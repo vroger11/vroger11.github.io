@@ -1,9 +1,3 @@
----
-layout: page
-title: Vincent ROGER - Data scientist
-permalink: /
----
-
 Phd student in Data Science at IRIT (Toulouse) (website in construction, stay tuned)
 
 ## Contact
