@@ -1,7 +1,7 @@
 Phd student in Data Science at IRIT (Toulouse) (website in construction, stay tuned)
 
 ## Contact
-*  **Email:** Vincent.Roger@irit.fr
+*  **Email:** <mailto:Vincent.Roger@irit.fr>
 
 *  **Address:**
   IRIT UMR 5505 - Equipe SAMOVA  
