@@ -1,4 +1,4 @@
-Phd student in Data Science at IRIT (Toulouse) (website in construction, stay tuned)
+PhD student in Data Science at IRIT (Toulouse) (website in construction, stay tuned)
 
 ## Contact
 *  **Email:** <mailto:Vincent.Roger@irit.fr>
@@ -18,7 +18,7 @@ I focus my work on deep neural networks in a big data context. In my thesis I wi
 
 I am currently a PhD student with [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php) and [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/).  
 The project consists in creating an Automatic System of Inteligibility Measurement (SAMI).
-It involves using clinical data, use of recent machine learning algorithms (such as neural networks) and some data analysis.
+It involves using clinical data, use of recent machine learning algorithms (such as Deep Neural Network or Statistical models) and some data analysis.
 
 I obtained my Master Degree in computer science (Artificial Intelligence, Pattern Recognition and Robotics) in 2015 at Paul Sabatier (Toulouse, France).
 
