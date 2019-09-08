@@ -32,6 +32,8 @@ plugins:
 disqus:
     shortname: vroger11
 
+url: http://vroger11.github.com
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
