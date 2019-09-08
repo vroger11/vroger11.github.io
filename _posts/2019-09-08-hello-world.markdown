@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Hello world"
 date:   2019-09-08 09:17:47 +0200
 categories: jekyll update
