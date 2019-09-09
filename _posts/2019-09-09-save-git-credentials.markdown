@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Save Git Credential"
+title:  "Save Git Credentials"
 date:   2019-09-09 19:30:00 +0200
 categories: tips dev
 ---
