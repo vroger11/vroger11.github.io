@@ -36,5 +36,5 @@ It involves using clinical data, use of recent machine learning algorithms (such
 
 I obtained my Master Degree in computer science (Artificial Intelligence, Pattern Recognition and Robotics) in 2015 at Paul Sabatier (Toulouse, France).
 
-You can find my full [CV](cv/cv_en.pdf) here or look at my [LinkedIn](https://www.linkedin.com/in/vroger11/) account.
+You can find my full [CV](/assets/cv/cv_en.pdf) here or look at my [LinkedIn](https://www.linkedin.com/in/vroger11/) account.
 
