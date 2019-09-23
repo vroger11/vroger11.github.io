@@ -21,7 +21,9 @@ Some website does not support this functiononality (overleaf git server for inst
 
 To save the credentials of every repository you log into, just type this:
 
-> $ git config credential.helper store
+```bash
+git config credential.helper store
+```
 
 And you are good to go. You will be asked only once for the credentials of each server dedicated to a repository. Next time, it will automatically be filled (silently without asking for credentials).
 
@@ -31,7 +33,9 @@ For security reasons (especially if you are not on your personnal computer), it 
 Let's say you want that delay being 4 hours.
 You just have to type:
 
-> $ git config --global credential.helper 'cache --timeout 14400'
+```bash
+git config --global credential.helper 'cache --timeout 14400'
+```
 
 14400 is then the time in seconds (our 4 hours).
 
