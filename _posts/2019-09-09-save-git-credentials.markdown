@@ -15,7 +15,7 @@ Saving them allows you to avoid typing your username and password when they are 
 The use of SSH and GPG keys is available on most popular git servers such as on gitlab or on github websites.
 It allows the user to avoid typing their username and password.
 
-Some website does not support this functiononality (overleaf git server for instance). Also, if you are like me, you use a multitude of git servers (and configuring each SSH keys become a pain).
+Some website does not support this functionality (overleaf git server for instance). Also, if you are like me, you use a multitude of git servers (and configuring each SSH keys become a pain).
 
 # Save git credentials
 
@@ -29,7 +29,7 @@ And you are good to go. You will be asked only once for the credentials of each 
 
 # Cache expiration
 
-For security reasons (especially if you are not on your personnal computer), it is better that the stored credentials expire after a certain amount of time.
+For security reasons (especially if you are not on your personal computer), it is better that the stored credentials expire after a certain amount of time.
 Let's say you want that delay being 4 hours.
 You just have to type:
 
