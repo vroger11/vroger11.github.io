@@ -30,7 +30,7 @@ In my thesis I will adapt Deep Neural Networks techniques in a few shots context
 
 # Summary
 
-I am currently a PhD student with [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php) and [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/).
+I am currently a PhD student with [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/index_en.php) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
 The project consists in creating an Automatic System of Inteligibility Measurement (SAMI).
 It involves using clinical data, use of recent machine learning algorithms (such as Deep Neural Network or Statistical models) and some data analysis.
 
