@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Check Writing in Neovim"
+title:  "Check your writing in Neovim"
 date:   2019-10-08 07:15:00 +0200
 categories: tips
 ---
