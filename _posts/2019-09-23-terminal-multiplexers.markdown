@@ -12,17 +12,17 @@ Terminal multiplexer is a tool allowing to have multiple sessions/windows in a s
 It is useful to split screen into multiple shells or accessing to multiple windows from the current one.
 The most handy use is when you use remote computers/servers to do some computations (let say to learn a model on GPUs).
 Indeed, throw a ssh connection you can't leave your session without killing your current process.
-While terminal multiplexers allow the user to log out and kepping the session active.
+While terminal multiplexers allow the user to log out and keeping the session active.
 It requires to simply detach the current session.
 After a reconnection throw ssh, you simply have to reattach your detached session (without loosing your processes).
 
-I personnaly use it a lot on my local machine and on remote servers to have a homogeneous way to interact with my different setups.
+I personally use it a lot on my local machine and on remote servers to have a homogeneous way to interact with my different setups.
 In this article I will expose [Tmux](https://github.com/tmux/tmux/wiki) software.
 In this post I will show you how to install/configure and use it.
 
 # Tmux
 
-I love to use only one multiplexer simultenoully but if you to use multiple ones with a specific profile for each of them I recomand you to look into [tmuxp](https://tmuxp.readthedocs.io/en/latest/) project.
+I love to use only one multiplexer simultaneously but if you to use multiple ones with a specific profile for each of them I recommend you to look into [tmuxp](https://tmuxp.readthedocs.io/en/latest/) project.
 In this post, I will only explain how I configure Tmux and how I use it.
 
 ## Installation
@@ -52,7 +52,7 @@ I do not modify a lot the tmux status bar, the only modifications are the follow
 * the bottom right display the ram usage for the GPUs and the CPU RAM.
 
 ### Installation
-My configuration files are composed into two parts: bash scripts to acquire system informations and tmux config file.
+My configuration files are composed into two parts: bash scripts to acquire system informations and Tmux config file.
 To install my config you have to download the files [here](https://github.com/vroger11/vroger11-configs/tree/master/tmux) and do:
 ```bash
 cp -r tmux_scripts ~/.tmux_scripts
@@ -91,13 +91,13 @@ To reattach your previous session, just type:
 tmux attach-session
 ```
 
-If you want to know other shortcuts and how to deal with multiple sessions I recommand you to read [The Tao of tmux book](https://leanpub.com/the-tao-of-tmux) or look into the cheatsheet [here](https://tmuxcheatsheet.com).
+If you want to know other shortcuts and how to deal with multiple sessions I recommend you to read [The Tao of tmux book](https://leanpub.com/the-tao-of-tmux) or look into the cheatsheet [here](https://tmuxcheatsheet.com).
 
 # Bonus: Alternative for Gnome users
 
 If you want a tmux-like well configured (by default) and you use Gnome with gnome-terminal, I recommend you to check out [Byobu](http://byobu.org/).
 It has a well explained video in its home page.
-Its shortcuts do not allways work on other terminals (which is a no go for me as I use Konsole terminal emulator).
+Its shortcuts do not always work on other terminals (which is a no go for me as I use Konsole terminal emulator).
 
 ## Sources
 
