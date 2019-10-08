@@ -65,7 +65,7 @@ rm /tmp/LanguageTool-stable.zip
 ## Neovim configuration
 I use [vim-plug](https://github.com/junegunn/vim-plug) plugin manager in Neovim.
 It is why I use it to install the [LanguageTool plugin from vigoux](https://github.com/vigoux/LanguageTool.nvim) (but other choices are possible).
-Before I continue, I recommend you to have a recent version of Neovim (>= 0.4.2) to use this plugin (as it use recent changes in Neovim).
+Before I continue, I recommend you to have a recent version of Neovim (&ge; 0.4.2) to use this plugin (as it use recent changes in Neovim).
 
 In your `~/.config/nvim/init.vim` between the `call plug#begin(<plugging_folderpath>)` and `call plug#end()` you have to add the following lines:
 
