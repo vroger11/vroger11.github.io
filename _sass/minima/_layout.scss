@@ -22,7 +22,7 @@
   &,
   &:visited,
   &:hover {
-    color: green;
+    color: $title-color-on-black;
   }
 }
 
@@ -39,7 +39,7 @@
   }
 
   .page-link {
-    color: green;
+    color: $title-color-on-black;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
