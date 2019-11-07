@@ -12,6 +12,7 @@ I am a PhD student in Data Science at IRIT (Toulouse), I also started a blog [ch
 I am focused on machine learning algorithms that can extract concepts from data. More specifically in unsupervised learning using feature learning, attention learning...
 
 In my thesis I will adapt Deep Neural Networks techniques in a few shots context for speech signals.
+To have more informations about it, look into [my first year review as a PhD student post](/phd/2019/10/12/first-year-review-as-a-phd-student.html).
 
 # Contact
 *  **Emails:**
