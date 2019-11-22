@@ -80,7 +80,7 @@ Then, outside the vim-plug calls you have to add:
 " grammar checking
 autocmd Filetype markdown LanguageToolSetUp
 autocmd Filetype tex LanguageToolSetUp
-let g:languagetool_server='/usr/local/LanguageTool/languagetool-server.jar'
+let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
 ```
 
 ## Usage
