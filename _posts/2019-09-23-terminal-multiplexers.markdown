@@ -99,7 +99,7 @@ If you want a tmux-like well configured (by default) and you use Gnome with gnom
 It has a well explained video in its home page.
 Its shortcuts do not always work on other terminals (which is a no go for me as I use Konsole terminal emulator).
 
-## Sources
+# Sources
 
 * [Tmux man page](https://man.openbsd.org/OpenBSD-current/man1/tmux.1)
 * [The Tao of tmux](https://leanpub.com/the-tao-of-tmux)
@@ -107,4 +107,18 @@ Its shortcuts do not always work on other terminals (which is a no go for me as 
 Hope it helps some of you.
 
 Cheers, Vincent.
+
+
+# 03-10-2020 update
+
+## Change default new split pane behavior
+
+I found myself always typing the same `cd` command after creating new split pane.
+Now new split pane have the same directory as the current pane.
+To do so, I add the following lines in my tmux.conf file:
+
+```bash
+bind % split-window -h -c "#{pane_current_path}"
+bind '"' split-window -v -c "#{pane_current_path}"
+```
 
