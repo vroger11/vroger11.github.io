@@ -17,7 +17,7 @@ For now, it is only an early work and have basic mechanisms implemented such as:
 * Basic activity detection system to filter features.
 * Most features have a corresponding testing module using [pytest](https://docs.pytest.org).
 
-My TODO list for the future (I is not an exhaustive one):
+My TODO list for the future (it is not an exhaustive one):
 1. Adding a documentation website.
 2. Add other features (spectrograms and so on)
 3. Have an elegant system of cache as an alternative to fill everything into the RAM.
