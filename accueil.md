@@ -4,6 +4,7 @@
 
 layout: page
 lang: fr
+ref: home
 ---
 
 Je suis un étudiant en thèse dans le domaine de la science des données à L'IRIT (Toulouse).

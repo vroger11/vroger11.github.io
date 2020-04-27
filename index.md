@@ -4,6 +4,7 @@
 
 layout: page
 lang: en
+ref: home
 ---
 
 I am a PhD student in Data Science at IRIT (Toulouse), I also started a blog [check it out](blog).
