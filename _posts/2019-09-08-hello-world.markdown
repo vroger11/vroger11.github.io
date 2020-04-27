@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Hello world"
+ref: hello_world
 date:   2019-09-08 09:17:47 +0200
 categories: tips
+lang: en
 ---
 
 This is my first post to present myself and what my blog will contains.

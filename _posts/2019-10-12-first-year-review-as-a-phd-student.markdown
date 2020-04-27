@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Review of my first year as a PhD student"
+ref: first_year_review
 date:   2019-10-12 17:15:00 +0200
 categories: PhD
+lang: en
 ---
 
 After almost a year (11 months), here I share with you my first year as a PhD student.

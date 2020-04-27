@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Format a bootable USB key"
+ref: format_bootable_key
 date:   2020-01-31 12:30:00 +0200
 categories: tips
+lang: en
 ---
 
 This post is mostly a remainder for me as it struggles me every time :stuck_out_tongue_winking_eye:.

@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Check your writing in Neovim"
+ref: check_writing
 date:   2019-10-08 07:15:00 +0200
 categories: tips
+lang: en
 ---
 
 When I am writing LaTeX, Markdown or Python files I use Neovim.

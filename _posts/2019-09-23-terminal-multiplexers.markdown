@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Terminal multiplexers"
+ref: terminal_multiplexers
 date:   2019-09-23 8:30:00 +0200
 categories: tips dev
+lang: en
 ---
 
 # What are terminal multiplexers?

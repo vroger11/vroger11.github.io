@@ -2,8 +2,10 @@
 layout: post
 comments: true
 title:  "Improve your bash terminal experience"
+ref: improve_default_bash
 date:   2020-01-29 17:30:00 +0200
 categories: tips dev
+lang: en
 ---
 
 This post is focused on bash configuration.

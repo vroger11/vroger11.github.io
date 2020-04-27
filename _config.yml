@@ -13,10 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Vincent ROGER's Website
+title:
+    en: Vincent ROGER's Website
+    fr: Site internet de Vincent ROGER
 email: roger.vincent.11@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-    PhD student in Machine Learning using Neural Networks technologies on speech in few shot context. Python and Linux enthusiast.
+description:
+    en: PhD student in Machine Learning using Neural Networks technologies on speech in few shot context. Python and Linux enthusiast.
+    fr: Thésard en apprentissage machine utilisant les réseaux de neurones artificiels sur de l'audio dans un contexte avec peu de données. Enthousiaste Python et de l'environnement Linux.
+index:
+    en: index.html
+    fr: accueil.html
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vroger11
