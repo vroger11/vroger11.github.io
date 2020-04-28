@@ -68,7 +68,7 @@ My scripts are as follows:
 
 The config file enable mouse interactions (for scrolling, select my split or resize my splits)
 It also modifies some colors and informations displayed in the status bar.
-The status bar is updated 
+The status bar is updated every 10 seconds.
 Look at [The Tao of tmux book](https://leanpub.com/the-tao-of-tmux/read#status-bar) for more styling options and how to modify it.
 ## Usage
 
