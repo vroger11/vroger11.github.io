@@ -15,4 +15,4 @@ Mon blog me sert à partager mes lectures, papiers, astuces sur l'apprentissage,
 
 Restez donc à l'affut, j'espère que ce blog aidera mes lecteurs.
 
-
+À la revoyure, Vincent.
