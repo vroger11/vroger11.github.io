@@ -87,7 +87,7 @@ To use tmux shortcuts, you have to press `<Ctrl+b>` first then type:
 * `c` to create a new tab in your multiplexer.
 * `d` to detach your session.
 
-I do every other actions like selecting terminal tab, resizing split, select split, ... using my mouse.
+I do every other actions like selecting terminal tab, resizing split or select split using my mouse.
 To reattach your previous session, just type:
 ```bash
 tmux attach-session
