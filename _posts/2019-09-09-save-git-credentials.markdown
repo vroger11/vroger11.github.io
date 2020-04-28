@@ -27,7 +27,9 @@ To save the credentials of every repository you log into, just type this:
 git config credential.helper store
 ```
 
-And you are good to go. You will be asked only once for the credentials of each server dedicated to a repository. Next time, it will automatically be filled (silently without asking for credentials).
+And you are good to go.
+You will be asked only once for each repository.
+Next time, it will automatically be filled (silently without asking for credentials).
 
 # Cache expiration
 
