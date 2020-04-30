@@ -11,15 +11,15 @@ lang: fr
 # Qu'est qu'un multiplexeur de terminaux?
 
 Un multiplexeur de terminaux est un outil permettant d'avoir plusieurs sessions/fenêtres dans un seul terminal.
-C'est utile pour partager un écran de terminal en plusieurs invités de commandes et/ou d'avoir une multitude d'invités de commandes accessible à partir d'un seul terminal.
+C'est utile pour partager un écran de terminal en plusieurs invités de commandes et/ou d'avoir une multitude d'invités de commandes accessibles à partir d'un seul terminal.
 L'utilisation la plus intéressante est d'utiliser les multiplexeurs de terminaux sur un serveur/ordinateur distant pour réaliser des calculs (par exemple apprendre un modèle sur GPU).
 En effet, à travers une connexion ssh vous ne pouvez pas vous déconnecter sans tuer le processus réalisant le calcul.
 Tandis que le multiplexeur de terminaux permet de garder une session active même après déconnexion.
 Il vous suffit de détacher la session du multiplexeur avant de vous déconnecter.
 Après vous être reconnecté via ssh, il vous suffit de vous rattacher à la session effectuant votre calcul. 
 
-J'utilise énormément le multiplexeur de terminaux sur mes machines personnelle et sur des serveurs distant.
-Cela me donne un environnement homogène sur l'ensemble des machines auquel j'ai accès.
+J'utilise énormément le multiplexeur de terminaux sur mes machines personnelles et sur des serveurs distants.
+Cela me donne un environnement homogène sur l'ensemble des machines auquels j'ai accès.
 Dans cet article de blogue je vais parler du multiplexeur [Tmux](https://github.com/tmux/tmux/wiki).
 Nous verrons comment l'installer, le configurer et l'utiliser.
 
@@ -88,7 +88,7 @@ Dans votre terminal (ou émulateur de terminal) taper ceci:
 tmux
 ```
 
-Actuellement les raccourcis par défaut combiné à la souris me conviennent.
+Actuellement les raccourcis par défaut combinés à la souris me conviennent.
 Dans cet article je vais seulement mentionner ce que j'utilise couramment.
 Pour utiliser les raccourcis de tmux, il vous faut tout d'abord appuyer sur la combinaison de touche `<Ctrl+b>` et ensuite taper un des raccourcis suivant:
 * `"` pour partager la fenêtre courante horizontalement.
