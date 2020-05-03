@@ -60,7 +60,7 @@ Cette dernière contient:
 
 ### Installation
 Mes fichiers de configuration sont composés en deux parties: des scripts bash pour récupérer des informations système et un fichier de configuration Tmux.
-Pour installer ma configuration, vous devez télécharger ces fichiers [ici](https://github.com/vroger11/vroger11-configs/tree/master/tmux).
+Pour installer ma configuration, vous devez télécharger [ces fichiers](https://github.com/vroger11/vroger11-configs/tree/master/tmux).
 Ensuite il vous faut taper:
 
 ```bash
@@ -68,7 +68,7 @@ cp -r tmux_scripts ~/.tmux_scripts
 cp tmux.conf ~/.tmux.conf
 ```
 
-Mes scripts de récupération d'information système sont les suivants:
+Mes scripts de récupération d'informations système sont les suivants:
 * le script `gpu.sh` utilise la commande nvidia-smi (que vous devez installer quand vous installez vos pilotes graphiques) pour obtenir la quantité de RAM GPU utilisé.
   ce script prend l'id du GPU en paramètre (le premier ayant le numéro 0).
   À vous d'ajouter d'autres appels à ce script (dans l'option status-right du fichier tmux.conf) pour monitorer plusieurs GPUs.
@@ -107,7 +107,7 @@ Si vous voulez connaitre d'autres raccourcis et savoir comment faire pour gérer
 
 # Bonus: Alternative pour les utilisateurs de Gnome
 
-Si vous voulez un environnement pré-configuré par défaut et que vous utilisez Gnome et gnome-terminal, je vous recommande de regarder [Byobu](http://byobu.org/).
+Si vous voulez un environnement pré-configuré par défaut et que vous utilisez Gnome ainsi gnome-terminal, je vous recommande de regarder [Byobu](http://byobu.org/).
 Leur site contient une vidéo explicative sur leur page d'accueil.
 Les raccourcis de byobu ne fonctionnent pas avec tous les terminaux (ce qui ne me convient pas vu que j'utilise konsole).
 

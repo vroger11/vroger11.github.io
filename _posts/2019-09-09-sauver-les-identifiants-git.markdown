@@ -14,11 +14,11 @@ Ce sont le nom d'utilisateur et le mot de passe associé que vous utilisez pour 
 Les sauvegarder vous permet d'éviter de les taper lorsqu'ils sont requis (principalement lors d'un push ou d'un pull).
 
 # Pourquoi sauver ces identifiants?
-L'utilisation de clés SSH ou même GPG est disponible sur la plupart des serveur git (tel gitlab ou même sur github).
+L'utilisation de clés SSH ou même GPG est disponible sur la plupart des serveurs git (tel gitlab ou même sur github).
 Cela permet également de se connecter sans taper son nom d'utilisateur et son mot de passe.
 
 Certain site internet ne supportent pas cette fonctionnalité (les serveurs git d'overleaf par exemple).
-Aussi, si vous êtes comme moi, vous utilisez une multitude de serveurs git (et configurer chaque clés SSH devient lourd).
+Aussi, si vous êtes comme moi, vous utilisez une multitude de serveurs git (et configurer chaque clé SSH devient lourd).
 
 # Sauver ses identifiants
 
