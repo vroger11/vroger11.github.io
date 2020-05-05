@@ -31,13 +31,13 @@ Hence, by intelligibility I mean the speaker intelligibility.
 This kind of measure have multiple applications:
 * evaluate pronunciation of people learning a foreign language.
 * refine informations for hearing aids to improve their efficiency.
-* evaluate the damages of one or multiple diseases (such as Parkinson, oral cancers, ...) to help the reeducation process.
+* evaluate the damages of one or multiple diseases (such as Parkinson or oral cancers) to help the reeducation process.
 
 The last point is the focus of my thesis.
 Hence, my automatic system has to work with pathological speech and unimpaired speech.
 
 To achieve my goal I have access to the [C2SI corpus](https://www.researchgate.net/publication/333132284_Construction_of_an_automatic_Carcinologic_Speech_Severity_Index_C2SI_score).
-It contains around 2 hours of recording for multiple tasks (lecture, spontaneous speech, maintained A, ...).
+It contains around 2 hours of recording for multiple tasks (such as lecture, spontaneous speech or maintained A).
 All speakers are French and are speaking French.
 The dataset is composed of patients (that suffer from oral cancer) and a control group (which have no particular problems to speak).
 More importantly, in this dataset we have access to a subjective evaluation of the intelligibility of every speaker. 
@@ -75,7 +75,7 @@ My planned publications (and future posts) are the following:
 # Feeling and impact on my way of life
 
 I stopped digital drawing as it took me a minimum of 2 hours per session.
-I learn everything from scratch in that domain (softwares, drawing techniques, ...).
+I learn everything from scratch in that domain (the softwares, drawing techniques and so on).
 It feels hard and it takes me a lot of mental energy.
 Instead, I started my website and this Blog as I like to share stuff.
 Also, it feels easier and more fun to me as I expected (it is mainly due to the simplicity of [Jekyll](https://jekyllrb.com/)).
