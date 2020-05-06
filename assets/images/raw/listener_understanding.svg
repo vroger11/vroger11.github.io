@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created using Karbon, part of Calligra: http://www.calligra.org/karbon -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="595.277pt"
+   height="419.528pt"
+   version="1.1"
+   id="svg316"
+   sodipodi:docname="listener_understanding.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata320">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     id="namedview318"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:zoom="0.88376918"
+     inkscape:cx="204.52952"
+     inkscape:cy="168.18736"
+     inkscape:window-x="1080"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg316" />
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker2451"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path2449"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1913"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1911"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker1873"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1871" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1557"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1560"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <defs
+       id="defs259" />
+    <defs
+       id="defs199" />
+    <defs
+       id="defs125" />
+    <defs
+       id="defs67" />
+    <defs
+       id="defs9" />
+  </defs>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2"
+     y="193.599"
+     x="294.59601"
+     height="42.232323pt"
+     width="128.07172pt"
+     stroke-miterlimit="2.00000000000"
+     id="shape0" />
+  <text
+     xml:space="preserve"
+     x="277"
+     y="298.05853"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text29"
+     style="font-style:normal;font-weight:400;font-size:15.00168037px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25013995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Knowledge of the listener</text>
+  <text
+     xml:space="preserve"
+     x="53"
+     y="208.78447"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text87"
+     style="font-style:normal;font-weight:400;font-size:14.9732399px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.24776995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal from speaker</text>
+  <text
+     xml:space="preserve"
+     x="346.71213"
+     y="214.11008"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text145"
+     style="font-style:normal;font-weight:400;font-size:15.06336021px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25528002;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Listener</text>
+  <text
+     xml:space="preserve"
+     x="337.51328"
+     y="231.56638"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text161"
+     style="font-style:normal;font-weight:400;font-size:15.06336021px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25528002;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Perception</text>
+  <text
+     xml:space="preserve"
+     x="53"
+     y="261.84586"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text219"
+     style="font-style:normal;font-weight:400;font-size:14.99003983px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.24916995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Environment noises</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41700006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+     inkscape:connector-curvature="0"
+     d="m 212.599,210.416 h 81.99701"
+     stroke-miterlimit="2.00000000000"
+     id="shape1"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;marker-end:url(#marker1873)"
+     inkscape:connector-curvature="0"
+     d="m 212.599,248.0315 81.99701,-16.77342"
+     stroke-miterlimit="2.00000000000"
+     id="shape2"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     x="516.341"
+     y="222.34608"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text279"
+     style="font-style:normal;font-weight:400;font-size:14.55935955px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.21327996;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Sentence understood</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;marker-end:url(#marker2451)"
+     inkscape:connector-curvature="0"
+     d="M 465.35829,218.97336 506.2094,218.938"
+     stroke-miterlimit="2.00000000000"
+     id="shape3"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:4.53544, 2.26772;marker-end:url(#marker1913)"
+     inkscape:connector-curvature="0"
+     d="m 373.494,283.3431 0.12502,-33.43434"
+     stroke-miterlimit="2.00000000000"
+     id="shape4"
+     sodipodi:nodetypes="cc" />
+</svg>
