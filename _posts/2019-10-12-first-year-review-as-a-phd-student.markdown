@@ -36,8 +36,8 @@ This kind of measure have multiple applications:
 The last point is the focus of my thesis.
 Hence, my automatic system has to work with pathological speech and unimpaired speech.
 
-To achieve my goal I have access to the [C2SI corpus](https://www.researchgate.net/publication/333132284_Construction_of_an_automatic_Carcinologic_Speech_Severity_Index_C2SI_score).
-It contains around 2 hours of recording for multiple tasks (such as lecture, spontaneous speech or maintained A).
+To achieve my goal, I have access to the [C2SI corpus](https://www.researchgate.net/publication/333132284_Construction_of_an_automatic_Carcinologic_Speech_Severity_Index_C2SI_score).
+It contains around 2 hours of recording for multiple tasks (such as reading, spontaneous speech or maintained A).
 All speakers are French and are speaking French.
 The dataset is composed of patients (that suffer from oral cancer) and a control group (which have no particular problems to speak).
 More importantly, in this dataset we have access to a subjective evaluation of the intelligibility of every speaker. 
@@ -60,9 +60,9 @@ After some experiments on the C2SI dataset, it appears to me that:
 I can't have more data (as it can be painful for the patients) to obtain better results.
 Classic data augmentation isn't a solution either.
 After listening some recordings, I am able to guess the intelligibility range of most of the speakers.
-It reminds me some lectures talking about techniques that try to be as efficient as a baby to learn new concepts (in term of quantity of data required): few-shot learning.
+It reminds me some reading about techniques that try to be as efficient as a baby to learn new concepts (in term of quantity of data required): few-shot learning.
 As it corresponds to my problem, I started to review what is done in that domain.
-And to share that expertise acquired I started to write a survey on few-shot learning for speech processing.
+To share that expertise acquired, I started to write a survey on few-shot learning for speech processing.
 
 # Coming next
 
