@@ -16,7 +16,7 @@ Je suis focalisé sur les algorithmes d'apprentissage machine capables d'extrair
 Plus précisément je suis intéressé par l'apprentissage non supervisé.
 
 Durant ma thèse, je vais adapter les techniques d'apprentissage profond pour des signaux de parole dans le cadre de peu de données.
-Pour avoir plus d'informations dessus, n'hésitez pas à regarder [mon bilan de ma première année en tant que thésard (en anglais pour le moment)](/phd/2019/10/12/first-year-review-as-a-phd-student.html).
+Pour avoir plus d'informations dessus, n'hésitez pas à regarder [la revue de ma première année en tant que thésard](/these/2019/10/12/revue-de-ma-premiere-annee-de-these.html).
 
 # Me contacter
 *  **Courriels:**
