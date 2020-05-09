@@ -54,7 +54,7 @@ To sign-in in the Zotero application, go under `Edit` -> `Preferences` -> `Sync`
 
 Now you can use your browser to look into papers on the web (in [arXiv](https://arxiv.org/) for example).
 When you want to add a paper to your collection, just click on the Zotero connector button in your web browser while you are looking into the PDF of the desired paper.
-It will automatically download the paper for offline use and extract all the information required to cite this paper (Title, Authors, Date, ...).
+It will automatically download the paper for offline use and extract all the information required to cite this paper (such as Title, Authors, Date and so on).
 The downloaded information can be changed at any time if something looks wrong.
 
 # Generate your BibTeX file using Zotero
