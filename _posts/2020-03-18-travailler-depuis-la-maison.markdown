@@ -4,7 +4,7 @@ comments: true
 title:  "Configurations pour travailler depuis la maison"
 ref: remote_work
 date:   2020-03-18 20:00:00 +0200
-categories: tips
+categories: astuces
 lang: fr
 ---
 
