@@ -214,6 +214,7 @@
     letter-spacing: -1px;
     line-height: 1;
 
+    font-weight: bold;
     @include media-query($on-laptop) {
         @include relative-font-size(1.75);
     }
@@ -223,31 +224,33 @@
     margin-bottom: $spacing-unit;
 
   h1 {
-    @include relative-font-size(1.5);
+    font-weight: bold;
+    @include relative-font-size(1.6);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+      @include relative-font-size(1.5);
     }
   }
 
   h2 {
-    @include relative-font-size(1.375);
+    @include relative-font-size(1.5);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
+      @include relative-font-size(1.4);
     }
   }
 
   h3 {
-    @include relative-font-size(1.125);
+    font-weight: bold;
+    @include relative-font-size(1.20);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.0625);
+      @include relative-font-size(1.1);
     }
   }
 
   h4 {
-    @include relative-font-size(1.0625);
+    @include relative-font-size(1.15);
 
     @include media-query($on-laptop) {
       @include relative-font-size(1);
