@@ -4,7 +4,7 @@ comments: true
 title:  "Tweaks on your machine to speedup Deep Learning Algorithms"
 ref: tips_ml_performances
 date:   2020-06-24 08:00:00 +0200
-categories: tips,dev
+categories: tips dev
 lang: en
 ---
 
