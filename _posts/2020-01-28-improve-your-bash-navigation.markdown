@@ -9,7 +9,7 @@ lang: en
 ---
 
 This post is focused on bash configuration.
-I use bash as it is shipped by default in most Linux distributions.
+I use bash as it is the default shell in most Linux distributions.
 I use it daily and after some tweaks it better suits me.
 In this post I will describe my main usage and how I configure it.
 
@@ -20,18 +20,18 @@ First, let review the basic features it offers.
 ## Default completion
 Completion in terminal is essential to gain productivity.
 In bash it is by default activated by pressing the Tab key.
-In Ubuntu most of the useful completions are activated by default, such as command options completion (`apt ins<Tab>` gives you `apt install `) or folders/files completion.
+Ubuntu enables most of the useful completions by default, such as command options completion (`apt ins<Tab>` gives you `apt install `) or folders/files completion.
 Nevertheless, the default completion behavior seems weird to me.
 If you press multiple times the Tab key you end up with the same listing showed to you multiple times.
 Such as in the following clip:
 
 ![Default completion output](/assets/images/bash_config/default_tab_behavior.gif)
-In the next section we will see how I configure it to be more consistent and useful.
+In the next section, we will see how I configure it to be more consistent and useful.
 
 ## Recursive search
 
 To get previous typed commands in a terminal you can use the upper arrow key.
-But, if you know a part of the command you want to reuse (and it is really high in your bash history) you can use the recursive mode.
+But, if you know a part of the command you want to reuse (and it is high in your bash history) you can use the recursive mode.
 To enter in recursive mode, you have to press CTRL+R keys and type the first letters of your choice (such as `ssh`).
 The result is the first command matching your search in your bash history.
 If you want the next matching results in your bash history, you just have to press the CTRL+R key combination.
@@ -40,7 +40,7 @@ I appreciate this behavior, so I let it as is in my configuration.
 ## Alerts
 
 It is a handy alias to send notification and it is in the default Ubuntu bashrc.
-In order to have this functionality working, you have to install the libnotify library:
+To have this functionality working, you have to install the libnotify library:
 
 ```bash
 sudo apt install libnotify-bin
@@ -65,12 +65,12 @@ cp ~/.bashrc ~/.bashrc_back
 ## Personalize the prompt
 It is a fancy part, but as you will see the prompt on every line you type I advise you to personalize it.
 To do so, you have to change the PS1 variable.
-Mine is done as follows:
+Mine is as follows:
 ```bash
 PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\H:\[$(tput sgr0)\]\[\033[38;5;32m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
 ```
 
-It should be placed under the following line in your ~/.bashrc:
+You have to put it under the following line in your `~/.bashrc`:
 ```bash
 if [ "$color_prompt" = yes ]; then
 ```
@@ -91,10 +91,10 @@ PATH=~/bin:$PATH
 
 ## Completion
 As you saw in the previous section, the default completion mode is not fantastic.
-By default, the Tab key is binded with the complete command.
+By default, bash bind the Tab key with the `complete` command.
 Fortunately, bash ships with an alternative: menu-complete.
 menu-complete makes tab cycle through suggestions after listing them.
-Here is the same example shown in previous section but using menu-complete:
+Here is the same example shown in the previous section but using menu-complete:
 
 ![menu-complete behavior](/assets/images/bash_config/improved_tab_behavior.gif)
 
@@ -125,9 +125,9 @@ bind '"²":menu-complete-backward' # for azerty keyboard
 
 # My full configuration file
 
-You can found my full bashrc [here](https://github.com/vroger11/vroger11-configs/blob/master/bash/bashrc).
+You can find my full bashrc [here](https://github.com/vroger11/vroger11-configs/blob/master/bash/bashrc).
 It contains more customizations, like gem configuration and miniconda initialization.
-I tested it under Konsole terminal emulator under Ubuntu 18.04 with two different username.
+I tested it under Konsole terminal emulator under Ubuntu 18.04 with two username.
 Nevertheless, be careful of what you do with it.
 I do not provide any warranty.
 

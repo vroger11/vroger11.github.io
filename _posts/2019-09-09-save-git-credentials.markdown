@@ -10,14 +10,14 @@ lang: en
 
 # What are git credentials?
 
-Git credentials are the username and password you use for login to a repository on a dedicated server.
-Saving them allows you to avoid typing your username and password when they are required (mainly pull and push operations).
+Git credentials are the username and password you used to log into a repository on a server.
+Saving them allows you to avoid typing your username and password when required (mainly pull and push operations).
 
 # Why saving git credentials?
-The use of SSH and GPG keys is available on most popular git servers such as on gitlab or on github websites.
+The use of SSH and GPG keys is available on most popular git servers such as on GitLab or on GitHub websites.
 It allows the user to avoid typing their username and password.
 
-Some website does not support this functionality (overleaf git server for instance). Also, if you are like me, you use a multitude of git servers (and configuring each SSH keys become a pain).
+Some website does not support this feature (overleaf git server for instance). Also, if you are like me, you use a multitude of git servers (and configuring each SSH keys become a pain).
 
 # Save git credentials
 
@@ -29,7 +29,7 @@ git config credential.helper store
 
 And you are good to go.
 You will be asked only once for each repository.
-Next time, it will automatically be filled (silently without asking for credentials).
+Afterwards, git will fill automatically the credentials for each repository.
 
 # Cache expiration
 

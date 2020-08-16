@@ -14,7 +14,7 @@ I will describe all steps for Ubuntu users that use KDE environment, but it is s
 
 # Connect your personal computer to the VPN of your company/lab using OpenVPN
 
-It is the first step required if you want to access to the Intranet of your company/lab.
+It is the first step required if you want to access to the intranet of your company/lab.
 Mine support OpenVPN, so I will describe the steps required to use it.
 
 First, install OpenVPN:
@@ -46,7 +46,7 @@ Then it opens you this menu:
 ![alt text](/assets/images/work_at_home/VPN_options.png)
 
 Here click on OpenVPN, then click on "Create" and follow the instruction of your company/lab.
-If your company/lab provide a OpenVPN file it is easier, just click on "Import VPN connection..." and select the provided file.
+If your company/lab provide an OpenVPN file it is easier, just click on "Import VPN connection..." and select the provided file.
 
 # Connect to distant servers
 
@@ -69,7 +69,7 @@ if [ ! -z "$SSH_CLIENT" ] && [ -z "$DESKTOP_SESSION" -a -z "$TMUX" ] ; then
 fi
 ```
 
-Now every time I use ssh to connect to servers from work, it start or attach to a tmux session called "ssh".
+Now every time I use ssh to connect to servers from work, it starts or attach to a tmux session called "ssh".
 
 # Working with Jupyter Lab Notebooks
 

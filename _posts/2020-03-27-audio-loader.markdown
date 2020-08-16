@@ -9,7 +9,7 @@ lang: en
 ---
 
 Today, I released an early version of the library I am working on.
-It is called [Audio Loader](https://github.com/vroger11/audio_loader) and it is designed to load audio batches (with features and ground truth) for deep learning libraries such as PyTorch or TensorFlow.
+It is called [Audio Loader](https://github.com/vroger11/audio_loader) and it loads audio batches (with features and ground truth) for deep learning libraries such as PyTorch or TensorFlow.
 
 For now, it is only an early work and have basic mechanisms implemented such as:
 * PyTorch bindings (basic one that fill all RAM and designed for windowed sampler).

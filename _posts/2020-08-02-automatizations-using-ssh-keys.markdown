@@ -10,15 +10,15 @@ lang: en
 
 I started my blog with a post telling you how to let Git remember your credentials for websites not supporting ssh keys (the post is [here](/tips/dev/2019/09/09/save-git-credentials.html) for those interested).
 In that day, I was struggling with Overleaf Git servers that do not support ssh keys (and still does not at the moment I am writing).
-It helped me for this particular case.
-Nevertheless, it is only related to Git servers and is not the best way to automatize your identifications (at least in my point of view).
+It helped me for this case.
+Nevertheless, it is only compatible with Git servers and is not the best way to automatize your identifications (at least in my point of view).
 Today we will see how to use ssh keys to automatize many login steps. 
 
 In this post we will see two use cases:
 * Automatic identification to servers using the ssh protocol.
 * Automatic identification when doing push/pull commands on Git servers (such as GitHub or GitLab).
 
-SSH keys are composed of a public key to encode messages (destined for servers) and a private key to be able to read those messages (destined for the client of the servers). 
+SSH keys contain a public key to encode messages (destined for servers) and a private key to be able to read those messages (destined for the client of the servers). 
 If you want more information of the protocol, have a look [here](https://www.ssh.com/ssh/public-key-authentication).
 
 The distribution used (and tested) for this tutorial is Kubuntu 20.04 LTS (my new main distribution, but this story is for a future post).
@@ -34,7 +34,7 @@ Afterwards, we will start the ssh-agent to configure it with the private key.
 Check the directory listing of `~/.ssh/` to see if you already have a public SSH key.
 By default, the filename of the public key is `id_rsa.pub`.
 You can use a different pair of keys per server if you want.
-I prefer to keep one pair of key per machine (and change it regularly).
+I prefer to keep one pair of keys per machine (and change it regularly).
 
 ## Generate a pair of SSH keys
 
@@ -121,7 +121,7 @@ sudo apt install ssh-askpass
 ```
 
 Then, we have to create a script that will automatically unlock your private key when logged in.
-This is done by the following lines:
+To achieve this, type the following lines:
 ```bash
 mkdir -p ~/.config/autostart-scripts
 echo '#!/bin/sh' > ~/.config/autostart-scripts/ssh-add.sh
@@ -134,7 +134,7 @@ For the next step, type the following command and **check the remember checkbox*
 ```bash
 ~/.config/autostart-scripts/ssh-add.sh
 ```
-It will let the KDE wallet retain the password for your private key and unlock it after each login.
+It will let the KDE wallet retain the password for your private key and unlocks it after each login.
 
 # Sources and inspirations
 

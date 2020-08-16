@@ -8,14 +8,15 @@ categories: tips
 lang: en
 ---
 
-When I am writing LaTeX, Markdown or Python files I use Neovim.
-Neovim is a software which refactor the Vim code base to be more accessible and be more extensible (while being compatible with almost all Vim plugins). 
-Basically, it can be viewed as an enhanced Vim, see the [Neovim about page](https://neovim.io/charter/) for more details.
+Neovim is a text editor designed to be able to use either a command-line interface or a graphical user interface.
+I use it to write nearly everything (mainly Python, markdown and LaTeX files).
+Many plugins are available to add handy features to Neovim (including the ones designed for Vim).
+Basically, it is an enhanced Vim, see the [Neovim about page](https://neovim.io/charter/) for more details.
 After writing, automatic checks are useful and help you to save some time.
 In this post I share my Neovim configuration and usage.
 
-# Spell Checking
-To do simple spell checking, you have to add in your `~/.config/nvim/init.vim` file the following lines:
+# Spell-Checking
+To do simple spell-checking, you have to add in your `~/.config/nvim/init.vim` file the following lines:
 
 ```
 " spell languages
@@ -26,16 +27,16 @@ inoremap <silent> <C-s> <C-O>:set spell!<cr>
 
 ## Usage
 
-In Neovim press Ctrl+S to highlight the misspelled words and then repress Ctrl+S to hide the highlighted misspelled words.
+In Neovim press Ctrl+S to highlight the misspelled words, then repress Ctrl+S to hide the highlighted misspelled words.
 To select a word suggestion in Insert mode, press Ctrl+X then S to select a suggestion.
 In Normal mode press `z=` to see the word suggestions.
 
-Remark: I know that my configuration inhibit the Ctrl+S user signal and it is my point to avoid unwanted behavior while typing.
+Remark: I know that my configuration inhibits the Ctrl+S user signal and it is my point to avoid unwanted behavior while typing.
 
 # Grammar Checking
 
 To check my writing I use [LanguageTool](https://www.languagetool.org/) suite.
-It is available for free, have an offline mode using its open source software (it is the main reason I'm using it).
+It is available for free, have an offline mode using its open-source software (it is the main reason I'm using it).
 Here I will help you to install it and how to use it with Neovim.
 
 ## LanguageTool installation
@@ -96,6 +97,13 @@ Then, the plugin proposes the following useful commands:
 * `:LanguageToolClear`: to clear LanguageTool displays.
 
 To see more options look at the [plugin page](https://github.com/vigoux/LanguageTool.nvim).
+
+# 16 August 2020 update
+
+I recently switched to [Antidote 10](https://www.antidote.info/en) to replace LanguageTool.
+I tend to avoid using LanguageTool (except for Python files) as it has many flows compared to Antidote (but you have to pay for it).
+This improved my writing and save me a lot of time.
+
 
 Hope it helps some of you.
 If you have a better setup or want to improve mine feel free to contribute or comment.
