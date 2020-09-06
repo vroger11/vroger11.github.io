@@ -8,15 +8,17 @@ categories: astuces
 lang: fr
 ---
 
-# Qu'est que Zotero?
+# Qu'est-ce que Zotero?
 
 [Zotero](https://www.zotero.org/) est un logiciel permettant de collecter, organiser, partager et synchroniser des papiers de recherche (ou d'autres contenus de recherche).
-Je préfère Zotero à d'autres solutions, car mes besoins sont remplis, Zotero est open source et est développé par une organisation indépendante, à but non lucratif et respectant la vie privée.
+Je préfère Zotero à d'autres solutions, car mes besoins sont remplis.
+De plus, le code de Zotero est ouvert et est développé par une organisation indépendante, à but non lucratif et respectant la vie privée.
 
 # Installation
 
 Zotero n'est pas disponible dans les dépôts d'Ubuntu.
-Pour installer Zotero, j'utilise [Flatpak](https://www.flatpak.org/) car cela permet la mise à jour automatique d'autres applications dans Ubuntu.
+Pour installer Zotero, j'utilise [Flatpak](https://www.flatpak.org/).
+Cela permet la mise à jour automatique d'applications à l'origine non disponible sous Ubuntu.
 
 J'utilise le dépôt [Flathub](https://flathub.org/) avec flatpak, pour le mettre en place vous devez taper:
 
@@ -44,7 +46,7 @@ Pour être capable d'utiliser toutes les fonctionnalités présentées dans cet 
 
   Pour l'installer il vous faut:
   1. Télécharger le [dernier fichier xpi](https://github.com/retorquere/zotero-better-bibtex/releases/latest).
-  2. Ouvrir Zotero, aller dans `Tools` -> `Add-ons`, cliquer sur la roue d'engrenage -> `Install Add-on From File...` et sélectionner le fichier d'extension que vous avez précédamment sélectionné.
+  2. Ouvrir Zotero, aller dans `Tools` -> `Add-ons`, cliquer sur la roue d'engrenage -> `Install Add-on From File...` et sélectionner le fichier d'extension que vous avez précédemment sélectionné.
 
 # Ajouter un papier dans votre collection
 
@@ -52,12 +54,12 @@ Avant tout, je vous recommande de créer un compte sur le site de Zotero.
 Cela vous aidera à synchroniser votre librairie sur tous vos appareils (dans mon cas mon ordinateur personnel et professionnel).
 Pour vous connecter dans l'application, aller dans `Edit` -> `Preferences` -> l'onglet `Sync`. 
 
-Maintenant vous pouvez utiliser votre navigateur internet pour chercher vos papiers sur le net (sur [arXiv](https://arxiv.org/) par exemple).
+Maintenant, vous pouvez utiliser votre navigateur internet pour chercher vos papiers sur le net (sur [arXiv](https://arxiv.org/) par exemple).
 Lorsque vous voulez ajouter un papier dans votre collection, cliquer sur l'icône du connecteur Zotero dans votre navigateur web pendant que vous visualisez le PDF désiré.
-Cela va automatiquement télécharger le papier pour une utilisation hors-ligne et extraire toutes les informations requises pour citer ce papier (Titre, auteurs, date...)
-Le téléchargement d'informations peut être modifié à tout moment si quelque chose ne conviens pas. 
+Cela va automatiquement télécharger le papier pour une utilisation hors-ligne et extraire toutes les informations requises pour citer ce papier (Titre, auteurs, date...).
+Le téléchargement d'informations peut être modifié à tout moment si quelque chose ne convient pas. 
 
-# Générer votre fichier BibTeX utilisant Zotero
+# Générer votre fichier BibTeX en utilisant Zotero
 
 Avant de générer votre fichier BibTeX, vous pouvez personnaliser le format des clés de citations que vous utiliserez dans votre fichier TeX.
 Pour effectuer cette personnalisation, allez dans le menu BibTeX: Edit -> Preferences -> l'onglet Better BibTeX.
@@ -77,7 +79,7 @@ Pour générer le fichier BibTeX:
 
    ![exporter un fichier BibTeX 1/2](/assets/images/zotero/export_bibtex_1.png)
 
-2. Dans le menu contextuel, sélectionnez le format "Better BibTeX" (qui utilise un format plus épuré que le format par défaut) et cochez la case "Keep updated" pour laisser Zotero mettre à jour le fichier résultant lorsque qu'une modification/ajout est faite sur votre librairie.
+2. Dans le menu contextuel, sélectionnez le format "Better BibTeX" (qui utilise un format plus épuré que le format par défaut) et cochez la case "Keep updated" pour laisser Zotero mettre à jour le fichier résultant lorsqu'une modification/ajout est faite sur votre librairie.
 
    ![exporter un fichier BibTeX 2/2](/assets/images/zotero/export_bibtex_2.png)
 

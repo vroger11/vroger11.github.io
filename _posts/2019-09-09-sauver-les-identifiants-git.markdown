@@ -10,14 +10,14 @@ lang: fr
 
 # Qu'est-ce que les identifiants git?
 
-Ce sont le nom d'utilisateur et le mot de passe associé que vous utilisez pour vous connecter sur un serveur git.
+Les identifiants git sont le nom d'utilisateur et le mot de passe associé que vous utilisez pour vous connecter sur un serveur git.
 Les sauvegarder vous permet d'éviter de les taper lorsqu'ils sont requis (principalement lors d'un push ou d'un pull).
 
 # Pourquoi sauver ces identifiants?
-L'utilisation de clés SSH ou même GPG est disponible sur la plupart des serveurs git (tel gitlab ou même sur github).
+L'utilisation de clés SSH ou même GPG est disponible sur la plupart des serveurs git (tel GitLab ou même sur GitHub).
 Cela permet également de se connecter sans taper son nom d'utilisateur et son mot de passe.
 
-Certain site internet ne supportent pas cette fonctionnalité (les serveurs git d'overleaf par exemple).
+Certains sites internet ne supportent pas cette fonctionnalité (les serveurs git d'overleaf par exemple).
 Aussi, si vous êtes comme moi, vous utilisez une multitude de serveurs git (et configurer chaque clé SSH devient lourd).
 
 # Sauver ses identifiants
@@ -30,7 +30,7 @@ git config credential.helper store
 
 Et c'est tout.
 Vous allez remplir seulement une fois vos identifiants pour chaque dépôt.
-Les prochaines fois ils seront remplis automatiquement.
+Les prochaines fois, ils seront remplis automatiquement.
 
 # Le cache d'expiration
 

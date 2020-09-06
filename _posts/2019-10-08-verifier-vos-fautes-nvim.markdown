@@ -9,10 +9,11 @@ lang: fr
 ---
 
 Quand j'écris du LaTeX, du Markdown ou du Python j'utilise Neovim.
-Neovim est un logiciel ayant refactoré le code de Vim pour être plus accessible et plus extensible (tout en restant compatible avec la plupart des plugins de Vim).
-Basiquement, Neovim peut être vu comme étant un Vim amélioré, allez sur [la page officielle du projet](https://neovim.io/charter/) pour plus de détails.
+Neovim est un logiciel ayant refactoré le code de Vim pour être plus accessible et plus extensible (tout en restant compatible avec la plupart des plug-ins de Vim).
+Basiquement, Neovim peut être vu comme une version améliorée de Vim.
+Allez sur [la page officielle du projet](https://neovim.io/charter/) pour plus de détails.
 Après avoir écrit votre texte ou documentation, les correcteurs automatiques sont utiles pour vous faire gagner du temps de relecture.
-Dans ce post je vous partage ma configuration Neovim pour faire cette relecture automatique.
+Dans cet article de blogue, je vous partage ma configuration Neovim pour faire cette relecture automatique.
 
 # Correction d'orthographe
 
@@ -36,14 +37,16 @@ Remarque: Je sais que ma configuration inhibe le signal utilisateur Ctrl+S et c'
 
 # Correction de grammaire
 
-Pour faire une première relecture j'utilise la suite [LanguageTool](https://www.languagetool.org/).
-Cette suite est disponible gratuitement et est disponible hors-ligne lorsque l'on utilise l'outil open source de correction (c'est la raison principale de mon utilisation).
-Dans cet article je vais vous aider à l'installer et vous aider à l'utiliser avec Neovim.
+Pour faire une première relecture, j'utilise la suite [LanguageTool](https://www.languagetool.org/).
+Elle est disponible gratuitement en version hors-ligne et en ligne.
+Le code de l'outil de correction hors-ligne est ouvert (c'est la raison principale de mon utilisation).
+Dans cet article, je vais vous aider à l'installer et vous aider à l'utiliser avec Neovim.
 
-## Installation de LanguageTool installation
+## Installation de LanguageTool
 
-LanguageTool nécessite un environnement java pour fonctionner.
-Ici je choisis OpenJDK comme environnement java et j'installe également curl pour installer LanguageTool.
+LanguageTool nécessite un environnement Java pour fonctionner.
+Ici je choisis OpenJDK comme environnement Java.
+Puis j'installe curl pour télécharger LanguageTool.
 
 ### Pour Fedora
 ```bash
@@ -56,7 +59,7 @@ sudo apt -y install default-jre curl
 ```
 
 ### Ensuite, sur les deux distributions
-Les commandes qui suivent télécharge LanguageTool et l'installe dans `/usr/local`:
+Les commandes qui suivent téléchargent LanguageTool et l'installe dans `/usr/local`:
 
 ```bash
 curl https://languagetool.org/download/LanguageTool-stable.zip > /tmp/LanguageTool-stable.zip
@@ -67,9 +70,9 @@ rm /tmp/LanguageTool-stable.zip
 
 
 ## Configuration de Neovim
-J'utilise le manager de plugin [vim-plug](https://github.com/junegunn/vim-plug) pour Neovim.
-C'est pourquoi je vais utiliser ce manager pour installer [le plugin de vigoux](https://github.com/vigoux/LanguageTool.nvim) (l'utilisation d'autres manager est possible).
-Avant de continuer, je vous recommande d'utiliser une version récente de Neovim (&ge; 0.4.2) pour utiliser ce plugin (puisqu'il utilise des changements récents fait dans Neovim).
+J'utilise le manager de plug-in [vim-plug](https://github.com/junegunn/vim-plug) pour Neovim.
+C'est pourquoi je vais utiliser ce manager pour installer [le plug-in de vigoux](https://github.com/vigoux/LanguageTool.nvim) (l'utilisation d'autre manager est possible).
+Avant de continuer, je vous recommande d'utiliser une version récente de Neovim (&ge; 0.4.2) pour utiliser ce plug-in (puisqu'il utilise des changements récents faits dans Neovim).
 
 Dans votre `~/.config/nvim/init.vim` entre l'appel `call plug#begin(<plugging_folderpath>)` et l'appel `call plug#end()` vous devez rajouter les lignes suivantes:
 
@@ -89,17 +92,24 @@ let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
 
 ## Utilisation
 
-Pour utiliser ce plugin, vous devez faire un appel à lui dans vos documents en mode normal grâce à la commande `:LanguageToolSetUp` (cette commande est lancée automatiquement pour les fichiers tex et markdown).
+Pour utiliser ce plug-in, vous devez faire un appel à lui dans vos documents en mode normal grâce à la commande `:LanguageToolSetUp` (cette commande est lancée automatiquement pour les fichiers tex et markdown).
 
-Ensuite, le plugin propose les commandes suivantes:
+Ensuite, le plug-in propose les commandes suivantes:
 
 * `:LanguageToolCheck`: pour surligner les erreurs détectées, vous devez réutiliser cette commande lorsque vous changer votre code/texte.
 * `:LanguageToolSummary`: pour afficher des détails sur les mots surlignés dans une sous-fenêtre. 
 * `:LanguageToolClear`: pour enlever les affichages de LanguageTool.
 
-Pour plus d'options allez sur la [page du plugin](https://github.com/vigoux/LanguageTool.nvim).
+Pour plus d'options allez sur la [page du plug-in](https://github.com/vigoux/LanguageTool.nvim).
+
+# Mise à jour du 16 aout 2020
+
+J'ai récemment remplacé LanguageTool par [Antidote 10](https://www.antidote.info/fr).
+J'ai maintenant pris l'habitude d'éviter LanguageTool (à part pour les fichiers Python), car il est en deçà d'antidote (qui est payant et non ouvert).
+Cela a amélioré mon écriture et me sauve énormément de temps.
+
 
 J’espère que cela aidera certains d’entre vous.
-Si vous avez une meilleure configuration ou voulez améliorer la mienne n'hésitez pas à contribuer.
+Si vous avez une meilleure configuration ou voulez améliorer la mienne, n'hésitez pas à contribuer.
 
 À la revoyure, Vincent.

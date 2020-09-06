@@ -23,7 +23,7 @@ Avant de définir ce terme, regardons un petit schéma général correspondant a
 
 Dans la communauté de la parole, l'intelligibilité désigne généralement que le signal écouté est 100% clair.
 Cette mesure sert à identifier les perturbations liées aux bruits environnementaux.
-Comme vous l'avez surement deviné ce n'est absolument pas la mesure que je cherche durant cette thèse.
+Comme vous l'avez surement deviné, ce n'est absolument pas la mesure que je cherche durant cette thèse.
 
 Pour cette thèse, nous nous intéressons à la clarté de l'orateur indépendamment des bruits environnementaux et de toutes connaissances de l'auditeur.
 
@@ -35,13 +35,13 @@ Ce genre de mesure a plusieurs applications:
 * l'évaluation des dommages d'une ou plusieurs maladie(s) (tel que Parkinson ou les cancers buccaux) pour aider au processus de rééducation.
 
 Le dernier point correspond au focus de ma thèse.
-Par conséquence, mon système doit fonctionner sur de la parole pathologique et non pathologique.
+Par conséquent, mon système doit fonctionner sur de la parole pathologique et non pathologique.
 
 Pour atteindre cet objectif, j'ai accès au [corpus C2SI](https://www.researchgate.net/publication/333132284_Construction_of_an_automatic_Carcinologic_Speech_Severity_Index_C2SI_score).
 Il contient environ 2 heures d'enregistrement de plusieurs tâches (lecture, parole spontanée, A maintenue...).
 Tous les sujets sont des Français et parlent couramment le Français.
 Le corpus C2SI est composé d'enregistrements de patients (souffrant de cancers buccaux) et d'un groupe contrôle (participants n'ayant pas de trouble de la parole)
-Plus important encore, dans ce corpus, nous avons accès a une évaluation subjective de l'intelligibilité de chaque participant.
+Plus important encore, dans ce corpus, nous avons accès à une évaluation subjective de l'intelligibilité de chaque participant.
 Ces scores ont été réalisés par un jury de 5 experts nous donnant un score compris entre 0 et 10.
 Ce corpus est donc le point de départ de ma thèse.
 
@@ -52,22 +52,22 @@ C'est pour ça que les encadrants et moi-même avons décidé de faire apprendre
 
 Après quelques expériences sur le corpus C2SI, j'en tire les leçons suivantes:
 
-* Utiliser les techniques d'apprentissage de l'état de l'art en reconnaissance de la parole (architectures très profondes et larges) est impossible sur la quantité de donnée que j'ai a disposition
+* Utiliser les techniques d'apprentissage de l'état de l'art en reconnaissance de la parole (architectures très profondes et larges) est impossible sur la quantité de données que j'ai à disposition
 
 * Utiliser des modèles avec moins de paramètres nécessaires (avec des techniques comme [SincNet](https://arxiv.org/abs/1808.00158) et l'utilisation de petites architectures) ne solutionne pas suffisamment bien le problème sur de la parole pathologique.
 
-* L'apprentissage par transfert (utilisant des modèles appris sur de la parole considérée non pathologique) résulte en des performances plus faible que les modèles avec moins de paramètres.
+* L'apprentissage par transfert (utilisant des modèles appris sur de la parole considérée non pathologique) résulte en des performances plus faibles que les modèles avec moins de paramètres.
 
-Pour le moment je ne peux obtenir plus de données (parce que cela peut être douloureux pour les patients) pour obtenir de meilleurs résultats.
+Pour le moment, je ne peux obtenir plus de données (parce que cela peut être douloureux pour les patients) pour obtenir de meilleurs résultats.
 L'augmentation de données n'a pas aidé à obtenir des résultats suffisants.
 Après avoir écouté l'enregistrement de plusieurs participants, je suis maintenant capable de deviner l'intervalle de valeur de leur score obtenu.
-Cela m'a rappelé certaines de mes lectures parlant de techniques qui essayaient d'être aussi efficiente que les enfants pour apprendre de nouveaux concepts (en termes de quantité de données): les techniques dites de few-shot. 
+Cela m'a rappelé certaines de mes lectures parlant de techniques qui essayaient d'être aussi efficientes que les enfants pour apprendre de nouveaux concepts (en termes de quantité de données): les techniques dites de few-shot. 
 Comme cela correspond à mon problème, j'ai commencé à faire une revue de ce domaine.
 Pour partager cette expertise acquise, j'ai commencé une revue de littérature sur les techniques de few-shot pour le traitement de la parole.
 
 # À venir
 
-Mes publications prévues (et futur articles de blogue) sont les suivants:
+Mes publications prévues (et futurs articles de blogue) sont les suivants:
 
 1. Une revue de littérature sur les techniques de few-shot appliquées pour le traitement de la parole.
 
@@ -77,20 +77,20 @@ Mes publications prévues (et futur articles de blogue) sont les suivants:
 
 J'ai arrêté le dessin digital parce que cela me nécessitait des sessions de 2 h.
 J'apprends tout depuis le début dans ce domaine (logiciels, techniques de dessin...).
-C'est un exercice dur pour moi et qui me prends beaucoup de ressources mentales.
-À la place, j'ai commencé mon site internet et ce Blogue vu que j'aime partager.
+C'est un exercice dur pour moi et qui me prend beaucoup de ressources mentales.
+À la place, j'ai commencé mon site internet et ce blogue vu que j'aime partager.
 De plus, cela me semble plus simple et plus amusant que je ne l'avais anticipé (c'est surtout dû à la simplicité de [Jekyll](https://jekyllrb.com/))
 Je reprendrai surement le dessin digital, mais après ma thèse.
 
-Actuellement j'apprends le rock acrobatique avec mon amour (ma Krikri).
+Actuellement, j'apprends le rock acrobatique avec mon amour (ma Krikri).
 Je pense qu'avoir trop d'activité physique est néfaste pour le corps, mais aussi pour le moral.
-Par conséquence, j'ai arrêté de courir.
+Par conséquent, j'ai arrêté de courir.
 
 En tant qu'informaticien, je suis souvent derrière un bureau.
-Ainsi, je suis peu exposé au soleil et produit ainsi moins de vitamine D que les personnes qui travaillent dehors.
-Pour compenser, je prends de la viramine D3.
+Ainsi, je suis peu exposé au soleil et produis ainsi moins de vitamine D que les personnes qui travaillent dehors.
+Pour compenser, je prends de la vitamine D3.
 Je vous conseille de regarder [ici](https://www.julienvenesson.fr/calculer-son-besoin-en-vitamine-d-en-fonction-de-son-poids/) ou [là](https://www.julienvenesson.fr/eviter-les-fortes-doses-de-vitamine-d/) pour comprendre ma démarche.
-Dans tous les cas demandez conseil à un professionnel.
+Dans tous les cas, demandez conseil à un professionnel.
 Une autre solution consiste à s'exposer plus au soleil (tout en profitant pour se relaxer/méditer).
 Ainsi, j'évite un maximum le métro en utilisant ma trottinette (une non électrique :smile: ).
 

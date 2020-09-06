@@ -9,9 +9,9 @@ lang: fr
 ---
 
 Ceci est mon premier article de blog pour me présenter et parler du contenu de ce blog.
-Je m'appelle Vincent, je suis un étudiant en thèse au moment où j'écris ces lignes à l'IRIT dans Toulouse.
-J'utilise les techniques d'apprentissage par réseaux profonds sur des signaux de paroles dans un contexte où j'ai très peut de données de disponibles.
-Mon blog me sert à partager mes lectures, papiers, astuces sur l'apprentissage, programmation (j'utilise principalement Python, LaTeX et le Markdown) et l'environnement Linux en général.
+Je m'appelle Vincent, je suis un étudiant en thèse à l'IRIT (laboratoire d'informatique de Toulouse) au moment où j'écris ces lignes.
+J'utilise les techniques d'apprentissage par réseaux profonds sur des signaux de paroles dans un contexte où j'ai très peu de données de disponibles.
+Dans mon blogue, je partage mes lectures, papiers, astuces sur l'apprentissage, programmation (j'utilise principalement Python, LaTeX et le Markdown) et l'environnement Linux en général.
 
 Restez donc à l'affut, j'espère que ce blog aidera mes lecteurs.
 
