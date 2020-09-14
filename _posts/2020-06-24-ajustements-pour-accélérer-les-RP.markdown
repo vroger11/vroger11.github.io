@@ -15,12 +15,12 @@ Dans cet article de blogue, je vais partager les configurations que j'effectue s
 Ces configurations me permettent de gagner du temps et les voici.
 
 # Monter le disque de données avec l'option noatime
-Cette astuce est la plus importante que j'ai trouvé.
+Cette astuce est la plus importante que j'ai trouvée.
 Par défaut, le système de fichier Linux utilise l'option atime.
 Cette option consiste à écrire le dernier temps d'accès dans chaque fichier lu.
-Cela induit un haut usage d'entrées/sorties disque lorsque l'on apprend un modèle sur de large base de données avec une multitude de fichiers.
-Lors de mes expériences je gagne environ 5% de temps de calcul sur un ensemble d'entrainement d'environ 30000 fichiers audios (durant moins de 10s chacun).
-Plus de fichiers résulterait à de meilleurs gains.
+Cela induit un haut usage d'entrées/sorties disque lorsque l'on apprend un modèle sur de larges bases de données avec une multitude de fichiers.
+Lors de mes expériences, je gagne environ 5% de temps de calcul sur un ensemble d'entrainement d'environ 30000 fichiers audios (durant moins de 10s chacun).
+Plus de fichiers résulteraient à de meilleurs gains.
 Gardez à l'esprit qu'utiliser un manager de données de haute performance (tel que hdf5) est une bonne alternative à cette solution (et peut potentiellement obtenir de meilleures performances).
 
 Dans les prochaines sous-sections, je vais expliquer comment mettre l'option noatime sur un disque pour désactiver le comportement atime.
@@ -33,7 +33,7 @@ sudo lsblk -fm
 ```
 ## Vérifier si le disque est déjà monté
 Maintenant que nous avons l'UUID de notre disque, nous devons nous assurer qu'il ne soit pas déjà monté.
-Pour cela tapez la commande suivante:
+Pour cela, tapez la commande suivante:
 ```bash
 df -h
 ```
@@ -47,7 +47,7 @@ umount <point d accès>
 
 ## Créer un point d'accès
 Avant de monter votre disque, vous devez créer dossier servant de point d'accès (ou utiliser un dossier déjà existant).
-Pour créer un dossier tapez:
+Pour créer un dossier, tapez:
 ```bash
 mkdir <votre point d accès>
 ```
@@ -61,10 +61,10 @@ UUID=<UUID-identifié> <chemin absolu du point d accès> ext4 errors=remount-ro,
 ```
 
 **Note:** l'astuce ici est d'ajouter l'option noatime.
-Elle peut être ajoutée sur les partitions systèmes (en modifiant les lignes du fichier `/etc/fstab`).
+Elle peut être ajoutée sur les partitions système (en modifiant les lignes du fichier `/etc/fstab`).
 
 ## Monter le disque de données
-Nous venons de configurer le ficher `fstab`, ce qui montera votre disque au prochain redémarrage.
+Nous venons de configurer le fichier `fstab`, ce qui montera votre disque au prochain redémarrage.
 Si vous ne voulez pas redémarrer votre machine, vous pouvez monter votre disque de données grâce à la commande suivante:
 ```bash
 sudo mount <chemin absolu du point d accès>
@@ -86,8 +86,8 @@ sudo apt install nvidia-driver-440
 ```
 
 # Utiliser des modèles avec une plus faible précision
-Par défaut, les librairies d'apprentissage profond (TensorFlow, Pytorch, ...) utilisent des variables encodés sur 64bits (les poids de modèles sont des variables).
-Pour être capable d'utiliser des tailles de batchs plus grande et de bénéficier des tensor cores (sur les dernières cartes Nvidia), vous pouvez encoder les poids de vos modèles sur 32 ou 64 bits.
+Par défaut, les librairies d'apprentissage profond (TensorFlow, Pytorch, ...) utilisent des variables encodées sur 64bits (les poids de modèles sont des variables).
+Pour être capable d'utiliser des tailles de batchs plus grandes et de bénéficier des tensor cores (sur les dernières cartes Nvidia), vous pouvez encoder les poids de vos modèles sur 32 ou 64 bits.
 
 **Note:** utiliser la précision mixte (non détaillé ici) est une meilleure stratégie que de fixer la précision des variables sur 16 bits.
 
@@ -117,6 +117,6 @@ none    /tmp/    tmpfs    noatime,size=10%    0    0
 N'oubliez pas de changer le cache utilisé pour ces cas (ou augmentez la taille de `/tmp` dans la ligne au-dessus et en fonction de votre quantité de RAM disponible).
 
 J’espère que cela aidera certains d’entre vous.
-Si vous avez des conseils ou d'autres astuces n'hésitez pas à partager votre savoir :smile:.
+Si vous avez des conseils ou d'autres astuces, n'hésitez pas à partager votre savoir :smile:.
 
 À la revoyure, Vincent.

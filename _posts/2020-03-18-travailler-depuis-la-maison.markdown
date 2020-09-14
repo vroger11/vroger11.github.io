@@ -10,7 +10,7 @@ lang: fr
 
 Cet article de blogue présente toutes les configurations que j'ai effectuées pour travailler depuis chez moi.
 C'est particulièrement utile lorsque vous êtes en quarantaine (ou allez être, car la progression du COVID-19 est alarmante).
-Je vais décrire toutes les étapes pour les utilisateurs Ubuntu avec un environnement KDE, les manipulations pour les utilisateurs de GNOME étant similaire je n'irai pas en détails pour ce cas.
+Je vais décrire toutes les étapes pour les utilisateurs Ubuntu avec un environnement KDE, les manipulations pour les utilisateurs de GNOME étant similaire je n'irai pas en détail pour ce cas.
 
 # Connecter votre ordinateur personnel au VPN de votre laboratoire/compagnie en utilisant OpenVPN
 
@@ -32,13 +32,13 @@ sudo apt install network-manager-openvpn
 sudo apt install network-manager-openvpn-gnome
 ```
 
-Ensuite, vous pouvez utiliser votre l'interface graphique de votre environnement de travail pour vous connecter au VPN désiré.
+Ensuite, vous pouvez utiliser l'interface graphique de votre environnement de travail pour vous connecter au VPN désiré.
 Pour les utilisateurs de KDE, aller dans le widget de réseaux:
 
 ![widget réseaux](/assets/images/work_at_home/Network_widget.png)
 
-Ensuite cliquez sur l'icône "Configure network connections..."  (entouré de bleue sur l'image précédente).
-Cela ouvre le fenêtre de configuration suivante:
+Ensuite, cliquez sur l'icône "Configure network connections..."  (entouré de bleue sur l'image précédente).
+Cela ouvre la fenêtre de configuration suivante:
 
 ![Menu réseaux](/assets/images/work_at_home/Network_menu.png)
 
@@ -47,8 +47,9 @@ Cela vous ouvrira le menu suivant:
 
 ![Options VPN](/assets/images/work_at_home/VPN_options.png)
 
-Ici cliquez sur OpenVPN, puis cliquez sur "Create" et suivez les instructions de votre compagnie/laboratoire.
-Si votre laboratoire/compagnie fournit un fichier OpenVPN c'est encore plus simple, il faut cliquer sur "Import VPN connection..." et sélectionnez le fichier qui vous est fournis.
+Ici, cliquez sur OpenVPN, puis cliquez sur "Create" et suivez les instructions de votre compagnie/laboratoire.
+Si votre laboratoire/compagnie fournit un fichier OpenVPN, c'est encore plus simple.
+Il vous faut cliquer sur "Import VPN connection..." et sélectionnez le fichier qui vous est fourni.
 
 # Se connecter à un serveur distant
 
@@ -61,7 +62,7 @@ ssh <login>@<addresss_du_serveur> -p <numéro_de_port>
 
 Si vous voulez créer un serveur ssh ou avoir plus de détails, je vous recommande de regarder la [documentation officielle d'Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
 
-Juste après mettre connecté, je commence toujours (ou attache) une session tmux.
+Après m'être connecté, je commence toujours (ou attache) une session tmux.
 Si vous ne connaissez pas ce qu'est tmux, allez regarder mon article de blog [ici](/astuces/dev/2019/09/23/multiplexeur-de-terminaux.html).
 Pour automatiser ce comportement, j'ajoute le code suivant dans mon fichier `~/.bashrc` côté serveur:
 ```bash
@@ -71,7 +72,7 @@ if [ ! -z "$SSH_CLIENT" ] && [ -z "$DESKTOP_SESSION" -a -z "$TMUX" ] ; then
 fi
 ```
 
-Maintenant, à chaque fois que je me connecte via ssh depuis chez moi, je me trouve dans une session tmux nommé `ssh`.
+Maintenant, à chaque connexion via ssh, je me trouve dans une session tmux nommée `ssh`.
 
 # Travailler avec des Notebooks de Jupyter Lab
 
@@ -87,12 +88,12 @@ Ici je vous donne ma solution:
     jupyter lab --port=8887 --no-browser
     ```
 3. Sur votre terminal local, il faut transmettre le port serveur 8887 vers un port local de votre machine (disons le port 8888).
-    Pour cela j'utilise les tunels ssh:
+    Pour cela j'utilise les tunnels ssh:
     ```bash
     ssh -N -f -L 8888:localhost:8887 <login>@<adresse_serveur>
     ```
 4. Utiliser votre navigateur local et pour aller sur [localhost:8888/](localhost:8888/).
-    Ensuite entrez votre mot de passe créé en étape 1.
+    Ensuite, entrez votre mot de passe créé en étape 1.
 
 5. Profitez
 

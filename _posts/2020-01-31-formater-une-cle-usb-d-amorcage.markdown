@@ -43,7 +43,7 @@ sudo dd if=/dev/zero of=/dev/sda bs=4k conv=fsync && alert
 ```
 
 Et c'est fini.
-Maintenant vous pouvez utiliser votre interface favorite pour formater votre clé usb.
+Maintenant, vous pouvez utiliser votre interface favorite pour formater votre clé usb.
 La commande `&& alert` n'est pas nécessaire.
 Si vous voulez comprendre son intérêt, je vous suggère de regarder mon [article de blog sur la configuration bash](http://website.vincent-roger.fr/astuces/dev/2019/09/23/multiplexeur-de-terminaux.html).
 

@@ -11,22 +11,23 @@ lang: fr
 J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](astuces/dev/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).
 À ce moment, j'étais dans l'impossibilité d'utiliser les clés SSH sur les serveurs d'Overleaf (et c'est toujours le cas au moment où j'écris).
 Cela m'a aidé pour ce cas particulier.
-Néanmoins, cette astuce ne marche que pour les serveurs git et n'est pas le meilleur moyen pour automatiser ses connexions (au moins de mon point de vue).
+Néanmoins, cette astuce fonctionne uniquement pour les serveurs git.
+De plus, ce n'est pas le meilleur moyen pour automatiser ses connexions (au moins de mon point de vue).
 Aujourd'hui, nous allons voir comment utiliser les clés SSH pour automatiser plusieurs étapes d'identifications.
 
 Dans cet article de blogue, nous allons voir deux cas d'utilisation:
 * Identification automatique à des serveurs utilisant le protocole SSH.
 * Identification automatique lors de commandes push/push sur des serveurs git (comme GitHub ou GitLab).
 
-Les clés SSH sont composés d'une clé publique pour encoder les messages (destiné aux serveurs) et une clé privée afin de lire ces messages (destiné pour le client du serveur).
+Les clés SSH sont composées d'une clé publique pour encoder les messages (destiné aux serveurs) et une clé privée afin de lire ces messages (destiné pour le client du serveur).
 Si vous voulez plus d'information sur ce protocole, allez voir [ici](https://delicious-insights.com/fr/articles/comprendre-et-maitriser-les-cles-ssh/).
 
 La distribution utilisée (et testée) pour ce tutoriel est Kubuntu 20.04 LTS (ma nouvelle distribution, mais c'est pour un futur article de blogue).
 
 # Préparer le côté client
 
-Dans cette section nous allons préparer le client qu'il puisse s'identifier automatiquement sur les serveurs.
-D'abord, créons une paire de clés publique et privé.
+Dans cette section, nous allons préparer le client qu'il puisse s'identifier automatiquement sur les serveurs.
+D'abord, créons une paire de clés publique et privée.
 Enfin, nous démarrerons l'agent de clés SSH pour le configurer avec la clé privée.
 
 ## Vérifiez la présence d'une paire de clés SSH
@@ -38,7 +39,7 @@ Je préfère garder une paire de clés par machine (et en changer régulièremen
 
 ## Générer une paire de clés SSH
 
-Pour générer une paire de clés liés à une adresse email (pour mieux identifier l'utilisateur connecté) vous devez écrire la ligne suivante: 
+Pour générer une paire de clés liées à une adresse email (pour mieux identifier l'utilisateur connecté) vous devez écrire la ligne suivante: 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
@@ -55,7 +56,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-Maintenant nous avons une paire de clé privée et publique ainsi que l'agent de clé SSH de configuré.
+Maintenant, nous avons une paire de clés privée et publique ainsi que l'agent de clé SSH de configurés.
 Nous sommes prêts pour automatiser les identifications SSH vers des serveurs SSH et/ou serveur git.
 
 # Configurer vos serveurs SSH
@@ -66,7 +67,7 @@ Avant ça, assurez-vous que votre espace utilisateur distant contienne le dossie
 ssh <identifiant>@<adresse_serveur> mkdir -p .ssh
 ```
 
-Ensuite vous devez ajouter votre clé publique dans le fichier des clés autorisées de vos serveurs:
+Ensuite, vous devez ajouter votre clé publique dans le fichier des clés autorisées de vos serveurs:
 ```bash
 cat ~/.ssh/id_rsa.pub | ssh <identifiant>@<adresse_serveur> 'cat >> .ssh/authorized_keys'
 ```
@@ -89,9 +90,9 @@ Ensuite, c'est aussi simple que suit:
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-Après, suivez les étapes de ce [lien](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) (en anglais, mais est très bien illustré) pour GitHub et de cet autre [lien](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account) (en anglais, mais la documentation officielle n'est pas traduite en français) pour GitLab.
+Après, suivez les étapes de ce [lien](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) (en anglais, mais très bien illustré) pour GitHub et de cet autre [lien](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account) (en anglais, mais la documentation officielle n'est pas traduite en français) pour GitLab.
 
-Maintenant votre configuration est prête pour votre serveur Git.
+Maintenant, votre configuration est prête pour votre serveur Git.
 La prochaine sous-section expliquera comment tester cette configuration sans avoir à modifier l'un de vos répertoires.
 
 ## Tester votre configuration

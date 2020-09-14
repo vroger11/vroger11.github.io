@@ -9,7 +9,7 @@ lang: fr
 ---
 
 Cet article de blogue est focalisé sur la configuration de bash.
-J'utilise bash car c'est le shell par défaut dans la plupart des distributions Linux.
+J'utilise bash, car c'est l'interpréteur de commandes par défaut dans la plupart des distributions Linux.
 Je l'utilise quotidiennement et après quelques réglages il me convient mieux.
 Dans cet article de blogue, je vais décrire mes habitudes et comment je configure mon bash.
 
@@ -19,7 +19,8 @@ Avant faisons la revue de la configuration de base d'Ubuntu.
 
 ## Complétion par défaut
 La complétion dans le terminal est essentielle pour gagner en productivité.
-Dans le shell bash par défaut d'Ubuntu, il s'active par l'appui de la touche tabulation.
+L'interpréteur de commandes par défaut d'Ubuntu est bash.
+Sous cet interpréteur, la complétion s'active par l'appui de la touche tabulation.
 Cette complétion est activée par défaut sur une multitude d'applications, comme la complétion de commandes (`apt ins<Tab>` donne `apt install `) ou de dossiers/fichiers.
 Néanmoins, le comportement par défaut de complétion me semble non naturel.
 Si vous appuyez de multiples fois sur la touche tabulation, vous finissez toujours avec la même liste de possibilités répétées le nombre de fois que vous appuyez sur la touche.
@@ -30,7 +31,7 @@ Dans la prochaine section nous verrons comment configurer bash pour qu'il soit p
 
 ## La recherche récursive
 
-Pour accéder aux commandes précédemment écrites dans le terminal vous pouvez utiliser la touche flèche vers le haut.
+Pour accéder aux commandes précédemment écrites dans le terminal, vous pouvez utiliser la touche flèche vers le haut.
 Si vous connaissez une partie de la commande que vous voulez réutiliser (et que cette commande n'a pas été écrite récemment) vous pouvez utiliser le mode récursif.
 Pour entrer dans le mode récursif, vous devez taper les touches Ctrl+R et écrire les premières lettres de votre choix (`ssh` par exemple).
 Le résultat est la première commande correspondant à votre recherche de votre historique bash.
@@ -64,7 +65,7 @@ cp ~/.bashrc ~/.bashrc_back
 
 ## Personnaliser l'invité de commandes
 C'est la partie cosmétique, mais comme vous allez voir l'invité de commandes à chaque ligne que vous écrivez autant qu'il vous convienne.
-Pour le personnaliser il vous faut changer la variable PS1.
+Pour le personnaliser, il vous faut changer la variable PS1.
 La mienne est comme suit:
 ```bash
 PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\H:\[$(tput sgr0)\]\[\033[38;5;32m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
@@ -112,7 +113,7 @@ bind 'set colored-stats on'
 ```
 
 De plus, menu-complete permet d'aller dans le sens inverse du cycle de suggestion (dans le cas où vous avez sauté la suggestion désirée).
-J'ai lié ce comportement à l'appuis de la touche ² (car elle est au-dessus de la touche de tabulation d'un clavier AZERTY).
+J'ai lié ce comportement à l'appui de la touche ² (car elle est au-dessus de la touche de tabulation d'un clavier AZERTY).
 Pour cela il faut ajouter les lignes suivantes:
 
 ```bash
