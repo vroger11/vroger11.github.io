@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="439.31763pt"
+   width="438.0434pt"
    height="78.923279pt"
    version="1.1"
    id="svg316"
    sodipodi:docname="listener_understanding_fr.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    inkscape:export-filename="/home/vroger/git/vroger11.github.io/assets/images/raw/listener_understanding_fr.svg.jpeg.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
@@ -219,15 +219,6 @@
      stroke-miterlimit="2.00000000000"
      id="shape2"
      sodipodi:nodetypes="cc" />
-  <text
-     xml:space="preserve"
-     x="472.11136"
-     y="29.372086"
-     font-size="12"
-     font-weight="400"
-     font-style="normal"
-     id="text279"
-     style="font-style:normal;font-weight:400;font-size:14.55935955px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.21327996;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Message compris</text>
   <path
      style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;marker-end:url(#marker2451)"
      inkscape:connector-curvature="0"
@@ -242,4 +233,30 @@
      stroke-miterlimit="2.00000000000"
      id="shape4"
      sodipodi:nodetypes="cc" />
-</svg>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:0.5;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="469.66071"
+     y="22.820385"
+     id="text38"><tspan
+       sodipodi:role="line"
+       x="469.66071"
+       y="22.820385"
+       id="tspan40"
+       style="font-size:14.66666698px;line-height:0.5">Message compris</tspan><tspan
+       sodipodi:role="line"
+       x="469.66071"
+       y="43.472832"
+       style="font-size:14.66666698px;line-height:0.5"
+       id="tspan52">par l'auditeur</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot42"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion44"><rect
+         id="rect46"
+         width="506.46548"
+         height="118.41531"
+         x="219.22835"
+         y="-21.985409" /></flowRegion><flowPara
+       id="flowPara48"></flowPara></flowRoot></svg>
