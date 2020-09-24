@@ -38,7 +38,7 @@ Le dernier point correspond au focus de ma thèse.
 Par conséquent, mon système doit fonctionner sur de la parole pathologique et non pathologique.
 
 Pour atteindre cet objectif, j'ai accès au [corpus C2SI](https://www.researchgate.net/publication/333132284_Construction_of_an_automatic_Carcinologic_Speech_Severity_Index_C2SI_score).
-Il contient environ 2 heures d'enregistrement de plusieurs tâches (lecture, parole spontanée, A maintenue...).
+Il contient environ 2 heures d'enregistrements de plusieurs tâches (lecture, parole spontanée, A maintenue...).
 Tous les sujets sont des Français et parlent couramment le Français.
 Le corpus C2SI est composé d'enregistrements de patients (souffrant de cancers buccaux) et d'un groupe contrôle (participants n'ayant pas de trouble de la parole)
 Plus important encore, dans ce corpus, nous avons accès à une évaluation subjective de l'intelligibilité de chaque participant.
