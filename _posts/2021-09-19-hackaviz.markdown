@@ -1,0 +1,38 @@
+---
+layout: post
+comments: true
+title:  "Hackaviz 2021"
+ref: hackaviz-2021
+date:   2021-09-19 08:00:00 +0200
+categories: blog dev
+lang: en
+---
+
+In this new blog post, I will present you my participation to the [Hackaviz 2021](https://github.com/ToulouseDataViz/Hackaviz2021).
+The Hackaviz is a contest organized by the data visualization association called [Toulouse dataviz](http://toulouse-dataviz.fr/). It consists in telling a story using data from Toulouse.
+
+I have fun making data visualizations in my free time, so I participated solo.
+The code I used will be available in a few days.
+In this blog post, I will reveal the story I wanted to tell through my work.
+
+# Results
+
+The Occitanie region is a sunny region with its capital city being Toulouse.
+It is therefore expected to be the most dynamic city in terms of land transactions between the years 2016 and 2020.
+
+Let's see this through my realization:
+
+{% include hackaviz2021/en_result.html %}
+
+Being an interactive figure feel free to move your mouse over the colored regions to get more details (the number of transactions per type and the average value of these transactions).
+
+Thus, Toulouse is not the city (among the cities for which data is available) with the most land transactions. Montpellier (capital of the former Languedoc-Roussillon region) and Nîmes are slightly ahead (2332 for Toulouse vs. 2481 for Montpellier vs. 2729 for Nîmes). While Béziers with its 4251 transactions is largely ahead of the other cities.
+Looking at this graph in more detail, we can see that, with the exception of Toulouse, the most dynamic cities are those close to the Mediterranean Sea. The average value of transactions in this area is generally higher than in the less dynamic cities.
+
+Thus, the Mediterranean basin is an attractive area for real estate activities.
+
+
+I hope this will help/inspire some of you.
+In any case, I hope it has been interesting.
+
+See you again, Vincent.
