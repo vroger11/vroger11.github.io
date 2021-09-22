@@ -12,7 +12,7 @@ Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[H
 L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](http://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données Toulousaines mises à disposition.
 
 M'amusant à faire des visualisations de données sur mon temps libre, j'y ai donc participé en solo.
-Le code que j'ai utilisé sera disponible dans quelques jours.
+Le code que j'ai utilisé est disponible [ici](https://github.com/vroger11/hackaviz2021).
 Dans cet article de blog, je vais vous révéler l'histoire que j'ai souhaité raconter à travers mon travail.
 
 # Résultats
