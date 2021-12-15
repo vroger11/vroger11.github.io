@@ -8,7 +8,7 @@ categories: blogue automatisation
 lang: fr
 ---
 
-J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](astuces/dev/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).
+J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](/astuces/dev/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).
 À ce moment, j'étais dans l'impossibilité d'utiliser les clés SSH sur les serveurs d'Overleaf (et c'est toujours le cas au moment où j'écris).
 Cela m'a aidé pour ce cas particulier.
 Néanmoins, cette astuce fonctionne uniquement pour les serveurs git.
