@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Badaboom (partie 2) - Fireballs"
+title:  "Badaboom (part 2) - Fireballs"
 ref: fireballs
 date:   2021-12-15 8:00:00 +0200
 categories: blog dev
