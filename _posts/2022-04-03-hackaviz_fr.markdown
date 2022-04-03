@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Hackaviz 2022"
 ref: hackaviz-2022
-date:   2022-04-03 23:00:00 +0200
+date:   2022-04-03 20:00:00 +0200
 categories: blog dev
 lang: fr
 ---
@@ -12,7 +12,7 @@ Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[H
 L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](http://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données mises à disposition.
 
 M'amusant à faire des visualisations de données sur mon temps libre, j'y ai donc participé en solo.
-Vous trouverez ma participation à l'année précédente [ici]().
+Vous trouverez ma participation à l'année précédente [ici](/blogue/dev/2021/09/19/hackaviz_fr.html).
 Le code que j'ai utilisé sera disponible d'ici peu.
 
 # Résultats
