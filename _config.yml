@@ -25,7 +25,7 @@ index:
     fr: accueil.html
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: http://vroger11.github.com
 twitter_username: vroger11
 github_username:  vroger11
 linkedin_username: vroger11
@@ -39,8 +39,6 @@ plugins:
 
 disqus:
     shortname: vroger11
-
-url: http://vroger11.github.com
 
 # Exclude from processing.
 # The following items will not be processed, by default.
