@@ -7,38 +7,24 @@ lang: fr
 ref: home
 ---
 
-Je suis un étudiant en thèse dans le domaine de la science des données à L'IRIT (Toulouse).
-J'ai aussi démarré un blogue, [c'est par ici](blogue).
+Je suis un doctorant en science des données à L'IRIT (Toulouse).
+Je tiens également un blogue sur des visualisations que je réalisés, sur la recherche que j'effectue et sur des astuces autour de Linux. [C'est par ici](blogue).
 
-# Mes intérêts de recherche
+# Mes intérêts
+* Je me concentre sur les algorithmes d'apprentissage automatique pour modéliser les connaissances avec peu ou beaucoup de données.
+Plus spécifiquement, j'aime utiliser l'apprentissage auto-supervisé pour extraire des connaissances à partir de données.
 
-Je suis focalisé sur les algorithmes d'apprentissage par machine capables d'extraire des concepts à partir des données.
-Plus précisément, je suis intéressé par l'apprentissage non supervisé.
+* Dans ma thèse, j'ai adapté des techniques de réseaux neuronaux profonds dans un contexte de quelques images pour les signaux vocaux.
+Pour en savoir plus, consultez [mon article sur le bilan de ma première année de doctorat](/these/2019/10/12/revue-de-ma-premiere-annee-de-these.html).
 
-Durant ma thèse, je vais adapter les techniques d'apprentissage profond pour des signaux de parole dans le cadre de peu de données.
-Pour avoir plus d'informations dessus, n'hésitez pas à regarder [la revue de ma première année en tant que thésard](/these/2019/10/12/revue-de-ma-premiere-annee-de-these.html).
-
-# Me contacter
-*  **Courriels:**
-
-    <mailto:Vincent.Roger@irit.fr>
-
-    <mailto:roger.vincent.11@gmail.com>
-
-*  **Adresse:**
-
-    IRIT UMR 5505 - Équipe SAMOVA
-
-    118, Route de Narbonne
-
-    31062 Toulouse Cedex 9
+* Je fais de l'analyse de données pour produire des visualisations (la plupart d'entre elles sont disponibles sur mon blogue) et je participe à certaines projets open sources.
 
 # Résumé
 
-Je suis actuellement encadré par [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
+Pour ma thèse, je suis encadré par [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
 Ma thèse consiste à réaliser un Système Automatique de Mesure de l'Intelligibilité (SAMI).
-Cela inclut l'utilisation de données médicales, l'utilisation d'algorithmes d'apprentissage modernes (comme les réseaux de neurones profonds ou les modèles statistiques) et de l'analyse de données.
 
-J'ai obtenu mon master Intelligence Artificielle en 2015 à l'université Paul Sabatier (Toulouse, France).
+Les personnes atteintes de cancers ORL présentent des difficultés de prononciation après des chirurgies ou des radiothérapies. Il est important pour le praticien de pouvoir disposer d’une mesure reflétant la sévérité de la parole. Je propose deux approches pour créer une mesure automatique, bien que ne disposant que de peu de données (environ 1h d’enregistrements audio pour 128 locuteurs). La première est fondée sur des méthodes de “few shot”, tandis que la seconde est fondée sur la mesure entropique de caractéristiques de la parole (apprises avec un modèle auto-supervisé sur un corpus annexe). Nos résultats sur cette dernière ont permis d'envisager une application médicale.
+Ainsi, j'ai obtenu une subvention pour encadrer un ingénieur afin de réaliser une application livrée au CHU de Toulouse.
 
 Vous pouvez retrouver mon résumé au complet [ici](/assets/cv/cv_fr.pdf) ou aller sur mon [LinkedIn](https://www.linkedin.com/in/vroger11/).

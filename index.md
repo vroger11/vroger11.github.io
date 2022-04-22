@@ -7,38 +7,26 @@ lang: en
 ref: home
 ---
 
-I am a PhD student in Data Science at IRIT (Toulouse), I also started a blog [check it out](blog).
+I am a PhD student in data science at L'IRIT (Toulouse).
+I also keep a blog about visualizations I make, research I do and tips around Linux. [Check it out](blog).
 
-# Research interests
+# Interests
 
-I am focused on machine learning algorithms that can extract concepts from data.
-More specifically in unsupervised learning using techniques such as feature learning or attention learning.
+* I am focused on machine learning algorithms to model knowledge with few or many data.
+More specifically I like to use self-supervised learning to extract knowledge from data.
 
-In my thesis I will adapt Deep Neural Networks techniques in a few-shots context for speech signals.
+* In my thesis I adapted Deep Neural Networks techniques in a few-shots context for speech signals.
 To have more information about it, look into [my first-year review as a PhD student post](/phd/2019/10/12/first-year-review-as-a-phd-student.html).
 
-# Contact
-*  **Emails:**
-
-    <mailto:Vincent.Roger@irit.fr>
-
-    <mailto:roger.vincent.11@gmail.com>
-
-*  **Address:**
-
-    IRIT UMR 5505 - Equipe SAMOVA
-
-    118, Route de Narbonne
-
-    31062 Toulouse Cedex 9
+* I do data analysis to produce some visualizations (most of them are available in my blog) and I participate to some open source.
 
 # Summary
 
-I am currently a PhD student and my advisors are [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/index_en.php) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
-The project consists in creating an Automatic System of Intelligibility Measurement (SAMI in French).
-It involves using clinical data, use of recent machine learning algorithms (such as Deep Neural Network or Statistical models) and some data analysis.
+For my PhD, my advisors are [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/index_en.php) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
+The project consists in creating measure to assess speech severity index.
 
-I obtained my Master Degree in computer science (Artificial Intelligence, Pattern Recognition and Robotics) in 2015 at Paul Sabatier (Toulouse, France).
+People with ENT cancers have speech difficulties after surgery or radiation therapy. It is important for the practitioner to have a measure that reflects the severity of speech. I propose two approaches to create an automatic measure, although with little data (about 1h of audio recordings for 128 speakers). The first one is based on "few shot" methods, while the second one is based on entropic measurement of speech features (learned with a self-supervised model on an annexed corpus). Our results on the latter have allowed us to consider a medical application.
+Thus, I obtained a grant to supervise an engineer in order to realize an application delivered to the Toulouse University Hospital.
 
 You can find my full CV [here](/assets/cv/cv_en.pdf) or look at my [LinkedIn](https://www.linkedin.com/in/vroger11/) account.
 
