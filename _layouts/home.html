@@ -15,7 +15,11 @@ layout: default
     {% assign posts=site.posts | where:"lang", page.lang %}
       {%- for post in posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- if page.lang == "fr" -%}
+          {%- assign date_format = "%-d %b %Y" -%}
+        {%- else -%}
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- endif -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
