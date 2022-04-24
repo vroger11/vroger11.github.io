@@ -25,10 +25,11 @@ index:
     fr: accueil.html
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://vroger11.github.com
+url: https://vroger11.github.com
 twitter_username: vroger11
 github_username:  vroger11
 linkedin_username: vroger11
+repository: vroger11/vroger11.github.io
 
 # Build settings
 markdown: kramdown
