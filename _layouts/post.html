@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class='post h-entry' itemscope itemtype='http://schema.org/BlogPosting'>
 
-  <header class="post-header">
-    <!-- <script type="text/javascript">
+  <header class='post-header'>
+    <script type='text/javascript'>
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var months_fr = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Aoû','Sep','Oct','Nov','Déc'];
+
       function lastModifiedDate() {
       if (document.getElementById('last-modified')) {
         fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
@@ -14,17 +17,25 @@ layout: default
           .then((commits) => {
             var modified = commits[0]['commit']['committer']['date'].slice(0,10);
             if(modified != "{{ page.date | date: "%Y-%m-%d" }}") {
-              return modified;
+              var year = modified.slice(0, 4);
+              var month = modified.slice(5, 7);
+              var day =  modified.slice(8, 10);
+              if ("{{ page.lang }}" === 'fr') {
+                document.getElementById('last-modified').innerHTML = 'Dernière modification: '.bold() + day + ' ' + months_fr[parseInt(month) - 1] + ' ' + year + '.';
+              } else {
+                document.getElementById('last-modified').innerHTML = 'Last modification: '.bold() + months[parseInt(month) - 1] + ' ' + day + ', ' + year + '.';
+              }
             }
-          });
+          })
       }
     }
-    </script> -->
+    </script>
 
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- if page.lang == "fr" -%}
+
+    <h1 class='post-title p-name' itemprop='name headline'>{{ page.title | escape }}</h1>
+    <p class='post-meta'>
+      <time class='dt-published' datetime='{{ page.date | date_to_xmlschema }}' itemprop='datePublished'>
+        {%- if page.lang == 'fr' -%}
           {%- assign date_format = "%-d %b %Y" -%}
         {%- else -%}
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -32,24 +43,20 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        • <span itemprop='author' itemscope itemtype='http://schema.org/Person'><span class='p-author h-card' itemprop='name'>{{ page.author }}</span></span>
       {%- endif -%}</p>
-      <!-- <p>
-        {%- if page.lang == "fr" -%}
-          <b>Dernière modification:</b> <script>lastModifiedDate();</script>.
-        {%- else -%}
-          <b>Last modification:</b> <script>lastModifiedDate();</script>.
-        {%- endif -%}
-      </p> -->
+      <p><span id='last-modified'></span></p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  <body onload="lastModifiedDate();">
+    <div class='post-content e-content' itemprop='articleBody'>
+      {{ content }}
+    </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
+  </body>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <a class='u-url' href="{{ page.url | relative_url }}" hidden></a>
 </article>
