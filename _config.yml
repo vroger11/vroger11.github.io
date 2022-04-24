@@ -36,10 +36,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jemoji
-  - jekyll-last-modified-at
-
-last-modified-at:
-    date-format: '%d-%b-%y'
+  - jekyll-github-metadata
 
 disqus:
     shortname: vroger11
