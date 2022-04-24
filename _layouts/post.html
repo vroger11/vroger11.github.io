@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <script type="text/javascript">
-      function setModifiedDate() {
+      function lastModifiedDate() {
       if (document.getElementById('last-modified')) {
         fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
           .then((response) => {
@@ -14,7 +14,7 @@ layout: default
           .then((commits) => {
             var modified = commits[0]['commit']['committer']['date'].slice(0,10);
             if(modified != "{{ page.date | date: "%Y-%m-%d" }}") {
-              document.getElementById('last-modified').textContent = modified;
+              return modified;
             }
           });
       }
@@ -36,9 +36,9 @@ layout: default
       {%- endif -%}</p>
       <p>
         {%- if page.lang == "fr" -%}
-          <b>Dernière modification:</b> <script>setModifiedDate();</script>.
+          <b>Dernière modification:</b> <script>lastModifiedDate();</script>.
         {%- else -%}
-          <b>Last modification:</b> <script>setModifiedDate();</script>.
+          <b>Last modification:</b> <script>lastModifiedDate();</script>.
         {%- endif -%}
       </p>
   </header>
