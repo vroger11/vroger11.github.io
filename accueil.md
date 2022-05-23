@@ -8,6 +8,7 @@ ref: home
 ---
 
 Je suis un doctorant en science des données à L'IRIT (Toulouse).
+Je travaille sur des corpus avec une quantité limitée de parole altérée.
 Je tiens également un blogue sur des visualisations que je réalisés, sur la recherche que j'effectue et sur des astuces autour de Linux. [C'est par ici](blogue).
 
 # Mes intérêts

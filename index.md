@@ -8,6 +8,7 @@ ref: home
 ---
 
 I am a PhD student in data science at L'IRIT (Toulouse).
+I am working on corpora with a limited amount of impaired speech.
 I also keep a blog about visualizations I make, research I do and tips around Linux. [Check it out](blog).
 
 # Interests
