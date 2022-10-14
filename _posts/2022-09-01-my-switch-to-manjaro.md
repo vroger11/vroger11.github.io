@@ -8,7 +8,7 @@ categories: blog
 lang: en
 ---
 
-I started my KDE adventure with Fedora (for 6 months) where the graphical interface was buggier than KDE Neon where I stayed for a bout a year and finished into Kubuntu LTS with flatpaks apps. It has been three years I was using Kubuntu, while I enjoy some of its aspects (LTS, based on Ubuntu packages, easy to configure and with many resources) my day-to-day experience was inconvenient. Every time I updated my NVIDIA drivers I feared to get unusable GUI (totally black screen with only tty terminals available) because even if all required packages for the NVIDIA driver are not in the repositories, the installation is done by apt. Even worse, those missing files can take 1 week to get in the repositories. Less game changer, but also annoying, snap is forced via apt in Ubuntu distribution (like `apt install firefox` or `apt install chromium` results in a snap install). Finally, having a really outdated KDE environment is not ideal if you want to benefit from last bug fixes of the environment (their team is making good effort to address many bugs and to improve the user experience, you can look into \[Nate’s blog\](https://pointieststick.com/author/pointieststi,ck/) to have a preview of their efforts).
+I started my KDE adventure with Fedora (for 6 months) where the graphical interface was buggier than KDE Neon where I stayed for a bout a year and finished into Kubuntu LTS with flatpaks apps. It has been three years I was using Kubuntu, while I enjoy some of its aspects (LTS, based on Ubuntu packages, easy to configure and with many resources) my day-to-day experience was inconvenient. Every time I updated my NVIDIA drivers I feared to get unusable GUI (totally black screen with only tty terminals available) because even if all required packages for the NVIDIA driver are not in the repositories, the installation is done by apt. Even worse, those missing files can take 1 week to get in the repositories. Less game changer, but also annoying, snap is forced via apt in Ubuntu distribution (like `apt install firefox` or `apt install chromium` results in a snap install). Finally, having a really outdated KDE environment is not ideal if you want to benefit from last bug fixes of the environment (their team is making good effort to address many bugs and to improve the user experience, you can look into [Nate’s blog](https://pointieststick.com/author/pointieststi,ck/) to have a preview of their efforts).
 
 # My requirements
 
@@ -60,15 +60,15 @@ In the two remaining subsections, I expose a more detailed feedback by listing a
 ### Disadvantages
 
 - AUR packages can break on some update. It happens as it is not an official source of packages supported by the Manjaro team (but having access to them is very handy). As I use official packages first, then flatpak apps and as a last resort AUR packages I have few AUR apps, and it is not a dealbreaker for me. Nevertheless, solutions to solve this problem can be:
-    
+
     - Delay an AUR package update to comply with its dependencies from Manjaro’s repositories (as they usually come later in Manjaro than in Arch). I did not need to do this in my usage.
-        
+
     - You may need to manually start a rebuild of an AUR package(`pamac remove <package>` then `pamac build <package>`) after a dependency update from Manjaro’s repositories. It occurred once to me until now.
-        
+
 - Some updates can break some of your config files (as format can change with new major releases). It can happen between each Kubuntu LTS upgrade, but now I am on an Arch based distribution, it can occur each update (for each specific config you set on your system). In practice, it only occurred to me once due to a gnome-keyring update (which I hopefully will be able to get rid of with plasma 5.26, as kwallet will implement the missing protocols handled by gnome-keyring). A good habit to solve those kinds of problems is to follow the [official Manjaro releases feed (it is a RSS one)](https://forum.manjaro.org/c/announcements/stable-updates/12). There, they describe the updates with possible problems and most of the time solutions to solve them. As each release is associated to a post on the Manjaro’s forum, you can ask the community for help (if there is not yet a solution 😄).
-    
+
 - You can’t use discover to install and update for new applications. I was used to this, and it integrates well in the KDE environment. But on Arch based systems, using it can break your system. Fortunately, there is a similar manager on Manjaro which fills all my needs (search for apps, packages and handle flatpaks). Except it uses a gtk UI instead of a qt one, so it is a minor issue.
-    
+
 
 # Problems I got and solutions:
 
@@ -130,7 +130,7 @@ WantedBy=bluetooth.service
 Then, add the following script in `/usr/local/bin/fix-mouse-lag.sh` that will be run by our service on every boot/wake:
 
 ```bash
-#!/bin/sh 
+#!/bin/sh
 
 echo 0 > /sys/kernel/debug/bluetooth/hci0/conn_latency
 echo 6 > /sys/kernel/debug/bluetooth/hci0/conn_min_interval
@@ -176,9 +176,9 @@ flatpak -y install org.gtk.Gtk3theme.Breeze-Dark
 # Sources
 
 - [AUR usage in Manjaro](https://forum.manjaro.org/t/howto-use-aur/116934)
-    
+
 - [Enable Bluetooth at startup](https://archived.forum.manjaro.org/t/enable-bluetooth-at-login-screen-system-boot/146842)
-    
+
 - [Reduce mouse input lags](https://archived.forum.manjaro.org/t/bluetooth-mouse-lag/99386/43)
-    
+
 - [Address flatpak theming issue (by your servant)](https://forum.manjaro.org/t/add-out-of-the-box-flatpak-gtk-application-themes-for-kde-plasma-users/117103)
