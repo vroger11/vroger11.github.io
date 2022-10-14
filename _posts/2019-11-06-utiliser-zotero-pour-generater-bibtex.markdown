@@ -4,7 +4,7 @@ comments: true
 title:  "Utiliser Zotero pour générer des fichiers BibTeX pour vos papiers"
 ref: using_zotero
 date:   2019-11-06 12:00:00 +0200
-categories: astuces
+categories: blogue
 lang: fr
 ---
 
@@ -42,7 +42,7 @@ Pour être capable d'utiliser toutes les fonctionnalités présentées dans cet 
 
   Pour l'installer, allez sur la page d'extension pour [Chrome](https://chrome.google.com/webstore/detail/ekhagklcjbdpajgpjgmbionohlpdbjgc) (compatible avec les navigateurs basés sur chromium) ou pour [Firefox](https://www.zotero.org/download/connectors).
 
-* Zotero possède un système d'extensions, j'en utilise une en particulier: Better BibTeX. 
+* Zotero possède un système d'extensions, j'en utilise une en particulier: Better BibTeX.
 
   Pour l'installer il vous faut:
   1. Télécharger le [dernier fichier xpi](https://github.com/retorquere/zotero-better-bibtex/releases/latest).
@@ -52,12 +52,12 @@ Pour être capable d'utiliser toutes les fonctionnalités présentées dans cet 
 
 Avant tout, je vous recommande de créer un compte sur le site de Zotero.
 Cela vous aidera à synchroniser votre librairie sur tous vos appareils (dans mon cas mon ordinateur personnel et professionnel).
-Pour vous connecter dans l'application, aller dans `Edit` -> `Preferences` -> l'onglet `Sync`. 
+Pour vous connecter dans l'application, aller dans `Edit` -> `Preferences` -> l'onglet `Sync`.
 
 Maintenant, vous pouvez utiliser votre navigateur internet pour chercher vos papiers sur le net (sur [arXiv](https://arxiv.org/) par exemple).
 Lorsque vous voulez ajouter un papier dans votre collection, cliquer sur l'icône du connecteur Zotero dans votre navigateur web pendant que vous visualisez le PDF désiré.
 Cela va automatiquement télécharger le papier pour une utilisation hors-ligne et extraire toutes les informations requises pour citer ce papier (Titre, auteurs, date...).
-Le téléchargement d'informations peut être modifié à tout moment si quelque chose ne convient pas. 
+Le téléchargement d'informations peut être modifié à tout moment si quelque chose ne convient pas.
 
 # Générer votre fichier BibTeX en utilisant Zotero
 

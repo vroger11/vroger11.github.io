@@ -4,7 +4,7 @@ comments: true
 title:  "Check your writing in Neovim"
 ref: check_writing
 date:   2019-10-08 07:15:00 +0200
-categories: tips
+categories: blog
 lang: en
 ---
 
@@ -74,7 +74,7 @@ In your `~/.config/nvim/init.vim` between the `call plug#begin(<plugging_folderp
 
 ```
 " Language tool integration
-Plug 'vigoux/LanguageTool.nvim'                                                                                 
+Plug 'vigoux/LanguageTool.nvim'
 ```
 
 Then, outside the vim-plug calls you have to add:
@@ -93,7 +93,7 @@ To use this plugin you first have to call `:LanguageToolSetUp` in Normal mode to
 Then, the plugin proposes the following useful commands:
 
 * `:LanguageToolCheck`: to highlight writing mistakes, you have to recall it when you change your code/text.
-* `:LanguageToolSummary`: to show details on highlighted errors in a split. 
+* `:LanguageToolSummary`: to show details on highlighted errors in a split.
 * `:LanguageToolClear`: to clear LanguageTool displays.
 
 To see more options look at the [plugin page](https://github.com/vigoux/LanguageTool.nvim).

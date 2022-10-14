@@ -4,7 +4,7 @@ comments: true
 title:  "Format a bootable USB key"
 ref: format_bootable_key
 date:   2020-01-31 12:30:00 +0200
-categories: tips
+categories: blog
 lang: en
 ---
 
@@ -17,16 +17,16 @@ This is the steps I have to do to be able to modify this USB key using one of th
 
 First type the following command:
 
-```bash 
+```bash
 lsblk
 ```
 
 It gives you an output like this:
 ```bash
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-sda           8:0    1  28,7G  0 disk 
+sda           8:0    1  28,7G  0 disk
 └─sda1        8:1    1  28,6G  0 part /media/vincent/Kde Neon
-nvme0n1     259:0    0 126,9G  0 disk 
+nvme0n1     259:0    0 126,9G  0 disk
 ├─nvme0n1p1 259:1    0   512M  0 part /boot/efi
 └─nvme0n1p2 259:2    0 126,4G  0 part /
 ```
@@ -43,7 +43,7 @@ sudo dd if=/dev/zero of=/dev/sda bs=4k conv=fsync && alert
 ```
 
 Now you can use your favorite graphical interface to format your key.
-The `&& alert` command is not necessary. If you want to understand what it is, I suggest you to look at [my post about my bash configuration](http://website.vincent-roger.fr/tips/dev/2020/01/29/improve-your-bash-navigation.html).
+The `&& alert` command is not necessary. If you want to understand what it is, I suggest you to look at [my post about my bash configuration](/blog/dev/2020/01/29/improve-your-bash-navigation.html).
 
 Hope it helps some of you, it surely helps me :smile:.
 

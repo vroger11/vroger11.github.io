@@ -12,7 +12,7 @@ lang: fr
 Lors d'un précédent article de blogue, j'ai annoncé l'aperçu de ma librairie Audio Loader.
 Elle prépare des batchs d'audios pour des librairies de réseaux de neurones (La librairie se trouve [ici](https://github.com/vroger11/audio_loader)).
 Pour cette librairie j'avais planifié de créer un site internet de documentation.
-Une version préliminaire est maintenant disponible [ici](http://website.vincent-roger.fr/audio_loader/).
+Une version préliminaire est maintenant disponible [ici](https://website.vincent-roger.fr/audio_loader/).
 Comme Audio Loader est une librairie Python, j'ai choisi [Sphinx](https://www.sphinx-doc.org/) pour générer la documentation de cette librairie.
 Sphinx utilise le format de fichier reStructuredText pour créer la documentation.
 Néanmoins, je préfère la syntaxe du markdown qui est plus simple et que j'utilise plus souvent.
@@ -37,7 +37,7 @@ Maintenant, nous avons tout le nécessaire pour créer notre documentation :smil
 
 ## Créer les fichiers initiaux
 
-Sphinx organise la documentation en 3 éléments: 
+Sphinx organise la documentation en 3 éléments:
 - un fichier de compilation pour générer la documentation
 - les fichiers sources contenant les instructions pour générer la documentation
 - la documentation résultante (fichier pdf, pages html, ...)
@@ -69,12 +69,12 @@ Néanmoins pour les cas où les fichiers rst sont nécessaires (comme `index.rst
 Par conséquent, c'est ce que je vais expliquer dans cette partie.
 
 ## Lier un fichier rst à l'aide du doctree
-Pour rajouter un lien vers un fichier (disons `extra_document.rst`) il vous faut ajouter `extra_document` dans le doctre comme suit: 
+Pour rajouter un lien vers un fichier (disons `extra_document.rst`) il vous faut ajouter `extra_document` dans le doctre comme suit:
 
 ```rst
 .. toctree::
     :maxdepth: 2
-    
+
     extra_document
 ```
 

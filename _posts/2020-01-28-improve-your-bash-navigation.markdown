@@ -4,7 +4,7 @@ comments: true
 title:  "Improve your bash terminal experience"
 ref: improve_default_bash
 date:   2020-01-29 17:30:00 +0200
-categories: tips dev
+categories: blog dev
 lang: en
 ---
 
@@ -77,7 +77,7 @@ if [ "$color_prompt" = yes ]; then
 You have to replace the default PS1 value by yours.
 
 Create the PS1 value can be long as it uses a complex syntax.
-If you are lazy like me, you can use [ezprompt](http://ezprompt.net/).
+If you are lazy like me, you can use [ezprompt](https://ezprompt.net/).
 It is an interactive website to create PS1 value.
 
 ## PATH modifications

@@ -4,7 +4,7 @@ comments: true
 title:  "Ajustements sur votre machine pour accélérer l'apprentissage de réseaux profonds"
 ref: tips_ml_performances
 date:   2020-06-24 08:00:00 +0200
-categories: astuces dev
+categories: blogue dev
 lang: fr
 ---
 
@@ -29,7 +29,7 @@ Dans les prochaines sous-sections, je vais expliquer comment mettre l'option noa
 L'identifiant d'un disque se nomme UUID.
 Identifier l'UUID d'un disque peut se faire facilement en utilisant la commande suivante:
 ```bash
-sudo lsblk -fm 
+sudo lsblk -fm
 ```
 ## Vérifier si le disque est déjà monté
 Maintenant que nous avons l'UUID de notre disque, nous devons nous assurer qu'il ne soit pas déjà monté.

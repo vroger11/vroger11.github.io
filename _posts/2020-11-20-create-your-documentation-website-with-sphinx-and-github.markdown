@@ -12,7 +12,7 @@ lang: en
 Previously I announced a preview of the Audio Loader library.
 It prepares audio batches for Neural Network libraries (have a look [here](https://github.com/vroger11/audio_loader)).
 For this library I planned to add a documentation website.
-A preliminary version is now available [here](http://website.vincent-roger.fr/audio_loader/).
+A preliminary version is now available [here](https://website.vincent-roger.fr/audio_loader/).
 As Audio Loader is a Python library, I chose [Sphinx](https://www.sphinx-doc.org/) to generate the documentation as it is a classic with Python libraries.
 It uses the reStructuredText file format to create the documentation.
 Nethertheless, I prefer the markdown syntax as it is simpler and I use it more often.
@@ -60,17 +60,17 @@ Here I will not detail how the rst format works as I avoid it as much as I can.
 Instead, I will show you how to add documents or link documents into a rst file.
 If you want to learn how the rst format works, go [there](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
 
-I prefer to avoid using rst files as much as I can as it is possible to use markdown for most of the time. 
+I prefer to avoid using rst files as much as I can as it is possible to use markdown for most of the time.
 However, in cases where rst files are needed (such as `index.rst`) it is useful to know how to include or link files.
 Therefore this is what I will explain in this section.
 
 ## Link a rst file into a doctree
-To add a link to a file (say `extra_document.rst`) you need to add `extra_document` to the doctrine as follows: 
+To add a link to a file (say `extra_document.rst`) you need to add `extra_document` to the doctrine as follows:
 
 ```rst
 .. toctree::
     :maxdepth: 2
-    
+
     extra_document
 ```
 

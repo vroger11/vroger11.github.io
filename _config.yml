@@ -25,7 +25,7 @@ index:
     fr: accueil.html
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://vroger11.github.com
+url: https://website.vincent-roger.fr
 twitter_username: vroger11
 github_username:  vroger11
 linkedin_username: vroger11
@@ -41,6 +41,11 @@ plugins:
 
 disqus:
     shortname: vroger11
+
+feed:
+  categories:
+    - blog
+    - blogue
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -4,7 +4,7 @@ comments: true
 title:  "Tweaks on your machine to speedup Deep Learning Algorithms"
 ref: tips_ml_performances
 date:   2020-06-24 08:00:00 +0200
-categories: tips dev
+categories: blog dev
 lang: en
 ---
 
@@ -30,7 +30,7 @@ In the next subsections, I will explain how to set the option noatime to a disk 
 The id of a disk is called UUID.
 The best way I know to identify a disk UUID is to type the following command:
 ```bash
-sudo lsblk -fm 
+sudo lsblk -fm
 ```
 
 ## Check if the disk is already mounted
@@ -91,7 +91,7 @@ sudo apt install nvidia-driver-440
 
 # Use models with smaller precision
 
-By default, Deep Learning libraries (like TensorFlow or PyTorch) use 64bits floats for each variable (hence weights of models). 
+By default, Deep Learning libraries (like TensorFlow or PyTorch) use 64bits floats for each variable (hence weights of models).
 To be able to have larger batch size (in case of large models) and be able to benefit from tensor cores (on last Nvidia GPUs), you can encode the weights into 32bits or 16bits.
 
 **Note:** mixed precision (not explained here) is a better solution than fixing variable precision to 16bits.

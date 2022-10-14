@@ -16,7 +16,7 @@ Je tiens également un blogue sur des visualisations que je réalisés, sur la r
 Plus spécifiquement, j'aime utiliser l'apprentissage auto-supervisé pour extraire des connaissances à partir de données.
 
 * Dans ma thèse, j'ai adapté des techniques de réseaux neuronaux profonds dans un contexte de quelques images pour les signaux vocaux.
-Pour en savoir plus, consultez [mon article sur le bilan de ma première année de doctorat](/these/2019/10/12/revue-de-ma-premiere-annee-de-these.html).
+Pour en savoir plus, consultez [mon article sur le bilan de ma première année de doctorat](/blogue/these/2019/10/12/revue-de-ma-premiere-annee-de-these.html).
 
 * Je fais de l'analyse de données pour produire des visualisations (la plupart d'entre elles sont disponibles sur mon blogue) et je participe à certaines projets open sources.
 

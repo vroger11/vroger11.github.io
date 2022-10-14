@@ -4,7 +4,7 @@ comments: true
 title:  "Vérifier vos fautes dans Neovim"
 ref: check_writing
 date:   2019-10-08 07:15:00 +0200
-categories: astuces
+categories: blogue
 lang: fr
 ---
 
@@ -78,7 +78,7 @@ Dans votre `~/.config/nvim/init.vim` entre l'appel `call plug#begin(<plugging_fo
 
 ```
 " Language tool integration
-Plug 'vigoux/LanguageTool.nvim'                                                                                 
+Plug 'vigoux/LanguageTool.nvim'
 ```
 
 Ensuite, en dehors des appels à vim-plug vous devez ajouter les lignes suivantes:
@@ -97,7 +97,7 @@ Pour utiliser ce plug-in, vous devez faire un appel à lui dans vos documents en
 Ensuite, le plug-in propose les commandes suivantes:
 
 * `:LanguageToolCheck`: pour surligner les erreurs détectées, vous devez réutiliser cette commande lorsque vous changer votre code/texte.
-* `:LanguageToolSummary`: pour afficher des détails sur les mots surlignés dans une sous-fenêtre. 
+* `:LanguageToolSummary`: pour afficher des détails sur les mots surlignés dans une sous-fenêtre.
 * `:LanguageToolClear`: pour enlever les affichages de LanguageTool.
 
 Pour plus d'options allez sur la [page du plug-in](https://github.com/vigoux/LanguageTool.nvim).

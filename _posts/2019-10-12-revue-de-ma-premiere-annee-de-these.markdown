@@ -4,7 +4,7 @@ comments: true
 title:  "Revue de ma première année de thèse"
 ref: first_year_review
 date:   2019-10-12 17:15:00 +0200
-categories: these
+categories: blogue these
 lang: fr
 ---
 
@@ -61,7 +61,7 @@ Après quelques expériences sur le corpus C2SI, j'en tire les leçons suivantes
 Pour le moment, je ne peux obtenir plus de données (parce que cela peut être douloureux pour les patients) pour obtenir de meilleurs résultats.
 L'augmentation de données n'a pas aidé à obtenir des résultats suffisants.
 Après avoir écouté l'enregistrement de plusieurs participants, je suis maintenant capable de deviner l'intervalle de valeur de leur score obtenu.
-Cela m'a rappelé certaines de mes lectures parlant de techniques qui essayaient d'être aussi efficientes que les enfants pour apprendre de nouveaux concepts (en termes de quantité de données): les techniques dites de few-shot. 
+Cela m'a rappelé certaines de mes lectures parlant de techniques qui essayaient d'être aussi efficientes que les enfants pour apprendre de nouveaux concepts (en termes de quantité de données): les techniques dites de few-shot.
 Comme cela correspond à mon problème, j'ai commencé à faire une revue de ce domaine.
 Pour partager cette expertise acquise, j'ai commencé une revue de littérature sur les techniques de few-shot pour le traitement de la parole.
 
@@ -104,4 +104,4 @@ J’espère que cela aidera certains d’entre vous.
 À la revoyure, Vincent.
 
 
-<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/index_en.php) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)
+<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)

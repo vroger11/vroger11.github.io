@@ -10,7 +10,15 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+
+    {%- if page.lang == "fr" -%}
+      <p class="rss-subscribe">Vous pouvez vous abonner à mon flux via <a href="{{ "/feed/blogue.xml" | relative_url }}">Atom/RSS</a>.</p>
+    {%- else -%}
+      <p class="rss-subscribe">You can subscribe to my feed via <a href="{{ "/feed/blog.xml" | relative_url }}">Atom/RSS</a>.</p>
+    {%- endif -%}
+
+    <h1 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h1>
+
     <ul class="post-list">
     {% assign posts=site.posts | where:"lang", page.lang %}
       {%- for post in posts -%}
@@ -32,8 +40,6 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
 </div>

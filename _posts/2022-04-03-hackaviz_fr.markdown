@@ -9,7 +9,7 @@ lang: fr
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[Hackaviz 2022](https://github.com/ToulouseDataViz/Hackaviz2022).
-L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](http://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données mises à disposition.
+L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](https://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données mises à disposition.
 
 M'amusant à faire des visualisations de données sur mon temps libre, j'y ai donc participé en solo.
 Vous trouverez ma participation à l'année précédente [ici](/blogue/dev/2021/09/19/hackaviz_fr.html).

@@ -4,7 +4,7 @@ comments: true
 title:  "Configurations pour travailler depuis la maison"
 ref: remote_work
 date:   2020-03-18 20:00:00 +0200
-categories: astuces
+categories: blogue
 lang: fr
 ---
 
@@ -63,7 +63,7 @@ ssh <login>@<addresss_du_serveur> -p <numéro_de_port>
 Si vous voulez créer un serveur ssh ou avoir plus de détails, je vous recommande de regarder la [documentation officielle d'Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
 
 Après m'être connecté, je commence toujours (ou attache) une session tmux.
-Si vous ne connaissez pas ce qu'est tmux, allez regarder mon article de blog [ici](/astuces/dev/2019/09/23/multiplexeur-de-terminaux.html).
+Si vous ne connaissez pas ce qu'est tmux, allez regarder mon article de blog [ici](/blogue/dev/2019/09/23/multiplexeur-de-terminaux.html).
 Pour automatiser ce comportement, j'ajoute le code suivant dans mon fichier `~/.bashrc` côté serveur:
 ```bash
 # Ouvre tmux automatiquement lorsque la machine est accédé par ssh et sans serveur X

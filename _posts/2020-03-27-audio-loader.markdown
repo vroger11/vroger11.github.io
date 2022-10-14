@@ -4,7 +4,7 @@ comments: true
 title:  "Audio loader - A library to load audio features and ground truth for Deep Learning frameworks"
 ref: audio_loader
 date:   2020-03-27 12:00:00 +0200
-categories: projects
+categories: blog projects
 lang: en
 ---
 

@@ -4,7 +4,7 @@ comments: true
 title:  "Terminal multiplexers"
 ref: terminal_multiplexers
 date:   2019-09-23 8:30:00 +0200
-categories: tips dev
+categories: blog dev
 lang: en
 ---
 
@@ -99,7 +99,7 @@ If you want to know other shortcuts and how to deal with multiple sessions, I re
 
 # Bonus: Alternative for Gnome users
 
-If you want a tmux-like well configured (by default) and you use Gnome with gnome-terminal, I recommend you to check out [Byobu](http://byobu.org/).
+If you want a tmux-like well configured (by default) and you use Gnome with gnome-terminal, I recommend you to check out [Byobu](https://www.byobu.org/).
 It has a well-explained video in its home page.
 Its shortcuts do not always work on other terminals (which is a no go for me as I use Konsole terminal emulator).
 

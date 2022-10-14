@@ -4,7 +4,7 @@ comments: true
 title:  "Audio loader - Une librairie pour charger les caractéristiques audios et vérité terrain pour les librairies de Deep Learning"
 ref: audio_loader
 date:   2020-03-27 12:00:00 +0200
-categories: projets
+categories: blogue projets
 lang: fr
 ---
 

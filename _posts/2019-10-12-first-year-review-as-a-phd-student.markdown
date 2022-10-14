@@ -4,7 +4,7 @@ comments: true
 title:  "Review of my first year as a PhD student"
 ref: first_year_review
 date:   2019-10-12 17:15:00 +0200
-categories: PhD
+categories: blog PhD
 lang: en
 ---
 
@@ -40,7 +40,7 @@ To achieve my goal, I have access to the [C2SI corpus](https://www.researchgate.
 It contains around 2 hours of recording for multiple tasks (such as reading, spontaneous speech or maintained A).
 All speakers are French and are speaking French.
 The dataset contains patients (that suffer from oral cancer) and controls (which have no problems to speak).
-More importantly, in this dataset we have access to a subjective evaluation of the intelligibility for every speaker. 
+More importantly, in this dataset we have access to a subjective evaluation of the intelligibility for every speaker.
 A panel of 5 experts produced intelligibility scores valuated between 0 and 10.
 This dataset is the starting point of my thesis.
 
@@ -102,4 +102,4 @@ Hope it was instructive and can help some of you.
 Cheers, Vincent.
 
 
-<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/index_en.php) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)
+<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)

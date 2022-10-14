@@ -4,7 +4,7 @@ comments: true
 title:  "Multiplexeur de terminaux"
 ref: terminal_multiplexers
 date:   2019-09-23 8:30:00 +0200
-categories: astuces dev
+categories: blogue dev
 lang: fr
 ---
 
@@ -16,7 +16,7 @@ L'utilisation la plus intéressante est d'utiliser les multiplexeurs de terminau
 En effet, à travers une connexion ssh vous ne pouvez pas vous déconnecter sans tuer le processus réalisant le calcul.
 Tandis que le multiplexeur de terminaux permet de garder une session active même après déconnexion.
 Il vous suffit de détacher la session du multiplexeur avant de vous déconnecter.
-Après vous être reconnecté via ssh, il vous suffit de vous rattacher à la session effectuant votre calcul. 
+Après vous être reconnecté via ssh, il vous suffit de vous rattacher à la session effectuant votre calcul.
 
 J'utilise énormément le multiplexeur de terminaux sur mes machines personnelles et sur des serveurs distants.
 Cela me donne un environnement homogène sur l'ensemble des machines auxquelles j'ai accès.
@@ -107,7 +107,7 @@ Si vous voulez connaitre d'autres raccourcis et savoir comment faire pour gérer
 
 # Bonus: Alternative pour les utilisateurs de Gnome
 
-Si vous voulez un environnement préconfiguré par défaut et que vous utilisez Gnome ainsi gnome-terminal, je vous recommande de regarder [Byobu](http://byobu.org/).
+Si vous voulez un environnement préconfiguré par défaut et que vous utilisez Gnome ainsi gnome-terminal, je vous recommande de regarder [Byobu](https://www.byobu.org/).
 Leur site contient une vidéo explicative sur leur page d'accueil.
 Les raccourcis de byobu ne fonctionnent pas avec tous les terminaux (ce qui ne me convient pas vu que j'utilise konsole).
 

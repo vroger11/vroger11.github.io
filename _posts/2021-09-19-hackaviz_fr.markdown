@@ -4,12 +4,12 @@ comments: true
 title:  "Hackaviz 2021"
 ref: hackaviz-2021
 date:   2021-09-19 08:00:00 +0200
-categories: blog dev
+categories: blogue dev
 lang: fr
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[Hackaviz 2021](https://github.com/ToulouseDataViz/Hackaviz2021).
-L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](http://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données Toulousaines mises à disposition.
+L'Hackaviz est un concours organisé par l'association de visualisation de données nommée [Toulouse dataviz](https://toulouse-dataviz.fr/). Elle consiste à raconter une histoire en utilisant des données Toulousaines mises à disposition.
 
 M'amusant à faire des visualisations de données sur mon temps libre, j'y ai donc participé en solo.
 Le code que j'ai utilisé est disponible [ici](https://github.com/vroger11/hackaviz2021).

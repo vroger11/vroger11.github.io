@@ -4,7 +4,7 @@ comments: true
 title:  "Use Zotero to generate BibTeX files for your papers"
 ref: using_zotero
 date:   2019-11-06 12:00:00 +0200
-categories: tips
+categories: blog
 lang: en
 ---
 
@@ -46,7 +46,7 @@ To be able to use all the features presented in this post you also need to insta
   1. Download the [latest xpi file](https://github.com/retorquere/zotero-better-bibtex/releases/latest).
   2. Open Zotero, go to `Tools` -> `Add-ons`, click on the gear -> `Install Add-on From File...` and select your previously downloaded extension.
 
-# Add papers to your collections 
+# Add papers to your collections
 
 First, I recommend you to create an online account on the Zotero website.
 It will help you to synchronize your library for all your devices (in my case at home and at work).
@@ -62,7 +62,7 @@ If any uploaded information looks wrong, you can modify it at any time.
 Before generating your BibTeX file, you may want to personalize the citation key format you will use in your TeX file.
 To do so, go to the Better BibTeX menu: Edit -> Preferences -> Better BibTeX tab.
 I use the default citation key format which please me: `[auth:lower][shorttitle3_3][year]`
-It corresponds to the first author (in lower cases), followed by the title of the paper (truncated) and the year of publication. 
+It corresponds to the first author (in lower cases), followed by the title of the paper (truncated) and the year of publication.
 If you want to modify the format of the generated keys, have a look to the official documentation [here](https://retorque.re/zotero-better-bibtex/citing/).
 
 After doing this, don't forget to refresh the citation key for every item in your collection (it is not automatic, but Ctrl+A key combination is your ally). Even if you want to keep the default citation key format from Better BibTeX extension, you have to do it. At least once after installing better BibTeX extension, unless Zotero keeps its default key format which uses underscores (which is better to avoid if you use LaTeX).
@@ -75,7 +75,7 @@ To generate the BibTeX file:
 
    ![alt text](/assets/images/zotero/export_bibtex_1.png)
 
-2. In the contextual menu, select "Better BibTeX" format (which use a cleaner format compared to the default BibTeX format of Zotero) and check the "Keep updated" box to let Zotero update your bib file when you add/modify your Library. 
+2. In the contextual menu, select "Better BibTeX" format (which use a cleaner format compared to the default BibTeX format of Zotero) and check the "Keep updated" box to let Zotero update your bib file when you add/modify your Library.
 
    ![alt text](/assets/images/zotero/export_bibtex_2.png)
 

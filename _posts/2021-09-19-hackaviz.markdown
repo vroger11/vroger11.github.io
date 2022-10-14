@@ -9,7 +9,7 @@ lang: en
 ---
 
 In this new blog post, I will present you my participation to the [Hackaviz 2021](https://github.com/ToulouseDataViz/Hackaviz2021).
-The Hackaviz is a contest organized by the data visualization association called [Toulouse dataviz](http://toulouse-dataviz.fr/). It consists in telling a story using data from Toulouse.
+The Hackaviz is a contest organized by the data visualization association called [Toulouse dataviz](https://toulouse-dataviz.fr/). It consists in telling a story using data from Toulouse.
 
 I have fun making data visualizations in my free time, so I participated solo.
 The code I used is available [here](https://github.com/vroger11/hackaviz2021).

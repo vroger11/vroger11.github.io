@@ -4,7 +4,7 @@ comments: true
 title:  "Améliorer votre expérience bash"
 ref: improve_default_bash
 date:   2020-01-29 17:30:00 +0200
-categories: astuces dev
+categories: blog dev
 lang: fr
 ---
 
@@ -78,7 +78,7 @@ if [ "$color_prompt" = yes ]; then
 Ainsi, remplacez la valeur par défaut par la vôtre.
 
 Créer votre variable PS1 peut être long et fastidieux vu la syntaxe nécessaire.
-Si vous êtes fainéant comme moi, servez-vous d'[ezprompt](http://ezprompt.net/) pour vous faciliter la vie.
+Si vous êtes fainéant comme moi, servez-vous d'[ezprompt](https://ezprompt.net/) pour vous faciliter la vie.
 C'est un site internet interactif pour vous aider à créer facilement votre variable PS1.
 
 ## Modifications de la variable PATH

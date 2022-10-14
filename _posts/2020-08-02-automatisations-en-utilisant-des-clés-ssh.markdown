@@ -8,7 +8,7 @@ categories: blogue automatisation
 lang: fr
 ---
 
-J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](/astuces/dev/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).
+J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](/blogue/dev/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).
 À ce moment, j'étais dans l'impossibilité d'utiliser les clés SSH sur les serveurs d'Overleaf (et c'est toujours le cas au moment où j'écris).
 Cela m'a aidé pour ce cas particulier.
 Néanmoins, cette astuce fonctionne uniquement pour les serveurs git.
@@ -39,7 +39,7 @@ Je préfère garder une paire de clés par machine (et en changer régulièremen
 
 ## Générer une paire de clés SSH
 
-Pour générer une paire de clés liées à une adresse email (pour mieux identifier l'utilisateur connecté) vous devez écrire la ligne suivante: 
+Pour générer une paire de clés liées à une adresse email (pour mieux identifier l'utilisateur connecté) vous devez écrire la ligne suivante:
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
@@ -90,7 +90,7 @@ Ensuite, c'est aussi simple que suit:
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-Après, suivez les étapes de ce [lien](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) (en anglais, mais très bien illustré) pour GitHub et de cet autre [lien](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account) (en anglais, mais la documentation officielle n'est pas traduite en français) pour GitLab.
+Après, suivez les étapes de ce [lien](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) (en anglais, mais très bien illustré) pour GitHub et de cet autre [lien](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account) (en anglais, mais la documentation officielle n'est pas traduite en français) pour GitLab.
 
 Maintenant, votre configuration est prête pour votre serveur Git.
 La prochaine sous-section expliquera comment tester cette configuration sans avoir à modifier l'un de vos répertoires.

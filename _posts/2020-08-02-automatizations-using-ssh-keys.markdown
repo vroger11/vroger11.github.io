@@ -8,17 +8,17 @@ categories: blog automatization
 lang: en
 ---
 
-I started my blog with a post telling you how to let Git remember your credentials for websites not supporting ssh keys (the post is [here](/tips/dev/2019/09/09/save-git-credentials.html) for those interested).
+I started my blog with a post telling you how to let Git remember your credentials for websites not supporting ssh keys (the post is [here](/blog/dev/2019/09/09/save-git-credentials.html) for those interested).
 In that day, I was struggling with Overleaf Git servers that do not support ssh keys (and still does not at the moment I am writing).
 It helped me for this case.
 Nevertheless, it is only compatible with Git servers and is not the best way to automatize your identifications (at least in my point of view).
-Today we will see how to use ssh keys to automatize many login steps. 
+Today we will see how to use ssh keys to automatize many login steps.
 
 In this post we will see two use cases:
 * Automatic identification to servers using the ssh protocol.
 * Automatic identification when doing push/pull commands on Git servers (such as GitHub or GitLab).
 
-SSH keys contain a public key to encode messages (destined for servers) and a private key to be able to read those messages (destined for the client of the servers). 
+SSH keys contain a public key to encode messages (destined for servers) and a private key to be able to read those messages (destined for the client of the servers).
 If you want more information of the protocol, have a look [here](https://www.ssh.com/ssh/public-key-authentication).
 
 The distribution used (and tested) for this tutorial is Kubuntu 20.04 LTS (my new main distribution, but this story is for a future post).
@@ -49,7 +49,7 @@ You will also set a password to unlock your private key, be sure to remember it.
 
 ## Start ssh-agent and add your private key
 
-To let your system remember your private key for your session you can use the ssh-agent as follows: 
+To let your system remember your private key for your session you can use the ssh-agent as follows:
 ```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
@@ -88,7 +88,7 @@ Then, it is as simple as this:
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-After, follow the steps from this [link](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) for GitHub and that [link](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account) for GitLab.
+After, follow the steps from this [link](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) for GitHub and that [link](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account) for GitLab.
 
 Now your configuration is ready for your Git server.
 The next subsection will be about testing this configuration without modifying your repositories.
