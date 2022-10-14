@@ -11,7 +11,7 @@ lang: fr
 Après presque une année (11 mois), je vais partager dans cet article mon expérience en tant qu'étudiant en thèse.
 Dans cet article de blogue, je vais parler du sujet de ma thèse, la direction prise, des travaux futurs et des changements dans ma vie (liés à la thèse).
 
-Avant de continuer, je voudrais remercier mes encadrants<sup>[1](#advisors)</sup> pour leur aide et leurs conseils, [La Région Occitanie](https://www.laregion.fr/) et [l'Université Fédérale de Toulouse](https://en.univ-toulouse.fr) pour leur financement, l'Université Paul Sabatier et le Laboratoire IRIT pour leur support.
+Avant de continuer, je voudrais remercier mes encadrants[^1] pour leur aide et leurs conseils, [La Région Occitanie](https://www.laregion.fr/) et [l'Université Fédérale de Toulouse](https://en.univ-toulouse.fr) pour leur financement, l'Université Paul Sabatier et le Laboratoire IRIT pour leur support.
 Je souhaite également rappeler que c'est un article de blogue personnel (il n'engage que moi-même).
 
 # Sujet
@@ -104,4 +104,4 @@ J’espère que cela aidera certains d’entre vous.
 À la revoyure, Vincent.
 
 
-<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)
+[^1]: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)

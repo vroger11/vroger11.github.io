@@ -11,7 +11,7 @@ lang: en
 After almost a year (11 months), here I share with you my first year as a PhD student.
 In this post I will talk about the subject of my PhD thesis, the direction it takes, future works and the changes in my life (due to PhD).
 
-Before I continue, I would like to thank my advisors<sup>[1](#advisors)</sup> for their help and advises, [La Région Occitanie](https://www.laregion.fr/) and [Federal University of Toulouse](https://en.univ-toulouse.fr) for funding me, the University Paul Sabatier and the IRIT lab for their support.
+Before I continue, I would like to thank my advisors[^1] for their help and advises, [La Région Occitanie](https://www.laregion.fr/) and [Federal University of Toulouse](https://en.univ-toulouse.fr) for funding me, the University Paul Sabatier and the IRIT lab for their support.
 Also, I want to remind you that it is my blog (it only engages myself).
 
 # Subject
@@ -102,4 +102,4 @@ Hope it was instructive and can help some of you.
 Cheers, Vincent.
 
 
-<a name="advisors">1</a>: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)
+[^1]: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)
