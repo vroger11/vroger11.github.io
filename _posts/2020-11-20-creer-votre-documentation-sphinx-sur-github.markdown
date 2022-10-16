@@ -4,7 +4,8 @@ comments: true
 title:  "Créer votre documentation sphinx sur GitHub"
 ref: sphinx_doc
 date:   2020-12-11 08:00:00 +0200
-categories: blog dev
+categories: blogue dev
+category: blogue
 lang: fr
 ---
 

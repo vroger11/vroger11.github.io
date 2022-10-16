@@ -5,6 +5,7 @@ title:  "Automatisation en utilisant des clés SSH"
 ref: ssh_keys
 date:   2020-08-02 08:00:00 +0200
 categories: blogue automatisation
+category: blogue
 lang: fr
 ---
 

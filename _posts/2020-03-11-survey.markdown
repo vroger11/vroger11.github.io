@@ -5,6 +5,7 @@ title:  "Survey from Large Speech Corpora to Limited Data"
 ref: survey_few_shot
 date:   2020-03-10 12:30:00 +0200
 categories: blog research
+category: blog
 lang: en
 ---
 

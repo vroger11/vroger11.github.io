@@ -5,6 +5,7 @@ title:  "Revue de ma première année de thèse"
 ref: first_year_review
 date:   2019-10-12 17:15:00 +0200
 categories: blogue these
+category: blogue
 lang: fr
 ---
 

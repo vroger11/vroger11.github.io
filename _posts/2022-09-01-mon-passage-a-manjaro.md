@@ -5,6 +5,7 @@ title:  "Mon passage à Manjaro Linux"
 ref: switch-manjaro
 date:   2022-09-03 20:00:00 +0200
 categories: blogue
+category: blogue
 lang: fr
 ---
 

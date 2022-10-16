@@ -5,6 +5,7 @@ title:  "Save Git Credentials"
 ref: git_credentials
 date:   2019-09-09 19:30:00 +0200
 categories: blog dev
+category: blog
 lang: en
 ---
 

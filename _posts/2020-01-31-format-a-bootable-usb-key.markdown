@@ -5,6 +5,7 @@ title:  "Format a bootable USB key"
 ref: format_bootable_key
 date:   2020-01-31 12:30:00 +0200
 categories: blog
+category: blog
 lang: en
 ---
 

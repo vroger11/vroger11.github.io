@@ -5,6 +5,7 @@ title:  "Configurations for working at home"
 ref: remote_work
 date:   2020-03-18 20:00:00 +0200
 categories: blog
+category: blog
 lang: en
 ---
 

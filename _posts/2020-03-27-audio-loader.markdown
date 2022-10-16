@@ -5,6 +5,7 @@ title:  "Audio loader - A library to load audio features and ground truth for De
 ref: audio_loader
 date:   2020-03-27 12:00:00 +0200
 categories: blog projects
+category: blog
 lang: en
 ---
 

@@ -5,6 +5,7 @@ title:  "Terminal multiplexers"
 ref: terminal_multiplexers
 date:   2019-09-23 8:30:00 +0200
 categories: blog dev
+category: blog
 lang: en
 ---
 

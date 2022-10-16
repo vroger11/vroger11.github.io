@@ -5,6 +5,7 @@ title:  "Vérifier vos fautes dans Neovim"
 ref: check_writing
 date:   2019-10-08 07:15:00 +0200
 categories: blogue
+category: blogue
 lang: fr
 ---
 

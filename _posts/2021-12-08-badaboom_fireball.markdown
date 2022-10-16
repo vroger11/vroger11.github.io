@@ -5,6 +5,7 @@ title:  "Badaboom (part 2) - Fireballs"
 ref: fireballs
 date:   2021-12-15 8:00:00 +0200
 categories: blog dev
+category: blog
 lang: en
 ---
 
@@ -35,7 +36,7 @@ That's why I made the following histogram:
 
 Nevertheless, it can be noted that there are less and less detections made without localization.
 It is therefore from the data with a geolocation that I made the following map.
-This map is interactive, by passing the mouse over the bubbles you can see the details for each impact. 
+This map is interactive, by passing the mouse over the bubbles you can see the details for each impact.
 You can also zoom on the map to see more precisely some regions of the world.
 The size of the bubbles corresponds to the impact energy of the fireball.
 

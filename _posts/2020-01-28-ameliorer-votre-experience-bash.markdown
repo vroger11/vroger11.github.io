@@ -4,7 +4,8 @@ comments: true
 title:  "Améliorer votre expérience bash"
 ref: improve_default_bash
 date:   2020-01-29 17:30:00 +0200
-categories: blog dev
+categories: blogue dev
+category: blogue
 lang: fr
 ---
 

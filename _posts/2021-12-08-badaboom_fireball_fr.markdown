@@ -5,6 +5,7 @@ title:  "Badaboom (partie 2) - Les boules de feu"
 ref: fireballs
 date:   2021-12-15 8:00:00 +0200
 categories: blogue dev
+category: blogue
 lang: fr
 ---
 
@@ -35,7 +36,7 @@ C'est pourquoi j'ai réalisé l'histogramme qui suit:
 
 On peut néanmoins noter qu'il y a de moins en moins de détection réalisée sans localisation.
 C'est donc à partir des données possédant une géolocalisation que j'ai réalisé la carte qui suit.
-Cette carte est interactive, en passant la souris dessus les bulles vous pouvez voir les détails pour chaque impact. 
+Cette carte est interactive, en passant la souris dessus les bulles vous pouvez voir les détails pour chaque impact.
 Vous pouvez également zoomer sur la carte pour voir plus précisément certaines régions du globe.
 La taille des bulles correspondant à l'énergie d'impact de la boule de feu.
 

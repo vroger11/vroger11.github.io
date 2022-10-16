@@ -5,6 +5,7 @@ title:  "Bonjour le monde"
 ref: hello_world
 date:   2019-09-08 09:17:47 +0200
 categories: blogue
+category: blogue
 lang: fr
 ---
 

@@ -5,6 +5,7 @@ title:  "Review of my first year as a PhD student"
 ref: first_year_review
 date:   2019-10-12 17:15:00 +0200
 categories: blog PhD
+category: blog
 lang: en
 ---
 

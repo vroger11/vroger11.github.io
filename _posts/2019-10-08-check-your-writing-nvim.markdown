@@ -5,6 +5,7 @@ title:  "Check your writing in Neovim"
 ref: check_writing
 date:   2019-10-08 07:15:00 +0200
 categories: blog
+category: blog
 lang: en
 ---
 

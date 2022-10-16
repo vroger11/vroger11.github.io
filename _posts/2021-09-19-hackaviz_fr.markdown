@@ -5,6 +5,7 @@ title:  "Hackaviz 2021"
 ref: hackaviz-2021
 date:   2021-09-19 08:00:00 +0200
 categories: blogue dev
+category: blogue
 lang: fr
 ---
 

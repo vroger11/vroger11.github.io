@@ -5,6 +5,7 @@ title:  "Multiplexeur de terminaux"
 ref: terminal_multiplexers
 date:   2019-09-23 8:30:00 +0200
 categories: blogue dev
+category: blogue
 lang: fr
 ---
 

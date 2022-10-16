@@ -5,6 +5,7 @@ title:  "BadaBoom"
 ref: badaboom
 date:   2021-09-12 08:00:00 +0200
 categories: blogue dev
+category: blogue
 lang: fr
 ---
 

@@ -5,6 +5,7 @@ title:  "Improve your bash terminal experience"
 ref: improve_default_bash
 date:   2020-01-29 17:30:00 +0200
 categories: blog dev
+category: blog
 lang: en
 ---
 

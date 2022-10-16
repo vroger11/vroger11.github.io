@@ -5,6 +5,7 @@ title:  "État de l'art sur le few-shot pour des corpus de parole avec peu de do
 ref: survey_few_shot
 date:   2020-03-10 12:30:00 +0200
 categories: blogue recherche
+category: blogue
 lang: fr
 ---
 

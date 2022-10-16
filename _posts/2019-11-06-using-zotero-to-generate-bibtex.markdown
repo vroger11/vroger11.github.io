@@ -5,6 +5,7 @@ title:  "Use Zotero to generate BibTeX files for your papers"
 ref: using_zotero
 date:   2019-11-06 12:00:00 +0200
 categories: blog
+category: blog
 lang: en
 ---
 

@@ -5,6 +5,7 @@ title:  "Audio loader - Une librairie pour charger les caractéristiques audios 
 ref: audio_loader
 date:   2020-03-27 12:00:00 +0200
 categories: blogue projets
+category: blogue
 lang: fr
 ---
 

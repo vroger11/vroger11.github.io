@@ -5,6 +5,7 @@ title:  "Hackaviz 2022"
 ref: hackaviz-2022
 date:   2022-04-03 20:00:00 +0200
 categories: blog dev
+category: blog
 lang: fr
 ---
 

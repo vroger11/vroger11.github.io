@@ -5,6 +5,7 @@ title:  "Create your documentation website with sphinx and GitHub"
 ref: sphinx_doc
 date:   2020-12-11 08:00:00 +0200
 categories: blog dev
+category: blog
 lang: en
 ---
 

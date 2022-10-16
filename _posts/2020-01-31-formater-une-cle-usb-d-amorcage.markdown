@@ -5,6 +5,7 @@ title:  "Formater une clé USB d'amorçage"
 ref: format_bootable_key
 date:   2020-01-31 12:30:00 +0200
 categories: blogue
+category: blogue
 lang: fr
 ---
 
