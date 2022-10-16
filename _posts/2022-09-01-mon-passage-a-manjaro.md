@@ -29,7 +29,7 @@ de maintenance manuelle,  
     
 - un environnement KDE à jour, mais pas forcément la dernière version, sans ruptures ni bugs.
 
-Compte tenu de ces exigences, Manjaro et openSUSE semblent être d'excellentes solutions. J'ai déjà utilisé la documentation et les wikis d'Arch/Manjaro pour résoudre certains de mes problèmes avec Kubuntu (c'est une ironie car il n'y avait rien sur les forums d'Ubuntu/Kubuntu). De plus, en 2021, Manjaro semble être une solution plus populaire : https://distrowatch.com/index.php?dataspan=2021 (donc peut-être plus de personnes pour aider en cas de problèmes).
+Compte tenu de ces exigences, Manjaro et openSUSE semblent être d'excellentes solutions. J'ai déjà utilisé la documentation et les wikis d'Arch/Manjaro pour résoudre certains de mes problèmes avec Kubuntu (c'est une ironie car il n'y avait rien sur les forums d'Ubuntu/Kubuntu). De plus, en [2021 sur distrowatch](https://distrowatch.com/index.php?dataspan=2021), Manjaro semble être une solution plus populaire (donc peut-être plus de personnes pour aider en cas de problèmes).
 
 # Mon expérience
 
@@ -50,27 +50,27 @@ Dans les deux sous-sections restantes, j'expose un retour plus détaillé en lis
 - Même interface que dans mon Kubuntu, mais avec un plasma plus récent (ce qui m'a permis de bénéficier de fonctionnalités plus récentes).
 
 - Vous pouvez sélectionner votre noyau Linux et le changer facilement, avec un accès aux derniers noyaux (LTS et non LTS, qui peuvent contenir des pilotes pour les dernières pièces de matériel).
-    
+
 - Pas de version plasma de pointe à moins qu'elle ne soit pas stable (comparé à KDE Neon), c'est une victoire claire pour mes besoins.
-    
+
 - Mon système fonctionne de manière beaucoup plus fluide sur mon ordinateur portable par rapport à Kubuntu avec la même autonomie de batterie !
 
 - Le gestionnaire de paquets a une interface similaire à `apt` : `pamac` (et non le gestionnaire `pacman`). Par conséquent, il m'aide beaucoup pour ma transition, de plus `pamac` suggère des paquets optionnels à installer (ce qui peut vous faire gagner du temps si vous manquez quelque chose).
 
 - L'interpréteur de commandes par défaut de Manjaro, zsh, est pratique et utile pour moi (j'ai même basculé de bash vers lui).
-    
+
 - Un large panel de logiciels et des intégrations prêtes à l'emploi (comme l'intégration de languagetool + texstudio si vous installez les deux).
 
 - Les mises à jour NVIDIA se sont bien passées (même après 10 mois d'utilisation).
 
 ### Inconvénients
- 
+
 - Les paquets AUR peuvent être cassés lors de certaines mises à jour. Cela arrive car ce n'est pas une source officielle de paquets supportés par l'équipe Manjaro (mais y avoir accès est très pratique). Comme j'utilise d'abord les paquets officiels, puis les applications flatpak et en dernier recours les paquets AUR, j'ai peu d'applications AUR, et ce n'est pas un problème pour moi. Néanmoins, les solutions pour résoudre ce problème peuvent être :
- 
+
     - Retarder la mise à jour d'un paquet AUR pour conformer ses dépendances dans les dépôts de Manjaro (car elles arrivent plus tard dans Manjaro que dans Arch). Je n'ai pas eu besoin de faire cela dans mon utilisation.
-        
+
     - Vous pouvez avoir besoin de lancer manuellement une reconstruction d'un paquet AUR (`pamac remove <paquet>` puis `pamac build <paquet>`) après une mise à jour des dépendances depuis les dépôts de Manjaro. Cela m'est arrivé une fois jusqu'à maintenant.
-        
+
 - Certaines mises à jour peuvent casser certains de vos fichiers de configuration (car le format peut changer avec les nouvelles versions majeures). Cela peut se produire entre chaque mise à jour de Kubuntu LTS, mais maintenant que je suis sur une distribution basée sur Arch, cela peut se produire à chaque mise à jour (pour chaque configuration spécifique que vous définissez sur votre système). En pratique, cela ne m'est arrivé qu'une fois à cause d'une mise à jour de gnome-keyring (dont j'espère pouvoir me débarrasser avec plasma 5.26, car kwallet implémentera les protocoles manquants gérés par gnome-keyring). Une bonne habitude pour résoudre ce genre de problèmes est de suivre le [flux officiel des versions de Manjaro (c'est un flux RSS)](https://forum.manjaro.org/c/announcements/stable-updates/12). Là, ils décrivent les mises à jour avec les problèmes possibles et la plupart du temps des solutions pour les résoudre. Comme chaque version est associée à un post sur le forum de Manjaro, vous pouvez demander de l'aide à la communauté (s'il n'y a pas encore de solution 😄).
 
 - Vous ne pouvez pas utiliser discover pour installer et mettre à jour pour les nouvelles applications. J'étais habitué à cet outil, et cela s'intègre bien dans l'environnement KDE. Mais sur les systèmes basés sur Arch, son utilisation peut casser votre système. Heureusement, il existe un gestionnaire similaire sur Manjaro qui répond à tous mes besoins (recherche d'applications, de paquets et gestion des flatpaks). Sauf qu'il utilise une interface utilisateur gtk au lieu d'une interface qt, donc c'est un problème mineur.
@@ -82,7 +82,7 @@ Dans les deux sous-sections restantes, j'expose un retour plus détaillé en lis
 
 Cette fonctionnalité est très utile pour les utilisateurs de souris et/ou claviers Bluetooth (pour saisir les identifiants et sélectionner les utilisateurs). Je pense qu'elle devrait être activée par défaut, mais vous pouvez l'activer rapidement :
 
-``bash
+```bash
 sudo sed -i.back 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
 ```
 
@@ -90,7 +90,7 @@ sudo sed -i.back 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.con
 
 Pour résoudre ce problème, désactivez d'abord toutes les options d'économie d'énergie sur les périphériques Bluetooth (uniquement pour les utilisateurs de [tlp](https://linrunner.de/tlp/index.html)). Pour faire cela facilement, vous pouvez installer `tlpui` :
 
-``bash
+```bash
 pamac install tlpui
 ```
 
@@ -101,7 +101,7 @@ J'ai combiné cette solution avec le remplacement de pulseaudio par pipewire (qu
 
 Pour le faire sous Manjaro, vous devez taper les commandes suivantes :
 
-``bash
+```bash
 pamac remove pulseaudio pulseaudio-jack pulseaudio-lirc pulseaudio-rtp pulseaudio-zeroconf pulseaudio-bluetooth pulseaudio-alsa pulseaudio-ctl manjaro-pulse plasma-pa
 pamac install manjaro-pipewire
 pamac install plasma-pa
@@ -119,7 +119,7 @@ Tout d'abord, si vous utilisez TLP, désactivez la fonction powersave pour votre
 ### Définir un service pour forcer une faible latence
 Pour ce faire, nous devons ajouter le script suivant dans `/etc/systemd/system/fix-mouse-lag.service` pour créer notre service :
 
-``bash
+```bash
 [Unité]
 Description=exécuter le script racine au démarrage/réveil pour corriger le décalage de la souris
 Avant=bluetooth.service
@@ -137,7 +137,7 @@ WantedBy=bluetooth.service
 Ensuite, ajoutez le script suivant dans `/usr/local/bin/fix-mouse-lag.sh` qui sera exécuté par notre service à chaque démarrage/réveil de veille :
 
 ```bash
-#!/bin/sh 
+#!/bin/sh
 
 echo 0 > /sys/kernel/debug/bluetooth/hci0/conn_latency
 echo 6 > /sys/kernel/debug/bluetooth/hci0/conn_min_intervalle
@@ -156,37 +156,37 @@ sudo systemctl enable fix-mouse-lag.service --now
 
 Je possède un Bose QC 35 II, et sur le papier il ne peut être utilisé qu'avec les codecs HSP/HFC, AAC et SBC. Le premier étant un codec de basse qualité qui permet d'utiliser le microphone du casque audio, et les derniers sont réservés à une sortie audio de haute qualité. Avec mes tests, j'ai découvert qu'il peut aussi gérer le codec SBC XQ (qui est un meilleur codec comparé à AAC et SBC, voir [ce lien](http://soundexpert.org/articles/-/blogs/audio-quality-of-sbc-xq-bluetooth-audio-codec) pour plus de détails).
 
-J'ai testé ces trois codecs de haute qualité avec une Logitech MX Vertical et j'ai constaté que si les codecs SBC et SBC XQ ne perturbent pas la connexion de ma souris, le codec AAC, lui, le fait. Pipewire utilise le codec AAC par défaut, car Bose le recommande pour ce casque [^1]. Pour modifier ce comportement, nous devons éditer le fichier `/usr/share/pipewire/media-session.d/bluez-monitor.conf`.
+J'ai testé ces trois codecs de haute qualité avec une Logitech MX Vertical et j'ai constaté que si les codecs SBC et SBC XQ ne perturbent pas la connexion de ma souris, le codec AAC, lui, le fait. Pipewire utilise le codec AAC par défaut, car Bose le recommande pour ce casque[^1]. Pour modifier ce comportement, nous devons éditer le fichier `/usr/share/pipewire/media-session.d/bluez-monitor.conf`.
 J'y ai décommenté la ligne `bluez5.enable-sbc-xq = true` et spécifié les `bluez5.codecs` comme suit :
 
 ```bluez5.codecs = [ sbc_xq ldac aptx aptx_hd aptx_ll aptx_ll_duplex faststream faststream_duplex ]```
 
 J'ai donc supprimé la capacité SBC et AAC de Pipewire pour être sûr qu'il n'utilisera pas ces codecs avec mes appareils (le premier n'est pas un problème, mais je préfère une qualité supérieure pour mon casque 😛).
 
-[^1] : Notez que je ne parle que pour le cas pipewire. Je ne l'ai pas testé pour pulseaudio car j'ai des problèmes de crépitement avec ce dernier.
+[^1]: Notez que je ne parle que pour le cas pipewire. Je ne l'ai pas testé pour pulseaudio car j'ai des problèmes de crépitement avec ce dernier.
 
 ## Corriger le bug des thèmes ne fonctionnant pas avec les applications flatpak
 
 La plupart des applications flatpak n'auront pas leur thème suivant celui du système sur Manjaro KDE. En particulier les applications gtk et electron. Si ce problème n'est pas traité en amont sur Arch, les développeurs de Manjaro ne le corrigeront pas (voir mes sources pour plus de détails). Pour résoudre ce problème, nous devons taper les commandes suivantes :
 
-``bash
+```bash
 flatpak override --filesystem=xdg-config/gtk-3.0:ro
 flatpak override --filesystem=xdg-config/gtk-4.0:ro
 ```
 
 Il ajoute aux applications flatpak les permissions minimales dont elles ont besoin pour voir le thème utilisé dans l'environnement KDE. Ensuite, vous devez installer le thème flatpak GTK correspondant à celui que vous utilisez sous votre système. Par exemple, si vous utilisez le thème breeze-dark sous KDE, vous devez installer la version du thème flatpak pour les applications gtk comme ceci :
 
-``bash
+```bash
 flatpak -y install org.gtk.Gtk3theme.Breeze-Dark
 ```
 
 # Mes sources
 
 - [ Utilisation de AUR sous Manjaro ](https://forum.manjaro.org/t/howto-use-aur/116934)
-    
+
 - [ Activer le Bluetooth au démarrage ](https://archived.forum.manjaro.org/t/enable-bluetooth-at-login-screen-system-boot/146842)
-    
+
 - [ Réduire les délais de saisie de la souris ](https://archived.forum.manjaro.org/t/bluetooth-mouse-lag/99386/43)
-    
+
 - [Résoudre le problème de thématisation de flatpak (par votre serviteur)](https://forum.manjaro.org/t/add-out-of-the-box-flatpak-gtk-application-themes-for-kde-plasma-users/117103)
 

@@ -24,7 +24,7 @@ Before telling you why I choose Manjaro KDE, I will expose you my needs:
 
 - a KDE environment up-to-date, but no bleeding-edge without breaks and bugs.
 
-Given these requirements, both Manjaro and openSUSE seem great solutions. I already used Arch/Manjaro documentation and wikis to solve some of my Kubuntu problems (it’s an irony as there was nothing on Ubuntu/Kubuntu forums). Moreover, in 2021 Manjaro seems to be a more popular solution: https://distrowatch.com/index.php?dataspan=2021 (so maybe more people to help in case of problems).
+Given these requirements, both Manjaro and openSUSE seem great solutions. I already used Arch/Manjaro documentation and wikis to solve some of my Kubuntu problems (it’s an irony as there was nothing on Ubuntu/Kubuntu forums). Moreover, in [2021 on distrowatch](https://distrowatch.com/index.php?dataspan=2021) Manjaro seems to be a more popular solution (so maybe more people to help in case of problems).
 
 # Experience
 
