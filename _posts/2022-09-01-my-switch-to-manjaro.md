@@ -5,7 +5,7 @@ title:  "My switch to Manjaro Linux"
 ref: switch-manjaro
 date:   2022-09-03 20:00:00 +0200
 categories: blog
-categories: blog
+category: blog
 lang: en
 ---
 
