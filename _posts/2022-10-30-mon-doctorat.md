@@ -48,7 +48,12 @@ Une fois mon manuscrit mis en ligne, j'ajouterai un lien vers ce dernier ici pou
 Comme pour mon manuscrit, j'ai utilisé Latex avec beamer pour ma présentation! Ce n'est pas un choix courant (je n'ai pas vu de présentation de thèse utilisant Latex) mais si on est habitué, on gagne tellement de temps pour se concentrer sur le fond plutôt que sur la forme. J'ai créé mon propre thème (pas à partir de zéro je ne suis pas un fou 🤣) et il était presque terminé avant de travailler sur ma présentation de thèse (car j'utilisais beamer pour mes présentations hebdomadaires avec mes encadrants).
 
 Maintenant parlons un peu de mon ressenti, j'étais stressé c'est sûr, ce moment m'intimidait... C'est tellement formel, surtout le temps pour réaliser la présentation (45 min dans mon cas). D'habitude quand je présente des choses, si je prends 5/10 de minutes de plus ou de moins que prévu, c'est OK. Mais là, je n'avais pas cette marge d'erreur. Cela m'a stressé et même si j'ai beaucoup répété pour cette présentation, plus je me préparais, plus je me sentais stressé. Ce qui est amusant, c'est que lorsqu'il y avait des problèmes (des gens qui arrivaient alors que j'avais commencé, des diapositives manquantes, des diapositives qui n'étaient pas partagées au début et ainsi de suite), cela me faisait oublier les aspects stressants de l'expérience.
-Pour ceux qui n'étaient pas là, vous pouvez voir ma présentation/"performance" [ici](https://youtu.be/yvYZDBKdzB8).
+Pour ceux qui n'étaient pas là, vous pouvez voir ma présentation/"performance":
+
+<iframe width="720" height="480"
+    src="https://www.youtube.com/embed/yvYZDBKdzB8">
+</iframe>
+
 Je pense que j'aurais pu réduire mon stress si j'avais fait une répétition dans l'amphithéâtre et utilisé un chronomètre numérique (avec un grand écran) lors de ma répétition et le jour de la soutenance.
 
 J'étais plus à l'aise avec les questions, là je n'étais pas limité par le temps pour répondre au jury. De plus, le fait que ce soit interactif réduit l'aspect formel de l'épreuve. Puis, après la délibération du jury, j'ai reçu mon titre de docteur ! Quel sentiment incroyable, un mélange de joie, de stress et de soulagement. Tout cela m'a fait pleurer à la fin, quel grand moment !
