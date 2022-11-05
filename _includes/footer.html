@@ -7,7 +7,11 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title[page.lang] }}</li>
+          {%- if page.lang == "fr" -%}
+            <li>Pour me contacter :</li>
+          {%- else -%}
+            <li>To contact me:</li>
+          {%- endif -%}
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
