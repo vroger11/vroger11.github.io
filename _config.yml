@@ -18,8 +18,8 @@ title:
     fr: Site internet de Vincent ROGER
 email: roger.vincent.11@gmail.com
 description:
-    en: PhD student in Machine Learning using Neural Networks technologies on speech in few shot context. Python and Linux enthusiast.
-    fr: Thésard en apprentissage machine utilisant les réseaux de neurones artificiels sur de l'audio dans un contexte avec peu de données. Enthousiaste Python et de l'environnement Linux.
+    en: I earned a PhD in computer science using machine learning (especially Neural Networks technologies). I work principally on image and speech signals. I am a python programmer and a FOSS enthusiast. Not only that, but I am a member of Toulouse dataviz association and I create data visualization for fun.
+    fr: J'ai obtenu un doctorat en informatique en utilisant l'apprentissage automatique (en particulier les technologies de réseaux neuronaux). Je travaille principalement sur les signaux d'image et de parole. Je suis un programmeur python et un passionné de logiciels libres. En plus de cela, je suis membre de l'association Toulouse dataviz et je crée des visualisations de données pour le plaisir.
 index:
     en: index.html
     fr: accueil.html
