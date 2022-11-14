@@ -6,4 +6,4 @@ ref: blog
 permalink: /blog/
 ---
 
-This blog will talk about Machine Learning things I find interesting, tips about programming (my main languages are Python, LaTeX and Markdown) and tips on Linux environment.
+This blog will share Machine Learning things I find interesting, dataviz I produce, tips about programming (my main languages are Python, LaTeX and Markdown) and tips on Linux environment.

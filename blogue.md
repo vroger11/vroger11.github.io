@@ -6,4 +6,4 @@ ref: blog
 lang: fr
 ---
 
-Ce blog est constitué d'articles sur l'apprentissage machine, astuces de programation et sur l'environnement Linux.
+Ce blog est constitué d'articles sur l'apprentissage machine, de visualisations que j'ai réalisées, astuces de programmation et sur l'environnement Linux.
