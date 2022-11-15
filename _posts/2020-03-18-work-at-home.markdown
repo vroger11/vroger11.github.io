@@ -44,6 +44,7 @@ It opens you the following system settings module:
 
 To add a VPN connection, click on the "Add new connection" icon.
 Then it opens you this menu:
+
 ![alt text](/assets/images/work_at_home/VPN_options.png)
 
 Here click on OpenVPN, then click on "Create" and follow the instruction of your company/lab.
