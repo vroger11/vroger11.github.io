@@ -59,7 +59,7 @@ ssh-add ~/.ssh/id_rsa
 Now we have a pair of private and public key and the ssh-agent configured with it.
 We are ready to automatize our SSH identifications to servers or Git servers.
 
-# Configure your SSH servers
+# Automatize your login on servers using SSH
 
 To automatize SSH password typing, you can add the public key to the authorized keys of your servers.
 Before that, make sure that your remote user space contains a `~/ssh` folder:
@@ -75,13 +75,18 @@ cat ~/.ssh/id_rsa.pub | ssh <login>@<server_adress> 'cat >> .ssh/authorized_keys
 Now your server is configured with your ssh pair of keys.
 You can repeat those two steps for each server you can access.
 
-# Configure your Git servers
+# Automatize your authentifications on Git servers
 
-To automatize your identification (typing your login and password) after using a pull or push command, you can add your public key to your Git server (via their web interface).
+To automatize your identification (typing your login and password) after using a `pull` or `push` command, you can add your public key to your Git server (via their web interface).
 To copy your public key on a website (such as GitHub or GitLab) you may want to add your key to the clipboard (to use Ctrl+V inside your web browser).
 For this purpose, you need to install `xclip`:
 ```bash
 sudo apt install xclip
+```
+
+or if you are on manjaro:
+```bash
+sudo pamac install xclip
 ```
 
 Then, it is as simple as this:
@@ -111,7 +116,7 @@ ssh -T git@github.com
 ssh -T git@gitlab.com
 ```
 
-# Retain ssh-agent identities on Kubuntu after restart
+# Keeping ssh-agent identities on Kubuntu 22.04 after restart
 
 With the above instructions, you have to (in Kubuntu at least) reconfigure the ssh-agent after each logout or restart.
 In this section, we will use kwallet to bypass this limitation.
@@ -127,7 +132,7 @@ To achieve this, type the following lines:
 mkdir -p ~/.config/autostart-scripts
 echo '#!/bin/sh' > ~/.config/autostart-scripts/ssh-add.sh
 echo 'export SSH_ASKPASS=/usr/bin/ksshaskpass' >> ~/.config/autostart-scripts/ssh-add.sh
-echo 'ssh-add </dev/null' >> ~/.config/autostart-scripts/ssh-add.sh
+echo 'ssh-add < /dev/null' >> ~/.config/autostart-scripts/ssh-add.sh
 chmod +x ~/.config/autostart-scripts/ssh-add.sh
 ```
 
@@ -137,12 +142,69 @@ For the next step, type the following command and **check the remember checkbox*
 ```
 It will let the KDE wallet retain the password for your private key and unlocks it after each login.
 
+# Keeping ssh-agent identities on Manjaro after a reboot
+
+After my switch to Manjaro linux ([see my post about my migration](/blog/2022/09/03/my-switch-to-manjaro.html)), I realized that the method for Kubuntu didn't work (and might not work on next LTS). Here is my solution, which is a combination of two approaches that you can find in my sources.
+
+First of all, make sure you have the necessary tools:
+
+```bash
+sudo pamac install kwallet ksshaskpass kwalletmanager
+```
+
+Next, let's configure our system and zsh to use the appropriate socket for the ssh agent:
+```bash
+sudo echo "#!/bin/sh" > /etc/profile.d/ssh-askpass.sh
+sudo echo "export SSH_ASKPASS=/usr/bin/ksshaskpass" >> /etc/profile.d/ssh-askpass.sh
+echo "export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket" >> ~/.zsherc
+```
+
+Next, we create the user directory for systemd:
+
+```bash
+mkdir -p ~/.config/systemd/user
+```
+
+Next, create the file `~/.config/systemd/user/ssh-agent.service` and fill it with the following content:
+
+```bash
+[Unit]
+Description=SSH agent (ssh-agent)
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+Environment=DISPLAY=:0
+Environment=KEY_FILE=/home/%u/.ssh/id_rsa
+ExecStart=ssh-agent -D -a $SSH_AUTH_SOCK
+ExecStartPost=/bin/sleep 3
+ExecStartPost=/usr/bin/ssh-add $KEY_FILE
+ExecStop=kill -15 $MAINPID
+
+[Install]
+WantedBy=default.target
+```
+
+This service starts the ssh agent at each login on your machine and adds the private key you created at the beginning of this article.
+We will now enable it and run it:
+
+```bash
+systemctl --user daemon-reload
+systemctl --user enable ssh-agent.service
+systemctl --user start ssh-agent.service
+```
+
+There you go, I hope this was helpful 😉.
+
+
 # Sources and inspirations
 
 * [GitHub Official instructions for SSH keys](https://help.github.com/en/github/authenticating-to-github)
 * [GitLab Official instructions for SSH keys](https://docs.gitlab.com/ee/ssh/)
 * [Configure ssh-agent on Ubuntu](http://www.linuxproblem.org/art_9.html)
 * [Kubuntu and ssh-agent](https://wiki.csnu.org/index.php/Kubuntu_/_KDE_:_login_ssh_automatique_par_cl%C3%A9)
+* [Manjaro and ssh-agent (1/2)](https://forum.manjaro.org/t/configuring-ssh-agent-to-autostart-and-automatically-add-ssh-keys-to-it/99715)
+* [Manjaro and ssh-agent (2/2)](https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088)
 
 Hope it helps some of you.
 
