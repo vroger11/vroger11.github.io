@@ -4,7 +4,7 @@ comments: true
 title:  "Badaboom (partie 2) - Les boules de feu"
 ref: fireballs
 date:   2021-12-15 8:00:00 +0200
-categories: blogue dev
+categories: blogue datavis
 category: blogue
 lang: fr
 ---

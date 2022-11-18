@@ -4,7 +4,7 @@ comments: true
 title:  "Hackaviz 2021"
 ref: hackaviz-2021
 date:   2021-09-19 08:00:00 +0200
-categories: blogue dev
+categories: blogue datavis
 category: blogue
 lang: fr
 ---

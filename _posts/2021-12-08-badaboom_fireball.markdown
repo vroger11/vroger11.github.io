@@ -4,7 +4,7 @@ comments: true
 title:  "Badaboom (part 2) - Fireballs"
 ref: fireballs
 date:   2021-12-15 8:00:00 +0200
-categories: blog dev
+categories: blog dataviz
 category: blog
 lang: en
 ---

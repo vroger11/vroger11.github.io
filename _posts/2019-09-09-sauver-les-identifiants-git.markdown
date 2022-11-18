@@ -4,7 +4,7 @@ comments: true
 title:  "Sauver les identifiants git"
 ref: git_credentials
 date:   2019-09-09 19:30:00 +0200
-categories: blogue dev
+categories: blogue automatisation
 category: blogue
 lang: fr
 ---
