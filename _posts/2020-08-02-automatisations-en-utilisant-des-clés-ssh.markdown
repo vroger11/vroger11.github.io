@@ -156,9 +156,9 @@ sudo pamac install kwallet ksshaskpass kwalletmanager
 
 Ensuite, configurons notre système et zsh pour utiliser les voix de communications adaptées à l'agent ssh:
 ```bash
-sudo echo "#!/bin/sh" > /etc/profile.d/ssh-askpass.sh
-sudo echo "export SSH_ASKPASS=/usr/bin/ksshaskpass" >> /etc/profile.d/ssh-askpass.sh
-echo "export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket" >> ~/.zsherc
+sudo echo '#!/bin/sh' > /etc/profile.d/ssh-askpass.sh
+sudo echo 'export SSH_ASKPASS=/usr/bin/ksshaskpass' >> /etc/profile.d/ssh-askpass.sh
+echo 'export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket' >> ~/.zsherc
 ```
 
 Ensuite, nous créons le répertoire utilisateur pour systemd:
@@ -193,10 +193,9 @@ Nous allons maintenant l'activer et le lancer :
 ```bash
 systemctl --user daemon-reload
 systemctl --user enable ssh-agent.service
-systemctl --user start ssh-agent.service
 ```
 
-Voilà, on est bon, en espérant que cela vous a été utile 😉.
+Maintenant vous pouvez redémarrer votre machine et toute est bon 😄. En espérant que cela vous a été utile 😉.
 
 
 # Sources et inspirations
