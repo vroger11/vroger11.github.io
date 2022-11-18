@@ -158,7 +158,7 @@ Ensuite, configurons notre système et zsh pour utiliser les voix de communicati
 ```bash
 sudo echo '#!/bin/sh' > /etc/profile.d/ssh-askpass.sh
 sudo echo 'export SSH_ASKPASS=/usr/bin/ksshaskpass' >> /etc/profile.d/ssh-askpass.sh
-echo 'export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket' >> ~/.zsherc
+echo 'export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket' >> ~/.zshrc
 ```
 
 Ensuite, nous créons le répertoire utilisateur pour systemd:
