@@ -4,15 +4,15 @@ comments: true
 title:  "État de l'art sur le few-shot pour des corpus de parole avec peu de données"
 ref: survey_few_shot
 date:   2020-03-10 12:30:00 +0200
-categories: blogue recherche
+categories: blogue these
 category: blogue
 lang: fr
 ---
 
-Mon nouvel état de l'art est disponible sur [arXiv](https://arxiv.org/abs/2003.04241).
+Mon nouvel état de l'art [est disponible](http://dx.doi.org/10.1186/s13636-022-00251-w).
 Il fait une revue des techniques automatiques de traitement de la parole en comparant les techniques utilisant beaucoup de données vs les techniques utilisant peu de données.
 Ainsi, il inclut une partie sur les techniques dites de few-shot (pour utiliser peu de données en apprentissage) et montre les premiers résultats encourageants de l'état de l'art sur l'audio.
 N'hésitez pas à y jeter un coup d'œil.
-Malheureusement, c'est en anglais et la traduction viendra dans mon manuscrit de thèse :.
+Malheureusement, c'est en anglais et la traduction viendra dans mon manuscrit de thèse.
 
 À la revoyure, Vincent.
