@@ -8,9 +8,9 @@ permalink: /contact_fr/
 
 ## Courriels:
 
-* Concernant mes recherches : <mailto:Vincent.Roger@irit.fr>
+* Concernant mes recherches ou projets pro: <mailto:vincent.roger.pro@proton.me>
 
-* Pour les autres requêtes: <mailto:roger.vincent.11@gmail.com>
+* Pour les autres requêtes: <mailto:vroger11@protonmail.com>
 
 ## Adresse:
 
