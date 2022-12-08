@@ -29,7 +29,7 @@ I am happy it worked out that well, so this post is the beginning of a series of
 Enough talk, let's look at my work now 😃.
 
 # Players achievements
-My first dataviz was to show the achievements of each player regarding their classements alongside the number of games they won, lost.
+My first dataviz was to show the achievements of each player regarding their rank alongside the number of games they won, lost.
 It also includes the prize they gained. I am pretty happy with this one as it looks pleasant with multiple information on it.
 
 {:refdef: style="text-align: center;"}
