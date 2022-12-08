@@ -9,7 +9,7 @@ category: blog
 lang: en
 ---
 
-It has been a while, no second year review due to mixed feelings during covid. But thanks to my supervisors, I managed to overcome negative thinking. Thanks to them, I managed to finish my work, and I am now proud to be a PhD in computer science:tada:. In this post, I will share with you a summary of my work, some feelings and advises I have to share.
+It has been a while, no second year review due to mixed feelings during covid. But thanks to my supervisors, I managed to overcome negative thinking. Thanks to them, I managed to finish my work, and I am now proud to be a PhD in computer science 🎉. In this post, I will share with you a summary of my work, some feelings and advises I have to share.
 
 # Thesis summary
 People with head and neck cancers have speech difficulties after surgery or radiation therapy. It is important for health practitioners to have a measure that reflects the severity of speech. To produce this measure, a perceptual study is commonly performed with a group of five to six clinical experts. This process limits the use of this assessment in practice. Thus, the creation of an automatic measure, similar to the severity index, would allow a better follow-up of the patients by facilitating its obtaining.

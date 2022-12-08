@@ -27,7 +27,7 @@ Ma liste de tâches pour ce projet (non exhaustive):
 4. Liens vers TensorFlow.
 
 Pour plus de détails, allez dans le [répertoire GitHub](https://github.com/vroger11/audio_loader) (tout est en anglais).
-Si vous voulez contribuer, n'hésitez pas à me contacter ou à proposer vos pull request :smile:.
+Si vous voulez contribuer, n'hésitez pas à me contacter ou à proposer vos pull request 😄.
 
 J’espère que cela aidera certains d’entre vous.
 

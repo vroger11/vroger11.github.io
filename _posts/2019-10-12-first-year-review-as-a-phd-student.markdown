@@ -90,7 +90,7 @@ As a computer scientist guy, I am often in a building behind a desk.
 The sun does not directly go on my skin and I produce less Vitamin D than peoples who work outside.
 To compensate I take some vitamin D3, look at [here](https://www.hsph.harvard.edu/nutritionsource/vitamin-d/) or [there](https://www.health.harvard.edu/staying-healthy/time-for-more-vitamin-d) to better understand why I do so.
 I recommend you to talk about it with a professional.
-Also, to be more exposed to the sun (and meditate/relax) I avoid the subway as much as I can by using my scooter (a manual one :smile: ).
+Also, to be more exposed to the sun (and meditate/relax) I avoid the subway as much as I can by using my scooter (a manual one 😄).
 
 When I have less motivation than usual, I listen to the following songs (maybe it can cheer you up):
 * [Into the Abyss, by Hilltop Hoods](https://youtu.be/FEvlOHR_624).

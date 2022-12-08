@@ -9,7 +9,7 @@ category: blog
 lang: fr
 ---
 
-Cela fait un moment, pas de bilan de deuxième année en raison de sentiments mitigés pendant le covid. Mais grâce à mes encadrants, j'ai réussi à surmonter mes pensées négatives. Grâce à eux, j'ai réussi à terminer mon travail, et je suis maintenant fier d'être un docteur en informatique :tada:. Dans ce post, je vais partager avec vous un résumé de mon travail, quelques sentiments et conseils que j'ai à partager.
+Cela fait un moment, pas de bilan de deuxième année en raison de sentiments mitigés pendant le covid. Mais grâce à mes encadrants, j'ai réussi à surmonter mes pensées négatives. Grâce à eux, j'ai réussi à terminer mon travail, et je suis maintenant fier d'être un docteur en informatique 🎉. Dans ce post, je vais partager avec vous un résumé de mon travail, quelques sentiments et conseils que j'ai à partager.
 
 # Résumé de ma thèse
 

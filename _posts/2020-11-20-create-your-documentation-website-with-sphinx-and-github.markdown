@@ -31,7 +31,7 @@ First let us install sphinx:
 ```bash
 pip install sphinx
 ```
-Now we have everything we need to create our documentation :smile:.
+Now we have everything we need to create our documentation 😄.
 
 ## Create the initial files
 
@@ -137,7 +137,7 @@ extensions.append('sphinx.ext.napoleon')
 Now we are ready to use autodoc.
 ### Show elements of a docstring
 
-All the following commands works in rst files (I still search a simple way to use it in markdown files, don't hesite to share in comments :smile:).
+All the following commands works in rst files (I still search a simple way to use it in markdown files, don't hesite to share in comments 😄).
 For more details follow the [official documentation](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html).
 
 #### Use the docstring of the module
@@ -159,7 +159,7 @@ For more details follow the [official documentation](https://www.sphinx-doc.org/
 
 # Sphinx theming
 
-Now let's be funky :smile:.
+Now let's be funky 😄.
 We will use themes in there: [showcase of themes](https://sphinx-themes.org/).
 
 On this website, choose your desired documentation style, then click on the pypi hyperlink to install the theme using the `pip` command.

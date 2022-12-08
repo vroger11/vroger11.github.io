@@ -37,7 +37,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jemoji
+  #- jemoji
   - jekyll-github-metadata
 
 disqus:

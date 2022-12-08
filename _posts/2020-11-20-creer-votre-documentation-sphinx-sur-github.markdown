@@ -34,7 +34,7 @@ Avant tout, il faut installer sphinx:
 pip install sphinx
 ```
 
-Maintenant, nous avons tout le nécessaire pour créer notre documentation :smile:.
+Maintenant, nous avons tout le nécessaire pour créer notre documentation 😄.
 
 ## Créer les fichiers initiaux
 
@@ -144,7 +144,7 @@ Nous sommes maintenant prêts pour utiliser autodoc.
 
 ### Montrer des éléments de la docstring
 
-Toutes les commandes qui vont suivre fonctionnent au sein de fichiers `rst` (je cherche toujours un moyen simple pour utiliser ces commandes dans un fichier markdown, n'hésitez pas à partager vos conseils en commentaire :smile:).
+Toutes les commandes qui vont suivre fonctionnent au sein de fichiers `rst` (je cherche toujours un moyen simple pour utiliser ces commandes dans un fichier markdown, n'hésitez pas à partager vos conseils en commentaire 😄).
 Pour plus de détails, suivez la [documentation officielle](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html).
 
 #### Utiliser la docstring d'un module
@@ -166,7 +166,7 @@ Pour plus de détails, suivez la [documentation officielle](https://www.sphinx-d
 
 # Thème sphinx
 
-Maintenant, pensons esthétique :smile:.
+Maintenant, pensons esthétique 😄.
 Nous allons utiliser les thèmes se trouvant [ici](https://sphinx-themes.org/).
 
 Sur le site internet, choisissez votre style désiré, puis cliquez sur l'hyperlink pypi pour installer le thème en utilisant la commande `pip`.

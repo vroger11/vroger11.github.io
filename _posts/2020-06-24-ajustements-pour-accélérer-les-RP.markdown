@@ -118,6 +118,6 @@ none    /tmp/    tmpfs    noatime,size=10%    0    0
 N'oubliez pas de changer le cache utilisé pour ces cas (ou augmentez la taille de `/tmp` dans la ligne au-dessus et en fonction de votre quantité de RAM disponible).
 
 J’espère que cela aidera certains d’entre vous.
-Si vous avez des conseils ou d'autres astuces, n'hésitez pas à partager votre savoir :smile:.
+Si vous avez des conseils ou d'autres astuces, n'hésitez pas à partager votre savoir 😄.
 
 À la revoyure, Vincent.

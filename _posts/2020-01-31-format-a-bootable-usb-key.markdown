@@ -9,7 +9,7 @@ category: blog
 lang: en
 ---
 
-This post is mostly a remainder for me as it struggles me every time :stuck_out_tongue_winking_eye:.
+This post is mostly a remainder for me as it struggles me every time 😜.
 After making a USB key bootable with any distribution, I get an error message when I want to format it with a graphical interface (tested with gnome-disk, kde partition manager and gparted).
 
 This is the steps I have to do to be able to modify this USB key using one of the graphical interfaces I listed.
@@ -46,6 +46,6 @@ sudo dd if=/dev/zero of=/dev/sda bs=4k conv=fsync && alert
 Now you can use your favorite graphical interface to format your key.
 The `&& alert` command is not necessary. If you want to understand what it is, I suggest you to look at [my post about my bash configuration](/blog/dev/2020/01/29/improve-your-bash-navigation.html).
 
-Hope it helps some of you, it surely helps me :smile:.
+Hope it helps some of you, it surely helps me 😄.
 
 Cheers, Vincent.

@@ -27,7 +27,7 @@ My TODO list for the future (it is not an exhaustive one):
 4. TensorFlow bindings
 
 For more details look into the [GitHub repository](https://github.com/vroger11/audio_loader).
-If you want to contribute, feel free to contact me or propose your pull request :smile:.
+If you want to contribute, feel free to contact me or propose your pull request 😄.
 
 Hope it helps some of you.
 

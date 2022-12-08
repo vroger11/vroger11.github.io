@@ -124,6 +124,6 @@ none    /tmp/    tmpfs    noatime,size=10%    0    0
 Don't forget to change the cache to use for these cases (or increase the size of `/tmp` in the line above depending on your RAM available).
 
 Hope it helps some of you.
-If you have advices or more trick don't hesitate to share your knowledge :smile:.
+If you have advices or more trick don't hesitate to share your knowledge 😄.
 
 Cheers, Vincent

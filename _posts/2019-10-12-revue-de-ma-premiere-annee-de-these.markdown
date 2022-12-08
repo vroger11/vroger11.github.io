@@ -93,7 +93,7 @@ Pour compenser, je prends de la vitamine D3.
 Je vous conseille de regarder [ici](https://www.julienvenesson.fr/calculer-son-besoin-en-vitamine-d-en-fonction-de-son-poids/) ou [là](https://www.julienvenesson.fr/eviter-les-fortes-doses-de-vitamine-d/) pour comprendre ma démarche.
 Dans tous les cas, demandez conseil à un professionnel.
 Une autre solution consiste à s'exposer plus au soleil (tout en profitant pour se relaxer/méditer).
-Ainsi, j'évite un maximum le métro en utilisant ma trottinette (une non électrique :smile: ).
+Ainsi, j'évite un maximum le métro en utilisant ma trottinette (une non électrique 😄).
 
 Lorsque je ressens moins de motivation que d'habitude, j'écoute les sons suivants (cela pourrait vous remonter le moral):
 * [Into the Abyss, by Hilltop Hoods](https://youtu.be/FEvlOHR_624).
