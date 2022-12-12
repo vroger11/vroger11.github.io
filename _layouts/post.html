@@ -53,8 +53,10 @@ layout: default
       {{ content }}
     </div>
 
-    {% if page.comments %}
-      {% include disqus.html %}
+    {% if jekyll.environment == 'production' %}
+      {% if page.comments %}
+        {% include disqus.html %}
+      {%- endif -%}
     {%- endif -%}
   </body>
 
