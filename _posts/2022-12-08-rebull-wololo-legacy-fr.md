@@ -4,7 +4,7 @@ comments: true
 title:  "Mes visualisations du tournois Red Bull Wololo legacy"
 ref: rbw6
 date:   2022-12-08 08:00:00 +0200
-categories: blog datavis
+categories: blog datavis aoe
 category: blog
 lang: fr
 ---

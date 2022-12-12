@@ -4,7 +4,7 @@ comments: true
 title:  "My Red Bull Wololo Legacy dataviz"
 ref: rbw6
 date:   2022-12-08 08:00:00 +0200
-categories: blog dataviz
+categories: blog dataviz aoe
 category: blog
 lang: en
 ---
