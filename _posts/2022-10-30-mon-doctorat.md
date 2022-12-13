@@ -4,8 +4,8 @@ comments: true
 title:  "L'expérience de mon doctorat"
 ref: my_phd
 date:   2022-10-30 08:00:00 +0200
-categories: blog these
-category: blog
+categories: blogue these
+category: blogue
 lang: fr
 ---
 

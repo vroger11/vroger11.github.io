@@ -4,8 +4,8 @@ comments: true
 title:  "Hackaviz 2022"
 ref: hackaviz-2022
 date:   2022-04-03 20:00:00 +0200
-categories: blog datavis
-category: blog
+categories: blogue datavis
+category: blogue
 lang: fr
 ---
 
