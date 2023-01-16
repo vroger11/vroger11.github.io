@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Mes visualisations du tournois Warlords"
+title:  "Mes visualisations du tournoi Warlords"
 ref: warlords1
 date:   2022-12-13 08:00:00 +0200
 categories: blogue datavis
