@@ -13,11 +13,3 @@ permalink: /contact/
 * Concerning the Toulouse dataviz association: <mailto:vincent.roger@toulouse-dataviz.fr>
 
 * For other requests: <mailto:vroger11@protonmail.com>
-
-## Address:
-
-    IRIT UMR 5505 - Equipe SAMOVA
-
-    118, Route de Narbonne
-
-    31062 Toulouse Cedex 9

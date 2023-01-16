@@ -14,10 +14,3 @@ permalink: /contact_fr/
 
 * Pour les autres requêtes: <mailto:vroger11@protonmail.com>
 
-## Adresse:
-
-    IRIT UMR 5505 - Équipe SAMOVA
-
-    118, Route de Narbonne
-
-    31062 Toulouse Cedex 9
