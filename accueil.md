@@ -8,7 +8,7 @@ ref: home
 ---
 
 J'ai un doctorat en science des données à L'IRIT (Toulouse).
-J'ai travaillé sur des corpus avec une quantité limitée de parole altérée.
+J'ai travaillé sur des corpus avec une quantité limitée de parole pathologique.
 Je tiens également un blogue sur des visualisations que je réalise, sur la recherche que j'effectue et sur des astuces autour de Linux. [C'est par ici](blogue).
 
 # Mes intérêts
