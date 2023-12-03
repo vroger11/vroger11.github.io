@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Mes visualisations du tournoi The Grand Melee"
+title:  "Outils de visualisation de données pour Python"
 ref: pres-python-dataviz
 date:   2023-12-03 08:00:00 +0200
 categories: blogue datavis python
