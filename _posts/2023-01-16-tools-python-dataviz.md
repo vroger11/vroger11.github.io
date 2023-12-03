@@ -14,7 +14,7 @@ Hello again, it has been a while!
 Recently, I did a presentation on Python libraries for data visualizations.
 I compared them and presented usage examples.
 All code and examples are available [here](https://github.com/vroger11/presentation-toulouse-dataviz).
-If by any chances the slides do not work well for you, you can [download the pdf versions]({{ site.baseurl }}/assets/presentations/tdv/python_tools_en.pdf) (with no animated elements).
+If by any chances the slides do not work well for you, you can [download the pdf version]({{ site.baseurl }}/assets/presentations/tdv/python_tools_en.pdf) (with no animated elements).
 
 If you understand French you can watch my presentation:
 <div style="width : 1000px ; margin : 0 auto ;">

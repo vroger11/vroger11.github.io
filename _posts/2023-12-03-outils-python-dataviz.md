@@ -14,7 +14,7 @@ Bonjour, cela fait un moment !
 Récemment, j'ai fait une présentation sur les bibliothèques Python pour la visualisation de données.
 Je les ai comparées et j'ai présenté des exemples d'utilisation.
 Tout le code et les exemples sont disponibles [ici](https://github.com/vroger11/presentation-toulouse-dataviz).
-Si par hasard les diapositives ne vous conviennent pas, vous pouvez [télécharger les versions pdf]({{ site.baseurl }}/assets/presentations/tdv/python_tools_fr.pdf) (sans éléments animés).
+Si par hasard les diapositives ne vous conviennent pas, vous pouvez [télécharger la version pdf]({{ site.baseurl }}/assets/presentations/tdv/python_tools_fr.pdf) (sans éléments animés).
 
 Vous pouvez également voir ma présentation :
 <div style="width : 1000px ; margin : 0 auto ;">
