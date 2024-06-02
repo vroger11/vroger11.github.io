@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Diffusers - generate images with unconditional model"
 ref: diffusers-tutorial-part1
-date:   2024-12-03 08:00:00 +0200
+date:   2024-06-02 08:00:00 +0200
 categories: blog deeplearning python
 category: blog
 lang: en
