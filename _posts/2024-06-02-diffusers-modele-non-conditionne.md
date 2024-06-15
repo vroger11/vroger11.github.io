@@ -150,7 +150,7 @@ fig = plot_generated_images(generated_image.images, 4, 4)
 fig.show()
 ```
 
-![images générées](/assets/images/diffusers/unconditional_tutorial_1.png)
+![images générées](/assets/images/diffusers/tutorial_1_unconditional.png)
 
 Nous y voilà, nous avons généré nos premiers exemples en utilisant la librairie diffusers.
 Dans un prochain article de blog, nous verrons comment générer des exemples à partir d'une vérité de terrain (au lieu de tutoriels n'utilisant que du texte et de suivre le cours deeplearning ai).
