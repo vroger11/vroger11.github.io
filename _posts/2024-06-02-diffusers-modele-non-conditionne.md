@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Diffusers - générer des images avec un modèle non conditioné"
+title:  "Diffusers - générer des images avec un modèle non conditionné"
 ref: diffusers-tutorial-part1
 date:   2024-06-02 08:00:00 +0200
 categories: blogue deeplearning python
