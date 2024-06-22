@@ -29,6 +29,6 @@ Ma thèse consistait à réaliser un Système Automatique de Mesure de l'Intelli
 
 Les personnes atteintes de cancers ORL présentent des difficultés de prononciation après des chirurgies ou des radiothérapies. Il est important pour le praticien de pouvoir disposer d’une mesure reflétant la sévérité de la parole. Je propose deux approches pour créer une mesure automatique, bien que ne disposant que de peu de données (environ 1h d’enregistrements audio pour 128 locuteurs). La première est fondée sur des méthodes de “few shot”, tandis que la seconde est fondée sur la mesure entropique de caractéristiques de la parole (apprises avec un modèle auto-supervisé sur un corpus annexe). Nos résultats sur cette dernière ont permis d'envisager une application médicale.
 Ainsi, j'ai obtenu une subvention pour encadrer un ingénieur afin de réaliser une application livrée au CHU de Toulouse.
-Pour plus d'informations, consultez [mon article sur le bilan mon doctorat](/blogue/phd/2022/10/30/mon-doctorat.html).
+Pour plus d'informations, consultez [mon article sur le bilan mon doctorat](/blogue/these/2022/10/30/mon-doctorat.html).
 
 Vous pouvez retrouver mon résumé au complet [ici](/assets/cv/cv_fr.pdf) ou aller sur mon [LinkedIn](https://www.linkedin.com/in/vroger11/).

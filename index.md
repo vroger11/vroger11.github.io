@@ -30,7 +30,6 @@ The project consisted in creating a measure to assess speech severity index.
 
 People with ENT cancers have speech difficulties after surgery or radiation therapy. It is important for the practitioner to have a measure that reflects the severity of speech. I propose two approaches to create an automatic measure, although with little data (about 1h of audio recordings for 128 speakers). The first one is based on "few shot" methods, while the second one is based on entropic measurement of speech features (learned with a self-supervised model on an annexed corpus). Our results on the latter have allowed us to consider a medical application.
 Thus, I obtained a grant to supervise an engineer to realize an application delivered to the Toulouse University Hospital.
-For more information, see [my article on my PhD report](/blog/phd/2022/10/30/my-doctorate.html).
+For more information, see [my article on my PhD report](/blog/phd/2022/10/30/my-phd-experience.html).
 
 You can find my full CV [here](/assets/cv/cv_en.pdf) or look at my [LinkedIn](https://www.linkedin.com/in/vroger11/) account.
-
