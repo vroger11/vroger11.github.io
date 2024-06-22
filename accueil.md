@@ -11,18 +11,19 @@ J'ai un doctorat en science des données à L'IRIT (Toulouse).
 J'ai travaillé sur des corpus avec une quantité limitée de parole pathologique.
 Je tiens également un blogue sur des visualisations que je réalise, sur la recherche que j'effectue et sur des astuces autour de Linux. [C'est par ici](blogue).
 
-# Mes intérêts
+## Mes intérêts
+
 * Je me concentre sur les algorithmes d'apprentissage automatique pour modéliser les connaissances avec peu ou beaucoup de données.
 Plus spécifiquement, j'aime utiliser l'apprentissage auto-supervisé pour extraire des connaissances à partir de données.
 
 * Dans ma thèse, j'ai adapté des techniques de réseaux neuronaux profonds dans un contexte de quelques images pour les signaux vocaux.
-Pour en savoir plus, consultez [mon article sur le bilan mon doctorat](/blogue/phd/2022/10/30/mon-doctorat.html).
+Pour en savoir plus, consultez [mon article sur le bilan mon doctorat](/blogue/these/2022/10/30/mon-doctorat.html).
 
 * Je fais de l'analyse de données pour produire des visualisations. La plupart d'entre elles sont disponibles sur mon blogue (et en avant première sur [Reddit](https://www.reddit.com/user/vroger11) ou mon [Twitter](https://twitter.com/vroger11))
 
 * Je participe à certains projets open sources (reports de bug, propositions de patch, discussions, etc...).
 
-# Résumé
+## Résumé
 
 Pour ma thèse, j'ai été encadré par [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
 Ma thèse consistait à réaliser un Système Automatique de Mesure de l'Intelligibilité (SAMI).

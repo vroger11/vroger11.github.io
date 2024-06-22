@@ -14,7 +14,7 @@ The Hackaviz is a contest organized by the data visualization association called
 It consists in telling a story using data made available.
 
 I have fun making data visualizations in my free time, so I participated solo.
-You can find my participation to the previous year [here](/blog/dev/2021/09/19/hackaviz.html).
+You can find my participation to the previous year [here](/blog/dataviz/2021/09/19/hackaviz.html).
 The code I used will be available soon.
 
 # Results

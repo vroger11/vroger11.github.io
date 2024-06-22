@@ -11,7 +11,7 @@ I have a PhD in data science at IRIT (Toulouse).
 I worked on corpora with a limited amount of impaired speech.
 I also keep a blog about visualizations I make, research I do and tips around Linux. [Check it out](blog).
 
-# Interests
+## Interests
 
 * I am focused on machine learning algorithms to model knowledge with few or many data.
 More specifically I like to use self-supervised learning to extract knowledge from data.
@@ -23,7 +23,7 @@ To have additional information about it, see [my PhD review article](/blog/phd/2
 
 * I participate in some open-source projects (bug reports, patch proposals, discussions, etc...).
 
-# Summary
+## Summary
 
 For my PhD, I was supervised by [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp).
 The project consisted in creating a measure to assess speech severity index.

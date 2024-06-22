@@ -23,13 +23,14 @@ Ensuite, pour héberger la documentation j'utilise GitHub Pages vu que je l'util
 Dans cet article de blogue, je vais vous expliquer comment créer une documentation en utilisant Sphinx et autant de fichiers markdown que possible.
 Enfin, j'expliquerai comment mettre en place votre dépôt GitHub pour héberger cette documentation.
 
-
 # Créer sa première documentation
 
 Dans cette partie, nous allons voir comment créer une documentation en utilisant Sphinx.
 
 ## Installer Sphinx
+
 Avant tout, il faut installer sphinx:
+
 ```bash
 pip install sphinx
 ```
@@ -39,11 +40,13 @@ Maintenant, nous avons tout le nécessaire pour créer notre documentation 😄.
 ## Créer les fichiers initiaux
 
 Sphinx organise la documentation en 3 éléments:
+
 - un fichier de compilation pour générer la documentation
 - les fichiers sources contenant les instructions pour générer la documentation
 - la documentation résultante (fichier pdf, pages html, ...)
 
 Maintenant, créons cette organisation en utilisant l'outil `quickstart` de sphinx:
+
 ```bash
 mkdir docs
 cd docs
@@ -70,6 +73,7 @@ Néanmoins pour les cas où les fichiers rst sont nécessaires (comme `index.rst
 Par conséquent, c'est ce que je vais expliquer dans cette partie.
 
 ## Lier un fichier rst à l'aide du doctree
+
 Pour rajouter un lien vers un fichier (disons `extra_document.rst`) il vous faut ajouter `extra_document` dans le doctre comme suit:
 
 ```rst
@@ -102,11 +106,13 @@ Le document contenant cette ligne sera rempli du contenu de `my_file.rst`.
 Pour ajouter le support du markdown dans sphinx, j'utilise `m2r` au lieu de `recommonmark` (officiellement recommandé par sphinx).
 La raison est simple: `recommonmark` ne supporte pas la commande `mdinclude` pour inclure les documents markdown dans des fichiers `rst`.
 Maintenant, installons `m2r`:
+
 ```bash
 pip install m2r
 ```
 
 Ensuite, nous devons modifier le fichier `source/config.py` pour lui  ajouter cette ligne:
+
 ```python
 extensions.append("m2r")
 ```
@@ -114,21 +120,26 @@ extensions.append("m2r")
 Maintenant, vous pouvez utiliser des fichiers markdown pour votre documentation.
 Vous pouvez ajoutez ces derniers dans le doctree (comme pour les fichiers `rst`) ou les inclure en utilisant `mdinclude`.
 Un petit exemple avec `mdinclude`:
+
 ```bash
 .. mdinclude:: my_file.md
 ```
 
 ## Autodoc
+
 Pendant la création d'une documentation, il est agréable d'utiliser la docstring des fichiers sources pour remplir la documentation.
 Ici je vais expliquer comment vous pouvez utiliser l'extension `autodoc`.
 
 ### Installation
+
 Pour activer l'extension, il faut ajouter la ligne suivante dans le fichier `source/config.py`:
+
 ```python
 extensions.append('sphinx.ext.autodoc')
 ```
 
 Il faut également ajouter les lignes suivantes en début du fichier `source/config.py`:
+
 ```python
 import os
 import sys
@@ -136,6 +147,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 ```
 
 Pour utiliser le format numpy dans vos docstring vous devez également ajouter l'extension napoleon dans le fichier `source/config.py`:
+
 ```python
 extensions.append('sphinx.ext.napoleon')
 ```
@@ -148,21 +160,23 @@ Toutes les commandes qui vont suivre fonctionnent au sein de fichiers `rst` (je 
 Pour plus de détails, suivez la [documentation officielle](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html).
 
 #### Utiliser la docstring d'un module
+
 ```rst
 .. automodule:: project_folder.module
 ```
 
 #### Utiliser toutes les docstring d'un module
+
 ```rst
 .. automodule:: project_folder.module
-	:members:
+    :members:
 ```
 
 #### Utiliser la docstring d'une classe
+
 ```rst
 .. autoclass:: project_folder.module.class
 ```
-
 
 # Thème sphinx
 
@@ -179,7 +193,9 @@ Maintenant que nous savons comment créer une documentation, il serait bien de l
 Ici, je vais expliquer comment j'ai fait avec les serveurs GitHub.
 
 ## Préparer la structure de votre projet
+
 Pour mes projets, je pense que la structure la plus adaptée est la suivante:
+
 ```
 my_project
 |-  my_project_code      --> dossier contenant le code source et les sources de la documentation
@@ -189,12 +205,14 @@ my_project
 
 Maintenant, créons cette structure.
 En premier, créons un répertoire pour votre projet:
+
 ```bash
 mkdir my_project
 cd my_project
 ```
 
 Puis, créons les dossiers `my_project/my_project_code` et `my_project/my_project_gh_pages`:
+
 ```bash
 mkdir my_project_gh_pages
 git clone https://github.com/username/my_project
@@ -202,6 +220,7 @@ mv my_project my_project_code
 ```
 
 Maintenant, créons et préparons le dossier `html`:
+
 ```bash
 git clone https://github.com/username/my_project
 mv my_project html
@@ -215,14 +234,17 @@ git clean -fdx
 ```
 
 ## Modifier le makefile de sphinx
+
 Maintenant, nous devons modifier le makefile pour utiliser la branche gh-branch et le dossier `my_project_gh_pages`.
 
 Pour cela, éditez le fichier `my_project/my_project_code/docs/Makefile` tel que la variable `BUILDDIR` soit comme tel:
+
 ```
 BUILDDIR      = ../../my_project_gh_pages/
 ```
 
 Vous pouvez maintenant générer votre documentation avec la commande suivante:
+
 ```bash
 make html
 ```
@@ -238,7 +260,6 @@ git commit -m "First documentation commit"
 git push --set-upstream origin gh-pages
 ```
 
-
 La documentation est maintenant disponible sous `https://username.github.io/my_project`, à moins que vous n'ayez fait de redirection pour votre GitHub Pages (comme pour ce blogue).
 
 ## Forcer la désactivation de jekyll
@@ -247,6 +268,7 @@ Les serveurs de GitHub utilisent jekyll et cela peut provoquer des erreurs d'int
 Heureusement, nous pouvons désactiver jekyll.
 
 À l'intérieur du dossier `my_project/my_project_gh_pages/html` tapez les commandes suivantes:
+
 ```bash
 touch .nojekyll
 git add .nojekyll
@@ -257,8 +279,9 @@ git push origin gh-pages
 ## Construire la documentation et la commiter automatiquement
 
 Vous pouvez ajouter une commande dans votre Makefile:
+
 ```bash
-	pushhtml: html
+    pushhtml: html
 
     cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
 ```
@@ -267,13 +290,14 @@ Maintenant, en tapant `make pushhtml` vous pouvez construire votre documentation
 Elle reste au côté de la commande `make html` qui peut être utilisée pour tester vos documentations dans les pousser sur GitHub.
 
 # Sources/Inspirations
-* [La documentation Official de sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
 
-* [Getting started with sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
+- [La documentation Official de sphinx](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
 
-* [Getting started with autodoc](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
+- [Getting started with sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
 
-* [Publishing sphinx documentation on GitHub](https://daler.github.io/sphinxdoc-test/includeme.html)
+- [Getting started with autodoc](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
+
+- [Publishing sphinx documentation on GitHub](https://daler.github.io/sphinxdoc-test/includeme.html)
 
 J’espère que cela aidera certains d’entre vous.
 

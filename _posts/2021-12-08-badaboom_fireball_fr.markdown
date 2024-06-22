@@ -10,7 +10,7 @@ lang: fr
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter la suite de mes travaux sur ma librairie [badaboom](https://github.com/vroger11/badaboom)).
-Cet article fait suite à mon précédent article sur mon projet badaboom (vous pouvez retrouver cet article [ici](/blogue/dev/2021/09/12/badaboom_fr.html)).
+Cet article fait suite à mon précédent article sur mon projet badaboom (vous pouvez retrouver cet article [ici](/blogue/datavis/2021/09/12/badaboom_fr.html)).
 Pour ce deuxième volet, j'ai réalisé l'analyse des boules de feu (fireballs en anglais).
 Les boules de feu sont des termes astronomiques désignant des météores exceptionnellement brillants et suffisamment spectaculaires pour être vus dans une zone très étendue.
 

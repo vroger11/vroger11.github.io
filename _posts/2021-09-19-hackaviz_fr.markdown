@@ -32,7 +32,6 @@ En regardant plus en détail ce graphique, on s'aperçoit qu'excepté Toulouse, 
 
 Ainsi, le bassin méditerranéen est une zone d'attraction pour les activités foncières.
 
-
 J’espère que cela aidera/inspirera certains d’entre vous.
 Dans tous les cas, j'espère que cela a été intéressant.
 
