@@ -17,7 +17,7 @@ Les boules de feu sont des termes astronomiques désignant des météores except
 Pour ce travail, j'ai utilisé la base de données du CNEOS (appartenant à la NASA).
 Je vais pour cet article, commencer par vous présenter les éléments présents dans cette base de données et finir par vous montrer les premiers résultats que j'ai obtenus (je mettrais à jour ce post compte tenu de mes avancées).
 
-# Résultats
+## Résultats
 
 Vu que cette base recense les impacts boules de feux, je me suis d'abord tourné vers les énergies démissions lumineuses et les énergies d'impacts.
 Il est à noter que j'ai mis ces énergies à l'échelle logarithmique, car l'échelle des valeurs et tellement varié que j'ai trouvé plus simple et plus lisible de faire ainsi.

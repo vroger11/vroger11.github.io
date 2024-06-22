@@ -16,7 +16,7 @@ M'amusant à faire des visualisations de données sur mon temps libre, j'y ai do
 Le code que j'ai utilisé est disponible [ici](https://github.com/vroger11/hackaviz2021).
 Dans cet article de blog, je vais vous révéler l'histoire que j'ai souhaité raconter à travers mon travail.
 
-# Résultats
+## Résultats
 
 La région Occitanie est une région bien ensoleillée avec son chef-lieu étant à Toulouse.
 On s'attend donc à ce que la ville soit la plus dynamique en termes de transactions foncières entre les années 2016 et 2020.

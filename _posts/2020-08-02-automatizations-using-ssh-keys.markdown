@@ -25,20 +25,20 @@ If you want more information of the protocol, have a look [here](https://www.ssh
 
 The distribution used (and tested) for this tutorial is Kubuntu 20.04 LTS (my new main distribution, but this story is for a future post).
 
-# Prepare the client side
+## Prepare the client side
 
 In this section we will prepare the client that will do the identifications to the servers.
 We will first create a pair of public and private keys.
 Afterwards, we will start the ssh-agent to configure it with the private key.
 
-## Check if you already have a pair of SSH keys
+### Check if you already have a pair of SSH keys
 
 Check the directory listing of `~/.ssh/` to see if you already have a public SSH key.
 By default, the filename of the public key is `id_rsa.pub`.
 You can use a different pair of keys per server if you want.
 I prefer to keep one pair of keys per machine (and change it regularly).
 
-## Generate a pair of SSH keys
+### Generate a pair of SSH keys
 
 To generate a pair of keys linked to an email address (to better identify the connected user) you have to type the following line:
 
@@ -51,7 +51,7 @@ You can let the default key path if you do not have a default pair of keys.
 You will also set a password to unlock your private key, be sure to remember it.
 **Be careful to not revel your private key (the `id_rsa` file) in any case.**
 
-## Start ssh-agent and add your private key
+### Start ssh-agent and add your private key
 
 To let your system remember your private key for your session you can use the ssh-agent as follows:
 
@@ -63,7 +63,7 @@ ssh-add ~/.ssh/id_rsa
 Now we have a pair of private and public key and the ssh-agent configured with it.
 We are ready to automatize our SSH identifications to servers or Git servers.
 
-# Automatize your login on servers using SSH
+## Automatize your login on servers using SSH
 
 To automatize SSH password typing, you can add the public key to the authorized keys of your servers.
 Before that, make sure that your remote user space contains a `~/ssh` folder:
@@ -81,7 +81,7 @@ cat ~/.ssh/id_rsa.pub | ssh <login>@<server_adress> 'cat >> .ssh/authorized_keys
 Now your server is configured with your ssh pair of keys.
 You can repeat those two steps for each server you can access.
 
-# Automatize your authentifications on Git servers
+## Automatize your authentifications on Git servers
 
 To automatize your identification (typing your login and password) after using a `pull` or `push` command, you can add your public key to your Git server (via their web interface).
 To copy your public key on a website (such as GitHub or GitLab) you may want to add your key to the clipboard (to use Ctrl+V inside your web browser).
@@ -108,25 +108,25 @@ After, follow the steps from this [link](https://help.github.com/en/github/authe
 Now your configuration is ready for your Git server.
 The next subsection will be about testing this configuration without modifying your repositories.
 
-## Test your configuration
+### Test your configuration
 
 To test your new configuration on your Git server, you can use the ssh protocol.
 It will avoid doing modifications to one of your Git repository.
 The next subsections show you how to do it for different Git servers.
 
-### GitHub
+#### GitHub
 
 ```bash
 ssh -T git@github.com
 ```
 
-### GitLab
+#### GitLab
 
 ```bash
 ssh -T git@gitlab.com
 ```
 
-# Keeping ssh-agent identities on Kubuntu 22.04 after restart
+## Keeping ssh-agent identities on Kubuntu 22.04 after restart
 
 With the above instructions, you have to (in Kubuntu at least) reconfigure the ssh-agent after each logout or restart.
 In this section, we will use kwallet to bypass this limitation.
@@ -156,7 +156,7 @@ For the next step, type the following command and **check the remember checkbox*
 
 It will let the KDE wallet retain the password for your private key and unlocks it after each login.
 
-# Keeping ssh-agent identities on Manjaro after a reboot
+## Keeping ssh-agent identities on Manjaro after a reboot
 
 After my switch to Manjaro linux ([see my post about my migration](/blog/2022/09/03/my-switch-to-manjaro.html)), I realized that the method for Kubuntu didn't work (and might not work on next LTS). Here is my solution, which is a combination of two approaches that you can find in my sources.
 
@@ -210,7 +210,7 @@ systemctl --user enable ssh-agent.service
 
 Now you can restart your machine and everything should work 😄. I hope this was helpful 😉.
 
-# Sources and inspirations
+## Sources and inspirations
 
 - [GitHub Official instructions for SSH keys](https://help.github.com/en/github/authenticating-to-github)
 - [GitLab Official instructions for SSH keys](https://docs.gitlab.com/ee/user/ssh.html)

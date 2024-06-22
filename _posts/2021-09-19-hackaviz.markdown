@@ -16,7 +16,7 @@ I have fun making data visualizations in my free time, so I participated solo.
 The code I used is available [here](https://github.com/vroger11/hackaviz2021).
 In this blog post, I will reveal the story I wanted to tell through my work.
 
-# Results
+## Results
 
 The Occitanie region is a sunny region with its capital city being Toulouse.
 It is therefore expected to be the most dynamic city in terms of land transactions between the years 2016 and 2020.

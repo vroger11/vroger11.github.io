@@ -26,20 +26,20 @@ Si vous voulez plus d'information sur ce protocole, allez voir [ici](https://del
 
 La distribution utilisée (et testée) pour ce tutoriel est Kubuntu 20.04 LTS (ma nouvelle distribution, mais c'est pour un futur article de blogue).
 
-# Préparer le côté client
+## Préparer le côté client
 
 Dans cette section, nous allons préparer le client qu'il puisse s'identifier automatiquement sur les serveurs.
 D'abord, créons une paire de clés publique et privée.
 Enfin, nous démarrerons l'agent de clés SSH pour le configurer avec la clé privée.
 
-## Vérifiez la présence d'une paire de clés SSH
+### Vérifiez la présence d'une paire de clés SSH
 
 Pour cela il faut regarder dans le dossier `~/.ssh/` pour voir si vous avez déjà une clé publique SSH.
 Par défaut, le nom de fichier d'une clé publique est `id_rsa.pub`.
 Vous pouvez utiliser une paire différente de clés par serveur si vous voulez.
 Je préfère garder une paire de clés par machine (et en changer régulièrement).
 
-## Générer une paire de clés SSH
+### Générer une paire de clés SSH
 
 Pour générer une paire de clés liées à une adresse email (pour mieux identifier l'utilisateur connecté) vous devez écrire la ligne suivante:
 
@@ -52,7 +52,7 @@ Vous pouvez laisser le chemin des clés par défaut si vous n'avez pas déjà un
 Vous allez également définir un mot de passe pour déverrouiller votre clé privée, soyez certain de vous en rappeler.
 **Faites également attention de ne pas révéler votre clé privée (le fichier `id_rsa`) en toutes circonstances.**
 
-## Démarrer l'agent de clé SSH et ajouter votre clé privée
+### Démarrer l'agent de clé SSH et ajouter votre clé privée
 
 Pour laisser votre système se souvenir de votre clé privée durant votre session, vous pouvez utiliser l'agent SSH comme suit:
 
@@ -64,7 +64,7 @@ ssh-add ~/.ssh/id_rsa
 Maintenant, nous avons une paire de clés privée et publique ainsi que l'agent de clé SSH de configurés.
 Nous sommes prêts pour automatiser les identifications SSH vers des serveurs SSH et/ou serveur git.
 
-# Automatisez votre connexion sur les serveurs en utilisant SSH
+## Automatisez votre connexion sur les serveurs en utilisant SSH
 
 Pour automatiser l'étape de saisie de votre mot de passe, vous pouvez ajouter votre clé publique dans la liste des clés autorisées de vos serveurs.
 Avant ça, assurez-vous que votre espace utilisateur distant contienne le dossier `~/ssh`:
@@ -82,7 +82,7 @@ cat ~/.ssh/id_rsa.pub | ssh <identifiant>@<adresse_serveur> 'cat >> .ssh/authori
 Maintenant, votre serveur est configuré avec votre paire de clés SSH.
 Vous pouvez répéter ces deux étapes pour chaque serveur dont vous avez accès.
 
-# Automatiser vos authentifications sur les serveurs Git
+## Automatiser vos authentifications sur les serveurs Git
 
 Pour automatiser vos authentifications (écrire votre identifiant et votre mot de passe) après l'utilisation d'une commande `push`/`pull`, vous devez ajouter votre clé publique dans le serveur git (en utilisant l'interface web du serveur git).
 Pour copier votre clé publique sur un site internet (tel que GitHub ou GitLab) vous pouvez ajouter votre clé dans le presse-papier (pour utiliser Ctrl+V à l'intérieur de votre navigateur internet).
@@ -128,7 +128,7 @@ ssh -T git@github.com
 ssh -T git@gitlab.com
 ```
 
-# Garder les identités de l'agent SSH sur Kubuntu 22.04 après un redémarrage
+## Garder les identités de l'agent SSH sur Kubuntu 22.04 après un redémarrage
 
 Avec les précédentes instructions, vous devez (du moins dans Kubuntu) reconfigurer votre agent SSH après chaque redémarrage ou déconnexion.
 Dans cette sous-section, nous allons utiliser kwallet pour outrepasser cette limitation.
@@ -158,7 +158,7 @@ L'étape suivante consiste à taper la commande suivante et de **cocher la case 
 
 Cela va permettre à kwallet (portefeuille de clés de KDE) de retenir le mot de passe pour votre clé privée et la débloquer après chaque connexion.
 
-# Garder les identités de l'agent SSH sur Manjaro après un redémarrage
+## Garder les identités de l'agent SSH sur Manjaro après un redémarrage
 
 Après mon passage sur Manjaro linux ([voir mon post sur ma migration](/blogue/2022/09/03/mon-passage-a-manjaro.html)), je me suis aperçu que la méthode pour Kubuntu ne fonctionnait pas (et risque de ne pas fonctionner sur les prochaines LTS). Voici ma solution, qui est une combinaison de deux approches que vous pouvez retrouver dans mes sources.
 
@@ -212,7 +212,7 @@ systemctl --user enable ssh-agent.service
 
 Maintenant vous pouvez redémarrer votre machine et toute est bon 😄. En espérant que cela vous a été utile 😉.
 
-# Sources et inspirations
+## Sources et inspirations
 
 - [Instructions officielles de GitHub pour les clés SSH](https://help.github.com/en/github/authenticating-to-github)
 - [Instructions officielles de GitLab pour les clés SSH](https://docs.gitlab.com/ee/user/ssh.html)

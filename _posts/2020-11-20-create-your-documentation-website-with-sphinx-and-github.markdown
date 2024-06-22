@@ -23,11 +23,11 @@ Next, to host this documentation I chose GitHub Pages as I already used it on my
 In this post, I will explain how to create a documentation using Sphinx and how to use as much as possible markdown files.
 Finally, I will explain how to set up your repository on GitHub to host your documentation.
 
-# Create your first documentation
+## Create your first documentation
 
 In this section, we will see how to create a documentation using sphinx.
 
-## Install Sphinx
+### Install Sphinx
 
 First let us install sphinx:
 
@@ -37,7 +37,7 @@ pip install sphinx
 
 Now we have everything we need to create our documentation 😄.
 
-## Create the initial files
+### Create the initial files
 
 Sphinx organize the documentation in three things:
 
@@ -61,7 +61,7 @@ Sphinx source files are in `docs/sources` and the `index.rst` file represents th
 To compile your documentation into a website or a pdf file you can use the makefile (using `make html` or `make pdf`).
 The resulted documentation format will be putted into `docs/build`.
 
-# Include/link files into a rst file
+## Include/link files into a rst file
 
 Here I will not detail how the rst format works as I avoid it as much as I can.
 Instead, I will show you how to add documents or link documents into a rst file.
@@ -71,7 +71,7 @@ I prefer to avoid using rst files as much as I can as it is possible to use mark
 However, in cases where rst files are needed (such as `index.rst`) it is useful to know how to include or link files.
 Therefore this is what I will explain in this section.
 
-## Link a rst file into a doctree
+### Link a rst file into a doctree
 
 To add a link to a file (say `extra_document.rst`) you need to add `extra_document` to the doctrine as follows:
 
@@ -87,7 +87,7 @@ To add a link to a file (say `extra_document.rst`) you need to add `extra_docume
 The `extra_document` indentation must be like the indentation of the `:maxdepth: 2` line.
 If it is not the case, you will have a warning telling you sphinx can't find your file (took me hours to figure it out).
 
-## Include a rst file into a rst file:
+### Include a rst file into a rst file:
 
 To add a `rst` file inline of a `rst` file, you just need to add the following line:
 
@@ -97,9 +97,9 @@ To add a `rst` file inline of a `rst` file, you just need to add the following l
 
 The document that contains this line will be filled with the `my_file.rst` content.
 
-# Write sphinx documentation using markdown and autodoc
+## Write sphinx documentation using markdown and autodoc
 
-## Configure sphinx with markdown
+### Configure sphinx with markdown
 
 To add markdown support for sphinx I use `m2r` instead of `recommonmark` (advised in the official documentation of sphinx).
 The reason is simple: `recommonmark` do not support `mdinclude` to include markdown documents into `rst` files.
@@ -123,12 +123,12 @@ One little example with `mdinclude`:
 .. mdinclude:: my_file.md
 ```
 
-## Autodoc
+### Autodoc
 
 While creating your documentation, it is nice to use the docstring of your python source files to fill your content.
 Here I will explain how you can do it using the autodoc extension.
 
-### Install
+#### Install
 
 To enable autodoc you have to add the extension in the `source/config.py` file:
 
@@ -152,31 +152,31 @@ extensions.append('sphinx.ext.napoleon')
 
 Now we are ready to use autodoc.
 
-### Show elements of a docstring
+#### Show elements of a docstring
 
 All the following commands works in rst files (I still search a simple way to use it in markdown files, don't hesite to share in comments 😄).
 For more details follow the [official documentation](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html).
 
-#### Use the docstring of the module
+##### Use the docstring of the module
 
 ```rst
 .. automodule:: project_folder.module
 ```
 
-#### Use all the docstrings of a module
+##### Use all the docstrings of a module
 
 ```rst
 .. automodule:: project_folder.module
-	:members:
+    :members:
 ```
 
-#### Use the docstring of a specific class
+##### Use the docstring of a specific class
 
 ```rst
 .. autoclass:: project_folder.module.class
 ```
 
-# Sphinx theming
+## Sphinx theming
 
 Now let's be funky 😄.
 We will use themes in there: [showcase of themes](https://sphinx-themes.org/).
@@ -185,12 +185,12 @@ On this website, choose your desired documentation style, then click on the pypi
 To apply your theme click on the associated `conf.py` hyperlink and look for the `html_theme` variable.
 Then copy the corresponding code to modify your `html_theme` variable in your `source/config.py` file.
 
-# Host your documentation on GitHub
+## Host your documentation on GitHub
 
 Now we know how to create a documentation, it will be nice to upload it into a server.
 Here I will explain how I do it for GitHub servers.
 
-## Prepare the structure of the projects
+### Prepare the structure of the projects
 
 For my projects, I think the cleanest structure is as follows:
 
@@ -231,7 +231,7 @@ rm .git/index
 git clean -fdx
 ```
 
-## Modify Sphinx makefile
+### Modify Sphinx makefile
 
 Now our makefile require modifications to use our gh-pages branch and `my_project_gh_pages` folder.
 
@@ -247,7 +247,7 @@ Now you can generate your documentation:
 make html
 ```
 
-## Build html files for GitHub
+### Build html files for GitHub
 
 Your documentation is now under `my_project/my_project_gh_pages/html`.
 Now `commit` and `push` your documentation such as:
@@ -261,7 +261,7 @@ git push --set-upstream origin gh-pages
 
 It is now available under `https://username.github.io/my_project`, unless you have made a redirection for your GitHub Pages (like for this blog).
 
-## Force no jekyll
+### Force no jekyll
 
 GitHub server use jekyll which provoque errors while interpreting html files generated by sphinx.
 Hopefully, we can disable jekyll.
@@ -274,7 +274,7 @@ git commit -m "added .nojekyll"
 git push origin gh-pages
 ```
 
-## Build and commit automatically
+### Build and commit automatically
 
 You can add a command inside your Makefile:
 
@@ -287,7 +287,7 @@ You can add a command inside your Makefile:
 Now by tipping `make pushhtml` you will build your documentation, commit it and push it on GitHub automatically.
 It comes alongside the `make html` command that I use to test some modifications without pushing it.
 
-# Sources/inspirations
+## Sources/inspirations
 
 - [Official sphinx Documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
 
