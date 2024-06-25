@@ -4,9 +4,10 @@ lang: en
 ref: contact
 title: Contact me
 permalink: /contact/
+nav_order: 3
 ---
 
-## Emails:
+## Emails
 
 * Concerning my research or professional projects: <mailto:vincent.roger.pro@proton.me>
 

@@ -14,15 +14,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title:
-    en: Vincent ROGER's Website
-    fr: Site internet de Vincent ROGER
+    en: Vincent ROGER
+    fr: Vincent ROGER
 email: vroger11@protonmail.com
 description:
-    en: I earned a PhD in computer science using machine learning (especially Neural Networks technologies). I work principally on image and speech signals. I am a python programmer and a FOSS enthusiast. Not only that, but I am a member of Toulouse dataviz association and I create data visualization for fun.
-    fr: J'ai obtenu un doctorat en informatique en utilisant l'apprentissage automatique (en particulier les technologies de réseaux neuronaux). Je travaille principalement sur les signaux d'image et de parole. Je suis un programmeur python et un passionné de logiciels libres. En plus de cela, je suis membre de l'association Toulouse dataviz et je crée des visualisations de données pour le plaisir.
+    en: PhD in computer science using machine learning (especially Neural Networks technologies). I work principally on image and speech signals. I am a Python programmer and a FOSS enthusiast.
+    fr: Docteur en informatique en utilisant l'apprentissage automatique (en particulier les technologies de réseaux neuronaux). Je travaille principalement sur les signaux d'image et de parole. Je suis un programmeur python et un passionné de logiciels libres.
 index:
     en: index.html
     fr: accueil.html
+
+subtitle:
+  en: Data and machine learning scientist
+  fr: Scientifique des données et de l'apprentissage automatique
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://website.vincent-roger.fr

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Diffusers - générer des images à partir de labels avec un modèle conditioné"
+title:  "Diffusers - générer des images à partir de labels avec un modèle conditionné"
 ref: diffusers-tutorial-part2
 date:   2024-06-16 08:00:00 +0200
 categories: blogue deeplearning python

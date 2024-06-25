@@ -9,9 +9,14 @@ category: blog
 lang: en
 ---
 
-It has been a while, no second year review due to mixed feelings during covid. But thanks to my supervisors, I managed to overcome negative thinking. Thanks to them, I managed to finish my work, and I am now proud to be a PhD in computer science 🎉. In this post, I will share with you a summary of my work, some feelings and advises I have to share.
+It's been a while; there was no second-year review due to mixed feelings during COVID. But thanks to my supervisors, I managed to overcome my negative thoughts. I am now proud to be a Doctor of Computer Science 🎉.
 
-# Thesis summary
+As a reminder, this thesis was supervised by [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/), and [Virginie Woisard](https://lnpl.univ-tlse2.fr/accueil/membres/virginie-woisard). It was conducted at [IRIT](https://www.irit.fr/) (Toulouse, France).
+
+In this post, I will share with you a summary of my work, some feelings and advises I have to share.
+
+## Thesis summary
+
 People with head and neck cancers have speech difficulties after surgery or radiation therapy. It is important for health practitioners to have a measure that reflects the severity of speech. To produce this measure, a perceptual study is commonly performed with a group of five to six clinical experts. This process limits the use of this assessment in practice. Thus, the creation of an automatic measure, similar to the severity index, would allow a better follow-up of the patients by facilitating its obtaining.
 
 To realize such a measure, we relied on a reading task, classically performed. We used the recordings of the cancer corpus, which includes more than 100 people [^1]. This corpus represents about one hour of recording to model the severity index. In this PhD work, a review of state-of-the-art methods on speech, emotion and speaker recognition using little data was undertaken. We then attempted to model severity using transfer learning and deep learning. Since the results were not usable, we turned to the so-called « few shot » techniques (learning from only a few examples). Thus, after promising first attempts at phoneme recognition[^2], we obtained promising results for categorizing the severity of patients. Nevertheless, the exploitation of these results for a medical application would require improvements.
@@ -29,7 +34,7 @@ We therefore performed projections of the data from our corpus. As some score sl
 For my manuscript, I used Latex (as all of my articles). To collaborate with others (especially my supervisors) on it, I used overleaf to have nice comments (more information [here](https://www.overleaf.com/learn/how-to/How_to_make_comments_in_an_Overleaf_LaTeX_project)), a history of modifications and to synchronize my work in progress on GitHub (for safety as I did not want to rewrite this manuscript from scratch).
 Once my manuscript goes online, I will add a link to it here for those interested.
 
-# Thesis presentation
+## Thesis presentation
 
 Like my manuscript, I used Latex (with beamer) for my presentation! It is not a common choice (I did not see any thesis presentation using Latex) but if you are used to it, you gain so much time to focus on the content instead of the form. I did create my own theme (not from scratch I am not a mad man 🤣) and it was near complete before working on my thesis presentation (as I used beamer for my weekly presentations with my supervisors).
 

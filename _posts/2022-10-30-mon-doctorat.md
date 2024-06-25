@@ -9,9 +9,13 @@ category: blogue
 lang: fr
 ---
 
-Cela fait un moment, pas de bilan de deuxième année en raison de sentiments mitigés pendant le covid. Mais grâce à mes encadrants, j'ai réussi à surmonter mes pensées négatives. Grâce à eux, j'ai réussi à terminer mon travail, et je suis maintenant fier d'être un docteur en informatique 🎉. Dans ce post, je vais partager avec vous un résumé de mon travail, quelques sentiments et conseils que j'ai à partager.
+Cela fait un moment, pas de bilan de deuxième année en raison de sentiments mitigés pendant le covid. Mais grâce à mes encadrants, j'ai réussi à surmonter mes pensées négatives. Je suis maintenant fier d'être un docteur en informatique 🎉.
 
-# Résumé de ma thèse
+Pour rappel, cette thèse a été encadré par [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas/) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp). Elle a été réalisé à l'[IRIT](https://www.irit.fr/) (Toulouse, France).
+
+Dans ce post, je vais partager avec vous un résumé de mon travail, quelques sentiments et conseils que j'ai à partager.
+
+## Résumé de ma thèse
 
 Les personnes atteintes de cancers des voies aérodigestives supérieures présentent des difficultés de prononciation après des chirurgies ou des radiothérapies. Il est important pour le praticien de pouvoir disposer d’une mesure reflétant la sévérité de la parole.
 Pour produire cette mesure, il est communément pratiqué une étude perceptive qui rassemble un groupe de cinq à six experts cliniques. Ce procédé limite l'usage de cette évaluation en pratique.
@@ -43,7 +47,7 @@ La qualité de nos résultats nous a permis d’envisager une utilisation en mil
 Pour mon manuscrit, j'ai utilisé Latex (comme tous mes articles). Pour collaborer avec d'autres personnes (notamment mes encadrants) sur celui-ci, j'ai utilisé overleaf pour avoir des commentaires collaboratif (plus d'informations [ici](https://www.overleaf.com/learn/how-to/How_to_make_comments_in_an_Overleaf_LaTeX_project)), un historique des modifications et pour synchroniser mon travail en cours sur GitHub (par sécurité car je ne voulais pas réécrire ce manuscrit depuis le début).
 Une fois mon manuscrit mis en ligne, j'ajouterai un lien vers ce dernier ici pour les personnes intéressées.
 
-# La présentation de ma thèse
+## La présentation de ma thèse
 
 Comme pour mon manuscrit, j'ai utilisé Latex avec beamer pour ma présentation! Ce n'est pas un choix courant (je n'ai pas vu de présentation de thèse utilisant Latex) mais si on est habitué, on gagne tellement de temps pour se concentrer sur le fond plutôt que sur la forme. J'ai créé mon propre thème (pas à partir de zéro je ne suis pas un fou 🤣) et il était presque terminé avant de travailler sur ma présentation de thèse (car j'utilisais beamer pour mes présentations hebdomadaires avec mes encadrants).
 
