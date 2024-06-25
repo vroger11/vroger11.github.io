@@ -18,8 +18,8 @@ title:
     fr: Vincent ROGER
 email: vroger11@protonmail.com
 description:
-    en: PhD in computer science using machine learning (especially Neural Networks technologies). I work principally on image and speech signals. I am a Python programmer and a FOSS enthusiast.
-    fr: Docteur en informatique en utilisant l'apprentissage automatique (en particulier les technologies de réseaux neuronaux). Je travaille principalement sur les signaux d'image et de parole. Je suis un programmeur python et un passionné de logiciels libres.
+    en: PhD in computer science using machine learning (especially Neural Networks technologies). I work principally on image and audio signals (speech, music, animals and so on). I am a Python programmer and a FOSS enthusiast.
+    fr: Docteur en informatique en utilisant l'apprentissage automatique (en particulier les technologies de réseaux neuronaux). Je travaille principalement sur les signaux d'image et audios (parole, musique, animaux, etc.). Je suis un programmeur python et un passionné de logiciels libres.
 index:
     en: index.html
     fr: accueil.html
