@@ -7,6 +7,7 @@ date:   2021-12-15 8:00:00 +0200
 categories: blog dataviz
 category: blog
 lang: en
+excerpt: Visualizations created to explore CNEOS data (NASA project).
 ---
 
 In this new blog post, I'm going to present you the continuation of my work on my library [badaboom](https://github.com/vroger11/badaboom)).
@@ -17,7 +18,7 @@ Fireballs are astronomical terms for meteors that are exceptionally bright and s
 For this work, I used the CNEOS database (owned by NASA).
 For this article, I will start by presenting you the elements present in this database and finish by showing you the first results I obtained (I will update this post as I progress).
 
-# Results
+## Results
 
 Since this database lists fireball impacts, I first turned to the light emission energies and the impact energies.
 Note that I put these energies on a logarithmic scale, because the scale of values is so varied that I found it simpler and more readable to do so.

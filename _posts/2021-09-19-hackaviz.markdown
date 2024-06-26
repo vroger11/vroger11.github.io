@@ -7,6 +7,7 @@ date:   2021-09-19 08:00:00 +0200
 categories: blog dataviz
 category: blog
 lang: en
+except: The visualization I proposed at hackaviz 2021 (organized by the Toulouse dataviz association).
 ---
 
 In this new blog post, I will present you my participation to the [Hackaviz 2021](https://github.com/ToulouseDataViz/Hackaviz2021).

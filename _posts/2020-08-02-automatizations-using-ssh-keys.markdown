@@ -7,6 +7,7 @@ date:   2020-07-21 08:00:00 +0200
 categories: blog automatization
 category: blog
 lang: en
+excerpt: To push/pull to your GitHub/GitLab account and to connect to other remote servers without having to unlock your SSH key every time.
 ---
 
 I started my blog with a post telling you how to let Git remember your credentials for websites not supporting ssh keys (the post is [here](/blog/automatization/2019/09/09/save-git-credentials.html) for those interested).

@@ -7,6 +7,7 @@ date:   2021-09-19 08:00:00 +0200
 categories: blogue datavis
 category: blogue
 lang: fr
+excerpt: La visualisation que j'ai proposée lors de l'hackaviz 2021 (organisé par l'association Toulouse dataviz).
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[Hackaviz 2021](https://github.com/ToulouseDataViz/Hackaviz2021).

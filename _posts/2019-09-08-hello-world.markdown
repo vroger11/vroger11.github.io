@@ -7,6 +7,7 @@ date:   2019-09-08 09:17:47 +0200
 categories: blog
 category: blog
 lang: en
+excerpt: Introducing a young PhD student.
 ---
 
 This is my first post to present myself and what my blog will contain.

@@ -7,6 +7,7 @@ date:   2022-10-30 08:00:00 +0200
 categories: blogue these
 category: blogue
 lang: fr
+excerpt: Petite rétrospective sur ma thèse et résumé de mon travail.
 ---
 
 Cela fait un moment, pas de bilan de deuxième année en raison de sentiments mitigés pendant le covid. Mais grâce à mes encadrants, j'ai réussi à surmonter mes pensées négatives. Je suis maintenant fier d'être un docteur en informatique 🎉.

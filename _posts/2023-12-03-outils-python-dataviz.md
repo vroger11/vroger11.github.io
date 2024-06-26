@@ -7,6 +7,7 @@ date:   2023-12-03 08:00:00 +0200
 categories: blogue datavis python
 category: blogue
 lang: fr
+excerpt: Après avoir exploré une multitude de bibliothèques Python pour créer des visualisations, voici la présentation que j'ai réalisée pour Toulouse dataviz sur ma vision de cet environnement.
 ---
 
 Bonjour, cela fait un moment !

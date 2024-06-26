@@ -7,6 +7,7 @@ date:   2022-12-08 08:00:00 +0200
 categories: blogue datavis aoe
 category: blogue
 lang: fr
+excerpt: Mes visualisations du plus grand tournoi d'age of empires 2. Avec une cagnotte de 200 000$ et organisé par Red Bull.
 ---
 
 Pendant mon temps libre, je joue à Age of Empires 2 (le jeu vidéo de mon enfance).
@@ -28,7 +29,8 @@ Je suis heureux que cela ait si bien fonctionné, ce billet est donc le début d
 
 Assez parlé, regardons maintenant mon travail 😃.
 
-# Réalisations des joueurs
+## Réalisations des joueurs
+
 Ma première dataviz était de montrer les réalisations de chaque joueur concernant leurs classements ainsi que le nombre de parties qu'ils ont gagnées, perdues.
 Elle inclut également le prix qu'ils ont gagné. Je suis assez content de celle-ci, car elle parait agréable et possède de multiples informations.
 
@@ -36,7 +38,7 @@ Elle inclut également le prix qu'ils ont gagné. Je suis assez content de celle
 ![Réalisations des joueurs](/assets/images/dataviz/aoe/rbw/6/rank_games.png){:width="1200px"}
 {: refdef}
 
-# Matchs de civilisations
+## Matchs de civilisations
 
 Ensuite, nous avons la dataviz avec le plus de retours (positifs et négatifs).
 Dans ce travail, j'ai créé une matrice de confusion et comme elles sont symétriques, j'ai supprimé la redondance (une habitude comme gars de l'apprentissage automatique 😅).
@@ -47,7 +49,7 @@ Comme il a nécessité un effort important dans Inkscape, il est possible que je
 ![Civilizations matchups](/assets/images/dataviz/aoe/rbw/6/civ_vs_civ_played.png){:width="1000px"}
 {: refdef}
 
-# Quelle civilisation a été jouée sur chaque carte ?
+## Quelle civilisation a été jouée sur chaque carte ?
 
 Ensuite, nous avons une matrice de quelle civilisation a été jouée pour chaque carte.
 Simple et efficace, j'aime le contenu, mais peu l'esthétique.
@@ -57,7 +59,7 @@ Je vais essayer d'améliorer cela pour les prochains tournois.
 ![Quelles civilisations sont jouées sur chaque carte ?](/assets/images/dataviz/aoe/rbw/6/map_civ_played.png){:width="1200px"}
 {: refdef}
 
-# Le ratio Kill/death de chaque civilisation jouée
+## Le ratio Kill/death de chaque civilisation jouée
 
 Celui qui a créé de nombreuses discussions sur les stratégies et les équilibres des civilisations.
 J'adore discuter et voir les explications des autres, ça m'aide comme joueur, et c'est toujours amusant 😄.
@@ -66,7 +68,7 @@ J'adore discuter et voir les explications des autres, ça m'aide comme joueur, e
 ![Ratio morts/morts de chaque civilisation jouée](/assets/images/dataviz/aoe/rbw/6/civ_played.png){:width="1200px"}
 {: refdef}
 
-# La roue de la victoire
+## La roue de la victoire
 
 Enfin, mon dernier travail, une roue des civilisations victorieuses sur chaque carte.
 Je l'ai fait sous forme de roue pour éviter les blancs d'un équivalent utilisant des matrices.
@@ -79,7 +81,7 @@ Ce graphique demandera du travail pour les prochains tournois (pour que les pers
 ![La roue de la victoire](/assets/images/dataviz/aoe/rbw/6/wheel.png){:width="1000px"}
 {: refdef}
 
-# Quelle est la suite ?
+## Quelle est la suite ?
 
 Pour cet événement, j'ai publié simultanément sur Twitter et Reddit.
 Mes créations ont obtenu plus de vues et de réactions sur Reddit.

@@ -7,6 +7,7 @@ date:   2023-01-16 12:00:00 +0200
 categories: blogue datavis
 category: blogue
 lang: fr
+excerpt: Encore une fois, un autre tournoi d'age of empires 2, voyons mes nouvelles visualisations.
 ---
 
 Ce billet est le troisième épisode de ma série de tournois Age of Empires 2 (jetez un coup d'œil à [mon premier](/blogue/datavis/aoe/2022/12/08/redbull-wololo-legacy-fr) et à mon [second](/blogue/datavis/2022/12/13/warlords-fr) si vous les avez manqués).
@@ -17,7 +18,8 @@ Cette fois, j'ai amélioré mes visualisations grâce à des données supplémen
 
 Regardons maintenant ce travail 😃.
 
-# Réalisations des joueurs
+## Réalisations des joueurs
+
 Ma première visualisation est celle montrant chaque rang obtenu des joueurs avec le nombre de matchs qu'ils ont gagné, perdu.
 Ici, il y avait moins de joueurs pour l'évènement principal, mais malgré tout nous avons pu assister à de beaux matchs.
 
@@ -25,7 +27,7 @@ Ici, il y avait moins de joueurs pour l'évènement principal, mais malgré tout
 ![Réalisations des joueurs](/assets/images/dataviz/aoe/tgm/1/rank_games.png){:width="1200px"}
 {: refdef}
 
-# Quelle civilisation a été jouée sur chaque carte ?
+## Quelle civilisation a été jouée sur chaque carte ?
 
 Ensuite, nous avons un sankey sur quelle civilisation a été jouée pour chaque carte.
 Dans ce tournoi, les civilisations qui n'ont pas été jouées sont : Celtes, Chinois, Hongrois, Malais, Maliens, Siciliens, Slaves, Espagnols, Teutons, Vietnamiens et Vikings.
@@ -35,7 +37,7 @@ J'ai préféré le sankey à la matrice de chaleur, car la matrice possède beau
 ![Quelles sont les civilisations jouées sur chaque carte ?](/assets/images/dataviz/aoe/tgm/1/civ_v_map_sankey.png){:width="1100px"}
 {: refdef}
 
-# Quelles cartes ont été populaires ?
+## Quelles cartes ont été populaires ?
 
 Ici, j'ai rajouté les informations de ban venant des drafts des joueurs.
 Ceci a plu, mais j'aimerais trouver un affichage plus adapté pour la suite.
@@ -44,7 +46,7 @@ Ceci a plu, mais j'aimerais trouver un affichage plus adapté pour la suite.
 ![Quelles sont les cartes les plus populaires ?](/assets/images/dataviz/aoe/tgm/1/maps_played.png){:width="1200px"}
 {: refdef}
 
-# Tuer/mourir de chaque civilisation jouée
+## Tuer/mourir de chaque civilisation jouée
 
 Ici, j'ai rajouté les informations de snipe et ban venant des drafts des joueurs.
 J'aime toujours autant les discussions que ce graphe génère 😄.
@@ -54,19 +56,18 @@ J'ai eu quelques pistes pour améliorer ce graphe (dont avoir les snipe/bans/mor
 ![Tué/mort pour chaque civilisation jouée](/assets/images/dataviz/aoe/tgm/1/civ_played.png){:width="1200px"}
 {: refdef}
 
-# La roue de la victoire
+## La roue de la victoire
 
 Enfin, la roue de la victoire !
 Comme mon précédent post, c'est une exclusivité pour ceux qui lisent ce post 😉.
 Vous pouvez survoler chaque segment avec votre souris pour recueillir des informations, et même cliquer sur les catégories pour examiner une carte ou une catégorie de carte spécifique (cliquez sur le logo du tournoi pour revenir en arrière).
 N'hésitez pas à me donner des conseils pour améliorer ce travail.
 
-
 <div style="width : 1000px ; margin : 0 auto ;">
     {% include interactive_dataviz/aoe/tgm/1/wheel.html %}
 </div>
 
-# Quelle est la prochaine étape ?
+## Quelle est la prochaine étape ?
 
 Je pense peaufiner et retravailler certains de mes graphes pour la suite.
 Vous verrez cela pour le prochain tournoi que je couvrirai.

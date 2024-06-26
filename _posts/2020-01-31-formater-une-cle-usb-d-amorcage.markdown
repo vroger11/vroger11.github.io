@@ -7,6 +7,7 @@ date:   2020-01-31 12:30:00 +0200
 categories: blogue
 category: blogue
 lang: fr
+excerpt: Comme les clés USB amorçables peuvent être difficiles à formater avec des interfaces graphiques basé sur gparted, ce rappel peut faire gagner beaucoup de temps dans la recherche d'une solution.
 ---
 
 Cet article de blogue est surtout un rappel pour moi, car je lutte à chaque fois pour arriver à cette solution 😜.
@@ -14,7 +15,7 @@ Après avoir créé une clé d'amorçage avec ma distribution préférée (KDE N
 
 Voici les étapes que je dois faire pour être capable de modifier la clé USB avec une interface graphique de formatage.
 
-# Identifier le nom de clé USB dans votre système
+## Identifier le nom de clé USB dans votre système
 
 D'abord, tapez la commande suivante:
 
@@ -23,6 +24,7 @@ lsblk
 ```
 
 Cela vous donne une sortie comme suit:
+
 ```bash
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda           8:0    1  28,7G  0 disk

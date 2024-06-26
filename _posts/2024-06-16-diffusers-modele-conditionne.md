@@ -7,6 +7,7 @@ date:   2024-06-16 08:00:00 +0200
 categories: blogue deeplearning python
 category: blogue
 lang: fr
+excerpt: Mon deuxième article sur la bibliothèque Diffuseurs. Ici, nous allons générer des images à l'aide d'un modèle conditionné utilisant des labels one-hot.
 ---
 
 Suite à mon précédent billet sur la génération non conditionnelle à l'aide de la bibliothèque diffusers (lien [ici](/blogue/deeplearning/python/2024/06/02/diffusers-modele-non-conditionne)), nous allons nous plonger dans la génération conditionnelle à l'aide de labels. Alors que de nombreux tutoriels et exemples se concentrent sur les modèles de diffusion guidés par le texte, dans cet article de blog, nous allons explorer l'utilisation de labels one-hot pour conditionner notre modèle de diffusion. Cette approche peut être particulièrement utile dans les scénarios où nous voulons générer des images basées sur des catégories discrètes plutôt que sur des descriptions textuelles.
@@ -15,7 +16,7 @@ Suite à mon précédent billet sur la génération non conditionnelle à l'aide
 
 Les modèles de diffusion conditionnelle étendent la diffusion non conditionnelle en introduisant des informations supplémentaires au cours du processus de génération. Ces informations supplémentaires, ou données de conditionnement, peuvent guider le modèle pour qu'il produise des échantillons appartenant à une catégorie spécifique ou possédant certaines caractéristiques. Les entrées de conditionnement les plus courantes sont les descriptions textuelles, les labels de classe ou d'autres attributs d'image.
 
-Dans ce tutoriel, nous utiliserons des labels one-hot comme entrée de conditionnement. Le codage unitaire est une représentation des variables catégorielles sous forme de vecteurs binaires. Cette méthode est particulièrement adaptée à des tâches telles que la génération d'images, où chaque image correspond à une catégorie discrète. Si nous reprenons notre jeu de données précédent, nous aurons 5 catégories : `[héros, non-héros, nourriture, sort, héros de profil]`.
+Dans ce tutoriel, nous utiliserons des labels [one-hot](https://fr.wikipedia.org/wiki/Encodage_one-hot) comme entrée de conditionnement. Le codage unitaire est une représentation des variables catégorielles sous forme de vecteurs binaires. Cette méthode est particulièrement adaptée à des tâches telles que la génération d'images, où chaque image correspond à une catégorie discrète. Si nous reprenons notre jeu de données précédent, nous aurons 5 catégories : `[héros, non-héros, nourriture, sort, héros de profil]`.
 
 ## Définir le modèle unet, le planificateur de bruit et le réseau pour intégrer nos labels
 

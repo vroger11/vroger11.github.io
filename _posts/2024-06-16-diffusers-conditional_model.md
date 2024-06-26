@@ -7,6 +7,7 @@ date:   2024-06-16 08:00:00 +0200
 categories: blog deeplearning python
 category: blog
 lang: en
+excerpt: My second post on the Diffusers library. Here, we will generate images using a conditioned model using one-hot labels.
 ---
 
 Following my previous post on unconditional generation using the diffusers library (link [here](/blog/deeplearning/python/2024/06/02/diffusers-unconditional_model)), we will dive into conditional generation using labels. While many tutorials and examples focus on text-guided diffusion models, in this blog post, we will explore the use of one-hot labels to condition our diffusion model. This approach can be particularly useful in scenarios where we want to generate images based on discrete categories rather than textual descriptions.
@@ -15,7 +16,7 @@ Following my previous post on unconditional generation using the diffusers libra
 
 Conditional diffusion models extend unconditional diffusion by introducing additional information during the generation process. This additional information, or conditioning input, can guide the model to produce samples that belong to a specific category or possess certain characteristics. Common conditioning inputs include text descriptions, class labels, or other image attributes.
 
-In this tutorial, we will use one-hot encoded labels as the conditioning input. One-hot encoding is a representation of categorical variables as binary vectors. This method is especially suitable for tasks like image generation where each image corresponds to a discrete category. Taken back to our previous dataset, we will have 5 categories : `[hero, non-hero, food, spell, side-facing hero]`.
+In this tutorial, we will use [one-hot](https://en.wikipedia.org/wiki/One-hot) encoded labels as the conditioning input. One-hot encoding is a representation of categorical variables as binary vectors. This method is especially suitable for tasks like image generation where each image corresponds to a discrete category. Taken back to our previous dataset, we will have 5 categories : `[hero, non-hero, food, spell, side-facing hero]`.
 
 ## Define the unet model, the noise scheduler and network to embed our labels
 

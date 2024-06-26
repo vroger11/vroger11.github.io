@@ -7,6 +7,7 @@ date:   2020-01-29 17:30:00 +0200
 categories: blogue dev
 category: blogue
 lang: fr
+excerpt: Post sur comment changer le comportement par défaut de votre bash pour être plus productif.
 ---
 
 Cet article de blogue est focalisé sur la configuration de bash.
@@ -14,11 +15,13 @@ J'utilise bash, car c'est l'interpréteur de commandes par défaut dans la plupa
 Je l'utilise quotidiennement et après quelques réglages il me convient mieux.
 Dans cet article de blogue, je vais décrire mes habitudes et comment je configure mon bash.
 
-# Utiliser le bashrc par défaut d'Ubuntu
+## Utiliser le bashrc par défaut d'Ubuntu
+
 La configuration par défaut d'Ubuntu est adaptée à l'usage quotidien et je me sers cette configuration comme base pour la mienne.
 Avant faisons la revue de la configuration de base d'Ubuntu.
 
-## Complétion par défaut
+### Complétion par défaut
+
 La complétion dans le terminal est essentielle pour gagner en productivité.
 L'interpréteur de commandes par défaut d'Ubuntu est bash.
 Sous cet interpréteur, la complétion s'active par l'appui de la touche tabulation.
@@ -30,7 +33,7 @@ Comme dans l'exemple suivant:
 ![Default completion output](/assets/images/bash_config/default_tab_behavior.gif)
 Dans la prochaine section nous verrons comment configurer bash pour qu'il soit plus consistent et utile.
 
-## La recherche récursive
+### La recherche récursive
 
 Pour accéder aux commandes précédemment écrites dans le terminal, vous pouvez utiliser la touche flèche vers le haut.
 Si vous connaissez une partie de la commande que vous voulez réutiliser (et que cette commande n'a pas été écrite récemment) vous pouvez utiliser le mode récursif.
@@ -39,7 +42,7 @@ Le résultat est la première commande correspondant à votre recherche de votre
 Si vous voulez les résultats suivants issus de votre historique bash, vous avez juste à presser les touches Ctrl+R.
 J'apprécie ce comportement, ainsi je le laisse tel quel.
 
-## Les alertes
+### Les alertes
 
 C'est un alias permettant d'envoyer des notifications sous Ubuntu.
 Pour utiliser cet alias, il faut d'abord installer la librairie libnotify:
@@ -56,7 +59,7 @@ Voici un exemple que vous pouvez essayer chez vous pour mieux comprendre son uti
 sleep 3 && alert
 ```
 
-# Personnaliser votre bashrc
+## Personnaliser votre bashrc
 
 Avant de commencer, je vous conseille de faire une sauvegarde de votre bashrc.
 
@@ -64,25 +67,29 @@ Avant de commencer, je vous conseille de faire une sauvegarde de votre bashrc.
 cp ~/.bashrc ~/.bashrc_back
 ```
 
-## Personnaliser l'invité de commandes
+### Personnaliser l'invité de commandes
+
 C'est la partie cosmétique, mais comme vous allez voir l'invité de commandes à chaque ligne que vous écrivez autant qu'il vous convienne.
 Pour le personnaliser, il vous faut changer la variable PS1.
 La mienne est comme suit:
+
 ```bash
 PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\H:\[$(tput sgr0)\]\[\033[38;5;32m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
 ```
 
 Elle devrait se trouver sous la ligne suivante de votre fichier ~/.bashrc:
+
 ```bash
 if [ "$color_prompt" = yes ]; then
 ```
+
 Ainsi, remplacez la valeur par défaut par la vôtre.
 
 Créer votre variable PS1 peut être long et fastidieux vu la syntaxe nécessaire.
 Si vous êtes fainéant comme moi, servez-vous d'[ezprompt](https://ezprompt.net/) pour vous faciliter la vie.
 C'est un site internet interactif pour vous aider à créer facilement votre variable PS1.
 
-## Modifications de la variable PATH
+### Modifications de la variable PATH
 
 J'aime mettre des scripts dans mon répertoire home (pour ne pas compromettre les répertoires de mon système d'exploitation).
 Pour cela j'ai créé un répertoire bin dans mon répertoire home et j'ajoute la ligne suivante dans mon bashrc:
@@ -91,7 +98,8 @@ Pour cela j'ai créé un répertoire bin dans mon répertoire home et j'ajoute l
 PATH=~/bin:$PATH
 ```
 
-## Complétion
+### Complétion
+
 Comme vu dans la précédente section, le comportement par défaut de complétion n'est pas incroyable.
 Par défaut, la touche tabulation est liée à la commande complete.
 Heureusement, bash est livré avec une alternative: menu-complete.
@@ -123,7 +131,7 @@ bind '"^[[Z":menu-complete-backward' # Shift+Tab, but it is not working in Konso
 bind '"²":menu-complete-backward' # for azerty keyboard
 ```
 
-# Mon fichier de configuration bashrc
+## Mon fichier de configuration bashrc
 
 Vous trouverez mon fichier bashrc [ici](https://github.com/vroger11/vroger11-configs/blob/master/bash/bashrc).
 Il contient plus de personnalisation que présenté, comme la configuration d'environnement gem et l'initialisation de miniconda.
@@ -131,7 +139,7 @@ J'ai testé cette configuration sous l'émulateur de terminaux Konsole sous Ubun
 Néanmoins, soyez vigilants sur ce que vous faites avec ce script.
 Je ne fournis aucune garantie.
 
-# Sources
+## Sources
 
 * [Les pages du manuel de Bash](https://linux.die.net/man/1/bash)
 

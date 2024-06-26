@@ -7,6 +7,7 @@ date:   2022-04-03 20:00:00 +0200
 categories: blog dataviz
 category: blog
 lang: en
+excerpt: My second participation in the hackaviz event organized by the Toulouse dataviz association.
 ---
 
 In this blog post, I will present you my participation to the [Hackaviz 2022](https://github.com/ToulouseDataViz/Hackaviz2022).
@@ -17,7 +18,7 @@ I have fun making data visualizations in my free time, so I participated solo.
 You can find my participation to the previous year [here](/blog/dataviz/2021/09/19/hackaviz.html).
 The code I used will be available soon.
 
-# Results
+## Results
 
 This year, a database of funding collected and distributed by the collective management organizations of the author's rights for private copy is in the spotlight.
 

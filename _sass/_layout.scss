@@ -98,6 +98,15 @@
     }
 }
 
+// dark border for each post
+.post-list li {
+    border: 1px solid $green-headlines-color;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 8px; /* Padding inside each post box */
+    margin: 2px 0; /* Spacing between posts */
+    list-style: none;
+    border-radius: 5px; /* add rounded corners */
+}
 
 
 /**

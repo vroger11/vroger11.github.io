@@ -7,6 +7,7 @@ date:   2021-09-12 08:00:00 +0200
 categories: blog datavis
 category: blog
 lang: en
+excerpt: My first visualizations using asteroid data provided by NASA ('Asteroids - NeoWs' database).
 ---
 
 In this new blog post, I'm going to present you a little project I've been doing lately.
@@ -18,7 +19,7 @@ In this database, the closest point of an asteroid passing near the Earth repres
 So I made a repository named [badaboom](https://github.com/vroger11/badaboom). This repository contains a parser (data extractor) and a program allowing to make some figures and statistics.
 In this blog post, I will detail the first results I obtained (and will update this post according to my progress).
 
-## Résultats
+## Results
 
 All the results that follow are calculated for the years between 1980 and 2030. Knowing that the data was retrieved on September 10, 2021, all data from that date to the end of 2030 are NASA's projections.
 

@@ -7,6 +7,7 @@ date:   2020-03-10 12:30:00 +0200
 categories: blogue these
 category: blogue
 lang: fr
+excerpt: Je vous propose un petit résumé et les liens pour trouver cet état de l'art.
 ---
 
 Mon nouvel état de l'art [est disponible](http://dx.doi.org/10.1186/s13636-022-00251-w).

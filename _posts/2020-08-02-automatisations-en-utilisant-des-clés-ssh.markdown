@@ -7,6 +7,7 @@ date:   2020-08-02 08:00:00 +0200
 categories: blogue automatisation
 category: blogue
 lang: fr
+excerpt: Pour push/pull vers votre compte GitHub/GitLab et pour vous connecter à d'autres serveurs distants sans avoir à déverrouiller votre clé SSH à chaque fois.
 ---
 
 J'ai commencé mon blogue avec un article de blogue sur comment sauver les identifiants git pour les sites internet ne supportant pas les clés SSH (c'est par [ici](/blogue/automatisation/2019/09/09/sauver-les-identifiants-git.html) pour ceux qui sont intéressés).

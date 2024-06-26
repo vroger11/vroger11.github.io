@@ -7,6 +7,7 @@ date:   2019-09-08 09:17:47 +0200
 categories: blogue
 category: blogue
 lang: fr
+excerpt: Présentation d'un jeune thésard.
 ---
 
 Ceci est mon premier article de blog pour me présenter et parler du contenu de ce blog.

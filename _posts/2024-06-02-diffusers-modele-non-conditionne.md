@@ -7,9 +7,8 @@ date:   2024-06-02 08:00:00 +0200
 categories: blogue deeplearning python
 category: blogue
 lang: fr
+excerpt: Voici mon premier article sur l'utilisation de la bibliothèque Diffusers pour générer des images avec un modèle non conditionné.
 ---
-
-Voici mon premier article sur l'utilisation de la bibliothèque [Diffusers](https://github.com/huggingface/diffusers).
 
 Ces dernières années, les modèles de diffusion se sont imposés comme un outil puissant dans le domaine de la modélisation générative, rivalisant souvent avec les GAN (Generative Adversarial Networks) dans la production d'images de haute qualité (voir [this paper](https://arxiv.org/abs/2105.05233) de 2021 et [stable diffusion](https://github.com/CompVis/stable-diffusion?tab=readme-ov-file) de 2022). Ces modèles fonctionnent en simulant un processus de diffusion où les données sont progressivement bruitées puis débruitées pour générer de nouveaux échantillons.
 

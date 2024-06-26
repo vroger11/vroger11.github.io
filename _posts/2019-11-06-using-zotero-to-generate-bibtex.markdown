@@ -7,14 +7,15 @@ date:   2019-11-06 12:00:00 +0200
 categories: blog
 category: blog
 lang: en
+excerpt: We talk on what is and how to use Zotero to generate BibTeX files to cite papers.
 ---
 
-# What is Zotero?
+## What is Zotero?
 
 [Zotero](https://www.zotero.org/) is a software that allows you to collect, organize, share and synchronize research papers (or other research contents).
 I prefer Zotero to other solutions as it fulfill all my needs, it is open source and "developed by an independent, nonprofit organization that has no financial interest in private information".
 
-# Installation
+## Installation
 
 Zotero is not directly available in default Ubuntu repositories.
 I prefer to install it via [Flatpak](https://www.flatpak.org/) as it enables automatic updates like other classic applications in Ubuntu.
@@ -27,13 +28,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ```
 
 Now let's install Zotero:
+
 ```bash
 flatpak install flathub org.zotero.Zotero
 ```
 
 Zotero is now installed and a shortcut is available in your application menu.
 
-## Extensions
+### Extensions
 
 To be able to use all the features presented in this post you also need to install the following extensions:
 
@@ -47,7 +49,7 @@ To be able to use all the features presented in this post you also need to insta
   1. Download the [latest xpi file](https://github.com/retorquere/zotero-better-bibtex/releases/latest).
   2. Open Zotero, go to `Tools` -> `Add-ons`, click on the gear -> `Install Add-on From File...` and select your previously downloaded extension.
 
-# Add papers to your collections
+## Add papers to your collections
 
 First, I recommend you to create an online account on the Zotero website.
 It will help you to synchronize your library for all your devices (in my case at home and at work).
@@ -58,7 +60,7 @@ When you want to add a paper to your collection, just click on the Zotero connec
 It will automatically download the paper for offline use and extract all the information required to cite this paper (such as Title, Authors, Date and so on).
 If any uploaded information looks wrong, you can modify it at any time.
 
-# Generate your BibTeX file using Zotero
+## Generate your BibTeX file using Zotero
 
 Before generating your BibTeX file, you may want to personalize the citation key format you will use in your TeX file.
 To do so, go to the Better BibTeX menu: Edit -> Preferences -> Better BibTeX tab.
@@ -85,4 +87,3 @@ You have now a bib file usable for your paper with your citation key format.
 Hope it helps some of you.
 
 Cheers, Vincent.
-

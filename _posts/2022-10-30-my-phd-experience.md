@@ -7,6 +7,7 @@ date:   2022-10-30 08:00:00 +0200
 categories: blog PhD
 category: blog
 lang: en
+excerpt: A short retrospective on my thesis and a summary of my work.
 ---
 
 It's been a while; there was no second-year review due to mixed feelings during COVID. But thanks to my supervisors, I managed to overcome my negative thoughts. I am now proud to be a Doctor of Computer Science 🎉.

@@ -7,6 +7,7 @@ date:   2019-10-08 07:15:00 +0200
 categories: blog
 category: blog
 lang: en
+excerpt: In my go-to text editor for terminal.
 ---
 
 Neovim is a text editor designed to be able to use either a command-line interface or a graphical user interface.
@@ -16,7 +17,8 @@ Basically, it is an enhanced Vim, see the [Neovim about page](https://neovim.io/
 After writing, automatic checks are useful and help you to save some time.
 In this post I share my Neovim configuration and usage.
 
-# Spell-Checking
+## Spell-Checking
+
 To do simple spell-checking, you have to add in your `~/.config/nvim/init.vim` file the following lines:
 
 ```
@@ -26,7 +28,7 @@ nnoremap <silent> <C-s> :set spell!<cr>
 inoremap <silent> <C-s> <C-O>:set spell!<cr>
 ```
 
-## Usage
+### Usage
 
 In Neovim press Ctrl+S to highlight the misspelled words, then repress Ctrl+S to hide the highlighted misspelled words.
 To select a word suggestion in Insert mode, press Ctrl+X then S to select a suggestion.
@@ -34,28 +36,31 @@ In Normal mode press `z=` to see the word suggestions.
 
 Remark: I know that my configuration inhibits the Ctrl+S user signal and it is my point to avoid unwanted behavior while typing.
 
-# Grammar Checking
+## Grammar Checking
 
 To check my writing I use [LanguageTool](https://www.languagetool.org/) suite.
 It is available for free, have an offline mode using its open-source software (it is the main reason I'm using it).
 Here I will help you to install it and how to use it with Neovim.
 
-## LanguageTool installation
+### LanguageTool installation
 
 LanguageTool requires java runtime.
 Here I will install OpenJDK and curl:
 
-### On Fedora
+#### On Fedora
+
 ```bash
 sudo dnf -y install java curl
 ```
 
-### On Ubuntu
+#### On Ubuntu
+
 ```bash
 sudo apt -y install default-jre curl
 ```
 
-### Then, on both distributions
+#### Then, on both distributions
+
 The following commands download LanguageTool and install it in `/usr/local`.
 
 ```bash
@@ -65,8 +70,8 @@ sudo mv /usr/local/LanguageTool/LanguageTool-*/* /usr/local/LanguageTool/
 rm /tmp/LanguageTool-stable.zip
 ```
 
+### Neovim configuration
 
-## Neovim configuration
 I use [vim-plug](https://github.com/junegunn/vim-plug) plugin manager in Neovim.
 It is why I use it to install the [LanguageTool plugin from vigoux](https://github.com/vigoux/LanguageTool.nvim) (but other choices are possible).
 Before I continue, I recommend you to have a recent version of Neovim (&ge; 0.4.2) to use this plugin (as it use recent changes in Neovim).
@@ -87,7 +92,7 @@ autocmd Filetype tex LanguageToolSetUp
 let g:languagetool_server_jar='/usr/local/LanguageTool/languagetool-server.jar'
 ```
 
-## Usage
+### Usage
 
 To use this plugin you first have to call `:LanguageToolSetUp` in Normal mode to start the LanguageTool server (which is automatically launched for tex files and markdown files).
 
@@ -99,12 +104,11 @@ Then, the plugin proposes the following useful commands:
 
 To see more options look at the [plugin page](https://github.com/vigoux/LanguageTool.nvim).
 
-# 16 August 2020 update
+## 16 August 2020 update
 
 I recently switched to [Antidote 10](https://www.antidote.info/en) to replace LanguageTool.
 I tend to avoid using LanguageTool (except for Python files) as it has many flows compared to Antidote (but you have to pay for it).
 This improved my writing and save me a lot of time.
-
 
 Hope it helps some of you.
 If you have a better setup or want to improve mine feel free to contribute or comment.

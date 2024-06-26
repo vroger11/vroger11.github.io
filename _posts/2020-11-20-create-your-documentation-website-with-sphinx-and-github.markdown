@@ -7,6 +7,7 @@ date:   2020-12-11 08:00:00 +0200
 categories: blog dev
 category: blog
 lang: en
+excerpt: Step by step from scratch (including installation of Sphinx) to a documentation using as much markdown as possible.
 ---
 
 
@@ -16,7 +17,7 @@ For this library I planned to add a documentation website.
 A preliminary version is now available [here](https://website.vincent-roger.fr/audio_loader/).
 As Audio Loader is a Python library, I chose [Sphinx](https://www.sphinx-doc.org/) to generate the documentation as it is a classic with Python libraries.
 It uses the reStructuredText file format to create the documentation.
-Nethertheless, I prefer the markdown syntax as it is simpler and I use it more often.
+Nevertheless, I prefer the markdown syntax as it is simpler and I use it more often.
 Hence, I use as much markdown files as I can to create Sphinx documentation.
 Next, to host this documentation I chose GitHub Pages as I already used it on my website.
 

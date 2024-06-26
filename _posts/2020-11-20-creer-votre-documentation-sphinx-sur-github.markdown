@@ -7,6 +7,7 @@ date:   2020-12-11 08:00:00 +0200
 categories: blogue dev
 category: blogue
 lang: fr
+excerpt: Pas à pas à partir de zéro (y compris l'installation de Sphinx) jusqu'à une documentation utilisant autant de markdown que possible.
 ---
 
 

@@ -7,6 +7,7 @@ date:   2021-09-12 08:00:00 +0200
 categories: blogue datavis
 category: blogue
 lang: fr
+excerpt: Mes premières visualisations utilisant les données d'astéroïdes fournis par la NASA (base ‘Asteroids - NeoWs’).
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter un petit projet que j'ai réalisé dernièrement.
@@ -19,6 +20,7 @@ J'ai donc réalisé un dépôt nommé [badaboom](https://github.com/vroger11/bad
 Dans cet article de blog, je vais détailler les premiers résultats que j'ai obtenus (et mettrais à jour ce post en fonction de mes avancées).
 
 ## Résultats
+
 Tous les résultats qui suivront sont calculés pour les années comprises entre 1980 et 2030. Sachant que les données étaient récupérées le 10 septembre 2021, toutes les données de cette date à fin 2030 sont les projections de la NASA.
 
 Avant de commencer, voici les 10 plus grands astéroïdes pour les années entre 1980 et 2030:

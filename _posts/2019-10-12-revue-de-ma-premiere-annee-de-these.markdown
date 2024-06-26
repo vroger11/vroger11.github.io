@@ -7,6 +7,7 @@ date:   2019-10-12 17:15:00 +0200
 categories: blogue these
 category: blogue
 lang: fr
+excerpt: J'y parle du sujet de ma thèse, des orientations que nous prenons et de certains sentiments et de l'impact sur ma vie.
 ---
 
 Après presque une année (11 mois), je vais partager dans cet article mon expérience en tant qu'étudiant en thèse.
@@ -15,7 +16,8 @@ Dans cet article de blogue, je vais parler du sujet de ma thèse, la direction p
 Avant de continuer, je voudrais remercier mes encadrants[^1] pour leur aide et leurs conseils, [La Région Occitanie](https://www.laregion.fr/) et [l'Université Fédérale de Toulouse](https://en.univ-toulouse.fr) pour leur financement, l'Université Paul Sabatier et le Laboratoire IRIT pour leur support.
 Je souhaite également rappeler que c'est un article de blogue personnel (il n'engage que moi-même).
 
-# Sujet
+## Sujet
+
 Ma thèse consiste à créer un Système Automatique de Mesure de l'Intelligibilité (SAMI).
 En traitement de la parole, l'intelligibilité peut correspondre à plusieurs choses.
 Avant de définir ce terme, regardons un petit schéma général correspondant au système d'écoute chez l'humain:
@@ -31,9 +33,10 @@ Pour cette thèse, nous nous intéressons à la clarté de l'orateur indépendam
 Ainsi, par intelligibilité je parle de celle de l'orateur.
 
 Ce genre de mesure a plusieurs applications:
-* l'évaluation de la prononciation de personnes apprenant des langues étrangères.
-* le raffinement des informations pour les dispositifs auditifs afin aider à leur amélioration.
-* l'évaluation des dommages d'une ou plusieurs maladie(s) (tel que Parkinson ou les cancers buccaux) pour aider au processus de rééducation.
+
+- l'évaluation de la prononciation de personnes apprenant des langues étrangères.
+- le raffinement des informations pour les dispositifs auditifs afin aider à leur amélioration.
+- l'évaluation des dommages d'une ou plusieurs maladie(s) (tel que Parkinson ou les cancers buccaux) pour aider au processus de rééducation.
 
 Le dernier point correspond au focus de ma thèse.
 Par conséquent, mon système doit fonctionner sur de la parole pathologique et non pathologique.
@@ -46,18 +49,16 @@ Plus important encore, dans ce corpus, nous avons accès à une évaluation subj
 Ces scores ont été réalisés par un jury de 5 experts nous donnant un score compris entre 0 et 10.
 Ce corpus est donc le point de départ de ma thèse.
 
-# Direction prise pour la thèse
+## Direction prise pour la thèse
 
 Je suis un scientifique de la donnée et j'aime particulièrement laisser la machine apprendre les concepts pour moi.
 C'est pour ça que les encadrants et moi-même avons décidé de faire apprendre le concept d'intelligibilité à l'aide de technique d'apprentissage par machine avec des systèmes de bout en bout (basés sur de l'apprentissage profond).
 
 Après quelques expériences sur le corpus C2SI, j'en tire les leçons suivantes:
 
-* Utiliser les techniques d'apprentissage de l'état de l'art en reconnaissance de la parole (architectures très profondes et larges) est impossible sur la quantité de données que j'ai à disposition
-
-* Utiliser des modèles avec moins de paramètres nécessaires (avec des techniques comme [SincNet](https://arxiv.org/abs/1808.00158) et l'utilisation de petites architectures) ne solutionne pas suffisamment bien le problème sur de la parole pathologique.
-
-* L'apprentissage par transfert (utilisant des modèles appris sur de la parole considérée non pathologique) résulte en des performances plus faibles que les modèles avec moins de paramètres.
+- Utiliser les techniques d'apprentissage de l'état de l'art en reconnaissance de la parole (architectures très profondes et larges) est impossible sur la quantité de données que j'ai à disposition
+- Utiliser des modèles avec moins de paramètres nécessaires (avec des techniques comme [SincNet](https://arxiv.org/abs/1808.00158) et l'utilisation de petites architectures) ne solutionne pas suffisamment bien le problème sur de la parole pathologique.
+- L'apprentissage par transfert (utilisant des modèles appris sur de la parole considérée non pathologique) résulte en des performances plus faibles que les modèles avec moins de paramètres.
 
 Pour le moment, je ne peux obtenir plus de données (parce que cela peut être douloureux pour les patients) pour obtenir de meilleurs résultats.
 L'augmentation de données n'a pas aidé à obtenir des résultats suffisants.
@@ -66,7 +67,7 @@ Cela m'a rappelé certaines de mes lectures parlant de techniques qui essayaient
 Comme cela correspond à mon problème, j'ai commencé à faire une revue de ce domaine.
 Pour partager cette expertise acquise, j'ai commencé une revue de littérature sur les techniques de few-shot pour le traitement de la parole.
 
-# À venir
+## À venir
 
 Mes publications prévues (et futurs articles de blogue) sont les suivants:
 
@@ -74,7 +75,7 @@ Mes publications prévues (et futurs articles de blogue) sont les suivants:
 
 2. Des expériences utilisant les techniques de few-shot sur le corpus du C2SI.
 
-# Ressenti et impact sur mon mode de vie
+## Ressenti et impact sur mon mode de vie
 
 J'ai arrêté le dessin digital parce que cela me nécessitait des sessions de 2 h.
 J'apprends tout depuis le début dans ce domaine (logiciels, techniques de dessin...).
@@ -96,6 +97,7 @@ Une autre solution consiste à s'exposer plus au soleil (tout en profitant pour 
 Ainsi, j'évite un maximum le métro en utilisant ma trottinette (une non électrique 😄).
 
 Lorsque je ressens moins de motivation que d'habitude, j'écoute les sons suivants (cela pourrait vous remonter le moral):
+
 * [Into the Abyss, by Hilltop Hoods](https://youtu.be/FEvlOHR_624).
 * [Here, by Briggs](https://youtu.be/tA07dpATOcY).
 * [Fight back, by  Neffex](https://youtu.be/CYDP_8UTAus).
@@ -103,6 +105,5 @@ Lorsque je ressens moins de motivation que d'habitude, j'écoute les sons suivan
 J’espère que cela aidera certains d’entre vous.
 
 À la revoyure, Vincent.
-
 
 [^1]: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) et [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)

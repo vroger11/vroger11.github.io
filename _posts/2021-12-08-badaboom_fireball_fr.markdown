@@ -7,6 +7,7 @@ date:   2021-12-15 8:00:00 +0200
 categories: blogue datavis
 category: blogue
 lang: fr
+excerpt: Visualisations réalisées pour explorer les données de CNEOS (projet appartenant à la NASA).
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter la suite de mes travaux sur ma librairie [badaboom](https://github.com/vroger11/badaboom)).

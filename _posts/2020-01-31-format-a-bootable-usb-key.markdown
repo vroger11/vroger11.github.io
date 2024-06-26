@@ -7,6 +7,7 @@ date:   2020-01-31 12:30:00 +0200
 categories: blog
 category: blog
 lang: en
+excerpt: As bootable USB keys can be hard to format with GUI using gparted, this reminder can save a lot of time searching for a solution.
 ---
 
 This post is mostly a remainder for me as it struggles me every time 😜.
@@ -14,7 +15,7 @@ After making a USB key bootable with any distribution, I get an error message wh
 
 This is the steps I have to do to be able to modify this USB key using one of the graphical interfaces I listed.
 
-# Identify the USB key name on your system
+## Identify the USB key name on your system
 
 First type the following command:
 
@@ -23,6 +24,7 @@ lsblk
 ```
 
 It gives you an output like this:
+
 ```bash
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda           8:0    1  28,7G  0 disk

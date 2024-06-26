@@ -7,13 +7,14 @@ date:   2020-03-18 20:00:00 +0200
 categories: blogue
 category: blogue
 lang: fr
+excerpt: Ensemble d'outils pour travailler à domicile. Il comprend l'utilisation d'un VPN, la connexion à un serveur distant et le travail avec jupyter lab à distance.
 ---
 
 Cet article de blogue présente toutes les configurations que j'ai effectuées pour travailler depuis chez moi.
 C'est particulièrement utile lorsque vous êtes en quarantaine (ou allez être, car la progression du COVID-19 est alarmante).
 Je vais décrire toutes les étapes pour les utilisateurs Ubuntu avec un environnement KDE, les manipulations pour les utilisateurs de GNOME étant similaire je n'irai pas en détail pour ce cas.
 
-# Connecter votre ordinateur personnel au VPN de votre laboratoire/compagnie en utilisant OpenVPN
+## Connecter votre ordinateur personnel au VPN de votre laboratoire/compagnie en utilisant OpenVPN
 
 C'est une première étape requise si vous voulez avoir accès à l'Intranet de votre compagnie/laboratoire.
 Mon laboratoire supporte OpenVPN, je vais décrire les étapes requises pour utiliser cet outil.
@@ -52,7 +53,7 @@ Ici, cliquez sur OpenVPN, puis cliquez sur "Create" et suivez les instructions d
 Si votre laboratoire/compagnie fournit un fichier OpenVPN, c'est encore plus simple.
 Il vous faut cliquer sur "Import VPN connection..." et sélectionnez le fichier qui vous est fourni.
 
-# Se connecter à un serveur distant
+## Se connecter à un serveur distant
 
 J'utilise une connexion ssh pour accéder aux machines de mon travail depuis chez moi.
 Pour rappel, on se connecte comme suit à un serveur distant via ssh:
@@ -66,6 +67,7 @@ Si vous voulez créer un serveur ssh ou avoir plus de détails, je vous recomman
 Après m'être connecté, je commence toujours (ou attache) une session tmux.
 Si vous ne connaissez pas ce qu'est tmux, allez regarder mon article de blog [ici](/blogue/dev/2019/09/23/multiplexeur-de-terminaux.html).
 Pour automatiser ce comportement, j'ajoute le code suivant dans mon fichier `~/.bashrc` côté serveur:
+
 ```bash
 # Ouvre tmux automatiquement lorsque la machine est accédé par ssh et sans serveur X
 if [ ! -z "$SSH_CLIENT" ] && [ -z "$DESKTOP_SESSION" -a -z "$TMUX" ] ; then
@@ -75,24 +77,31 @@ fi
 
 Maintenant, à chaque connexion via ssh, je me trouve dans une session tmux nommée `ssh`.
 
-# Travailler avec des Notebooks de Jupyter Lab
+## Travailler avec des Notebooks de Jupyter Lab
 
 Si vous utilisez Jupyter Lab, vous voulez certainement utiliser votre navigateur local pour accéder à vos notebooks.
 Il y a une multitude de solutions disponible sur internet.
 Ici je vous donne ma solution:
+
 1. Créer un mot de passe pour les notebooks de jupyter (côté serveur):
+
     ```bash
     jupyter notebook password
     ```
+
 2. Lancer jupyter lab en utilisant un port définit (ici 8887):
+
     ```bash
     jupyter lab --port=8887 --no-browser
     ```
+
 3. Sur votre terminal local, il faut transmettre le port serveur 8887 vers un port local de votre machine (disons le port 8888).
     Pour cela j'utilise les tunnels ssh:
+
     ```bash
     ssh -N -f -L 8888:localhost:8887 <login>@<adresse_serveur>
     ```
+
 4. Utiliser votre navigateur local et pour aller sur [localhost:8888/](localhost:8888/).
     Ensuite, entrez votre mot de passe créé en étape 1.
 
@@ -100,10 +109,13 @@ Ici je vous donne ma solution:
 
 Lorsque vous avez fini, vous voulez certainement arrêter le tunnel ssh sur votre machine locale.
 Pour faire cela, il faut identifier le PID de la commande utilisée en étape 3 en utilisant la commande:
+
 ```bash
 ps -ax | grep "ssh -N -f -L"
 ```
+
 Maintenant que vous avez identifié le PID, il vous faut utiliser la commande `kill` pour arrêter le tunnel:
+
 ```bash
 kill -9 <PID_identifié>
 ```

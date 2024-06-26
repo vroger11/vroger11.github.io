@@ -7,9 +7,8 @@ date:   2024-06-02 08:00:00 +0200
 categories: blog deeplearning python
 category: blog
 lang: en
+excerpt: This is my first article on using the Diffusers library to generate images with an unconditioned model.
 ---
-
-Hello again, it has been a while, here is my first post on using the [Diffusers](https://github.com/huggingface/diffusers) library.
 
 In recent years, diffusion models have emerged as a powerful tool in the domain of generative modeling, often rivaling GANs (Generative Adversarial Networks) in producing high-quality images (have a look at [this paper](https://arxiv.org/abs/2105.05233) from 2021 and [stable diffusion](https://github.com/CompVis/stable-diffusion?tab=readme-ov-file) from 2022). These models operate by simulating a diffusion process where data is progressively noised and then denoised to generate new samples.
 

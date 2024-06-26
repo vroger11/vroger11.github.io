@@ -7,15 +7,16 @@ date:   2019-11-06 12:00:00 +0200
 categories: blogue
 category: blogue
 lang: fr
+excerpt: Nous expliquons ce qu'est Zotero et comment l'utiliser pour générer des fichiers BibTeX afin de citer des articles.
 ---
 
-# Qu'est-ce que Zotero?
+## Qu'est-ce que Zotero?
 
 [Zotero](https://www.zotero.org/) est un logiciel permettant de collecter, organiser, partager et synchroniser des papiers de recherche (ou d'autres contenus de recherche).
 Je préfère Zotero à d'autres solutions, car mes besoins sont remplis.
 De plus, le code de Zotero est ouvert et est développé par une organisation indépendante, à but non lucratif et respectant la vie privée.
 
-# Installation
+## Installation
 
 Zotero n'est pas disponible dans les dépôts d'Ubuntu.
 Pour installer Zotero, j'utilise [Flatpak](https://www.flatpak.org/).
@@ -29,13 +30,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ```
 
 Maintenant, installons Zotero:
+
 ```bash
 flatpak install flathub org.zotero.Zotero
 ```
 
 Zotero est maintenant installé et un raccourci est disponible dans votre environnement de travail.
 
-## Extensions
+### Extensions
 
 Pour être capable d'utiliser toutes les fonctionnalités présentées dans cet article de blogue, vous devez installer les extensions suivantes:
 
@@ -49,7 +51,7 @@ Pour être capable d'utiliser toutes les fonctionnalités présentées dans cet 
   1. Télécharger le [dernier fichier xpi](https://github.com/retorquere/zotero-better-bibtex/releases/latest).
   2. Ouvrir Zotero, aller dans `Tools` -> `Add-ons`, cliquer sur la roue d'engrenage -> `Install Add-on From File...` et sélectionner le fichier d'extension que vous avez précédemment sélectionné.
 
-# Ajouter un papier dans votre collection
+## Ajouter un papier dans votre collection
 
 Avant tout, je vous recommande de créer un compte sur le site de Zotero.
 Cela vous aidera à synchroniser votre librairie sur tous vos appareils (dans mon cas mon ordinateur personnel et professionnel).
@@ -60,7 +62,7 @@ Lorsque vous voulez ajouter un papier dans votre collection, cliquer sur l'icôn
 Cela va automatiquement télécharger le papier pour une utilisation hors-ligne et extraire toutes les informations requises pour citer ce papier (Titre, auteurs, date...).
 Le téléchargement d'informations peut être modifié à tout moment si quelque chose ne convient pas.
 
-# Générer votre fichier BibTeX en utilisant Zotero
+## Générer votre fichier BibTeX en utilisant Zotero
 
 Avant de générer votre fichier BibTeX, vous pouvez personnaliser le format des clés de citations que vous utiliserez dans votre fichier TeX.
 Pour effectuer cette personnalisation, allez dans le menu BibTeX: Edit -> Preferences -> l'onglet Better BibTeX.

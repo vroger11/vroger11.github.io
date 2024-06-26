@@ -7,6 +7,7 @@ date:   2023-12-03 08:00:00 +0200
 categories: blog dataviz python
 category: blog
 lang: en
+excerpt: After exploring a multitude of Python libraries to create visualizations, here is a presentation of mine given you the insights I gathered.
 ---
 
 Hello again, it has been a while!
@@ -25,4 +26,3 @@ It was a talk done for the Toulouse Dataviz association.
 I hope this helps and/or inspires some of you.
 
 See you again, Vincent.
-

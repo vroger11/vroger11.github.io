@@ -7,6 +7,7 @@ date:   2019-10-12 17:15:00 +0200
 categories: blog PhD
 category: blog
 lang: en
+excerpt: Talking about the subject of my thesis, the directions we are going for and some feelings and the impact on my life.
 ---
 
 After almost a year (11 months), here I share with you my first year as a PhD student.
@@ -15,7 +16,8 @@ In this post I will talk about the subject of my PhD thesis, the direction it ta
 Before I continue, I would like to thank my advisors[^1] for their help and advises, [La Région Occitanie](https://www.laregion.fr/) and [Federal University of Toulouse](https://en.univ-toulouse.fr) for funding me, the University Paul Sabatier and the IRIT lab for their support.
 Also, I want to remind you that it is my blog (it only engages myself).
 
-# Subject
+## Subject
+
 My thesis consists in creating an Automatic System of Intelligibility Measurement (SAMI in French).
 In the speech processing field, intelligibility can mean multiple things.
 First, lets define it by looking how a listener listens:
@@ -30,9 +32,10 @@ In this thesis, we are interested in the clarity of the speaker independently of
 Hence, by intelligibility I mean the speaker intelligibility.
 
 This measures have multiple applications:
-* evaluate people diction, especially foreigners to help them.
-* refine information for hearing aids to improve their efficiency.
-* evaluate the damages of one or multiple diseases (such as Parkinson or oral cancers) to help the reeducation process.
+
+- evaluate people diction, especially foreigners to help them.
+- refine information for hearing aids to improve their efficiency.
+- evaluate the damages of one or multiple diseases (such as Parkinson or oral cancers) to help the reeducation process.
 
 The last point is the focus of my thesis.
 Hence, my automatic system has to work with pathological speech and unimpaired speech.
@@ -45,18 +48,16 @@ More importantly, in this dataset we have access to a subjective evaluation of t
 A panel of 5 experts produced intelligibility scores valuated between 0 and 10.
 This dataset is the starting point of my thesis.
 
-# Thesis direction
+## Thesis direction
 
 I am a data scientist and I like to let the machine learn concepts for me.
 It is why my advisors and I decided to learn the concept of intelligibility using machine learning techniques with end-to-end systems (based on deep learning techniques).
 
 After some experiments on the C2SI dataset, it appears to me that:
 
-* Using state-of-the-art learning techniques for speech processing (with big architectures) is impossible on the available amount of data I have.
-
-* Using models with fewer parameters (with techniques such as [SincNet](https://arxiv.org/abs/1808.00158) and use small architectures) does not perform well enough on pathological speech.
-
-* Use pre-trained models on unimpaired speech to do transfer learning performs worse than "light" models.
+- Using state-of-the-art learning techniques for speech processing (with big architectures) is impossible on the available amount of data I have.
+- Using models with fewer parameters (with techniques such as [SincNet](https://arxiv.org/abs/1808.00158) and use small architectures) does not perform well enough on pathological speech.
+- Use pre-trained models on unimpaired speech to do transfer learning performs worse than "light" models.
 
 I can't have more data (as it can be painful for the patients) to obtain better results.
 Classic data augmentation isn't a solution either.
@@ -65,7 +66,7 @@ It reminds me some reading about techniques that try to be as efficient as a bab
 As it corresponds to my problem, I started to review what existed in that domain.
 To share that expertise acquired, I started to write a survey on few-shot learning for speech processing.
 
-# Coming next
+## Coming next
 
 My planned publications (and future posts) are the following:
 
@@ -73,7 +74,7 @@ My planned publications (and future posts) are the following:
 
 2. Experiments using promising few-shot techniques on the C2SI dataset.
 
-# Feeling and impact on my way of life
+## Feeling and impact on my way of life
 
 I stopped digital drawing as it took me a least two hours per session.
 I learn everything from scratch in that domain (softwares, drawing techniques and so on).
@@ -93,14 +94,13 @@ I recommend you to talk about it with a professional.
 Also, to be more exposed to the sun (and meditate/relax) I avoid the subway as much as I can by using my scooter (a manual one 😄).
 
 When I have less motivation than usual, I listen to the following songs (maybe it can cheer you up):
-* [Into the Abyss, by Hilltop Hoods](https://youtu.be/FEvlOHR_624).
-* [Here, by Briggs](https://youtu.be/tA07dpATOcY).
-* [Fight back, by  Neffex](https://youtu.be/CYDP_8UTAus).
 
+- [Into the Abyss, by Hilltop Hoods](https://youtu.be/FEvlOHR_624).
+- [Here, by Briggs](https://youtu.be/tA07dpATOcY).
+- [Fight back, by  Neffex](https://youtu.be/CYDP_8UTAus).
 
 Hope it was instructive and can help some of you.
 
 Cheers, Vincent.
-
 
 [^1]: [Julien Pinquier](https://www.irit.fr/~Julien.Pinquier/index_en.php), [Jérôme Farinas](https://www.irit.fr/~Jerome.Farinas) and [Virginie Woisard](https://octogone.univ-tlse2.fr/accueil/membres/virginie-woisard--183287.kjsp)

@@ -7,6 +7,7 @@ date:   2022-04-03 20:00:00 +0200
 categories: blogue datavis
 category: blogue
 lang: fr
+excerpt: Ma seconde participation à l'évènement hackaviz proposé par l'association Toulouse dataviz.
 ---
 
 Dans ce nouvel article de blog, je vais vous présenter ma participation à l'[Hackaviz 2022](https://github.com/ToulouseDataViz/Hackaviz2022).
@@ -16,7 +17,7 @@ M'amusant à faire des visualisations de données sur mon temps libre, j'y ai do
 Vous trouverez ma participation à l'année précédente [ici](/blogue/datavis/2021/09/19/hackaviz_fr.html).
 Le code que j'ai utilisé sera disponible d'ici peu.
 
-# Résultats
+## Résultats
 
 Cette année, une base de données des financements collectés et
 distribués par les organismes de gestion collective des droits
@@ -35,7 +36,6 @@ Suite à ce premier constat, j'ai voulu observer la répartition du nombre d'aid
 
 Ainsi avec ce graphique on se rend compte que la répartition des financements est restée stable de 2016 à 2019 (indépendamment de l'augmentation du nombre d'aides allouées).
 Néanmoins pour l'année 2020 cette répartition a changé en la défaveur des diffusions de spectacle vivant et en faveur des financements de créations. Tandis que la proportion de financements pour l'éducation artistique et culturelle et la formation des artistes est restée stable.
-
 
 J’espère que cela aidera/inspirera certains d’entre vous.
 Dans tous les cas, j'espère que cela a été intéressant.
