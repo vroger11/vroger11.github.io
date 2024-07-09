@@ -4,7 +4,7 @@ title: Blogue
 permalink: /blogue/
 ref: blog
 lang: fr
-list_title: Posts
+list_title: Articles
 nav_order: 2
 ---
 
