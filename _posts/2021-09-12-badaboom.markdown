@@ -4,7 +4,7 @@ comments: true
 title:  "BadaBoom"
 ref: badaboom
 date:   2021-09-12 08:00:00 +0200
-categories: blog datavis
+categories: blog dataviz
 category: blog
 lang: en
 excerpt: My first visualizations using asteroid data provided by NASA ('Asteroids - NeoWs' database).
