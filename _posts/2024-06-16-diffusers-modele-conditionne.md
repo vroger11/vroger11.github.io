@@ -302,7 +302,7 @@ fig.show()
 ![images générés](/assets/images/diffusers/tutorial_2_conditional.png)
 
 Et voilà, nous avons généré nos premiers exemples conditionnés en utilisant la librairie de diffusers avec des labels one-hot.
-Le notebook complet est disponnible [ici](https://github.com/vroger11/diffusers-tutorial).
+Le notebook complet et les poids d'entrainement sont disponibles [ici](https://github.com/vroger11/diffusers-tutorial).
 
 J'espère que cela aidera et/ou inspirera certains d'entre vous.
 
