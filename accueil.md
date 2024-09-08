@@ -3,7 +3,7 @@ layout: home
 lang: fr
 ref: home
 title: Page d'accueil
-list_title: Last blog articles
+list_title: Derniers articles de blogue
 nav_order: 1
 ---
 

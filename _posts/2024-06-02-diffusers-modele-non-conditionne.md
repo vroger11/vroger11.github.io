@@ -14,7 +14,7 @@ Ces dernières années, les modèles de diffusion se sont imposés comme un outi
 
 De nouveaux cours apparaissent pour expliquer le fonctionnement de ces méthodes. L'un d'entre eux est [How Diffusion Models Works](https://www.deeplearning.ai/short-courses/how-diffusion-models-work/) de DeepLearning.ai. Il fournit d'excellents carnets de notes pour créer notre premier modèle de diffusion/pipeline. Cependant, il est fastidieux de mettre en œuvre une telle approche à partir de zéro en utilisant uniquement la bibliothèque PyTorch (mais c'est un excellent moyen d'apprendre le fonctionnement d'une telle méthode).
 
-Dans cet article de blog, nous allons nous plonger dans l'implémentation d'un UNet inconditionnel en utilisant la bibliothèque [Diffusers](https://github.com/huggingface/diffusers) de deeplearning.ai. Nous allons parcourir les composants clés du code, expliquer comment le processus de diffusion est modélisé avec la bibliothèque Diffusers. Tout le code et un notebook de démonstrations peuvent être trouvés [ici](https://github.com/vroger11/diffusers-tutorial).
+Dans cet article de blog, nous allons nous plonger dans l'implémentation d'un UNet inconditionnel en utilisant la bibliothèque [Diffusers](https://github.com/huggingface/diffusers) de deeplearning.ai. Nous allons parcourir les composants clés du code, expliquer comment le processus de diffusion est modélisé avec la bibliothèque Diffusers. Tout le code (sous forme de nortebook) les poids du réseau peuvent être trouvés [ici](https://github.com/vroger11/diffusers-tutorials).
 
 **Note:** Ce billet n'explique pas le fonctionnement des modèles de diffusion, mais comment utiliser la librairie diffusers pour se simplifier la vie.
 

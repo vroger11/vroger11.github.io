@@ -11,7 +11,7 @@ excerpt: Visualizations created to explore CNEOS data (NASA project).
 ---
 
 In this new blog post, I'm going to present you the continuation of my work on my library [badaboom](https://github.com/vroger11/badaboom)).
-This article follows my previous article about my badaboom project (you can find this article [here](/blog/datavis/2021/09/12/badaboom.html)).
+This article follows my previous article about my badaboom project (you can find this article [here](/blog/dataviz/2021/09/12/badaboom.html)).
 For this second part, I realized the analysis of fireballs.
 Fireballs are astronomical terms for meteors that are exceptionally bright and spectacular enough to be seen over a wide area.
 

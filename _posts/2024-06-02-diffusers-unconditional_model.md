@@ -14,7 +14,7 @@ In recent years, diffusion models have emerged as a powerful tool in the domain 
 
 New courses appear to explain how such method function. One of them is [How Diffusion Models Works](https://www.deeplearning.ai/short-courses/how-diffusion-models-work/) from DeepLearning.ai. It provides great notebooks to create our first diffusion model/pipeline. But, it is tedious to implement such an approach from scratch using only the PyTorch library (but a great way to learn the way such a method works).
 
-In this blog post, we will delve into the implementation of an Unconditional UNet using the [Diffusers](https://github.com/huggingface/diffusers) library from deeplearning.ai. We will walk through the key components of the code, explain how the diffusion process is modeled with the Diffusers library. All the code and a notebook of demonstrations can be found [there](https://github.com/vroger11/diffusers-tutorial).
+In this blog post, we will delve into the implementation of an Unconditional UNet using the [Diffusers](https://github.com/huggingface/diffusers) library from deeplearning.ai. We will walk through the key components of the code, explain how the diffusion process is modeled with the Diffusers library. All the code (as notebook) and trained weights can be found [there](https://github.com/vroger11/diffusers-tutorials).
 
 **Note:** This post will not explain how diffusion models works, but how to use diffusers library to simplify our life.
 

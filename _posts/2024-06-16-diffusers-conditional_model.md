@@ -305,7 +305,7 @@ fig.show()
 ![generated images](/assets/images/diffusers/tutorial_2_conditional.png)
 
 Here we go, we have generated our first conditioned examples using the diffusers library with one-hot labels.
-The full notebook is available [here](https://github.com/vroger11/diffusers-tutorial).
+The full notebook and weights is available [here](https://github.com/vroger11/diffusers-tutorials).
 
 I hope this helps and/or inspires some of you.
 

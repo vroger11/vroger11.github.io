@@ -4,6 +4,7 @@ title: Blog
 lang: en
 ref: blog
 permalink: /blog/
+list_title: Posts
 nav_order: 2
 ---
 
