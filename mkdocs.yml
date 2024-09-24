@@ -1,0 +1,147 @@
+site_name: Vincent ROGER, (PhD)
+site_url: https://website.vincent-roger.fr
+repo_url: https://github.com/vroger11/vroger11.github.io
+site_description: Vincent Roger's website and blog.
+
+theme:
+  font:
+    text: Noto Sans
+  name: material
+  custom_dir: overrides
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: black
+      accent: green
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: black
+      accent: green
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+      primary: black
+      accent: green
+  logo: assets/logo.svg
+  favicon: assets/favicon.ico
+  features:
+    # - toc.integrate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    # - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+copyright: "Copyright &copy; 2019-2024 Vincent Roger."
+
+markdown_extensions:
+  # to make the mermaid diagrams follow the theme
+  - pymdownx.details
+  - pymdownx.snippets:
+      base_path: ['docs']
+      check_paths: True
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: "!!python/name:mermaid2.fence_mermaid_custom"
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: '#'
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - admonition
+  - md_in_html
+  - footnotes
+
+plugins:
+  - awesome-pages:
+      strict: false
+  - redirects
+  - search
+  - tags
+  - mermaid2
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
+  - i18n:
+      docs_structure: folder
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: '<img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English'
+          build: true
+        - locale: fr
+          name: '<img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français'
+          build: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      exclude:
+        - en/index.md
+        - fr/index.md
+        - en/contact.md
+        - fr/contact.md
+        - en/blog/index.md
+        - fr/blog/index.md
+  - rss:
+      date_from_meta:
+        as_creation: "date"
+        datetime_format: "%Y-%m-%d"
+      pretty_print: !ENV [PRETTY_RSS, false]
+      length: 30
+      match_path: "en/blog/.*"
+
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/vroger11/
+      name: Vincent Roger on LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/vroger11
+      name: Vincent Roger on Github
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/user/vroger11/
+      name: Vincent Roger on Reddit
+    - icon: fontawesome/solid/square-rss
+      link: https://website.vincent-roger.fr/feed_rss_created.xml
+      name: Blog RSS feed
+  analytics:
+    provider: google
+    property: G-F0PYQHTR42
+
+extra_css:
+  - assets/stylesheets/extra.css

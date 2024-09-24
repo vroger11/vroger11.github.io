@@ -1,0 +1,5 @@
+nav:
+    - 09-25-website-migration-to-mkdocs.md
+    - 09-08-diffusers-obtain-better-results.md
+    - 06-16-diffusers-conditional-model.md
+    - 06-02-diffusers-unconditional-model.md

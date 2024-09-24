@@ -1,0 +1,22 @@
+/* Invert Previous and Next for the footer */
+.md-footer-nav__link--prev {
+    order: 1;
+}
+
+.md-footer-nav__link--next {
+    order: 2;
+}
+
+/* hide repo on navigation bars */
+.md-header__source, .md-nav__source {
+    display: none;
+}
+
+.md-grid {
+    max-width: 1440px;
+    min-width: 414px;
+}
+
+p {
+    text-align: justify;
+}

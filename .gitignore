@@ -1,7 +1,31 @@
-_site
-.sass-cache
-.jekyll-metadata
-vendor
-Gemfile.lock
-.bundle
-.jekyll-cache
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# MkDocs build files
+site/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# MkDocs config files
+*.lock
+
+# Other IDE settings
+.idea/
+*.iml
+
+# Node modules (if using npm for additional JS/CSS dependencies)
+node_modules/
+
+# Environment variables
+.env
+.venv/

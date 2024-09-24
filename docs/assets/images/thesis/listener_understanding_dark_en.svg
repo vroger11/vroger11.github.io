@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="314.79489mm"
+   height="79.463753mm"
+   viewBox="0 0 314.79489 79.463753"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="listener_understanding_dark_en.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="0.77859125"
+     inkscape:cx="739.79768"
+     inkscape:cy="201.00406"
+     inkscape:window-width="1279"
+     inkscape:window-height="692"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="95.142181,282.65257"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="244.88994,258.15843"
+       orientation="1,0"
+       id="guide7"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1.001"
+       markerHeight="1.001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-7"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1.001"
+       markerHeight="1.001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-9"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1.001"
+       markerHeight="1.001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-3"
+       refX="4"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="1.001"
+       markerHeight="1.001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-6" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(66.48278,-82.759392)">
+    <rect
+       style="fill:#1e2129;fill-opacity:1;stroke:none;stroke-width:0.765;stroke-opacity:1"
+       id="rect2"
+       width="314.79489"
+       height="79.463753"
+       x="-66.48278"
+       y="82.759392"
+       ry="0" />
+    <rect
+       style="fill:none;fill-opacity:0.454128;stroke:#b7bac0;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="89.628639"
+       height="44.213593"
+       x="50.212975"
+       y="85.303398"
+       ry="0.88194448" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       x="94.826096"
+       y="104.3289"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:center;text-anchor:middle;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="94.826096"
+         y="104.3289"
+         id="tspan2">Listener</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:center;text-anchor:middle;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="94.826096"
+         y="114.91224"
+         id="tspan7">Perception</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#b7bac0;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       d="M 25.029485,96.248079 H 50.212976"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#b7bac0;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow-7)"
+       d="M 25.029485,118.57232 H 50.212976"
+       id="path2-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#b7bac0;stroke-width:0.765;stroke-dasharray:4.59, 1.53;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#RoundedArrow-9)"
+       d="M 95.02728,147.86154 V 129.517"
+       id="path2-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#b7bac0;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow-3)"
+       d="m 139.42541,107.4102 h 26.88261"
+       id="path2-6"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;text-align:center;text-anchor:middle;fill:#b7bac0;fill-opacity:1;stroke:#000000;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1"
+       x="94.758575"
+       y="157.33812"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-size:7.76111px;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.765"
+         x="94.758575"
+         y="157.33812">Knowledge of the listerner</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;text-align:center;text-anchor:middle;fill:#b7bac0;fill-opacity:1;stroke:#000000;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1"
+       x="169.91167"
+       y="104.35003"
+       id="text3-8"><tspan
+         sodipodi:role="line"
+         style="font-size:7.76111px;text-align:start;text-anchor:start;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.765"
+         x="169.91167"
+         y="104.35003"
+         id="tspan4">Sentence understood</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:7.76111px;text-align:start;text-anchor:start;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.765"
+         x="169.91167"
+         y="114.05141"
+         id="tspan8">by the listener</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;text-align:start;text-anchor:start;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1"
+       x="-61.349567"
+       y="98.439163"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="font-size:7.76111px;fill:#b7bac0;fill-opacity:1;stroke-width:0.765"
+         x="-61.349567"
+         y="98.439163">Signal from the speaker</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;text-align:start;text-anchor:start;fill:#b7bac0;fill-opacity:1;stroke:none;stroke-width:0.765;stroke-dasharray:none;stroke-opacity:1"
+       x="-47.138546"
+       y="121.34063"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-size:7.76111px;fill:#b7bac0;fill-opacity:1;stroke-width:0.765"
+         x="-47.138546"
+         y="121.34063">Environment noises</tspan></text>
+  </g>
+</svg>
