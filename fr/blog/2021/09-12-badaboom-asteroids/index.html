@@ -1,0 +1,1985 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vincent Roger's website and blog.">
+      
+      
+      
+        <link rel="canonical" href="https://website.vincent-roger.fr/fr/blog/2021/09-12-badaboom-asteroids/">
+      
+      
+        <link rel="prev" href="../09-19-hackaviz/">
+      
+      
+        <link rel="next" href="../../2020/11-20-create-a-documentation-with-sphinx-on-github/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS du contenu mis à jour" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>BadaBoom - Astéroïdes - Vincent ROGER, (PhD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-F0PYQHTR42"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-F0PYQHTR42",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-F0PYQHTR42",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#resultats" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-header__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vincent ROGER, (PhD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BadaBoom - Astéroïdes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../blog/2021/09-12-badaboom-asteroids/" hreflang="en" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+    
+  
+  À propos de moi
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contact/" class="md-tabs__link">
+        
+  
+    
+  
+  Me contacter
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Blogue
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-nav__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Vincent ROGER, (PhD)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    À propos de moi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Me contacter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blogue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue dans mon blogue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/09-25-website-migration-to-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migration de ce site web vers MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/09-08-diffusers-obtain-better-results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amélioration de la vitesse et de la qualité de génération d'image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/06-16-diffusers-conditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Générer des images à partir de labels avec un modèle conditionné
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/06-02-diffusers-unconditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Générer des images avec un modèle non conditionné
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2023
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/12-03-tools-python-dataviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outils de visualisation de données pour Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/01-16-the_grand_melee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi The Grand Melee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2022
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-13-warlords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi Warlords
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-08-redbull-wololo-legacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi Red Bull Wololo legacy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/10-30-my-phd-experience/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L'expérience de mon doctorat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/09-01-my-switch-to-manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mon passage à Manjaro Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/04-03-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            2021
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-08-badaboom-fireballs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badaboom - Les boules de feu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-19-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BadaBoom - Astéroïdes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BadaBoom - Astéroïdes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Résultats
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2020
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/11-20-create-a-documentation-with-sphinx-on-github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer votre documentation sphinx sur GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/08-02-automation-using-ssh-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisation en utilisant des clés SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/06-24-tweaks-to-speedup-AI-servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Astuces pour accélérer le Deep Learning sur les serveurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-27-audio-loader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-18-work-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurations pour travailler depuis la maison
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-11-survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    État de l'art sur le few-shot pour des corpus de parole avec peu de données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/01-31-format-a-bootable-usb-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formater une clé USB d'amorçage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/01-28-improve-your-bash-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Améliorer votre expérience bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2019
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            2019
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/11-06-using-zotero-to-generate-bibtex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser Zotero pour générer des fichiers BibTeX pour vos papiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-12-first-year-review-as-a-phd-student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revue de ma première année de thèse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-08-check-your-writing-in-nvim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vérifier vos fautes dans Neovim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-23-terminal-multiplexers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiplexeur de terminaux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-09-save-git-credentials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sauver les identifiants git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-08-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonjour le monde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Résultats
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Archives</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Visualisations</span>
+    
+  
+</nav>
+
+
+  
+  
+
+
+  <h1>BadaBoom - Astéroïdes</h1>
+
+<p>Dans ce nouvel article de blog, je vais vous présenter un petit projet que j'ai réalisé dernièrement.
+Étant passionné d'espace, j'ai cherché une base de données simple qui me permettrait d'appréhender l'immensité du monde qui nous entoure.
+Je suis finalement tombé sur la base 'Asteroids - NeoWs' fournie par la NASA (pour plus d'informations, c'est par <a href="https://api.nasa.gov/">ici</a>).
+Cette base est focalisée sur les astéroïdes passant près de la planète Terre.
+Dans cette base, le point le plus proche d'un astéroïde passant auprès de la Terre représente un évènement.</p>
+<p>J'ai donc réalisé un dépôt nommé <a href="https://github.com/vroger11/badaboom">badaboom</a>. Ce dernier contient un parseur (extracteur de données) et un programme permettant de réaliser quelques figures et statistiques.
+Dans cet article de blog, je vais détailler les premiers résultats que j'ai obtenus (et mettrais à jour ce post en fonction de mes avancées).</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Vous pouvez recréer tous les graphiques avec des informations mises à jour. Pour cela, vous pouvez consulter le projet sur GitHub à <a href="https://github.com/vroger11/badaboom">badaboom</a>. J'utilise également ce dépôt comme modèle pour mes projets Python. N'hésitez pas à y jeter un œil et à me faire part de vos suggestions pour l'améliorer !</p>
+</div>
+<h2 id="resultats">Résultats<a class="headerlink" href="#resultats" title="Permanent link">#</a></h2>
+<p>Tous les résultats qui suivront sont calculés pour les années comprises entre 1980 et 2030. Sachant que les données étaient récupérées le 10 septembre 2021, toutes les données de cette date à fin 2030 sont les projections de la NASA.</p>
+<p>Avant de commencer, voici les 10 plus grands astéroïdes pour les années entre 1980 et 2030:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Identifiant de l'astéroïde</th>
+<th style="text-align: left;">Nom de l'astéroïde</th>
+<th style="text-align: right;">Diamètre minimum estimé (km)</th>
+<th style="text-align: right;">Diamètre maximum estimé (km)</th>
+<th style="text-align: right;"><a href="https://ssd.jpl.nasa.gov/?glossary&amp;term=H">Amplitude absolue h</a></th>
+<th style="text-align: left;">Lien d'information de l'astéroïde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2001036</td>
+<td style="text-align: left;">1036 Ganymed (A924 UB)</td>
+<td style="text-align: right;">37.5452</td>
+<td style="text-align: right;">83.9537</td>
+<td style="text-align: right;">9.25</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001036">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001036</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2000433</td>
+<td style="text-align: left;">433 Eros (A898 PA)</td>
+<td style="text-align: right;">21.8049</td>
+<td style="text-align: right;">48.7573</td>
+<td style="text-align: right;">10.43</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2000433">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2000433</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2001866</td>
+<td style="text-align: left;">1866 Sisyphus (1972 XA)</td>
+<td style="text-align: right;">8.64082</td>
+<td style="text-align: right;">19.3215</td>
+<td style="text-align: right;">12.44</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001866">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001866</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2004954</td>
+<td style="text-align: left;">4954 Eric (1990 SQ)</td>
+<td style="text-align: right;">8.06408</td>
+<td style="text-align: right;">18.0318</td>
+<td style="text-align: right;">12.59</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2004954">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2004954</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2001627</td>
+<td style="text-align: left;">1627 Ivar (1929 SH)</td>
+<td style="text-align: right;">7.7724</td>
+<td style="text-align: right;">17.3796</td>
+<td style="text-align: right;">12.67</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001627">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001627</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2003552</td>
+<td style="text-align: left;">3552 Don Quixote (1983 SA)</td>
+<td style="text-align: right;">6.80072</td>
+<td style="text-align: right;">15.2069</td>
+<td style="text-align: right;">12.96</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2003552">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2003552</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2002212</td>
+<td style="text-align: left;">2212 Hephaistos (1978 SB)</td>
+<td style="text-align: right;">5.73528</td>
+<td style="text-align: right;">12.8245</td>
+<td style="text-align: right;">13.33</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2002212">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2002212</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2025916</td>
+<td style="text-align: left;">25916 (2001 CP44)</td>
+<td style="text-align: right;">4.88152</td>
+<td style="text-align: right;">10.9154</td>
+<td style="text-align: right;">13.68</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2025916">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2025916</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2001980</td>
+<td style="text-align: left;">1980 Tezcatlipoca (1950 LA)</td>
+<td style="text-align: right;">4.61907</td>
+<td style="text-align: right;">10.3286</td>
+<td style="text-align: right;">13.8</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001980">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2001980</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2005587</td>
+<td style="text-align: left;">5587 (1990 SB)</td>
+<td style="text-align: right;">4.57673</td>
+<td style="text-align: right;">10.2339</td>
+<td style="text-align: right;">13.82</td>
+<td style="text-align: left;"><a href="https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2005587">https://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2005587</a></td>
+</tr>
+</tbody>
+</table>
+<p>Ainsi, on s'aperçoit que des astéroïdes gigantesques passent au-dessus notre tête sans même que l'on ne s'en rende compte !
+Certains d'entre vous remarqueront que certains noms d'astéroïdes leur sont familiers (surtout si vous regardez la série The Expanse).</p>
+<p>Maintenant regardons le nombre d'astéroïdes nous visitant par mois (la figure est interactive n'hésitez pas à passer votre souris sur les barres):</p>
+<html lang="en">
+
+  <head>
+
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+
+
+
+
+
+
+
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.3.min.js" integrity="sha384-dM3QQsP+wXdHg42wTqW85BjZQdLNNIXqlPw/BgKoExPmTG7ZLML4EGqLMfqHT6ON" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+
+
+
+
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+
+
+  <body>
+
+
+
+
+
+
+              <div class="bk-root" id="27c6d8cb-66ea-4834-ba2f-58f84455b5d5" data-root-id="1003"></div>
+
+
+
+
+
+        <script type="application/json" id="1173">
+          {"cfc8759a-eb36-47f5-8207-847994e8727e":{"defs":[],"roots":{"references":[{"attributes":{"formatter":{"id":"1049"},"major_label_policy":{"id":"1048"},"ticker":{"id":"1019"}},"id":"1018","type":"LinearAxis"},{"attributes":{},"id":"1048","type":"AllLabels"},{"attributes":{},"id":"1026","type":"ResetTool"},{"attributes":{},"id":"1052","type":"Selection"},{"attributes":{"range":{"id":"1006"},"value":-0.16},"id":"1038","type":"Dodge"},{"attributes":{"data_source":{"id":"1002"},"glyph":{"id":"1040"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1041"},"view":{"id":"1043"}},"id":"1042","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1028","type":"BoxAnnotation"},{"attributes":{"callback":null,"tooltips":[["Year","@years"],["Number of unique events","@nunique_events_per_year"],["Number of unique asteroid","@nunique_asteroid_per_year"]]},"id":"1029","type":"HoverTool"},{"attributes":{"formatter":{"id":"1046"},"major_label_policy":{"id":"1045"},"ticker":{"id":"1015"}},"id":"1014","type":"LinearAxis"},{"attributes":{},"id":"1019","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"firebrick"},"line_alpha":{"value":0.1},"line_color":{"value":"firebrick"},"top":{"field":"nunique_events_per_year"},"width":{"value":0.28},"x":{"field":"years","transform":{"id":"1038"}}},"id":"1041","type":"VBar"},{"attributes":{"overlay":{"id":"1028"}},"id":"1024","type":"BoxZoomTool"},{"attributes":{},"id":"1049","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"1018"},"dimension":1,"ticker":null},"id":"1021","type":"Grid"},{"attributes":{},"id":"1022","type":"PanTool"},{"attributes":{},"id":"1010","type":"LinearScale"},{"attributes":{"fill_color":{"value":"firebrick"},"line_color":{"value":"firebrick"},"top":{"field":"nunique_events_per_year"},"width":{"value":0.28},"x":{"field":"years","transform":{"id":"1038"}}},"id":"1040","type":"VBar"},{"attributes":{},"id":"1008","type":"DataRange1d"},{"attributes":{"source":{"id":"1002"}},"id":"1043","type":"CDSView"},{"attributes":{"data":{"nunique_asteroid_per_year":[1996,1913,1861,1911,1982,1983,2019,1927,2021,1973,2038,2033,2029,2050,2090,2124,2083,2194,2250,2177,2285,2387,2422,2502,2594,2746,2722,2850,2982,3072,3227,3149,3464,3432,3797,3907,4220,4454,4356,4723,5404,4357,2639,2670,2506,2348,2401,2422,2316,2322,2259],"nunique_events_per_year":[2249,2201,2122,2179,2282,2282,2308,2222,2309,2246,2341,2287,2321,2333,2377,2428,2387,2506,2561,2487,2595,2738,2762,2837,2945,3125,3090,3300,3385,3470,3674,3574,3929,3883,4287,4390,4736,5028,4944,5333,6044,4922,3025,3059,2849,2675,2749,2786,2607,2678,2573],"years":[1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030]},"selected":{"id":"1052"},"selection_policy":{"id":"1051"}},"id":"1002","type":"ColumnDataSource"},{"attributes":{"range":{"id":"1006"},"value":0.16},"id":"1056","type":"Dodge"},{"attributes":{},"id":"1046","type":"BasicTickFormatter"},{"attributes":{"below":[{"id":"1014"}],"center":[{"id":"1017"},{"id":"1021"},{"id":"1054"}],"left":[{"id":"1018"}],"renderers":[{"id":"1042"},{"id":"1060"}],"title":{"id":"1004"},"toolbar":{"id":"1030"},"width":1350,"x_range":{"id":"1006"},"x_scale":{"id":"1010"},"y_range":{"id":"1008"},"y_scale":{"id":"1012"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{"data_source":{"id":"1002"},"glyph":{"id":"1058"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1059"},"view":{"id":"1061"}},"id":"1060","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"grey"},"line_alpha":{"value":0.1},"line_color":{"value":"grey"},"top":{"field":"nunique_asteroid_per_year"},"width":{"value":0.28},"x":{"field":"years","transform":{"id":"1056"}}},"id":"1059","type":"VBar"},{"attributes":{"active_multi":null,"tools":[{"id":"1022"},{"id":"1023"},{"id":"1024"},{"id":"1025"},{"id":"1026"},{"id":"1027"},{"id":"1029"}]},"id":"1030","type":"Toolbar"},{"attributes":{},"id":"1025","type":"SaveTool"},{"attributes":{},"id":"1012","type":"LinearScale"},{"attributes":{"text":"Past and future asteroids events. Produced the 2021-09-10."},"id":"1004","type":"Title"},{"attributes":{"fill_color":{"value":"grey"},"line_color":{"value":"grey"},"top":{"field":"nunique_asteroid_per_year"},"width":{"value":0.28},"x":{"field":"years","transform":{"id":"1056"}}},"id":"1058","type":"VBar"},{"attributes":{"label":{"value":"Number of unique events per year"},"renderers":[{"id":"1042"}]},"id":"1055","type":"LegendItem"},{"attributes":{"axis":{"id":"1014"},"ticker":null},"id":"1017","type":"Grid"},{"attributes":{},"id":"1045","type":"AllLabels"},{"attributes":{"label":{"value":"Number of unique asteroid per year"},"renderers":[{"id":"1060"}]},"id":"1072","type":"LegendItem"},{"attributes":{},"id":"1027","type":"HelpTool"},{"attributes":{},"id":"1015","type":"BasicTicker"},{"attributes":{"items":[{"id":"1055"},{"id":"1072"}],"location":"top_left","orientation":"horizontal"},"id":"1054","type":"Legend"},{"attributes":{"source":{"id":"1002"}},"id":"1061","type":"CDSView"},{"attributes":{},"id":"1051","type":"UnionRenderers"},{"attributes":{},"id":"1006","type":"DataRange1d"},{"attributes":{},"id":"1023","type":"WheelZoomTool"}],"root_ids":["1003"]},"title":"Bokeh Application","version":"2.3.3"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+
+                  var docs_json = document.getElementById('1173').textContent;
+                  var render_items = [{"docid":"cfc8759a-eb36-47f5-8207-847994e8727e","root_ids":["1003"],"roots":{"1003":"27c6d8cb-66ea-4834-ba2f-58f84455b5d5"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+
+</html>
+
+<p>En voyant ce graphique on peut en tirer les points suivants:</p>
+<ul>
+<li>Plus les années passent et plus on observe d'astéroïdes (surement lié à une amélioration de nos observatoires, même si plus d'astéroïdes peuvent nous croiser ces dernières années).</li>
+<li>Le nombre de passages prévus d'astéroïdes est plus faible que ces 5 dernières années. Cela est peut-être dû au fait que les efforts sont mis sur les astéroïdes les plus gros (voir la figure suivante qui peut laisser penser cette ceci).</li>
+<li>Les astéroïdes ne font en général pas plus d'un passage par an.</li>
+</ul>
+<p>Allons maintenant plus en détail avec la figure suivante (elle aussi interactive):</p>
+<html lang="en">
+
+  <head>
+
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+
+
+
+
+
+
+
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.3.min.js" integrity="sha384-dM3QQsP+wXdHg42wTqW85BjZQdLNNIXqlPw/BgKoExPmTG7ZLML4EGqLMfqHT6ON" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+
+
+
+
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+
+
+  <body>
+
+
+
+
+
+
+              <div class="bk-root" id="58ac7bdc-af7f-47cb-87cd-d7a52e1b2f23" data-root-id="1175"></div>
+
+
+
+
+
+        <script type="application/json" id="1401">
+          {"21726f8e-ed5c-4a57-83f1-4cdc4670808a":{"defs":[],"roots":{"references":[{"attributes":{"source":{"id":"1174"}},"id":"1257","type":"CDSView"},{"attributes":{"label":{"value":"Asteroids with max diameter \u2265 500m and &lt; 1km"},"renderers":[{"id":"1256"}]},"id":"1268","type":"LegendItem"},{"attributes":{"label":{"value":"Asteroids with max diameter \u2265 2km"},"renderers":[{"id":"1288"}]},"id":"1300","type":"LegendItem"},{"attributes":{"bottom":{"expr":{"id":"1214"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"blue"},"line_alpha":{"value":0.1},"line_color":{"value":"blue"},"top":{"expr":{"id":"1215"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1255","type":"VBar"},{"attributes":{"data_source":{"id":"1174"},"glyph":{"id":"1254"},"hover_glyph":null,"muted_glyph":null,"name":"y3","nonselection_glyph":{"id":"1255"},"view":{"id":"1257"}},"id":"1256","type":"GlyphRenderer"},{"attributes":{},"id":"1232","type":"UnionRenderers"},{"attributes":{},"id":"1233","type":"Selection"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1200","type":"BoxAnnotation"},{"attributes":{"fields":["y1","y2"]},"id":"1213","type":"Stack"},{"attributes":{"label":{"value":"Asteroids with max diameter &lt; 100m"},"renderers":[{"id":"1223"}]},"id":"1236","type":"LegendItem"},{"attributes":{"fields":["y1","y2","y3"]},"id":"1215","type":"Stack"},{"attributes":{"active_multi":null,"tools":[{"id":"1194"},{"id":"1195"},{"id":"1196"},{"id":"1197"},{"id":"1198"},{"id":"1199"},{"id":"1201"}]},"id":"1202","type":"Toolbar"},{"attributes":{"fields":["y1","y2","y3","y4"]},"id":"1218","type":"Stack"},{"attributes":{"source":{"id":"1174"}},"id":"1224","type":"CDSView"},{"attributes":{"bottom":{"expr":{"id":"1210"}},"fill_color":{"value":"grey"},"line_color":{"value":"grey"},"top":{"expr":{"id":"1211"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1221","type":"VBar"},{"attributes":{"bottom":{"expr":{"id":"1210"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"grey"},"line_alpha":{"value":0.1},"line_color":{"value":"grey"},"top":{"expr":{"id":"1211"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1222","type":"VBar"},{"attributes":{"fields":["y1","y2"]},"id":"1214","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"1216"}},"fill_color":{"value":"black"},"top":{"expr":{"id":"1217"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1270","type":"VBar"},{"attributes":{"fields":["y1","y2","y3"]},"id":"1216","type":"Stack"},{"attributes":{"fields":["y1","y2","y3","y4"]},"id":"1217","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"1216"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"black"},"line_alpha":{"value":0.1},"top":{"expr":{"id":"1217"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1271","type":"VBar"},{"attributes":{"source":{"id":"1174"}},"id":"1273","type":"CDSView"},{"attributes":{"label":{"value":"Asteroids with max diameter \u2265 1km and &lt; 2km"},"renderers":[{"id":"1272"}]},"id":"1284","type":"LegendItem"},{"attributes":{},"id":"1182","type":"LinearScale"},{"attributes":{"below":[{"id":"1186"}],"center":[{"id":"1189"},{"id":"1193"},{"id":"1235"}],"left":[{"id":"1190"}],"renderers":[{"id":"1223"},{"id":"1240"},{"id":"1256"},{"id":"1272"},{"id":"1288"}],"title":{"id":"1176"},"toolbar":{"id":"1202"},"width":1350,"x_range":{"id":"1178"},"x_scale":{"id":"1182"},"y_range":{"id":"1180"},"y_scale":{"id":"1184"}},"id":"1175","subtype":"Figure","type":"Plot"},{"attributes":{"data_source":{"id":"1174"},"glyph":{"id":"1270"},"hover_glyph":null,"muted_glyph":null,"name":"y4","nonselection_glyph":{"id":"1271"},"view":{"id":"1273"}},"id":"1272","type":"GlyphRenderer"},{"attributes":{},"id":"1180","type":"DataRange1d"},{"attributes":{"fields":["y1"]},"id":"1211","type":"Stack"},{"attributes":{},"id":"1178","type":"DataRange1d"},{"attributes":{"text":"Past and future asteroids events sorted by size. Produced the 2021-09-10."},"id":"1176","type":"Title"},{"attributes":{"bottom":{"expr":{"id":"1212"}},"fill_color":{"value":"firebrick"},"line_color":{"value":"firebrick"},"top":{"expr":{"id":"1213"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1238","type":"VBar"},{"attributes":{"data_source":{"id":"1174"},"glyph":{"id":"1221"},"hover_glyph":null,"muted_glyph":null,"name":"y1","nonselection_glyph":{"id":"1222"},"view":{"id":"1224"}},"id":"1223","type":"GlyphRenderer"},{"attributes":{"label":{"value":"Asteroids with max diameter \u2265 100m and &lt; 500m"},"renderers":[{"id":"1240"}]},"id":"1252","type":"LegendItem"},{"attributes":{},"id":"1184","type":"LinearScale"},{"attributes":{"formatter":{"id":"1227"},"major_label_policy":{"id":"1226"},"ticker":{"id":"1187"}},"id":"1186","type":"LinearAxis"},{"attributes":{"source":{"id":"1174"}},"id":"1241","type":"CDSView"},{"attributes":{},"id":"1199","type":"HelpTool"},{"attributes":{"formatter":{"id":"1230"},"major_label_policy":{"id":"1229"},"ticker":{"id":"1191"}},"id":"1190","type":"LinearAxis"},{"attributes":{},"id":"1226","type":"AllLabels"},{"attributes":{"bottom":{"expr":{"id":"1212"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"firebrick"},"line_alpha":{"value":0.1},"line_color":{"value":"firebrick"},"top":{"expr":{"id":"1213"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1239","type":"VBar"},{"attributes":{},"id":"1187","type":"BasicTicker"},{"attributes":{"axis":{"id":"1186"},"ticker":null},"id":"1189","type":"Grid"},{"attributes":{"bottom":{"expr":{"id":"1214"}},"fill_color":{"value":"blue"},"line_color":{"value":"blue"},"top":{"expr":{"id":"1215"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1254","type":"VBar"},{"attributes":{"data_source":{"id":"1174"},"glyph":{"id":"1238"},"hover_glyph":null,"muted_glyph":null,"name":"y2","nonselection_glyph":{"id":"1239"},"view":{"id":"1241"}},"id":"1240","type":"GlyphRenderer"},{"attributes":{"items":[{"id":"1236"},{"id":"1252"},{"id":"1268"},{"id":"1284"},{"id":"1300"}],"location":"top_left"},"id":"1235","type":"Legend"},{"attributes":{"axis":{"id":"1190"},"dimension":1,"ticker":null},"id":"1193","type":"Grid"},{"attributes":{"fields":["y1","y2","y3","y4","y5"]},"id":"1219","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"1218"}},"fill_color":{"value":"red"},"line_color":{"value":"red"},"top":{"expr":{"id":"1219"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1286","type":"VBar"},{"attributes":{},"id":"1227","type":"BasicTickFormatter"},{"attributes":{"source":{"id":"1174"}},"id":"1289","type":"CDSView"},{"attributes":{"bottom":{"expr":{"id":"1218"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"red"},"line_alpha":{"value":0.1},"line_color":{"value":"red"},"top":{"expr":{"id":"1219"}},"width":{"value":0.5},"x":{"field":"years"}},"id":"1287","type":"VBar"},{"attributes":{"data_source":{"id":"1174"},"glyph":{"id":"1286"},"hover_glyph":null,"muted_glyph":null,"name":"y5","nonselection_glyph":{"id":"1287"},"view":{"id":"1289"}},"id":"1288","type":"GlyphRenderer"},{"attributes":{},"id":"1198","type":"ResetTool"},{"attributes":{"data":{"y1":[662,623,612,635,664,688,694,626,663,681,713,662,669,708,710,761,755,763,791,776,810,846,886,974,1033,1073,1148,1208,1241,1316,1399,1380,1548,1568,1802,1824,2044,2204,2160,2492,2892,2242,1184,1133,1085,992,982,967,913,902,876],"y2":[791,752,725,758,783,772,784,745,804,786,814,818,821,777,830,820,817,854,895,870,907,947,978,986,1006,1065,997,1086,1157,1150,1192,1202,1254,1293,1420,1488,1608,1628,1568,1604,1845,1510,924,962,879,820,893,874,855,880,875],"y3":[321,317,321,317,324,314,336,339,346,315,299,341,322,349,317,314,313,346,354,335,346,392,350,336,332,388,370,367,374,377,403,359,424,378,369,388,356,402,406,407,427,397,328,338,336,335,320,360,336,354,310],"y4":[150,151,144,147,151,146,148,155,148,150,140,144,149,159,165,176,135,166,140,146,173,142,146,153,161,160,151,128,143,167,167,155,168,133,152,148,141,161,166,160,181,163,141,172,144,144,153,157,158,134,147],"y5":[72,70,59,54,60,63,57,62,60,41,72,68,68,57,68,53,63,65,70,50,49,60,62,53,62,60,56,61,67,61,65,53,70,60,54,59,71,59,56,60,59,45,62,65,62,57,53,64,54,52,51],"years":[1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030]},"selected":{"id":"1233"},"selection_policy":{"id":"1232"}},"id":"1174","type":"ColumnDataSource"},{"attributes":{},"id":"1197","type":"SaveTool"},{"attributes":{"overlay":{"id":"1200"}},"id":"1196","type":"BoxZoomTool"},{"attributes":{},"id":"1194","type":"PanTool"},{"attributes":{},"id":"1230","type":"BasicTickFormatter"},{"attributes":{},"id":"1229","type":"AllLabels"},{"attributes":{},"id":"1195","type":"WheelZoomTool"},{"attributes":{"fields":["y1"]},"id":"1212","type":"Stack"},{"attributes":{"fields":[]},"id":"1210","type":"Stack"},{"attributes":{"callback":null,"tooltips":[["Year","@years"],["Asteroids with max diameter &lt; 100m","@y1"],["Asteroids with max diameter \u2265 100m and &lt; 500m","@y2"],["Asteroids with max diameter \u2265 500m and &lt; 1km","@y3"],["Asteroids with max diameter \u2265 1km and &lt; 2km","@y4"],["Asteroids with max diameter \u2265 2km","@y5"]]},"id":"1201","type":"HoverTool"},{"attributes":{},"id":"1191","type":"BasicTicker"}],"root_ids":["1175"]},"title":"Bokeh Application","version":"2.3.3"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+
+                  var docs_json = document.getElementById('1401').textContent;
+                  var render_items = [{"docid":"21726f8e-ed5c-4a57-83f1-4cdc4670808a","root_ids":["1175"],"roots":{"1175":"58ac7bdc-af7f-47cb-87cd-d7a52e1b2f23"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+
+</html>
+
+<p>Les catégories d'astéroïdes sont complètements arbitraires. C'est surtout que j'arrive à me visualiser ces différentes tailles avec ces catégories.
+On remarque que l'on détecte de plus en plus d'astéroïdes dont la taille est inférieure à 500m. Tandis que lorsque l'on regarde les prévisions on s'aperçoit que le nombre prévu est bien moindre. Surement parce que les plus gros astéroïdes sont prioritaires pour la surveillance autour de notre planète.</p>
+<p>En addition à ce graphique, j'ai calculé les nombres suivants:</p>
+<ul>
+<li>Astéroïde unique rencontré et observé de 1980 à 2021-09-10 : 25810</li>
+<li>Astéroïde unique dont la rencontre est prévue entre 2021-09-10 et 2030 : 11211</li>
+</ul>
+<p>Il y a malgré tout pas mal de visites de prévues, en espérant que les plus gros n'entrent pas en contact (pour les plus anxieux, ce n'est pas au programme).</p>
+<p>Voilà, c'est tout pour aujourd'hui, j'ai réalisé ce projet pour ma curiosité et je me suis dit que je pouvais vous le partager.</p>
+<p>J’espère que cela aidera/inspirera certains d’entre vous.
+Dans tous les cas, j'espère que cela a été intéressant.</p>
+<p>À bientôt, Vincent.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 septembre 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 septembre 2021</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+
+  <h2 id="__comments">Commentaires</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="vroger11/vroger11.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxNjM0MTYzNTU="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOCb2JI84CivWa"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024 Vincent Roger.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/vroger11" target="_blank" rel="noopener" title="Vincent Roger on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.reddit.com/user/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on Reddit" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zm349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://website.vincent-roger.fr/feed_rss_created.xml" target="_blank" rel="noopener" title="Blog RSS feed" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

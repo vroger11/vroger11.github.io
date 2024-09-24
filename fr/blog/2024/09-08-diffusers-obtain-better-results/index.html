@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vincent Roger's website and blog.">
+      
+      
+      
+        <link rel="canonical" href="https://website.vincent-roger.fr/fr/blog/2024/09-08-diffusers-obtain-better-results/">
+      
+      
+        <link rel="prev" href="../09-25-website-migration-to-mkdocs/">
+      
+      
+        <link rel="next" href="../06-16-diffusers-conditional-model/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS du contenu mis à jour" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Amélioration de la vitesse et de la qualité de génération d'image - Vincent ROGER, (PhD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-F0PYQHTR42"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-F0PYQHTR42",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-F0PYQHTR42",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analyse-des-donnees-letape-cruciale" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-header__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vincent ROGER, (PhD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Amélioration de la vitesse et de la qualité de génération d'image
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../blog/2024/09-08-diffusers-obtain-better-results/" hreflang="en" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+    
+  
+  À propos de moi
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contact/" class="md-tabs__link">
+        
+  
+    
+  
+  Me contacter
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Blogue
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-nav__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Vincent ROGER, (PhD)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    À propos de moi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Me contacter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blogue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue dans mon blogue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-25-website-migration-to-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migration de ce site web vers MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Amélioration de la vitesse et de la qualité de génération d'image
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Amélioration de la vitesse et de la qualité de génération d'image
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-des-donnees-letape-cruciale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse des données : l'étape cruciale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse des données : l'étape cruciale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprendre-la-distribution-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprendre la distribution des données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-de-la-classe-non-humaine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse de la classe non-humaine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ameliorations-dans-la-conception-du-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations dans la conception du réseau
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations dans la conception du réseau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#echauffement-du-reseau-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Échauffement du réseau conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-larchitecture-du-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'architecture du réseau
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations de l'architecture du réseau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-lunet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'UNet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goulot-detranglement-du-reseau-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goulot d'étranglement du réseau conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques-de-regularisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Techniques de régularisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techniques de régularisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dropout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimiseur-adamw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimiseur AdamW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajustements-du-scheduler-et-de-la-fonction-de-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajustements du scheduler et de la fonction de perte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajustements du scheduler et de la fonction de perte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddim-vs-ddpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      DDIM vs. DDPM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-de-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction de perte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-lentrainement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'entraînement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations de l'entraînement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#augmentation-des-epoques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Augmentation des époques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch-compile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Torch compile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Résultat final
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-16-diffusers-conditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Générer des images à partir de labels avec un modèle conditionné
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-02-diffusers-unconditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Générer des images avec un modèle non conditionné
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2023
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/12-03-tools-python-dataviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outils de visualisation de données pour Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/01-16-the_grand_melee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi The Grand Melee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2022
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-13-warlords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi Warlords
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-08-redbull-wololo-legacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mes visualisations du tournoi Red Bull Wololo legacy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/10-30-my-phd-experience/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L'expérience de mon doctorat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/09-01-my-switch-to-manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mon passage à Manjaro Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/04-03-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            2021
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/12-08-badaboom-fireballs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badaboom - Les boules de feu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/09-19-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/09-12-badaboom-asteroids/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BadaBoom - Astéroïdes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2020
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/11-20-create-a-documentation-with-sphinx-on-github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer votre documentation sphinx sur GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/08-02-automation-using-ssh-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisation en utilisant des clés SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/06-24-tweaks-to-speedup-AI-servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Astuces pour accélérer le Deep Learning sur les serveurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-27-audio-loader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-18-work-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurations pour travailler depuis la maison
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/03-11-survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    État de l'art sur le few-shot pour des corpus de parole avec peu de données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/01-31-format-a-bootable-usb-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formater une clé USB d'amorçage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2020/01-28-improve-your-bash-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Améliorer votre expérience bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2019
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            2019
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/11-06-using-zotero-to-generate-bibtex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utiliser Zotero pour générer des fichiers BibTeX pour vos papiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-12-first-year-review-as-a-phd-student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revue de ma première année de thèse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-08-check-your-writing-in-nvim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vérifier vos fautes dans Neovim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-23-terminal-multiplexers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiplexeur de terminaux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-09-save-git-credentials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sauver les identifiants git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-08-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonjour le monde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-des-donnees-letape-cruciale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse des données : l'étape cruciale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse des données : l'étape cruciale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprendre-la-distribution-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprendre la distribution des données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-de-la-classe-non-humaine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse de la classe non-humaine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ameliorations-dans-la-conception-du-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations dans la conception du réseau
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations dans la conception du réseau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#echauffement-du-reseau-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Échauffement du réseau conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-larchitecture-du-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'architecture du réseau
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations de l'architecture du réseau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-lunet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'UNet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goulot-detranglement-du-reseau-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goulot d'étranglement du réseau conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#techniques-de-regularisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Techniques de régularisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techniques de régularisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dropout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimiseur-adamw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimiseur AdamW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajustements-du-scheduler-et-de-la-fonction-de-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajustements du scheduler et de la fonction de perte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajustements du scheduler et de la fonction de perte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddim-vs-ddpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      DDIM vs. DDPM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-de-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction de perte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-de-lentrainement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Améliorations de l'entraînement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations de l'entraînement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#augmentation-des-epoques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Augmentation des époques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch-compile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Torch compile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Résultat final
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Apprentissage Automatique</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Développement</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Génération</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Python</span>
+    
+  
+</nav>
+
+
+  
+  
+
+
+  <h1>Amélioration de la vitesse et de la qualité de génération d'image</h1>
+
+<p>Bienvenue dans la troisième partie de notre série sur la bibliothèque Diffusers. Dans cet article, nous explorerons des stratégies pour améliorer à la fois la vitesse d'inférence et la qualité des images générées. Ainsi, nous améliorerons les techniques discutées dans notre <a href="../06-16-diffusers-conditional-model/">article précédent</a>, mais aussi en utiliserons des nouvelles.</p>
+<div class="admonition info">
+<p class="admonition-title">Remarque sur les bonnes pratiques</p>
+<p>Avant d'entrer dans les détails techniques, il est important de noter que cet article ne suit pas toutes les bonnes pratiques généralement recommandées pour les projets de machine learning. En particulier, nous n'utilisons pas de versionnage de jeux de données, d'outils de suivi comme MLflow, ni de cadres d'optimisation d'hyperparamètres tels que Optuna. Ces pratiques sont essentielles pour un workflow ML robuste et seront abordées dans de futurs articles, mais pas immédiatement. L'objectif de ce tutoriel est de présenter un flux de travail simplifié, plus facile à suivre et à comprendre.</p>
+</div>
+<h2 id="analyse-des-donnees-letape-cruciale">Analyse des données : l'étape cruciale<a class="headerlink" href="#analyse-des-donnees-letape-cruciale" title="Permanent link">#</a></h2>
+<p>L'analyse des données est une étape cruciale pour améliorer la qualité de la génération d'image.</p>
+<h3 id="comprendre-la-distribution-des-donnees">Comprendre la distribution des données<a class="headerlink" href="#comprendre-la-distribution-des-donnees" title="Permanent link">#</a></h3>
+<p>Commençons par examiner la distribution de notre jeu de données. Cela nous aidera à identifier tout déséquilibre ou anomalie dans les données.</p>
+<p><a class="glightbox" href="../../../../assets/images/diffusers/tutorial_3_distribution.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image distribution" src="../../../../assets/images/diffusers/tutorial_3_distribution.png" /></a></p>
+<p>Actuellement, notre jeu de données n'est pas équilibré. Le rééquilibrage des données améliorera la performance du modèle en renforçant sa capacité à généraliser et à produire des résultats plus précis.
+Nous pouvons le faire avec l'ajout suivant dans notre notebook d'entraînement :</p>
+<div class="highlight"><pre><span></span><code><span class="n">dataset</span> <span class="o">=</span> <span class="n">SpritesDataset</span><span class="p">(</span>
+    <span class="s2">&quot;./dlai_lib/sprites_1788_16x16.npy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;./dlai_lib/sprite_labels_nc_1788_16x16.npy&quot;</span><span class="p">,</span>
+    <span class="n">null_context</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="c1"># Création d&#39;un sampler pour compenser le déséquilibre du jeu de données</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slabels</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">u_labels</span><span class="p">,</span> <span class="n">class_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">class_weights</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">class_counts</span> <span class="o">/</span> <span class="n">class_counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">sample_weights</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">class_weights</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">)</span>
+<span class="n">num_samples</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span><span class="o">/</span><span class="n">batch_size</span><span class="p">)</span> <span class="o">*</span> <span class="n">batch_size</span>  <span class="c1"># num_samples est un multiple de batch_size pour éviter de recompilation</span>
+
+<span class="n">dataset_sampler</span> <span class="o">=</span> <span class="n">WeightedRandomSampler</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="n">sample_weights</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="n">num_samples</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">dataset</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">dataset_sampler</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Dans cette approche, nous calculons les poids pour chaque échantillon dans notre jeu de données et utilisons un échantillonneur de données aléatoire pour sélectionner les échantillons en fonction de ces poids. Ainsi, les échantillons des classes les moins représentées sont sélectionnés plus fréquemment que ceux des classes les plus fréquentes.</p>
+<p>Malgré le fait que la classe non-humaine soit l'une des plus fréquentes dans notre jeu de données, le modèle peine à générer autre chose que des formes indistinctes, ce qui indique qu'il pourrait y avoir des problèmes sous-jacents avec les données elles-mêmes.</p>
+<h3 id="analyse-de-la-classe-non-humaine">Analyse de la classe non-humaine<a class="headerlink" href="#analyse-de-la-classe-non-humaine" title="Permanent link">#</a></h3>
+<p>Un défi majeur pour notre modèle est la classe non-humaine, qui inclut fréquemment des images mal définis. Pour illustrer ce problème, examinons d'abord les images non-humaines d'origine :</p>
+<p><a class="glightbox" href="../../../../assets/images/diffusers/tutorial_3_non-human_overview_with_bad.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Vue d'ensemble de la classe non-humaine" src="../../../../assets/images/diffusers/tutorial_3_non-human_overview_with_bad.png" /></a></p>
+<p>Comme on peut le voir, certains exemples sont de mauvaise qualité et ressemblent aux sorties non-humaines produites par notre modèle. Pour résoudre ce problème, nous allons étudier et développer une fonction pour détecter automatiquement de tels échantillons problématiques dans la base de données, car il n'est pas possible de revoir manuellement plus de 80 000 échantillons.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">detect_wrong_images</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">number_of_white</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">26</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction pour détecter si une image est incorrecte et doit être exclue de l&#39;entraînement.</span>
+
+<span class="sd">    Paramètres</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : np.ndarray</span>
+<span class="sd">        L&#39;image en RGB avec une forme [largeur, hauteur, canal]</span>
+<span class="sd">    number_of_white : int, optionnel</span>
+<span class="sd">        Le nombre de pixels blancs qu&#39;une image doit avoir pour être considérée comme valide, par défaut 26</span>
+
+<span class="sd">    Retourne</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        True si l&#39;image est incorrecte pour la génération et False si elle est correcte.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">wrong_image</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1"># Notez que le blanc est (255, 255, 255), donc la somme est 765</span>
+    <span class="c1"># Fond blanc donc un minimum de pixels doit être blanc</span>
+    <span class="n">wrong_image</span> <span class="o">|=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">765</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">number_of_white</span>
+
+    <span class="c1"># Les 4 coins doivent être blancs</span>
+    <span class="n">wrong_image</span> <span class="o">|=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">765</span>
+    <span class="n">wrong_image</span> <span class="o">|=</span> <span class="n">image</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">765</span>
+    <span class="n">wrong_image</span> <span class="o">|=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">765</span>
+    <span class="n">wrong_image</span> <span class="o">|=</span> <span class="n">image</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">765</span>
+
+    <span class="k">return</span> <span class="n">wrong_image</span>
+</code></pre></div>
+<p>L'objectif de cette fonction est simple : les bonnes images doivent avoir tous les coins blancs et une part significative des pixels doit être blancs, puisque nous nous attendons à des arrière-plans blancs. Bien que cette approche suffise pour un jeu de données relativement simple, des jeux de données réels nécessiteront des vérifications supplémentaires, telles que la netteté et des contraintes sur la palette de couleurs.</p>
+<p>Si nous traçons quelques mauvais échantillons, nous obtenons ceci :</p>
+<p><a class="glightbox" href="../../../../assets/images/diffusers/tutorial_3_wrong_non-human.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Quelques mauvais échantillons" src="../../../../assets/images/diffusers/tutorial_3_wrong_non-human.png" /></a></p>
+<p>En utilisant cette approche, nous avons identifié et supprimé 30 000 échantillons problématiques de notre jeu de données, capturant efficacement les principaux problèmes de la classe non-humaine.</p>
+<p>Et si nous montrons les 30 exemples non-humains de notre nouveau jeu de données, nous obtenons ceci :</p>
+<p><a class="glightbox" href="../../../../assets/images/diffusers/tutorial_3_right_non-human.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Vue d'ensemble de la classe non-humaine après filtrage" src="../../../../assets/images/diffusers/tutorial_3_right_non-human.png" /></a></p>
+<p>L'application de cette fonction pour affiner notre jeu de données peut accélérer l'entraînement du modèle et améliorer significativement les résultats. Toutefois, vous constaterez peut-être que la qualité des images générées est encore insuffisante et que le processus de génération est trop lent. J'ai créé un jeu de données personnalisé pour permettre ce filtrage avec le paramètre <code>clean_version=True</code>.</p>
+<p><strong>Remarque :</strong> Pour une explication détaillée de ce processus, veuillez consulter le notebook dédié ici : <a href="https://github.com/vroger11/diffusers-tutorials/tree/main/tutorials/03-dataset_analysis.ipynb">https://github.com/vroger11/diffusers-tutorials/tree/main/tutorials/03-dataset_analysis.ipynb</a></p>
+<h2 id="ameliorations-dans-la-conception-du-reseau">Améliorations dans la conception du réseau<a class="headerlink" href="#ameliorations-dans-la-conception-du-reseau" title="Permanent link">#</a></h2>
+<p>On pense souvent qu'ajouter des couches et des paramètres supplémentaires améliorera le modèle. Bien que cela puisse être vrai dans certains cas, ce n'est pas la solution complète et cela conduit souvent à des modèles inefficaces. Dans les sous-sections suivantes, nous explorerons des techniques pour améliorer les résultats et la vitesse d'inférence.</p>
+<h3 id="echauffement-du-reseau-conditionnel">Échauffement du réseau conditionnel<a class="headerlink" href="#echauffement-du-reseau-conditionnel" title="Permanent link">#</a></h3>
+<p>Pour renforcer la concordance du résultat conditionné, nous utilisons une stratégie d'échauffement pour le réseau conditionnel. Mais, cela entraine un sur apprentissage de l'UNet sur la vérité terrain. Pour solutionner ce problème, après avoir gelé les paramètres du réseau conditionnel, nous appliquons un masquage aléatoire des étiquettes (contexte) en utilisant une distribution de Bernoulli. Cette approche stabilise le processus d'entraînement et aide à éviter que le UNet ne surapprenne au réseau conditionnel.</p>
+<p>J'ai choisi une valeur d'échauffement arbitraire de 80 à des fins de démonstration dans ce tutoriel. Cela peut ne pas être la valeur optimale pour tous les scénarios. Dans des applications réelles, il est conseillé de surveiller les performances du modèle et d'ajuster l'étape d'échauffement en conséquence pour déterminer le meilleur moment pour geler le réseau conditionnel.</p>
+<p>Ces ajustements sont mis en œuvre en incorporant les deux conditions suivantes dans notre boucle d'entraînement :</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">epoch</span> <span class="o">&gt;=</span> <span class="n">warmup</span><span class="p">:</span>
+    <span class="n">warmup_done</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="c1"># geler toutes les couches du réseau d&#39;embeddings</span>
+    <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">emb_net</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+        <span class="n">param</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">warmup_done</span><span class="p">:</span>
+    <span class="c1"># masquage aléatoire des étiquettes (contexte)</span>
+    <span class="n">context_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.95</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">unet</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span> <span class="o">*</span> <span class="n">context_mask</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="ameliorations-de-larchitecture-du-reseau">Améliorations de l'architecture du réseau<a class="headerlink" href="#ameliorations-de-larchitecture-du-reseau" title="Permanent link">#</a></h3>
+<h4 id="ameliorations-de-lunet">Améliorations de l'UNet<a class="headerlink" href="#ameliorations-de-lunet" title="Permanent link">#</a></h4>
+<p>L'ajout à la fois d'un bloc descendant et d'un bloc ascendant à l'architecture UNet s'est avéré efficace. Mes expériences ont montré que l'absence de ces blocs entraînait une baisse de la qualité des images générées.</p>
+<p>Par conséquent, nous modifions notre UNet comme suit :</p>
+<div class="highlight"><pre><span></span><code><span class="n">unet</span> <span class="o">=</span> <span class="n">UNet2DConditionModel</span><span class="p">(</span>
+    <span class="n">encoder_hid_dim</span><span class="o">=</span><span class="n">class_emb_size</span><span class="p">,</span>
+    <span class="n">sample_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">out_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">layers_per_block</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">block_out_channels</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+    <span class="n">down_block_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;DownBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;DownBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;CrossAttnDownBlock2D&quot;</span><span class="p">),</span>  <span class="c1"># Un bloc descendant supplémentaire</span>
+    <span class="n">up_block_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;CrossAttnUpBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;UpBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;UpBlock2D&quot;</span><span class="p">),</span>  <span class="c1"># Un bloc ascendant supplémentaire</span>
+<span class="p">)</span>
+</code></pre></div>
+<h4 id="goulot-detranglement-du-reseau-conditionnel">Goulot d'étranglement du réseau conditionnel<a class="headerlink" href="#goulot-detranglement-du-reseau-conditionnel" title="Permanent link">#</a></h4>
+<p>La mise en œuvre d'un goulot d'étranglement dans le réseau conditionnel impose une meilleure qualité des embeddings, ce qui améliore à son tour la performance globale.</p>
+<p>Ainsi, notre réseau d'embeddings devient :</p>
+<div class="highlight"><pre><span></span><code><span class="n">emb_net</span> <span class="o">=</span> <span class="n">CustomSequential</span><span class="p">(</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">class_emb_size</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span> <span class="c1"># goulot d&#39;étranglement pour imposer une meilleure qualité des embeddings</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">class_emb_size</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">class_emb_size</span><span class="p">),</span>
+    <span class="n">UnsqueezeLayer</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="techniques-de-regularisation">Techniques de régularisation<a class="headerlink" href="#techniques-de-regularisation" title="Permanent link">#</a></h3>
+<p>Les techniques de régularisation sont essentielles pour améliorer la généralisation du modèle final et éviter le surapprentissage :</p>
+<h4 id="dropout">Dropout<a class="headerlink" href="#dropout" title="Permanent link">#</a></h4>
+<p>Nous appliquons le dropout à la fois au UNet et au réseau d'embeddings pour réduire le surapprentissage et améliorer la robustesse du modèle.</p>
+<p>Cela entraîne les modifications suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="n">emb_net</span> <span class="o">=</span> <span class="n">CustomSequential</span><span class="p">(</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">class_emb_size</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span>  <span class="c1"># ajout du dropout pour régulariser le modèle</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">(),</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">class_emb_size</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">class_emb_size</span><span class="p">),</span>
+    <span class="n">UnsqueezeLayer</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># Définir le modèle UNet</span>
+<span class="n">unet</span> <span class="o">=</span> <span class="n">UNet2DConditionModel</span><span class="p">(</span>
+    <span class="n">encoder_hid_dim</span><span class="o">=</span><span class="n">class_emb_size</span><span class="p">,</span>
+    <span class="n">sample_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">out_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">layers_per_block</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">block_out_channels</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+    <span class="n">down_block_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;DownBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;DownBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;CrossAttnDownBlock2D&quot;</span><span class="p">),</span>
+    <span class="n">up_block_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;CrossAttnUpBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;UpBlock2D&quot;</span><span class="p">,</span> <span class="s2">&quot;UpBlock2D&quot;</span><span class="p">),</span>
+    <span class="n">dropout</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>  <span class="c1"># ajout du dropout pour régulariser le modèle</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Notez que nous évitons d'appliquer le Dropout à la sortie de notre réseau d'embeddings pour éviter des problèmes, tels que l'optimisation des valeurs d'embedding nulles dues au Dropout, qui pourraient affecter le mécanisme d'attention dans notre UNet.</p>
+<h4 id="optimiseur-adamw">Optimiseur AdamW<a class="headerlink" href="#optimiseur-adamw" title="Permanent link">#</a></h4>
+<p>Nous utilisons l'optimiseur AdamW, qui intègre la dégradation des poids. Cette technique favorise une meilleure régularisation en pénalisant les poids importants.</p>
+<p>Pour configurer cela, nous devons modifier une importation :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">torch.optim</span> <span class="kn">import</span> <span class="n">AdamW</span>
+</code></pre></div>
+<p>De plus, il est nécessaire de changez la création de l'optimiseur en utilisant un <code>weight_decay</code>. Ici, j'ai choisi une valeur arbitraire qui fonctionne bien dans la plupart des cas mais qui mérite d'être sélectionnée plus soigneusement si vous avez les capacités de calcul :</p>
+<div class="highlight"><pre><span></span><code><span class="n">optimizer</span> <span class="o">=</span> <span class="n">AdamW</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">unet</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">emb_net</span><span class="o">.</span><span class="n">parameters</span><span class="p">()),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="ajustements-du-scheduler-et-de-la-fonction-de-perte">Ajustements du scheduler et de la fonction de perte<a class="headerlink" href="#ajustements-du-scheduler-et-de-la-fonction-de-perte" title="Permanent link">#</a></h3>
+<h4 id="ddim-vs-ddpm">DDIM vs. DDPM<a class="headerlink" href="#ddim-vs-ddpm" title="Permanent link">#</a></h4>
+<p>Le DDIM (Denoising Diffusion Implicit Models) présente plusieurs avantages par rapport au DDPM (Denoising Diffusion Probabilistic Models).
+Contrairement au DDPM, qui repose sur une chaîne de Markov pour débruiter séquentiellement les échantillons, le DDIM contourne le processus de Markov explicite en utilisant une approche non-Markovienne qui permet moins d'étapes de diffusion. Cela se traduit par un échantillonnage plus rapide et plus efficace, tout en maintenant ou en améliorant la qualité des images générées.</p>
+<p>Le passage du DDPM au DDIM est simple ; nous devons simplement commencer par remplacer la création du scheduler de bruit :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Utilisation du DDIMScheduler au lieu du DDPMScheduler</span>
+<span class="n">noise_scheduler</span> <span class="o">=</span> <span class="n">DDIMScheduler</span><span class="p">(</span><span class="n">num_train_timesteps</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div>
+<p>Comme l'API du <code>DDIMScheduler</code> est similaire à celle du <code>DDPMScheduler</code>, il n'est pas nécessaire de modifier le code autour du <code>noise_scheduler</code>. Cependant, nous devons réécrire notre pipeline, bien qu'il ressemble beaucoup à notre <code>DDPMPipeline</code> personnalisé.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConditionalDDIMPipeline</span><span class="p">(</span><span class="n">DDIMPipeline</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DConditionModel</span><span class="p">,</span> <span class="n">class_net</span><span class="p">:</span> <span class="n">CustomSequential</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">DDIMScheduler</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">unet</span><span class="o">=</span><span class="n">unet</span><span class="p">,</span> <span class="n">scheduler</span><span class="o">=</span><span class="n">scheduler</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_net</span> <span class="o">=</span> <span class="n">class_net</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_net</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_modules</span><span class="p">(</span><span class="n">class_net</span><span class="o">=</span><span class="n">class_net</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+
+    <span class="nd">@torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">class_label</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
+        <span class="n">generator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">eta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">num_inference_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">use_clipped_model_output</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">output_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pil&quot;</span><span class="p">,</span>
+        <span class="n">return_dict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">ImagePipelineOutput</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction d&#39;appel du pipeline pour la génération.</span>
+
+<span class="sd">        Arguments:</span>
+<span class="sd">            class_label (list[list[float]]):</span>
+<span class="sd">                Liste d&#39;exemples one-hot. len(class_label) représente le nombre d&#39;exemples à générer.</span>
+<span class="sd">            generator (`torch.Generator`, *optionnel*):</span>
+<span class="sd">                Un [`torch.Generator`](https://pytorch.org/docs/stable/generated/torch.Generator.html) pour rendre</span>
+<span class="sd">                la génération déterministe.</span>
+<span class="sd">            eta (`float`, *optionnel*, par défaut 0.0):</span>
+<span class="sd">                Correspond au paramètre eta (η) du papier [DDIM](https://arxiv.org/abs/2010.02502). Ne s&#39;applique</span>
+<span class="sd">                qu&#39;au [`~schedulers.DDIMScheduler`], et est ignoré dans les autres schedulers. Une valeur de `0`</span>
+<span class="sd">                correspond à DDIM et `1` correspond à DDPM.</span>
+<span class="sd">            num_inference_steps (`int`, *optionnel*, par défaut 1000):</span>
+<span class="sd">                Le nombre d&#39;étapes de débruitage. Plus d&#39;étapes de débruitage conduisent généralement à une image de</span>
+<span class="sd">                meilleure qualité, au détriment d&#39;une inférence plus lente.</span>
+<span class="sd">            use_clipped_model_output (`bool`, *optionnel*, par défaut `None`):</span>
+<span class="sd">                Si `True` ou `False`, voir la documentation de [`DDIMScheduler.step`]. Si `None`, rien n&#39;est passé</span>
+<span class="sd">                en aval au scheduler (utiliser `None` pour les schedulers qui ne prennent pas en charge cet argument).</span>
+<span class="sd">            output_type (`str`, *optionnel*, par défaut `&quot;pil&quot;`):</span>
+<span class="sd">                Le format de sortie de l&#39;image générée. Choisissez entre `PIL.Image` ou `np.array`.</span>
+<span class="sd">            return_dict (`bool`, *optionnel*, par défaut `True`):</span>
+<span class="sd">                Si `True`, retourne un [`~pipelines.ImagePipelineOutput`] ; sinon, retourne un tuple simple.</span>
+
+<span class="sd">        Retourne:</span>
+<span class="sd">            [`~pipelines.ImagePipelineOutput`] ou `tuple`:</span>
+<span class="sd">                Si `return_dict` est `True`, un [`~pipelines.ImagePipelineOutput`] est retourné, sinon un tuple</span>
+<span class="sd">                est retourné dont le premier élément est une liste des images générées.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">class_label</span><span class="p">)</span>
+        <span class="c1"># Échantillonnage du bruit gaussien pour débuter la boucle</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">sample_size</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">image_shape</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">batch_size</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">sample_size</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">sample_size</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">sample_size</span><span class="p">)</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="n">randn_tensor</span><span class="p">(</span><span class="n">image_shape</span><span class="p">,</span> <span class="n">generator</span><span class="o">=</span><span class="n">generator</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_execution_device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+        <span class="c1"># obtention du ground truth encodé</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">class_label</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">autocast</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">device</span><span class="p">)):</span>
+            <span class="n">enc_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_net</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+            <span class="c1"># définition des valeurs de step</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">set_timesteps</span><span class="p">(</span><span class="n">num_inference_steps</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">timesteps</span><span class="p">):</span>
+                <span class="c1"># 1. prédire le bruit model_output</span>
+                <span class="n">model_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">enc_labels</span><span class="p">,</span> <span class="n">class_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span>
+                    <span class="mi">0</span>
+                <span class="p">]</span>
+
+                <span class="c1"># 2. prédire la moyenne précédente de l&#39;image x_t-1 et ajouter la variance en fonction de eta</span>
+                <span class="c1"># eta correspond à η dans l&#39;article et doit être compris entre [0, 1]</span>
+                <span class="c1"># passer de x_t à x_t-1</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+                    <span class="n">model_output</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="n">eta</span><span class="p">,</span> <span class="n">use_clipped_model_output</span><span class="o">=</span><span class="n">use_clipped_model_output</span><span class="p">,</span> <span class="n">generator</span><span class="o">=</span><span class="n">generator</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">prev_sample</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">output_type</span> <span class="o">==</span> <span class="s2">&quot;pil&quot;</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">numpy_to_pil</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">return_dict</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">image</span><span class="p">,)</span>
+
+        <span class="k">return</span> <span class="n">ImagePipelineOutput</span><span class="p">(</span><span class="n">images</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+</code></pre></div>
+<p>Nous avons modifié l'héritage et ajouté le paramètre <code>eta</code> pour assurer la compatibilité avec le <code>DDPMScheduler</code>. Avec ce scheduler, j'ai pu générer des échantillons de haute qualité en seulement 10 étapes, au lieu de 100, améliorant ainsi la vitesse d'inférence de notre modèle final de plus de 10 fois, car nous utilisons également une approche non-Markovienne.</p>
+<h3 id="fonction-de-perte">Fonction de perte<a class="headerlink" href="#fonction-de-perte" title="Permanent link">#</a></h3>
+<p>Nous passons de la perte L2 à la perte L1. La perte L1, ou erreur absolue moyenne (MAE), est moins sensible aux valeurs aberrantes par rapport à la perte L2 (erreur quadratique moyenne), ce qui la rend plus robuste et stable pendant l'entraînement. Cette robustesse aide à générer des images plus claires et plus cohérentes visuellement en réduisant l'influence des valeurs extrêmes et en assurant des mises à jour de gradients stables.</p>
+<p>Dans notre code précédent, cela nécessite de modifier le calcul de la fonction de perte :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Calculer la perte l1 au lieu de mse, elle offre une meilleure robustesse aux bruits</span>
+<span class="c1"># ce qui est adapté aux modèles de diffusion, mais l&#39;inconvénient est un entraînement plus lent</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">l1_loss</span><span class="p">(</span><span class="n">predicted_noise</span><span class="p">,</span> <span class="n">noise</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="ameliorations-de-lentrainement">Améliorations de l'entraînement<a class="headerlink" href="#ameliorations-de-lentrainement" title="Permanent link">#</a></h3>
+<h4 id="augmentation-des-epoques">Augmentation des époques<a class="headerlink" href="#augmentation-des-epoques" title="Permanent link">#</a></h4>
+<p>Avec les modifications mentionnées, nous avons augmenté le nombre d'époques d'entraînement à 100. Cela garantit que le modèle soit bien entraîné et de mieux tirer parti de nos ajustements précédents.</p>
+<h4 id="torch-compile">Torch compile<a class="headerlink" href="#torch-compile" title="Permanent link">#</a></h4>
+<p>Pour accélérer l'entraînement, nous utilisions déjà la précision mixet. Néanmoin, nous pouvons faire mieux en utilisant <code>torch.compile</code>. Ceci nous permet de réduire de 30 % le temps d'entraînement. Notez que <code>torch.compile</code> n'a pas été utilisé pour le pipeline final, car nous avons nécessité un seul forward pour l'évaluation. Cependant, <code>torch.compile</code> offre des avantages significatifs en matière d'efficacité pour la mise en production des modèles.</p>
+<p>Pour compiler nos réseaux, nous devons ajouter les lignes suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># compiler les réseaux pour des inférences plus rapides même pour l&#39;entraînement</span>
+<span class="n">unet</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">unet</span><span class="p">,</span> <span class="n">fullgraph</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">emb_net</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">emb_net</span><span class="p">,</span> <span class="n">fullgraph</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p>Pour ceux qui sont intéressés par des résultats encore plus rapides grâce à des techniques telles que la quantification et la distillation, je recommande de consulter le <a href="https://huggingface.co/docs/diffusers/tutorials/fast_diffusion">tutoriel de Hugging Face sur la diffusion rapide</a>.</p>
+<h2 id="resultat-final">Résultat final<a class="headerlink" href="#resultat-final" title="Permanent link">#</a></h2>
+<p>Avant de présenter les résultats finaux, je tiens à fixer des attentes réalistes. Avec le jeu de données actuel (exempt d'exemples de mauvaise qualité), nous pouvons nous attendre à de bons résultats. Cependant, gardez à l'esprit que nous travaillons avec seulement cinq catégories dans notre ground truth, et les exemples au sein de chaque catégorie sont assez hétérogènes. En conséquence, bien que le modèle apprendra à distinguer les catégories, il ne capturera pas les "sous-catégories", limitant notre contrôle sur celles-ci. Ce manque d'homogénéité au sein des catégories permet au ground truth d'être plus facilement mélangé.</p>
+<p>Regardons maintenant quelques échantillons de chaque classe :</p>
+<p><a class="glightbox" href="../../../../assets/images/diffusers/tutorial_3_final_result.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Résultat final" src="../../../../assets/images/diffusers/tutorial_3_final_result.png" /></a></p>
+<p>Comme vous pouvez le voir, les images semblent assez soignées, mais de nombreux résultats générés sont presque identiques à certains exemples d'entraînement. Vous remarquerez peut-être des différences subtiles entre les originaux et les échantillons générés (notamment avec les petits détails sur les flammes). Pour mieux contrôler les sous-catégories, nous pourrions améliorer la vérité terrain en subdivisant les catégories existantes. Ce travail est laborieux s'il est effectué manuellement. Une approche plus efficace consiste à l'automatiser en appliquant des algorithmes comme k-means dans l'espace encodé de notre UNet sur les échantillons d'entraînement et à attribuer des noms aux catégories résultantes. Cela rendrait le mélange de catégories plus significatif et permettrait plus de flexibilité dans l'ajustement des embeddings.</p>
+<p>Cependant, comme je dois fixer des limites pour ce tutoriel afin d'éviter qu'il ne devienne trop vaste, je considère cette partie hors du cadre.</p>
+<p>J'espère que cet article aidera et/ou inspirera certains d'entre vous. Si vous avez des suggestions, n'hésitez pas à commenter ou à me contacter.</p>
+<p>À bientôt, Vincent.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 septembre 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 septembre 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+
+  <h2 id="__comments">Commentaires</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="vroger11/vroger11.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxNjM0MTYzNTU="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOCb2JI84CivWa"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024 Vincent Roger.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/vroger11" target="_blank" rel="noopener" title="Vincent Roger on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.reddit.com/user/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on Reddit" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zm349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://website.vincent-roger.fr/feed_rss_created.xml" target="_blank" rel="noopener" title="Blog RSS feed" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,85 @@
+
+
+
+
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="89a13faf-7e4d-4789-9676-5b154322c9cb" data-root-id="2505"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2723">
+          {"5e9c4391-8a7f-44fb-b8cd-3b4cea445789":{"defs":[],"roots":{"references":[{"attributes":{},"id":"2514","type":"LinearScale"},{"attributes":{"code":"\n                                    var labels = {0: '2016', 1: '2017', 2: '2018', 3: '2019', 4: '2020'};\n                                    return labels[tick];\n                                    "},"id":"2538","type":"FuncTickFormatter"},{"attributes":{"range":{"id":"2508"},"value":0.08333333333333331},"id":"2579","type":"Dodge"},{"attributes":{"fill_color":{"value":"#ff7f0e"},"hatch_color":{"value":"#ff7f0e"},"line_color":{"value":"#ff7f0e"},"line_width":{"value":2},"top":{"field":"diffusion du spectacle vivant"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2560"}}},"id":"2562","type":"VBar"},{"attributes":{"fill_color":{"value":"#2ca02c"},"hatch_color":{"value":"#2ca02c"},"line_color":{"value":"#2ca02c"},"line_width":{"value":2},"top":{"field":"formation des artistes"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2579"}}},"id":"2581","type":"VBar"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2545"}],"tooltips":[["Ann\u00e9ees","@__x__values_original"],["cr\u00e9ation","@{cr\u00e9ation}"]]},"id":"2558","type":"HoverTool"},{"attributes":{"coordinates":null,"data_source":{"id":"2504"},"glyph":{"id":"2542"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"2544"},"nonselection_glyph":{"id":"2543"},"view":{"id":"2546"}},"id":"2545","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#ff7f0e"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"#ff7f0e"},"line_alpha":{"value":0.1},"line_color":{"value":"#ff7f0e"},"line_width":{"value":2},"top":{"field":"diffusion du spectacle vivant"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2560"}}},"id":"2563","type":"VBar"},{"attributes":{},"id":"2508","type":"DataRange1d"},{"attributes":{"range":{"id":"2508"},"value":-0.08333333333333334},"id":"2560","type":"Dodge"},{"attributes":{"below":[{"id":"2516"}],"center":[{"id":"2519"},{"id":"2523"},{"id":"2556"}],"height":600,"left":[{"id":"2520"}],"output_backend":"webgl","renderers":[{"id":"2545"},{"id":"2565"},{"id":"2584"},{"id":"2603"}],"sizing_mode":"fixed","title":{"id":"2506"},"toolbar":{"id":"2531"},"width":1200,"x_range":{"id":"2508"},"x_scale":{"id":"2512"},"y_range":{"id":"2510"},"y_scale":{"id":"2514"}},"id":"2505","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"2549","type":"BasicTickFormatter"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"line_width":{"value":2},"top":{"field":"cr\u00e9ation"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2540"}}},"id":"2543","type":"VBar"},{"attributes":{"label":{"value":" formation des artistes"},"renderers":[{"id":"2584"}]},"id":"2595","type":"LegendItem"},{"attributes":{"axis":{"id":"2516"},"coordinates":null,"group":null,"ticker":null},"id":"2519","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"#ff7f0e"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"#ff7f0e"},"line_alpha":{"value":0.2},"line_color":{"value":"#ff7f0e"},"line_width":{"value":2},"top":{"field":"diffusion du spectacle vivant"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2560"}}},"id":"2564","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"#d62728"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"#d62728"},"line_alpha":{"value":0.2},"line_color":{"value":"#d62728"},"line_width":{"value":2},"top":{"field":"\u00e9ducation artistique et culturelle"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2598"}}},"id":"2602","type":"VBar"},{"attributes":{"axis_label":"Ann\u00e9ees","coordinates":null,"formatter":{"id":"2538"},"group":null,"major_label_policy":{"id":"2552"},"ticker":{"id":"2617"}},"id":"2516","type":"LinearAxis"},{"attributes":{},"id":"2525","type":"WheelZoomTool"},{"attributes":{},"id":"2550","type":"AllLabels"},{"attributes":{"label":{"value":" diffusion du spectacle vivant"},"renderers":[{"id":"2565"}]},"id":"2576","type":"LegendItem"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"2530","type":"BoxAnnotation"},{"attributes":{"coordinates":null,"data_source":{"id":"2504"},"glyph":{"id":"2562"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"2564"},"nonselection_glyph":{"id":"2563"},"view":{"id":"2566"}},"id":"2565","type":"GlyphRenderer"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2603"}],"tooltips":[["Ann\u00e9ees","@__x__values_original"],["\u00e9ducation artistique et culturelle","@{\u00e9ducation artistique et culturelle}"]]},"id":"2615","type":"HoverTool"},{"attributes":{"range":{"id":"2508"},"value":0.25},"id":"2598","type":"Dodge"},{"attributes":{"data":{"__x__values":[0,1,2,3,4],"__x__values_original":[2016,2017,2018,2019,2020],"cr\u00e9ation":{"__ndarray__":"AAAAAAAJtUAAAAAAAEG3QAAAAAAA/rdAAAAAAAApukAAAAAAAM21QA==","dtype":"float64","order":"little","shape":[5]},"diffusion du spectacle vivant":{"__ndarray__":"AAAAAACorkAAAAAAAAyyQAAAAAAABbJAAAAAAADNskAAAAAAAHSbQA==","dtype":"float64","order":"little","shape":[5]},"formation des artistes":{"__ndarray__":"AAAAAACAdEAAAAAAAPBzQAAAAAAA0HVAAAAAAADQdEAAAAAAAOBrQA==","dtype":"float64","order":"little","shape":[5]},"\u00e9ducation artistique et culturelle":{"__ndarray__":"AAAAAACgZkAAAAAAAGB1QAAAAAAAyIBAAAAAAAAQgkAAAAAAAIB0QA==","dtype":"float64","order":"little","shape":[5]}},"selected":{"id":"2554"},"selection_policy":{"id":"2553"}},"id":"2504","type":"ColumnDataSource"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2565"}],"tooltips":[["Ann\u00e9ees","@__x__values_original"],["diffusion du spectacle vivant","@{diffusion du spectacle vivant}"]]},"id":"2577","type":"HoverTool"},{"attributes":{"range":{"id":"2508"},"value":-0.25},"id":"2540","type":"Dodge"},{"attributes":{},"id":"2512","type":"LinearScale"},{"attributes":{"coordinates":null,"data_source":{"id":"2504"},"glyph":{"id":"2581"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"2583"},"nonselection_glyph":{"id":"2582"},"view":{"id":"2585"}},"id":"2584","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"#2ca02c"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"#2ca02c"},"line_alpha":{"value":0.2},"line_color":{"value":"#2ca02c"},"line_width":{"value":2},"top":{"field":"formation des artistes"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2579"}}},"id":"2583","type":"VBar"},{"attributes":{},"id":"2510","type":"DataRange1d"},{"attributes":{"fill_color":{"value":"#1f77b4"},"hatch_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"line_width":{"value":2},"top":{"field":"cr\u00e9ation"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2540"}}},"id":"2542","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#d62728"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"#d62728"},"line_alpha":{"value":0.1},"line_color":{"value":"#d62728"},"line_width":{"value":2},"top":{"field":"\u00e9ducation artistique et culturelle"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2598"}}},"id":"2601","type":"VBar"},{"attributes":{"coordinates":null,"group":null},"id":"2506","type":"Title"},{"attributes":{"source":{"id":"2504"}},"id":"2566","type":"CDSView"},{"attributes":{"fill_color":{"value":"#d62728"},"hatch_color":{"value":"#d62728"},"line_color":{"value":"#d62728"},"line_width":{"value":2},"top":{"field":"\u00e9ducation artistique et culturelle"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2598"}}},"id":"2600","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#2ca02c"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"#2ca02c"},"line_alpha":{"value":0.1},"line_color":{"value":"#2ca02c"},"line_width":{"value":2},"top":{"field":"formation des artistes"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2579"}}},"id":"2582","type":"VBar"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2584"}],"tooltips":[["Ann\u00e9ees","@__x__values_original"],["formation des artistes","@{formation des artistes}"]]},"id":"2596","type":"HoverTool"},{"attributes":{"ticks":[0,1,2,3,4]},"id":"2617","type":"FixedTicker"},{"attributes":{"label":{"value":" \u00e9ducation artistique et culturelle"},"renderers":[{"id":"2603"}]},"id":"2614","type":"LegendItem"},{"attributes":{"source":{"id":"2504"}},"id":"2585","type":"CDSView"},{"attributes":{"coordinates":null,"data_source":{"id":"2504"},"glyph":{"id":"2600"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"2602"},"nonselection_glyph":{"id":"2601"},"view":{"id":"2604"}},"id":"2603","type":"GlyphRenderer"},{"attributes":{"axis":{"id":"2520"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"2523","type":"Grid"},{"attributes":{"axis_label":"Nombre d'aides fournies","coordinates":null,"formatter":{"id":"2549"},"group":null,"major_label_policy":{"id":"2550"},"ticker":{"id":"2521"}},"id":"2520","type":"LinearAxis"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"#1f77b4"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"#1f77b4"},"line_alpha":{"value":0.2},"line_color":{"value":"#1f77b4"},"line_width":{"value":2},"top":{"field":"cr\u00e9ation"},"width":{"value":0.14285714285714285},"x":{"field":"__x__values","transform":{"id":"2540"}}},"id":"2544","type":"VBar"},{"attributes":{"active_scroll":{"id":"2525"},"tools":[{"id":"2524"},{"id":"2525"},{"id":"2526"},{"id":"2527"},{"id":"2528"},{"id":"2529"},{"id":"2558"},{"id":"2577"},{"id":"2596"},{"id":"2615"}]},"id":"2531","type":"Toolbar"},{"attributes":{"source":{"id":"2504"}},"id":"2604","type":"CDSView"},{"attributes":{},"id":"2521","type":"BasicTicker"},{"attributes":{},"id":"2529","type":"HelpTool"},{"attributes":{},"id":"2524","type":"PanTool"},{"attributes":{"click_policy":"hide","coordinates":null,"group":null,"items":[{"id":"2557"},{"id":"2576"},{"id":"2595"},{"id":"2614"}],"location":"top_left"},"id":"2556","type":"Legend"},{"attributes":{"overlay":{"id":"2530"}},"id":"2526","type":"BoxZoomTool"},{"attributes":{},"id":"2527","type":"SaveTool"},{"attributes":{},"id":"2552","type":"AllLabels"},{"attributes":{},"id":"2553","type":"UnionRenderers"},{"attributes":{},"id":"2528","type":"ResetTool"},{"attributes":{"label":{"value":" cr\u00e9ation"},"renderers":[{"id":"2545"}]},"id":"2557","type":"LegendItem"},{"attributes":{},"id":"2554","type":"Selection"},{"attributes":{"source":{"id":"2504"}},"id":"2546","type":"CDSView"}],"root_ids":["2505"]},"title":"Bokeh Application","version":"2.4.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('2723').textContent;
+                  const render_items = [{"docid":"5e9c4391-8a7f-44fb-b8cd-3b4cea445789","root_ids":["2505"],"roots":{"2505":"89a13faf-7e4d-4789-9676-5b154322c9cb"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

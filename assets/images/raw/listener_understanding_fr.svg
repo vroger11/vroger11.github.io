@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created using Karbon, part of Calligra: http://www.calligra.org/karbon -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="438.0434pt"
+   height="78.923279pt"
+   version="1.1"
+   id="svg316"
+   sodipodi:docname="listener_understanding_fr.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:export-filename="/home/vroger/git/vroger11.github.io/assets/images/raw/listener_understanding_fr.svg.jpeg.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <metadata
+     id="metadata320">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     id="namedview318"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:zoom="1.2498384"
+     inkscape:cx="309.73881"
+     inkscape:cy="161.35122"
+     inkscape:window-x="1080"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg316"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2451"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2449"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1913"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1911"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1873"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1871"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1557"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1560"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <defs
+       id="defs259" />
+    <defs
+       id="defs199" />
+    <defs
+       id="defs125" />
+    <defs
+       id="defs67" />
+    <defs
+       id="defs9" />
+  </defs>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2"
+     y="0.625"
+     x="250.36636"
+     height="42.232323pt"
+     width="128.07172pt"
+     stroke-miterlimit="2.00000000000"
+     id="shape0" />
+  <text
+     xml:space="preserve"
+     x="238.77036"
+     y="105.08453"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text29"
+     style="font-style:normal;font-weight:400;font-size:15.00168037px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25013995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Connaissances de l'auditeur</text>
+  <text
+     xml:space="preserve"
+     x="13.971021"
+     y="19.01088"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text87"
+     style="font-style:normal;font-weight:400;font-size:14.9732399px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.24776995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Signal de l'orateur</text>
+  <text
+     xml:space="preserve"
+     x="288.48248"
+     y="21.136078"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text145"
+     style="font-style:normal;font-weight:400;font-size:15.06336021px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25528002;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Perception de</text>
+  <text
+     xml:space="preserve"
+     x="301.28363"
+     y="38.592377"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text161"
+     style="font-style:normal;font-weight:400;font-size:15.06336021px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25528002;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">l'auditeur</text>
+  <text
+     xml:space="preserve"
+     x="-1.2296517"
+     y="66.871857"
+     font-size="12"
+     font-weight="400"
+     font-style="normal"
+     id="text219"
+     style="font-style:normal;font-weight:400;font-size:14.99003983px;font-family:'Sans Serif';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.24916995;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">Bruits environnementaux</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41700006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+     inkscape:connector-curvature="0"
+     d="m 168.36935,17.442001 h 81.99701"
+     stroke-miterlimit="2.00000000000"
+     id="shape1"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;marker-end:url(#marker1873)"
+     inkscape:connector-curvature="0"
+     d="m 168.36935,55.057501 81.99701,-16.77342"
+     stroke-miterlimit="2.00000000000"
+     id="shape2"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;marker-end:url(#marker2451)"
+     inkscape:connector-curvature="0"
+     d="m 421.12864,25.999361 40.85111,-0.03536"
+     stroke-miterlimit="2.00000000000"
+     id="shape3"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.41732526;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:4.53544, 2.26772;marker-end:url(#marker1913)"
+     inkscape:connector-curvature="0"
+     d="m 329.26435,90.369101 0.12502,-33.43434"
+     stroke-miterlimit="2.00000000000"
+     id="shape4"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:0.5;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="469.66071"
+     y="22.820385"
+     id="text38"><tspan
+       sodipodi:role="line"
+       x="469.66071"
+       y="22.820385"
+       id="tspan40"
+       style="font-size:14.66666698px;line-height:0.5">Message compris</tspan><tspan
+       sodipodi:role="line"
+       x="469.66071"
+       y="43.472832"
+       style="font-size:14.66666698px;line-height:0.5"
+       id="tspan52">par l'auditeur</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot42"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion44"><rect
+         id="rect46"
+         width="506.46548"
+         height="118.41531"
+         x="219.22835"
+         y="-21.985409" /></flowRegion><flowPara
+       id="flowPara48"></flowPara></flowRoot></svg>

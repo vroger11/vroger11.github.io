@@ -1,0 +1,2317 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vincent Roger's website and blog.">
+      
+      
+      
+        <link rel="canonical" href="https://website.vincent-roger.fr/blog/2020/11-20-create-a-documentation-with-sphinx-on-github/">
+      
+      
+        <link rel="prev" href="../../2021/09-12-badaboom-asteroids/">
+      
+      
+        <link rel="next" href="../08-02-automation-using-ssh-keys/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Create a documentation with Sphinx on GitHub - Vincent ROGER, (PhD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-F0PYQHTR42"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-F0PYQHTR42",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-F0PYQHTR42",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-your-first-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Vincent ROGER, (PhD)" class="md-header__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vincent ROGER, (PhD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a documentation with Sphinx on GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/blog/2020/11-20-create-a-documentation-with-sphinx-on-github/" hreflang="fr" class="md-select__link">
+              <img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vroger11/vroger11.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  About me
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contact/" class="md-tabs__link">
+        
+  
+    
+  
+  Contact me
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Vincent ROGER, (PhD)" class="md-nav__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Vincent ROGER, (PhD)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vroger11/vroger11.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to my blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/09-25-website-migration-to-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website migration to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/09-08-diffusers-obtain-better-results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Improving Speed and Quality of Image Generation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/06-16-diffusers-conditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate images from labels with conditional model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024/06-02-diffusers-unconditional-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate images with unconditional model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2023
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/12-03-tools-python-dataviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datavisualization tools for Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023/01-16-the_grand_melee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My dataviz for The Grand Melee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2022
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-13-warlords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My dataviz for Warlords
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/12-08-redbull-wololo-legacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Red Bull Wololo Legacy dataviz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/10-30-my-phd-experience/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My PhD experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/09-01-my-switch-to-manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My switch to Manjaro Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/04-03-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            2021
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/12-08-badaboom-fireballs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badaboom - Fireballs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/09-19-hackaviz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackaviz 2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/09-12-badaboom-asteroids/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BadaBoom - Asteroids
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2020
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Create a documentation with Sphinx on GitHub
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Create a documentation with Sphinx on GitHub
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-first-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create your first documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-sphinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Sphinx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-initial-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the initial files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#includelink-files-into-a-rst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include/link files into a rst file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Include/link files into a rst file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-a-rst-file-into-a-doctree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link a rst file into a doctree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-a-rst-file-into-a-rst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include a rst file into a rst file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-sphinx-documentation-using-markdown-and-autodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write sphinx documentation using markdown and autodoc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Write sphinx documentation using markdown and autodoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-sphinx-with-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure sphinx with markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autodoc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autodoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-elements-of-a-docstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show elements of a docstring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Show elements of a docstring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-docstring-of-the-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the docstring of the module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-all-the-docstrings-of-a-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use all the docstrings of a module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-docstring-of-a-specific-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the docstring of a specific class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx-theming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sphinx theming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-your-documentation-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host your documentation on GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host your documentation on GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-structure-of-the-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare the structure of the projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-sphinx-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify Sphinx makefile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-html-files-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build html files for GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-no-jekyll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force no jekyll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-and-commit-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build and commit automatically
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcesinspirations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources/inspirations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-02-automation-using-ssh-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automation using ssh key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-24-tweaks-to-speedup-AI-servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tweaks to speedup Deep Learning on servers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-27-audio-loader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-18-work-at-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurations for working at home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-11-survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Survey from Large Speech Corpora to Limited Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-31-format-a-bootable-usb-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format a bootable USB key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-28-improve-your-bash-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Improve your bash terminal experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2019
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            2019
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/11-06-using-zotero-to-generate-bibtex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Zotero to generate BibTeX files for your papers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-12-first-year-review-as-a-phd-student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review of my first year as a PhD student
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/10-08-check-your-writing-in-nvim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Check your writing in Neovim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-23-terminal-multiplexers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal multiplexers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-09-save-git-credentials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Save Git Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019/09-08-hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello world
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-first-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your first documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create your first documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-sphinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Sphinx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-initial-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the initial files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#includelink-files-into-a-rst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include/link files into a rst file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Include/link files into a rst file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-a-rst-file-into-a-doctree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link a rst file into a doctree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-a-rst-file-into-a-rst-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include a rst file into a rst file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-sphinx-documentation-using-markdown-and-autodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write sphinx documentation using markdown and autodoc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Write sphinx documentation using markdown and autodoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-sphinx-with-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure sphinx with markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autodoc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autodoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-elements-of-a-docstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show elements of a docstring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Show elements of a docstring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-docstring-of-the-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the docstring of the module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-all-the-docstrings-of-a-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use all the docstrings of a module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-docstring-of-a-specific-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the docstring of a specific class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx-theming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sphinx theming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-your-documentation-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host your documentation on GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host your documentation on GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-structure-of-the-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare the structure of the projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-sphinx-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify Sphinx makefile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-html-files-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build html files for GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-no-jekyll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force no jekyll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-and-commit-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build and commit automatically
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcesinspirations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources/inspirations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Archive</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Development</span>
+    
+  
+</nav>
+
+
+  
+  
+
+
+  <h1>Create a documentation with Sphinx on GitHub</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>I now use <code>mkdocs</code> for all my documentation projects, including this website.</p>
+</div>
+<p>Previously I announced a preview of the Audio Loader library.
+It prepares audio batches for Neural Network libraries (have a look <a href="https://github.com/vroger11/audio_loader">here</a>).
+For this library I planned to add a documentation website.
+A preliminary version is now available <a href="https://website.vincent-roger.fr/audio_loader/">here</a>.
+As Audio Loader is a Python library, I chose <a href="https://www.sphinx-doc.org/">Sphinx</a> to generate the documentation as it is a classic with Python libraries.
+It uses the reStructuredText file format to create the documentation.
+Nevertheless, I prefer the markdown syntax as it is simpler and I use it more often.
+Hence, I use as much markdown files as I can to create Sphinx documentation.
+Next, to host this documentation I chose GitHub Pages as I already used it on my website.</p>
+<p>In this post, I will explain how to create a documentation using Sphinx and how to use as much as possible markdown files.
+Finally, I will explain how to set up your repository on GitHub to host your documentation.</p>
+<h2 id="create-your-first-documentation">Create your first documentation<a class="headerlink" href="#create-your-first-documentation" title="Permanent link">#</a></h2>
+<p>In this section, we will see how to create a documentation using sphinx.</p>
+<h3 id="install-sphinx">Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permanent link">#</a></h3>
+<p>First let us install sphinx:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>sphinx
+</code></pre></div>
+<p>Now we have everything we need to create our documentation 😄.</p>
+<h3 id="create-the-initial-files">Create the initial files<a class="headerlink" href="#create-the-initial-files" title="Permanent link">#</a></h3>
+<p>Sphinx organize the documentation in three things:</p>
+<ul>
+<li>makefiles to generate the documentation</li>
+<li>source pages that contain the documentation instruction</li>
+<li>the resulting documentation (pdf file, html webpages and so on)</li>
+</ul>
+<p>Now let's create this organization using <code>quickstart</code> tool from sphinx:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>docs
+<span class="nb">cd</span><span class="w"> </span>docs
+sphinx-quickstart
+</code></pre></div>
+<p>In the quickstart instructions, choose separate source folder and build folder (as it will be more convenient for next steps).
+Fill the rest as you please.</p>
+<p>Afterwards, sphinx created two folders (<code>docs/sources</code> and <code>docs/build</code>) and a makefile (<code>docs/Makefile</code>).
+Sphinx source files are in <code>docs/sources</code> and the <code>index.rst</code> file represents the first page of your documentation (the equivalent of the <code>index.html</code> of a website).
+To compile your documentation into a website or a pdf file you can use the makefile (using <code>make html</code> or <code>make pdf</code>).
+The resulted documentation format will be putted into <code>docs/build</code>.</p>
+<h2 id="includelink-files-into-a-rst-file">Include/link files into a rst file<a class="headerlink" href="#includelink-files-into-a-rst-file" title="Permanent link">#</a></h2>
+<p>Here I will not detail how the rst format works as I avoid it as much as I can.
+Instead, I will show you how to add documents or link documents into a rst file.
+If you want to learn how the rst format works, go <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">there</a>.</p>
+<p>I prefer to avoid using rst files as much as I can as it is possible to use markdown for most of the time.
+However, in cases where rst files are needed (such as <code>index.rst</code>) it is useful to know how to include or link files.
+Therefore this is what I will explain in this section.</p>
+<h3 id="link-a-rst-file-into-a-doctree">Link a rst file into a doctree<a class="headerlink" href="#link-a-rst-file-into-a-doctree" title="Permanent link">#</a></h3>
+<p>To add a link to a file (say <code>extra_document.rst</code>) you need to add <code>extra_document</code> to the doctrine as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> 2
+
+    extra_document
+</code></pre></div>
+<p><strong>Warning:</strong></p>
+<p>The <code>extra_document</code> indentation must be like the indentation of the <code>:maxdepth: 2</code> line.
+If it is not the case, you will have a warning telling you sphinx can't find your file (took me hours to figure it out).</p>
+<h3 id="include-a-rst-file-into-a-rst-file">Include a rst file into a rst file:<a class="headerlink" href="#include-a-rst-file-into-a-rst-file" title="Permanent link">#</a></h3>
+<p>To add a <code>rst</code> file inline of a <code>rst</code> file, you just need to add the following line:</p>
+<div class="highlight"><pre><span></span><code>..<span class="w"> </span>include::<span class="w"> </span>my_file.rst
+</code></pre></div>
+<p>The document that contains this line will be filled with the <code>my_file.rst</code> content.</p>
+<h2 id="write-sphinx-documentation-using-markdown-and-autodoc">Write sphinx documentation using markdown and autodoc<a class="headerlink" href="#write-sphinx-documentation-using-markdown-and-autodoc" title="Permanent link">#</a></h2>
+<h3 id="configure-sphinx-with-markdown">Configure sphinx with markdown<a class="headerlink" href="#configure-sphinx-with-markdown" title="Permanent link">#</a></h3>
+<p>To add markdown support for sphinx I use <code>m2r</code> instead of <code>recommonmark</code> (advised in the official documentation of sphinx).
+The reason is simple: <code>recommonmark</code> do not support <code>mdinclude</code> to include markdown documents into <code>rst</code> files.
+Now let's install <code>m2r</code>:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>m2r
+</code></pre></div>
+<p>Then let's edit the <code>source/config.py</code> file to add this line:</p>
+<div class="highlight"><pre><span></span><code><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;m2r&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Now you can use markdown files in your documentation.
+You can add it in the doctree (same as for rst files) or include markdown files into rst files using <code>mdinclude</code>.
+One little example with <code>mdinclude</code>:</p>
+<div class="highlight"><pre><span></span><code>..<span class="w"> </span>mdinclude::<span class="w"> </span>my_file.md
+</code></pre></div>
+<h3 id="autodoc">Autodoc<a class="headerlink" href="#autodoc" title="Permanent link">#</a></h3>
+<p>While creating your documentation, it is nice to use the docstring of your python source files to fill your content.
+Here I will explain how you can do it using the autodoc extension.</p>
+<h4 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h4>
+<p>To enable autodoc you have to add the extension in the <code>source/config.py</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Also add the following lines to the beginning of the <code>source/config.py</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../..&#39;</span><span class="p">))</span>
+</code></pre></div>
+<p>To use the numpy format in the docstring you also have to add the napoleon extension:</p>
+<div class="highlight"><pre><span></span><code><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.napoleon&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Now we are ready to use autodoc.</p>
+<h4 id="show-elements-of-a-docstring">Show elements of a docstring<a class="headerlink" href="#show-elements-of-a-docstring" title="Permanent link">#</a></h4>
+<p>All the following commands works in rst files (I still search a simple way to use it in markdown files, don't hesite to share in comments 😄).
+For more details follow the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">official documentation</a>.</p>
+<h5 id="use-the-docstring-of-the-module">Use the docstring of the module<a class="headerlink" href="#use-the-docstring-of-the-module" title="Permanent link">#</a></h5>
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> project_folder.module
+</code></pre></div>
+<h5 id="use-all-the-docstrings-of-a-module">Use all the docstrings of a module<a class="headerlink" href="#use-all-the-docstrings-of-a-module" title="Permanent link">#</a></h5>
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> project_folder.module
+    <span class="nc">:members:</span>
+</code></pre></div>
+<h5 id="use-the-docstring-of-a-specific-class">Use the docstring of a specific class<a class="headerlink" href="#use-the-docstring-of-a-specific-class" title="Permanent link">#</a></h5>
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> project_folder.module.class
+</code></pre></div>
+<h2 id="sphinx-theming">Sphinx theming<a class="headerlink" href="#sphinx-theming" title="Permanent link">#</a></h2>
+<p>Now let's be funky 😄.
+We will use themes in there: <a href="https://sphinx-themes.org/">showcase of themes</a>.</p>
+<p>On this website, choose your desired documentation style, then click on the pypi hyperlink to install the theme using the <code>pip</code> command.
+To apply your theme click on the associated <code>conf.py</code> hyperlink and look for the <code>html_theme</code> variable.
+Then copy the corresponding code to modify your <code>html_theme</code> variable in your <code>source/config.py</code> file.</p>
+<h2 id="host-your-documentation-on-github">Host your documentation on GitHub<a class="headerlink" href="#host-your-documentation-on-github" title="Permanent link">#</a></h2>
+<p>Now we know how to create a documentation, it will be nice to upload it into a server.
+Here I will explain how I do it for GitHub servers.</p>
+<h3 id="prepare-the-structure-of-the-projects">Prepare the structure of the projects<a class="headerlink" href="#prepare-the-structure-of-the-projects" title="Permanent link">#</a></h3>
+<p>For my projects, I think the cleanest structure is as follows:</p>
+<div class="highlight"><pre><span></span><code>my_project
+|-  my_project_code      --&gt; folder containing your source codes and documentation sources
+|-  my_project_gh_pages  --&gt; folder containing your built website
+|   |-  html             --&gt; folder containing your documentation (synced with your gh_pages branch)
+</code></pre></div>
+<p>Now let us create this structure.
+First, let's create a directory for your project:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>my_project
+<span class="nb">cd</span><span class="w"> </span>my_project
+</code></pre></div>
+<p>Now let's create <code>my_project/my_project_code</code> and <code>my_project/my_project_gh_pages</code> folders:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>my_project_gh_pages
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/my_project
+mv<span class="w"> </span>my_project<span class="w"> </span>my_project_code
+</code></pre></div>
+<p>Now let's create and prepare the <code>html</code> folder:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/my_project
+mv<span class="w"> </span>my_project<span class="w"> </span>html
+<span class="nb">cd</span><span class="w"> </span>html
+git<span class="w"> </span>branch<span class="w"> </span>gh-pages
+
+git<span class="w"> </span>symbolic-ref<span class="w"> </span>HEAD<span class="w"> </span>refs/heads/gh-pages<span class="w">  </span><span class="c1"># auto-switches branches to gh-pages</span>
+<span class="c1"># remove all files and git indexes for the branch</span>
+rm<span class="w"> </span>.git/index
+git<span class="w"> </span>clean<span class="w"> </span>-fdx
+</code></pre></div>
+<h3 id="modify-sphinx-makefile">Modify Sphinx makefile<a class="headerlink" href="#modify-sphinx-makefile" title="Permanent link">#</a></h3>
+<p>Now our makefile require modifications to use our gh-pages branch and <code>my_project_gh_pages</code> folder.</p>
+<p>Edit your <code>my_project/my_project_code/docs/Makefile</code> file such as your <code>BUILDDIR</code> variable is such as the following:</p>
+<div class="highlight"><pre><span></span><code>BUILDDIR      = ../../my_project_gh_pages/
+</code></pre></div>
+<p>Now you can generate your documentation:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>html
+</code></pre></div>
+<h3 id="build-html-files-for-github">Build html files for GitHub<a class="headerlink" href="#build-html-files-for-github" title="Permanent link">#</a></h3>
+<p>Your documentation is now under <code>my_project/my_project_gh_pages/html</code>.
+Now <code>commit</code> and <code>push</code> your documentation such as:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>my_project_gh_pages/
+git<span class="w"> </span>add<span class="w"> </span>html
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;First documentation commit&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</code></pre></div>
+<p>It is now available under <code>https://username.github.io/my_project</code>, unless you have made a redirection for your GitHub Pages (like for this blog).</p>
+<h3 id="force-no-jekyll">Force no jekyll<a class="headerlink" href="#force-no-jekyll" title="Permanent link">#</a></h3>
+<p>GitHub server use jekyll which provoque errors while interpreting html files generated by sphinx.
+Hopefully, we can disable jekyll.
+Inside the <code>my_project/my_project_gh_pages/html</code> folder type the following commands:</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>.nojekyll
+git<span class="w"> </span>add<span class="w"> </span>.nojekyll
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;added .nojekyll&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</code></pre></div>
+<h3 id="build-and-commit-automatically">Build and commit automatically<a class="headerlink" href="#build-and-commit-automatically" title="Permanent link">#</a></h3>
+<p>You can add a command inside your Makefile:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>pushhtml:<span class="w"> </span>html
+
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="k">$(</span>BUILDDIR<span class="k">)</span>/html<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;rebuilt docs&quot;</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</code></pre></div>
+<p>Now by tipping <code>make pushhtml</code> you will build your documentation, commit it and push it on GitHub automatically.
+It comes alongside the <code>make html</code> command that I use to test some modifications without pushing it.</p>
+<h2 id="sourcesinspirations">Sources/inspirations<a class="headerlink" href="#sourcesinspirations" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p><a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html">Official sphinx Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html">Getting started with sphinx</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365">Getting started with autodoc</a></p>
+</li>
+<li>
+<p><a href="https://daler.github.io/sphinxdoc-test/includeme.html">Publishing sphinx documentation on GitHub</a></p>
+</li>
+</ul>
+<p>Hope it helps some of you.</p>
+<p>Cheers, Vincent</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 10, 2020</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="vroger11/vroger11.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxNjM0MTYzNTU="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOCb2JI84CivWa"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024 Vincent Roger.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/vroger11" target="_blank" rel="noopener" title="Vincent Roger on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.reddit.com/user/vroger11/" target="_blank" rel="noopener" title="Vincent Roger on Reddit" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zm349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://website.vincent-roger.fr/feed_rss_created.xml" target="_blank" rel="noopener" title="Blog RSS feed" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
