@@ -1,7 +1,7 @@
 ---
 comments: true
 title:  "Tweaks to speedup Deep Learning on servers"
-date:   2020-06-24 08:00:00 +0200
+date:   2020-06-24
 tags:
     - Development
 hide:
