@@ -21,7 +21,7 @@ I work with limited data sets as well as large ones.
 I focus on machine learning algorithms to model knowledge and integrate it into microservices (based on Docker).
 My preferred programming language is Python, allowing me to focus on functionalities (and benefit from a wide range of libraries).
 As an open-source enthusiast, I contribute to open-source projects (bug reports, patch proposals, discussions, etc.) whenever possible.
-I also perform data analysis to produce visualizations. Most of them are available on my blog (and as a preview on [Reddit](https://www.reddit.com/user/vroger11) or my [X (formerly Twitter)](https://x.com/vroger11) account).
+I also perform data analysis to produce visualizations. Most of them are available on my blog (and as a preview on [Reddit](https://www.reddit.com/user/vroger11)).
 
 Finally, I also maintain a blog on visualizations I create, research I conduct, deep learning tutorials, and tips. [Check it out](blog/index.md).
 
