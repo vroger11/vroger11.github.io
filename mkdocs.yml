@@ -102,10 +102,14 @@ plugins:
       languages:
         - locale: en
           default: true
-          name: '<img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English'
+          name: >
+            <img style="height: 11px; border: 0px;" alt="en" class="twemoji"
+            src="/assets/images/flags/en.png" title="english" /> English
           build: true
         - locale: fr
-          name: '<img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français'
+          name: >
+            <img style="height: 11px; border: 0px;" alt="fr" class="twemoji"
+            src="/assets/images/flags/fr.png" title="english" /> Français
           build: true
   - git-revision-date-localized:
       enable_creation_date: true
