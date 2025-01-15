@@ -1908,7 +1908,7 @@ We can do it with the following addition in our training notebook:</p>
 <p>A major challenge for our model is the non-human class, which frequently includes poorly representative images. To illustrate this issue, let’s first examine the original non-human images:</p>
 <p><a class="glightbox" href="../../../assets/images/diffusers/tutorial_3_non-human_overview_with_bad.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Overview of the non-human class" src="../../../assets/images/diffusers/tutorial_3_non-human_overview_with_bad.png" /></a></p>
 <p>As observed, some examples are of poor quality and resemble the non-human outputs produced by our model. To address this, we will investigate and develop a function to automatically detect such problematic samples in the database, as reviewing over 80,000 samples manually is not feasible.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">detect_wrong_images</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">number_of_white</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">26</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">detect_wrong_images</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">number_of_white</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">26</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Function to detect if an image is a wrong one and should be excluded from training.</span>
 
 <span class="sd">    Parameters</span>
@@ -2024,7 +2024,7 @@ This approach stabilizes the training process and helps prevent the UNet from ov
 <h4 id="adamw-optimizer">AdamW Optimizer<a class="headerlink" href="#adamw-optimizer" title="Permanent link">#</a></h4>
 <p>We use the AdamW optimizer, which incorporates weight decay. This technique aids in better regularization by penalizing large weights.</p>
 <p>So set this up, we have to change an import:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">torch.optim</span> <span class="kn">import</span> <span class="n">AdamW</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="kn">import</span> <span class="n">AdamW</span>
 </code></pre></div>
 <p>Also change the optimizer creation and using a <code>weight_decay</code>, here I chose an arbitrary value that works well in most cases but deserve to be chosen more carefully if you have the computations capacities:</p>
 <div class="highlight"><pre><span></span><code><span class="n">optimizer</span> <span class="o">=</span> <span class="n">AdamW</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="n">unet</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">emb_net</span><span class="o">.</span><span class="n">parameters</span><span class="p">()),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
@@ -2039,8 +2039,8 @@ Unlike DDPM, which relies on a Markov chain to sequentially denoise samples, DDI
 </code></pre></div>
 <p>Since the API of the <code>DDIMScheduler</code> is similar to that of the <code>DDPMScheduler</code>, there's no need to modify the code related to the <code>noise_scheduler</code>.
 However, we do need to rewrite our pipeline, though it closely resembles our custom <code>DDPMPipeline</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConditionalDDIMPipeline</span><span class="p">(</span><span class="n">DDIMPipeline</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ConditionalDDIMPipeline</span><span class="p">(</span><span class="n">DDIMPipeline</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DConditionModel</span><span class="p">,</span> <span class="n">class_net</span><span class="p">:</span> <span class="n">CustomSequential</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">DDIMScheduler</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">unet</span><span class="o">=</span><span class="n">unet</span><span class="p">,</span> <span class="n">scheduler</span><span class="o">=</span><span class="n">scheduler</span><span class="p">)</span>
@@ -2050,7 +2050,7 @@ However, we do need to rewrite our pipeline, though it closely resembles our cus
         <span class="bp">self</span><span class="o">.</span><span class="n">unet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 
     <span class="nd">@torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">class_label</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
         <span class="n">generator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>

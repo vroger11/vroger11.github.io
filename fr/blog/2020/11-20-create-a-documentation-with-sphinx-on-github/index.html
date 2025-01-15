@@ -2016,8 +2016,8 @@ Ici je vais expliquer comment vous pouvez utiliser l'extension <code>autodoc</co
 <div class="highlight"><pre><span></span><code><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Il faut également ajouter les lignes suivantes en début du fichier <code>source/config.py</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../..&#39;</span><span class="p">))</span>
 </code></pre></div>
 <p>Pour utiliser le format numpy dans vos docstring vous devez également ajouter l'extension napoleon dans le fichier <code>source/config.py</code>:</p>

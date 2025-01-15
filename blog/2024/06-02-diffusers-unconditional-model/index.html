@@ -1563,8 +1563,8 @@
 </ul>
 <h2 id="define-the-unet-model-and-a-noise-scheduler">Define the unet model and a noise scheduler<a class="headerlink" href="#define-the-unet-model-and-a-noise-scheduler" title="Permanent link">#</a></h2>
 <p>Before training a model, we need to define it and to define the associated noise scheduler:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">diffusers</span> <span class="kn">import</span> <span class="n">DDPMScheduler</span>
-<span class="kn">from</span> <span class="nn">diffusers.models</span> <span class="kn">import</span> <span class="n">UNet2DModel</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">diffusers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DDPMScheduler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">diffusers.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">UNet2DModel</span>
 
 <span class="c1"># Define the UNet model</span>
 <span class="c1"># Note: this model use less parameters compared to deeplearning.ai course as it is not necessary to have such huge model for this task</span>
@@ -1584,7 +1584,7 @@
 <p>And that is it! The <a href="https://huggingface.co/docs/diffusers/api/models/unet2d">UNet2DModel</a> can save us a huge amount of time defining such a model.</p>
 <h2 id="train-the-model">Train the model<a class="headerlink" href="#train-the-model" title="Permanent link">#</a></h2>
 <p>Here I made a simple train function including the basics to not overwhelm readers 😉:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DModel</span><span class="p">,</span> <span class="n">noise_scheduler</span><span class="p">:</span> <span class="n">DDPMScheduler</span><span class="p">,</span> <span class="n">dataloader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">lr</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DModel</span><span class="p">,</span> <span class="n">noise_scheduler</span><span class="p">:</span> <span class="n">DDPMScheduler</span><span class="p">,</span> <span class="n">dataloader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">lr</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Train the unet given its noise_scheduler and a dataloader.</span>
 
 <span class="sd">    Parameters</span>
@@ -1645,7 +1645,7 @@ First, let's load our model parameters:</p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">UNet2DModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">pre_trained_model</span><span class="p">)</span>
 </code></pre></div>
 <p>Pretty easy! Now let's declare our pipeline and use cuda if available:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">diffusers</span> <span class="kn">import</span> <span class="n">DDPMPipeline</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">diffusers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DDPMPipeline</span>
 
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">DDPMPipeline</span><span class="p">(</span><span class="n">unet</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">scheduler</span><span class="o">=</span><span class="n">noise_scheduler</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>

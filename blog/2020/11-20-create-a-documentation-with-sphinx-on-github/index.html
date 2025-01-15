@@ -2016,8 +2016,8 @@ Here I will explain how you can do it using the autodoc extension.</p>
 <div class="highlight"><pre><span></span><code><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Also add the following lines to the beginning of the <code>source/config.py</code> file:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../..&#39;</span><span class="p">))</span>
 </code></pre></div>
 <p>To use the numpy format in the docstring you also have to add the napoleon extension:</p>

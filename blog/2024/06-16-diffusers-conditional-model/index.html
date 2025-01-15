@@ -1553,8 +1553,8 @@
 <p>In this tutorial, we will use <a href="https://en.wikipedia.org/wiki/One-hot">one-hot</a> encoded labels as the conditioning input. One-hot encoding is a representation of categorical variables as binary vectors. This method is especially suitable for tasks like image generation where each image corresponds to a discrete category. Taken back to our previous dataset, we will have 5 categories : <code>[hero, non-hero, food, spell, side-facing hero]</code>.</p>
 <h2 id="define-the-unet-model-the-noise-scheduler-and-network-to-embed-our-labels">Define the unet model, the noise scheduler and network to embed our labels<a class="headerlink" href="#define-the-unet-model-the-noise-scheduler-and-network-to-embed-our-labels" title="Permanent link">#</a></h2>
 <p>Compared to last time, we will use the <code>UNet2DConditionModel</code> class for our model, and we will pass the ground truth as embeddings.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">diffusers</span> <span class="kn">import</span> <span class="n">DDPMScheduler</span>
-<span class="kn">from</span> <span class="nn">diffusers.models</span> <span class="kn">import</span> <span class="n">UNet2DConditionModel</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">diffusers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DDPMScheduler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">diffusers.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">UNet2DConditionModel</span>
 
 <span class="n">class_emb_size</span> <span class="o">=</span> <span class="mi">64</span>
 
@@ -1575,30 +1575,30 @@
 </code></pre></div>
 <p>To introduce conditions with such a model, you can use cross attention block, hence the use of <code>"CrossAttnDownBlock2D"</code> and <code>"CrossAttnUpBlock2D"</code> in our unet.
 Now we need some network to embed our one-hot data into the desired embedding size, here we will take the similar network as in the deeplearning.ai course:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnsqueezeLayer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UnsqueezeLayer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Generic layer to unsqueeze its input.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">UnsqueezeLayer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">dim</span>
 
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
 
 
 <span class="c1"># We have to create this custom class to be able to use our sequential model inside our pipeline.</span>
-<span class="k">class</span> <span class="nc">CustomSequential</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CustomSequential</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Extend sequential to add `device` and `dtype` properties.</span>
 
 <span class="sd">    It supposes that all parameters shares the same device and uses the same dtype.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">.</span><span class="n">device</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dtype</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dtype</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">.</span><span class="n">dtype</span>
 
 <span class="n">num_classes</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1613,7 +1613,7 @@ Now we need some network to embed our one-hot data into the desired embedding si
 <p>Here, we used a custom class to have <code>device</code> and <code>dtype</code> properties on this model (to be able to use it in our final pipeline). As <code>UNet2DConditionModel</code> is designed to have text embeddings of shape <code>[batch, sequence_length, feature_dim]</code>, our <code>emb_net</code> finish with a squeeze to have the embedding of shape <code>[batch_size, 1, class_emb_size]</code>. Having no sequence in our labels, this suits better our case.</p>
 <h2 id="train-the-model">Train the model<a class="headerlink" href="#train-the-model" title="Permanent link">#</a></h2>
 <p>Here I modified our train function to add mixed precision (to speed up the training) and our conditioning:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">train</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span>
     <span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DConditionModel</span><span class="p">,</span>
     <span class="n">emb_net</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
     <span class="n">noise_scheduler</span><span class="p">:</span> <span class="n">DDPMScheduler</span><span class="p">,</span>
@@ -1689,11 +1689,11 @@ First, let's load our models:</p>
 <span class="n">emb_net</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">pre_trained_emb_net</span><span class="p">))</span>
 </code></pre></div>
 <p>Pretty easy! Now the hard part, we need to create a custom pipeline to use our models. Here, we will not start from zero by extending the <code>DDPMPipeline</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">diffusers</span> <span class="kn">import</span> <span class="n">DDPMPipeline</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">diffusers</span><span class="w"> </span><span class="kn">import</span> <span class="n">DDPMPipeline</span>
 
 
-<span class="k">class</span> <span class="nc">ConditionalDDPMPipeline</span><span class="p">(</span><span class="n">DDPMPipeline</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConditionalDDPMPipeline</span><span class="p">(</span><span class="n">DDPMPipeline</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">unet</span><span class="p">:</span> <span class="n">UNet2DConditionModel</span><span class="p">,</span> <span class="n">class_net</span><span class="p">:</span> <span class="n">CustomSequential</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">DDPMScheduler</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">unet</span><span class="o">=</span><span class="n">unet</span><span class="p">,</span> <span class="n">scheduler</span><span class="o">=</span><span class="n">scheduler</span><span class="p">)</span>
@@ -1702,7 +1702,7 @@ First, let's load our models:</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">register_modules</span><span class="p">(</span><span class="n">class_net</span><span class="o">=</span><span class="n">class_net</span><span class="p">)</span>
 
     <span class="nd">@torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">class_label</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
         <span class="n">generator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
