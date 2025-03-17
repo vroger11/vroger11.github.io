@@ -11,15 +11,12 @@ All articles are accessible from the sidebar on the left, sorted by date with th
 
 You can also search for an article by its tag or use the categories below:
 
-=== ":material-robot: Automation"
-    I've written several articles about automating various tasks during development. Here are a few highlights:
-
-    - [Save your Git credentials](2019/09-09-save-git-credentials.md) to avoid repeatedly entering your password.
-    - [Automation with SSH keys](2020/08-02-automation-using-ssh-keys.md), where we explore useful tasks you can automate using SSH keys.
-    - [Working remotely or from home](2020/03-18-work-at-home.md), detailing how to configure your workstations for remote access.
-
 === ":material-brain: Machine Learning"
-    I've created tutorials on generating images using the Diffusers library:
+    I created tutorials on how to create a speech-to-speech agent (named SpeechBot):
+
+    1. [SpeechBot - how to quickly create a first version?](2025/03-18-speechbot-starting-point.md)
+
+    Also, I've created tutorials on generating images using the Diffusers library:
 
     1. [Generating images with an unconditional model](2024/06-02-diffusers-unconditional-model.md).
     2. [Generating images from labels with a conditional model](2024/06-16-diffusers-conditional-model.md).
@@ -37,5 +34,12 @@ You can also search for an article by its tag or use the categories below:
     - [The Grand Melee](2023/01-16-the_grand_melee.md)
 
     I also presented a [survey on Python data visualization tools](2023/12-03-tools-python-dataviz.md) for the Toulouse Dataviz association.
+
+=== ":material-robot: Work automation"
+    I've written several articles about automating various tasks during development. Here are a few highlights:
+
+    - [Save your Git credentials](2019/09-09-save-git-credentials.md) to avoid repeatedly entering your password.
+    - [Automation with SSH keys](2020/08-02-automation-using-ssh-keys.md), where we explore useful tasks you can automate using SSH keys.
+    - [Working remotely or from home](2020/03-18-work-at-home.md), detailing how to configure your workstations for remote access.
 
 To stay up to date with new posts, subscribe to my [Atom/RSS feed](https://website.vincent-roger.fr/feed_rss_created.xml) and/or to my social networks.
