@@ -14,7 +14,7 @@ You can also search for an article by its tag or use the categories below:
 === ":material-brain: Machine Learning"
     I created tutorials on how to create a speech-to-speech agent (named SpeechBot):
 
-    1. [SpeechBot - how to quickly create a first version?](2025/03-18-speechbot-starting-point.md)
+    1. [SpeechBot - how to quickly create a first version?](2025/03-17-speechbot-starting-point.md)
 
     Also, I've created tutorials on generating images using the Diffusers library:
 

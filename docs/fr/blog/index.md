@@ -15,7 +15,7 @@ Vous pouvez également rechercher un article par son tag ou utiliser les catégo
 === ":material-brain: Apprentissage Automatique"
     J'ai créé des tutoriels sur la création d'un agent parole vers parole (nommé SpeechBot) :
 
-    1. [SpeechBot - comment créer rapidement une première version ?](2025/03-18-speechbot-starting-point.md)
+    1. [SpeechBot - comment créer rapidement une première version ?](2025/03-17-speechbot-starting-point.md)
 
     De plus, j'ai créé des tutoriels sur la génération d'images en utilisant la bibliothèque Diffusers :
 
