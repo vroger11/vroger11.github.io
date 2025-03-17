@@ -47,7 +47,7 @@ theme:
     - search.highlight
     - content.code.copy
 
-copyright: "Copyright &copy; 2019-2024 Vincent Roger."
+copyright: "Copyright &copy; 2019-2025 Vincent Roger."
 
 markdown_extensions:
   # to make the mermaid diagrams follow the theme
