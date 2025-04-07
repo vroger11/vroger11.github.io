@@ -4,7 +4,7 @@ title:  "Ma participation à l'Hackaviz"
 date:   2025-04-07
 tags:
     - Développement
-    - Datavisualisation
+    - Visualisation de Données
     - Python
 hide:
     - navigation
