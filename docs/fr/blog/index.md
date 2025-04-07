@@ -35,7 +35,10 @@ Vous pouvez également rechercher un article par son tag ou utiliser les catégo
     - [Travailler à distance ou depuis chez soi](2020/03-18-work-at-home.md), expliquant comment configurer vos postes de travail pour un accès à distance.
 
 === ":material-chart-line: Visualisations"
-    Pendant mon temps libre, je crée des visualisations, notamment pour les tournois d'*Age of Empires 2*, qui ont accumulé plus de 100 000 vues. Voici quelques-uns de mes articles :
+    Pendant mon temps libre, j’aime créer des visualisations de données. Plus récemment, j’ai participé à l’édition 2025 de Hackaviz.
+    Jetez un œil [ici](2025/04-07-hackaviz.md).
+
+    De plus, j'ai couvert des tournois d'*Age of Empires 2*, qui ont accumulé plus de 100 000 vues. Voici quelques-uns de mes articles :
 
     - [Red Bull Wololo Legacy](2022/12-08-redbull-wololo-legacy.md)
     - [Warlords](2022/12-13-warlords.md)

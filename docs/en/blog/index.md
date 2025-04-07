@@ -27,7 +27,10 @@ You can also search for an article by its tag or use the categories below:
     During my PhD, I conducted a survey on few-shot techniques for audio processing—[check it out here](2020/03-11-survey.md).
 
 === ":material-chart-line: Visualizations"
-    In my free time, I create visualizations, particularly for *Age of Empires 2* tournaments, which have garnered over 100k views. Some of my articles include:
+    In my spare time, I enjoy creating data visualizations. Most recently, I took part in the 2025 edition of Hackaviz.
+    Have a look [here](2025/04-07-hackaviz.md).
+
+    Also, I covered some *Age of Empires 2* tournaments, which have garnered over 100k views. Some of my articles include:
 
     - [Red Bull Wololo Legacy](2022/12-08-redbull-wololo-legacy.md)
     - [Warlords](2022/12-13-warlords.md)
