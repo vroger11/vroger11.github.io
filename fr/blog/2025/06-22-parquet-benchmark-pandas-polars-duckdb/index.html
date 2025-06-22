@@ -6,14 +6,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Vincent Roger's website and blog." name="description"/>
-<link href="https://website.vincent-roger.fr/fr/blog/2025/03-17-speechbot-starting-point/" rel="canonical"/>
-<link href="../04-07-hackaviz/" rel="prev"/>
-<link href="../../2024/09-25-website-migration-to-mkdocs/" rel="next"/>
+<link href="https://website.vincent-roger.fr/fr/blog/2025/06-22-parquet-benchmark-pandas-polars-duckdb/" rel="canonical"/>
+<link href="../../" rel="prev"/>
+<link href="../04-07-hackaviz/" rel="next"/>
 <link href="../../../../feed_rss_created.xml" rel="alternate" title="Flux RSS" type="application/rss+xml"/>
 <link href="../../../../feed_rss_updated.xml" rel="alternate" title="Flux RSS du contenu mis à jour" type="application/rss+xml"/>
 <link href="../../../../assets/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.8" name="generator"/>
-<title>SpeechBot - le commencement - Vincent ROGER, (PhD)</title>
+<title>Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet - Vincent ROGER, (PhD)</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#architecture-de-speechbot">
+<a class="md-skip" href="#motivation">
           Aller au contenu
         </a>
 </div>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SpeechBot - le commencement
+              Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
             
           </span>
 </div>
@@ -91,7 +91,7 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../blog/2025/03-17-speechbot-starting-point/" hreflang="en">
+<a class="md-select__link" href="../../../../blog/2025/06-22-parquet-benchmark-pandas-polars-duckdb/" hreflang="en">
 <img alt="en" class="twemoji" src="/assets/images/flags/en.png" style="height: 11px; border: 0px;" title="english"> English
 
             </img></a>
@@ -261,34 +261,18 @@
             2025
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../06-22-parquet-benchmark-pandas-polars-duckdb/">
-<span class="md-ellipsis">
-    Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04-07-hackaviz/">
-<span class="md-ellipsis">
-    Ma participation à l'Hackaviz
-    
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    SpeechBot - le commencement
+    Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    SpeechBot - le commencement
+    Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
     
   </span>
 </a>
@@ -299,52 +283,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-de-speechbot">
+<a class="md-nav__link" href="#motivation">
 <span class="md-ellipsis">
-      Architecture de SpeechBot
+      🎯 Motivation
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bibliotheques-utilisees">
-<span class="md-ellipsis">
-      Bibliothèques utilisées
-    </span>
-</a>
-<nav aria-label="Bibliothèques utilisées" class="md-nav">
+<nav aria-label="🎯 Motivation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#streamlit">
+<a class="md-nav__link" href="#quest-ce-quune-colonne-categorielle-et-pourquoi-les-utiliser">
 <span class="md-ellipsis">
-      Streamlit
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fastapi">
-<span class="md-ellipsis">
-      FastAPI
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker-compose">
-<span class="md-ellipsis">
-      Docker Compose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hugging-face-transformers">
-<span class="md-ellipsis">
-      Hugging Face Transformers
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#llamacpp">
-<span class="md-ellipsis">
-      LlamaCpp
+      Qu’est-ce qu’une colonne catégorielle et pourquoi les utiliser ?
     </span>
 </a>
 </li>
@@ -352,21 +301,83 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modeles-utilises">
+<a class="md-nav__link" href="#jeu-de-donnees-realworld2016">
 <span class="md-ellipsis">
-      Modèles utilisés
+      📦 Jeu de données : REALWORLD2016
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ce-qui-vient-ensuite">
+<a class="md-nav__link" href="#taches-de-benchmark">
 <span class="md-ellipsis">
-      Ce qui vient ensuite
+      🧪 Tâches de benchmark
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-et-reproductibilite">
+<span class="md-ellipsis">
+      📁 Code et reproductibilité
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resume-des-resultats">
+<span class="md-ellipsis">
+      📈 Résumé des résultats
+    </span>
+</a>
+<nav aria-label="📈 Résumé des résultats" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#temps-de-chargement">
+<span class="md-ellipsis">
+      Temps de chargement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#describe-value_counts">
+<span class="md-ellipsis">
+      Describe + value_counts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utilisation-memoire">
+<span class="md-ellipsis">
+      Utilisation mémoire
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      📋 Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-07-hackaviz/">
+<span class="md-ellipsis">
+    Ma participation à l'Hackaviz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-17-speechbot-starting-point/">
+<span class="md-ellipsis">
+    SpeechBot - le commencement
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -721,52 +732,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-de-speechbot">
+<a class="md-nav__link" href="#motivation">
 <span class="md-ellipsis">
-      Architecture de SpeechBot
+      🎯 Motivation
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bibliotheques-utilisees">
-<span class="md-ellipsis">
-      Bibliothèques utilisées
-    </span>
-</a>
-<nav aria-label="Bibliothèques utilisées" class="md-nav">
+<nav aria-label="🎯 Motivation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#streamlit">
+<a class="md-nav__link" href="#quest-ce-quune-colonne-categorielle-et-pourquoi-les-utiliser">
 <span class="md-ellipsis">
-      Streamlit
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fastapi">
-<span class="md-ellipsis">
-      FastAPI
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker-compose">
-<span class="md-ellipsis">
-      Docker Compose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hugging-face-transformers">
-<span class="md-ellipsis">
-      Hugging Face Transformers
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#llamacpp">
-<span class="md-ellipsis">
-      LlamaCpp
+      Qu’est-ce qu’une colonne catégorielle et pourquoi les utiliser ?
     </span>
 </a>
 </li>
@@ -774,16 +750,62 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modeles-utilises">
+<a class="md-nav__link" href="#jeu-de-donnees-realworld2016">
 <span class="md-ellipsis">
-      Modèles utilisés
+      📦 Jeu de données : REALWORLD2016
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ce-qui-vient-ensuite">
+<a class="md-nav__link" href="#taches-de-benchmark">
 <span class="md-ellipsis">
-      Ce qui vient ensuite
+      🧪 Tâches de benchmark
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-et-reproductibilite">
+<span class="md-ellipsis">
+      📁 Code et reproductibilité
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resume-des-resultats">
+<span class="md-ellipsis">
+      📈 Résumé des résultats
+    </span>
+</a>
+<nav aria-label="📈 Résumé des résultats" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#temps-de-chargement">
+<span class="md-ellipsis">
+      Temps de chargement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#describe-value_counts">
+<span class="md-ellipsis">
+      Describe + value_counts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utilisation-memoire">
+<span class="md-ellipsis">
+      Utilisation mémoire
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      📋 Conclusion
     </span>
 </a>
 </li>
@@ -795,133 +817,158 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<span class="md-tag">Agent</span>
-<span class="md-tag">Apprentissage automatique</span>
+<span class="md-tag">Données</span>
 <span class="md-tag">Développement</span>
-<span class="md-tag">LLM</span>
-<span class="md-tag">Parole</span>
 <span class="md-tag">Python</span>
 </nav>
-<h1>SpeechBot - le commencement</h1>
-<p>Ce post est le point de départ de ma nouvelle série de tutoriels sur la création d'un agent de parole à parole efficient.
-Nous examinerons les choix faits et le type d'architecture choisi.
-Dans ce post, nous nous concentrerons sur la version initiale disponnible sur <a href="https://github.com/vroger11/SpeechBot">GitHub</a>.
-L'objectif est d'avoir une solution performante qui peut fonctionner sur une configuration de bureau moyenne (j'ai utilisé un AMD Ryzen 7 5700X, 32 Go de RAM et une NVIDIA RTX 4060).
-Vous pouvez voir l'application en action sur <a href="https://youtu.be/5Cik2asxGfM">YouTube</a> ou vous pouvez l'essayer sur votre machine.
-Tous les modèles utilisés sont rassemblés sur Hugging Face Hub, et la solution est construite en utilisant plusieurs modèles au lieu d'un seul.</p>
-<h2 id="architecture-de-speechbot"><strong>Architecture de SpeechBot</strong><a class="headerlink" href="#architecture-de-speechbot" title="Permanent link">#</a></h2>
-<p>SpeechBot est conçu comme un système modulaire où chaque composant gère une fonction spécifique dans le pipeline d'interaction vocale. Au lieu d'utiliser un modèle de parole à parole (où les modèles SOTA utilisent des milliards de paramètres et sont difficiles à améliorer), j'ai préféré utiliser cette solution car elle est simple à mettre en œuvre et simple à mettre à niveau.</p>
-<p>De plus, créer un programme unique qui utilise et importe tous les modèles est difficile et peut être impossible car chaque modèle a ses exigences de dépendance qui peuvent être incompatibles.
-Ainsi, j'ai opté pour créer un service par modèle, et un dernier pour le frontend, en utilisant FastAPI pour chaque service utilisant un modèle (STT, LLM, TTS).</p>
-<p>Ainsi, l'architecture globale contient les composants suivants :</p>
-<pre class="mermaid"><code>graph TD
-   User["🎙 Utilisateur"] --&gt;|Parle| Frontend;
-   Frontend["🖥 Frontend (Streamlit)"] --&gt;|Envoie l'audio| STT["🗣 Speech-to-Text (STT)"];
-   STT --&gt;|Texte transcrit| Frontend;
-   Frontend --&gt;|Texte transcrit| LLM["🧠 Large Language Model (LLM)"];
-   LLM --&gt;|Réponse textuelle générée| Frontend;
-   Frontend --&gt;|Réponse textuelle générée| TTS["🔊 Text-to-Speech (TTS)"];
-   TTS --&gt;|Audio généré| Frontend;
-   Frontend --&gt;|Montre les résultats intermédiaires| User;
-   Frontend --&gt;|Joue la réponse| User;
-
-   subgraph Services
-      STT
-      LLM
-      TTS
-   end
-
-   subgraph System
-      Frontend
-      Services
-   end
-</code></pre>
-<p>Les détails de chaque composant sont les suivants :</p>
+<h1>Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet</h1>
+<p>Stocker des données de capteurs structurées au format Parquet permet de réduire significativement l’espace disque et l’usage mémoire, en particulier lorsque l’on encode les colonnes catégorielles plutôt que d’utiliser des chaînes de caractères brutes.
+Je voulais évaluer comment différentes bibliothèques Python se comparent en termes de <strong>vitesse de chargement</strong>, <strong>performance analytique</strong> et <strong>utilisation mémoire</strong> avec ce type de colonnes.</p>
+<p>D’après mon expérience, Polars est souvent le plus rapide sur des données numériques ou de simples chaînes, mais le comportement change lorsqu’on utilise de véritables types catégoriels.</p>
+<p>Dans ce billet, je compare trois outils populaires :</p>
+<ul>
+<li><a href="https://pandas.pydata.org">Pandas</a></li>
+<li><a href="https://pola.rs">Polars</a></li>
+<li><a href="https://duckdb.org">DuckDB</a></li>
+</ul>
+<h2 id="motivation">🎯 Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
+<p>Parquet est un format de stockage en colonnes largement adopté, idéal pour des structures tabulaires comme celles des DataFrames (Pandas/Polars) ou des bases de données relationnelles.
+Ce format est particulièrement efficace quand on encode les colonnes catégorielles.</p>
+<p>Cependant, les performances varient fortement selon :</p>
+<ul>
+<li>La manière dont les colonnes catégorielles sont gérées</li>
+<li>L’usage d’une exécution paresseuse (lazy) ou immédiate (eager)</li>
+<li>Le coût des conversions internes pendant le chargement ou le calcul</li>
+</ul>
+<p>Pour explorer ces différences, j’ai conçu un benchmark basé sur des journaux réels de capteurs portés, où des métadonnées catégorielles (activité, type de capteur, orientation) complètent les valeurs numériques.</p>
+<p>Le script de génération du jeu de données est disponible dans la section <em>Code et reproductibilité</em>.</p>
+<h3 id="quest-ce-quune-colonne-categorielle-et-pourquoi-les-utiliser">Qu’est-ce qu’une colonne catégorielle et pourquoi les utiliser ?<a class="headerlink" href="#quest-ce-quune-colonne-categorielle-et-pourquoi-les-utiliser" title="Permanent link">#</a></h3>
+<p>Les colonnes catégorielles prennent un nombre fini de valeurs distinctes.
+Elles sont souvent représentées sous forme de chaînes dans les jeux de données bruts (par exemple <code>"walking"</code>, <code>"running"</code>), mais peuvent être encodées en entiers pour plus d’efficacité.</p>
+<p>Dans Parquet, cet encodage se fait via un dictionnaire : les valeurs sont stockées comme des entiers avec une table de correspondance pour retrouver la chaîne d’origine.
+Cela permet un stockage compact tout en conservant la lisibilité lors des requêtes.</p>
+<p>Chaque framework gère ces colonnes différemment, mais le format Parquet garantit une compatibilité entre bibliothèques comme Pandas, Polars et DuckDB.</p>
+<h2 id="jeu-de-donnees-realworld2016">📦 Jeu de données : REALWORLD2016<a class="headerlink" href="#jeu-de-donnees-realworld2016" title="Permanent link">#</a></h2>
+<p>Ce benchmark utilise le <a href="https://www.uni-mannheim.de/dws/research/projects/activity-recognition/dataset/dataset-realworld/">jeu de données REALWORLD2016</a> composé de mesures accéléromètre, gyroscope et magnétomètre sur 15 individus réalisant différentes activités.</p>
+<p>Chaque enregistrement contient :</p>
+<ul>
+<li>Accélérations <code>x</code>, <code>y</code>, <code>z</code></li>
+<li>Index temporel <code>time</code></li>
+<li>ID utilisateur <code>user</code></li>
+<li>Métadonnées catégorielles :</li>
+<li><code>activity</code> (ex : marche, saut)</li>
+<li><code>orientation</code> (ex : torse, cuisse)</li>
+<li><code>sensor</code> (acc, gyr, mag)</li>
+</ul>
+<p>Les fichiers CSV compressés d’origine ont été convertis en fichiers Parquet avec Pandas et PyArrow, en forçant les colonnes catégorielles.
+Les fichiers générés sont compatibles avec Pandas, Polars et DuckDB.</p>
+<h2 id="taches-de-benchmark">🧪 Tâches de benchmark<a class="headerlink" href="#taches-de-benchmark" title="Permanent link">#</a></h2>
+<p>Chaque outil a été évalué sur quatre tâches :</p>
 <ol>
-<li>
-<p><strong>Frontend (utilisant Streamlit)</strong></p>
-<ul>
-<li>Capture la parole de l'utilisateur via un microphone.</li>
-<li>Assure la communication entre les services.<ul>
-<li>Envoie l'audio enregistré au service Speech-to-Text (STT) pour obtenir la transcription.</li>
-<li>Reçoit des réponses textuelles du service Large Language Model (LLM) étant donné la transcription.</li>
-<li>Obtient la parole du service Text-to-Speech (TTS).</li>
-</ul>
-</li>
-<li>Joue la parole générée.</li>
-<li>Montre à l'utilisateur le résultat de chaque étape.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Speech-to-Text (STT)</strong></p>
-<ul>
-<li>Convertit l'entrée parlée en texte.</li>
-<li>Utilise un modèle (Whisper tiny) pour effectuer la transcription.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Large Language Model (LLM)</strong></p>
-<ul>
-<li>Traite le texte transcrit et génère une réponse.</li>
-<li>Utilise un modèle pour comprendre le contexte (version distillée de Qwen 2.5) et générer des réponses ayant du sens.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Text-to-Speech (TTS)</strong></p>
-<ul>
-<li>Convertit le texte généré en parole.</li>
-<li>Utilise un modèle pour synthétiser la voix de l'agent (tiny TTS-parler).</li>
-</ul>
-</li>
+<li><strong>Chargement</strong> des fichiers Parquet</li>
+<li><strong>Statistiques descriptives</strong> : min, max, moyenne sur les colonnes numériques</li>
+<li><strong>Comptes groupés</strong> sur les colonnes <code>activity</code>, <code>orientation</code> et <code>sensor</code></li>
+<li><strong>Utilisation mémoire</strong> : RAM minimale nécessaire pour charger entièrement les données</li>
 </ol>
-<h2 id="bibliotheques-utilisees">Bibliothèques utilisées<a class="headerlink" href="#bibliotheques-utilisees" title="Permanent link">#</a></h2>
-<p>Chaque service et le frontend sont dockerisés et peuvent être lancés en utilisant Docker Compose.
-Alors que le frontend est écrit en utilisant Streamlit, chaque service est écrit comme une API REST (en utilisant FastAPI) avec des bibliothèques associées aux modèles sous le capot (llama-cpp ou transformers).
-Voici les détails de pourquoi j'ai sélectionné ces bibliothèques :</p>
-<h3 id="streamlit">Streamlit<a class="headerlink" href="#streamlit" title="Permanent link">#</a></h3>
-<p>Streamlit est une libraire open-source qui vous permet de créer de belles applications web pour les projets de machine learning et de science des données avec un minimum d'effort. Il est utilisé pour le frontend pour capturer la parole de l'utilisateur, afficher les étapes intermédiaires et jouer la parole générée.</p>
-<h3 id="fastapi">FastAPI<a class="headerlink" href="#fastapi" title="Permanent link">#</a></h3>
-<p>FastAPI est une librarie web moderne, rapide (haute performance) pour la création d'API avec Python basé sur les annotations de type standard de Python. Il est utilisé pour créer des API REST pour chaque service (STT, LLM, TTS) en raison de sa rapidité et de sa facilité d'utilisation. De plus, la génération automatique de documentation Swagger et ReDoc (j'utilise Swagger pour tester mes services indépendamment) le rend adapté au développement rapide.</p>
-<div class="admonition warning">
-<p class="admonition-title">Avertissement</p>
-<p>Cette application dans sa première version est conçue pour un seul utilisateur. La mise en œuvre des services FastAPI n'est pas écrite pour des utilisateurs concurrents.</p>
-</div>
-<h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">#</a></h3>
-<p>Docker Compose est un outil pour définir et exécuter des applications multi-conteneurs Docker. Il est utilisé pour gérer les services et leurs dépendances, assurant une communication transparente entre tous les composants. En utilisant son sous-réseau, je peux facilement accéder aux services depuis le frontend (en utilisant des adresses comme <code>http://llm_service:8000</code>). Il simplifie également le déploiement et la gestion de tous les services.</p>
+<h2 id="code-et-reproductibilite">📁 Code et reproductibilité<a class="headerlink" href="#code-et-reproductibilite" title="Permanent link">#</a></h2>
+<p>Tous les scripts et notebooks sont disponibles ici :</p>
+<p>👉 <a href="https://github.com/vroger11/parquet-categorical-benchmark">Dépôt GitHub</a></p>
+<p>Pour reproduire les benchmarks :</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync
+uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>download_extract_realworld.py<span class="w">   </span><span class="c1"># génère les fichiers Parquet</span>
+jupyter<span class="w"> </span>notebook<span class="w"> </span>load_data_benchmarks.ipynb<span class="w">   </span><span class="c1"># exécute les benchmarks</span>
+</code></pre></div>
+<p>Je recommande d’ouvrir le notebook pour consulter les implémentations ainsi que les remarques et astuces ajoutées dans les cellules.
+Vos suggestions et contributions sont les bienvenues (issues, pull requests ou commentaires).</p>
+<h2 id="resume-des-resultats">📈 Résumé des résultats<a class="headerlink" href="#resume-des-resultats" title="Permanent link">#</a></h2>
+<h3 id="temps-de-chargement">Temps de chargement<a class="headerlink" href="#temps-de-chargement" title="Permanent link">#</a></h3>
+<pre class="mermaid"><code>xychart-beta
+    title "Temps de chargement (en secondes)"
+    x-axis ["Polars Eager initial", "Polars Eager", "Polars Lazy", Pandas, DuckDB]
+    bar [62.0, 9.0, 4.6, 4.5, 3.3]
+</code></pre>
+<p>La première implémentation en eager de Polars, utilisant la concaténation implicite, est de loin la pire (62 s).
+La concaténation explicite avant de passer les données à Polars s’est révélée bien plus performante.
+C’est un cas rare où déléguer à la logique interne d’une bibliothèque nuit à la performance.</p>
+<p>Polars en lazy est aussi rapide que Pandas, tandis que DuckDB est légèrement plus rapide encore.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Sur les serveurs cloud avec plusieurs clients, vous préférerez Terraform associé à Kubernetes au lieu de Docker Compose.</p>
+<p>En général, il faut éviter d'appeler <code>.collect()</code> sur un DataFrame lazy Polars sans chaîne d’opérations.
+Ici, <code>.collect()</code> est volontairement appelé pour isoler et comparer les performances entre outils.</p>
 </div>
-<h3 id="hugging-face-transformers">Hugging Face Transformers<a class="headerlink" href="#hugging-face-transformers" title="Permanent link">#</a></h3>
-<p>Hugging Face Transformers est une bibliothèque qui fournit des architectures à usage général pour la compréhension et la génération de langage naturel avec des modèles pré-entraînés. Elle est utilisée pour les services STT et TTS pour traiter le texte transcrit et générer des réponses.</p>
-<h3 id="llamacpp">LlamaCpp<a class="headerlink" href="#llamacpp" title="Permanent link">#</a></h3>
-<p>LlamaCpp est une bibliothèque qui fournit des implémentations efficaces de divers modèles LLM. Je la préfère à la bibliothèque transformers car elle offre de meilleures performances brutes.</p>
-<h2 id="modeles-utilises">Modèles utilisés<a class="headerlink" href="#modeles-utilises" title="Permanent link">#</a></h2>
-<p>Tous les modèles sont disponibles sur le <a href="https://huggingface.co/">Hugging Face Hub</a>, une ressource inestimable pour accéder à une large gamme de modèles et de jeux de données.</p>
-<p>Pour le modèle STT, <a href="https://huggingface.co/openai/whisper-tiny">Whisper tiny</a> a été sélectionné pour accomplir cette tâche car il obtient de bons résultats sur GPU et n'est pas gourmand en VRAM.</p>
-<p>Pour le LLM, j'ai utilisé une <a href="https://huggingface.co/bartowski/Qwen2.5.1-Coder-7B-Instruct-GGUF">version distillée de Qwen 2.5</a> pour être efficace sur CPU (car les modèles STT et TTS ne laissent pas assez de mémoire VRAM), car la performance était suffisante pour cette première version. Pour les futures versions, j'explorerai plus de modèles comme GEMINI de Google.</p>
-<p>Pour le modèle TTS, j'ai sélectionné une version tiny de <a href="https://huggingface.co/parler-tts/parler-tts-tiny-v1">tiny TTS-parler</a> pour s'assurer qu'il fonctionne efficacement sur les ressources disponibles.</p>
-<div class="admonition info">
-<p class="admonition-title">Besoin de vos retours</p>
-<p>Si vous connaissez de meilleurs modèles que je pourrais utiliser, n'hésitez pas à me contacter pour que nous puissions en discuter. J'ai vu par la suite l'approche <a href="https://github.com/huggingface/speech-to-speech">speech-to-speech</a> de Hugging Face qui a fait des choix similaires. Je prendrai leur approche en compte dans les futurs posts.</p>
-</div>
-<h2 id="ce-qui-vient-ensuite">Ce qui vient ensuite<a class="headerlink" href="#ce-qui-vient-ensuite" title="Permanent link">#</a></h2>
-<p>Le prochain post de cette série portera sur la façon d'améliorer les performances, alors restez à l'écoute (vous pouvez suivre mon flux RSS ou me suivre sur <a href="https://www.linkedin.com/in/vroger11/">LinkedIn</a>).
-J'espère que vous avez apprécié, tout retour est le bienvenu.</p>
-<p>À bientôt,</p>
-<p>Vincent</p>
+<h3 id="describe-value_counts">Describe + value_counts<a class="headerlink" href="#describe-value_counts" title="Permanent link">#</a></h3>
+<p>On compare maintenant des opérations analytiques, à commencer par <code>describe()</code> :</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Calcul de describe (en secondes)"
+    x-axis ["Polars", "Pandas", "DuckDB"]
+    bar [1.6, 4.5, 9.8]
+</code></pre>
+<p>Les données étant déjà en mémoire, Polars ne peut pas exploiter ses optimisations lazy.
+Il reste tout de même le plus rapide.</p>
+<p>Puis les comptes groupés (value_counts) :</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Comptes groupés (en secondes)"
+    x-axis ["Pandas", "Polars Lazy", "Polars Eager", "DuckDB"]
+    bar [1.0, 1.2, 1.5, 16.1]
+</code></pre>
+<p>Surprise : Pandas surpasse ici Polars Lazy (1.0 s contre 1.2 s).
+DuckDB est bien plus lent.</p>
+<p>Si vous connaissez une méthode plus efficace pour faire cela avec DuckDB, n’hésitez pas à contribuer !</p>
+<h3 id="utilisation-memoire">Utilisation mémoire<a class="headerlink" href="#utilisation-memoire" title="Permanent link">#</a></h3>
+<p>On mesure ici la RAM nécessaire pour contenir les données en mémoire.
+Attention, certaines bibliothèques utilisent temporairement plus de mémoire pendant le chargement.</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Mémoire nécessaire (en Go)"
+    x-axis ["Pandas", "Polars", "DuckDB", "Dataframe depuis DuckDB"]
+    bar [2.17, 2.71, 6.33, 11.83]
+</code></pre>
+<p>Polars utilise environ 25% de RAM en plus que Pandas, en raison d’Arrow et de son cache interne.</p>
+<p>DuckDB consomme presque 3 fois plus que Pandas, car il stocke les colonnes catégorielles comme des chaînes complètes (VARCHAR).</p>
+<p>Exporter le DataFrame depuis DuckDB aggrave la situation : on atteint 18.16 Go nécessaires.</p>
+<h2 id="conclusion">📋 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>Chaque outil a ses points forts :</p>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pandas</td>
+<td>API simple, chargement rapide</td>
+<td>Pas d’exécution lazy</td>
+</tr>
+<tr>
+<td>Polars</td>
+<td>Analyse très rapide (en lazy)</td>
+<td>Moins performant si mal utilisé</td>
+</tr>
+<tr>
+<td>DuckDB</td>
+<td>Chargement compétitif, SQL natif</td>
+<td>Grosse consommation mémoire</td>
+</tr>
+</tbody>
+</table>
+<p>Polars est très efficace si bien utilisé, mais nécessite de connaître le lazy execution model.
+DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles, tant qu’elles sont représentées en VARCHAR.</p>
+<hr/>
+<p><em>Merci pour la lecture. Vous pouvez ouvrir une issue, proposer une amélioration dans le dépôt, ou laisser un commentaire sur ce billet.</em></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Dernière mise à jour">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 mars 2025</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 juin 2025</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Créé">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 mars 2025</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 juin 2025</span>
 </span>
 </aside>
 <h2 id="__comments">Commentaires</h2>

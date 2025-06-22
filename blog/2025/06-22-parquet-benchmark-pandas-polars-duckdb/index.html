@@ -1,29 +1,29 @@
 
 <!DOCTYPE html>
 
-<html class="no-js" lang="fr">
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Vincent Roger's website and blog." name="description"/>
-<link href="https://website.vincent-roger.fr/fr/blog/2025/03-17-speechbot-starting-point/" rel="canonical"/>
-<link href="../04-07-hackaviz/" rel="prev"/>
-<link href="../../2024/09-25-website-migration-to-mkdocs/" rel="next"/>
-<link href="../../../../feed_rss_created.xml" rel="alternate" title="Flux RSS" type="application/rss+xml"/>
-<link href="../../../../feed_rss_updated.xml" rel="alternate" title="Flux RSS du contenu mis à jour" type="application/rss+xml"/>
-<link href="../../../../assets/favicon.ico" rel="icon"/>
+<link href="https://website.vincent-roger.fr/blog/2025/06-22-parquet-benchmark-pandas-polars-duckdb/" rel="canonical"/>
+<link href="../../" rel="prev"/>
+<link href="../04-07-hackaviz/" rel="next"/>
+<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS feed" type="application/rss+xml"/>
+<link href="../../../feed_rss_updated.xml" rel="alternate" title="RSS feed of updated content" type="application/rss+xml"/>
+<link href="../../../assets/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.8" name="generator"/>
-<title>SpeechBot - le commencement - Vincent ROGER, (PhD)</title>
-<link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>Benchmark: Pandas, Polars, DuckDB on Categorical Parquet - Vincent ROGER, (PhD)</title>
+<link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-F0PYQHTR42"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-F0PYQHTR42",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-F0PYQHTR42",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
- <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -32,22 +32,22 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="green" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#architecture-de-speechbot">
-          Aller au contenu
+<a class="md-skip" href="#motivation">
+          Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
-<nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Vincent ROGER, (PhD)" class="md-header__button md-logo" data-md-component="logo" href="../../../" title="Vincent ROGER, (PhD)">
-<img alt="logo" src="../../../../assets/logo.svg"/>
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Vincent ROGER, (PhD)" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Vincent ROGER, (PhD)">
+<img alt="logo" src="../../../assets/logo.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SpeechBot - le commencement
+              Benchmark: Pandas, Polars, DuckDB on Categorical Parquet
             
           </span>
 </div>
@@ -85,19 +85,19 @@
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
 <div class="md-select">
-<button aria-label="Sélectionner la langue" class="md-header__button md-icon">
+<button aria-label="Select language" class="md-header__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
 </button>
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="../../../../blog/2025/03-17-speechbot-starting-point/" hreflang="en">
+<a class="md-select__link" href="./" hreflang="en">
 <img alt="en" class="twemoji" src="/assets/images/flags/en.png" style="height: 11px; border: 0px;" title="english"> English
 
             </img></a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="./" hreflang="fr">
+<a class="md-select__link" href="../../../fr/blog/2025/06-22-parquet-benchmark-pandas-polars-duckdb/" hreflang="fr">
 <img alt="fr" class="twemoji" src="/assets/images/flags/fr.png" style="height: 11px; border: 0px;" title="english"/> Français
 
             </a>
@@ -113,13 +113,13 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
-<nav aria-label="Recherche" class="md-search__options">
-<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
@@ -129,7 +129,7 @@
 <div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
-            Initialisation de la recherche
+            Initializing search
           </div>
 <ol class="md-search-result__list" role="presentation"></ol>
 </div>
@@ -138,7 +138,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt">
+<a class="md-source" data-md-component="source" href="https://github.com/vroger11/vroger11.github.io" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -150,16 +150,16 @@
 </nav>
 </header>
 <div class="md-container" data-md-component="container">
-<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../">
+<a class="md-tabs__link" href="../../..">
         
   
     
   
-  À propos de moi
+  About me
 
       </a>
 </li>
@@ -169,7 +169,7 @@
   
     
   
-  Me contacter
+  Contact me
 
       </a>
 </li>
@@ -177,7 +177,7 @@
 <a class="md-tabs__link" href="../../">
           
   
-  Blogue
+  Blog
 
         </a>
 </li>
@@ -191,13 +191,13 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Vincent ROGER, (PhD)" class="md-nav__button md-logo" data-md-component="logo" href="../../../" title="Vincent ROGER, (PhD)">
-<img alt="logo" src="../../../../assets/logo.svg"/>
+<a aria-label="Vincent ROGER, (PhD)" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Vincent ROGER, (PhD)">
+<img alt="logo" src="../../../assets/logo.svg"/>
 </a>
     Vincent ROGER, (PhD)
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt">
+<a class="md-source" data-md-component="source" href="https://github.com/vroger11/vroger11.github.io" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
 </div>
@@ -208,9 +208,9 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
-    À propos de moi
+    About me
     
   </span>
 </a>
@@ -218,7 +218,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../contact/">
 <span class="md-ellipsis">
-    Me contacter
+    Contact me
     
   </span>
 </a>
@@ -227,7 +227,7 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
-    Blogue
+    Blog
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -235,13 +235,13 @@
 <nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-            Blogue
+            Blog
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
-    Bienvenue dans mon blogue
+    Welcome to my blog
     
   </span>
 </a>
@@ -261,90 +261,39 @@
             2025
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../06-22-parquet-benchmark-pandas-polars-duckdb/">
-<span class="md-ellipsis">
-    Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04-07-hackaviz/">
-<span class="md-ellipsis">
-    Ma participation à l'Hackaviz
-    
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    SpeechBot - le commencement
+    Benchmark: Pandas, Polars, DuckDB on Categorical Parquet
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    SpeechBot - le commencement
+    Benchmark: Pandas, Polars, DuckDB on Categorical Parquet
     
   </span>
 </a>
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
-      Table des matières
+      Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-de-speechbot">
+<a class="md-nav__link" href="#motivation">
 <span class="md-ellipsis">
-      Architecture de SpeechBot
+      🎯 Motivation
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bibliotheques-utilisees">
-<span class="md-ellipsis">
-      Bibliothèques utilisées
-    </span>
-</a>
-<nav aria-label="Bibliothèques utilisées" class="md-nav">
+<nav aria-label="🎯 Motivation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#streamlit">
+<a class="md-nav__link" href="#what-are-categorical-columns-and-why-use-them">
 <span class="md-ellipsis">
-      Streamlit
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fastapi">
-<span class="md-ellipsis">
-      FastAPI
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker-compose">
-<span class="md-ellipsis">
-      Docker Compose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hugging-face-transformers">
-<span class="md-ellipsis">
-      Hugging Face Transformers
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#llamacpp">
-<span class="md-ellipsis">
-      LlamaCpp
+      What Are Categorical Columns? And why use them?
     </span>
 </a>
 </li>
@@ -352,21 +301,83 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modeles-utilises">
+<a class="md-nav__link" href="#dataset-realworld2016">
 <span class="md-ellipsis">
-      Modèles utilisés
+      📦 Dataset: REALWORLD2016
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ce-qui-vient-ensuite">
+<a class="md-nav__link" href="#benchmark-tasks">
 <span class="md-ellipsis">
-      Ce qui vient ensuite
+      🧪 Benchmark Tasks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-and-reproducibility">
+<span class="md-ellipsis">
+      📁 Code and Reproducibility
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results-summary">
+<span class="md-ellipsis">
+      📈 Results Summary
+    </span>
+</a>
+<nav aria-label="📈 Results Summary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-time-lower-is-better">
+<span class="md-ellipsis">
+      Load Time (Lower is Better)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#describe-value_counts">
+<span class="md-ellipsis">
+      Describe + value_counts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-usage">
+<span class="md-ellipsis">
+      Memory Usage
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      📋 Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-07-hackaviz/">
+<span class="md-ellipsis">
+    My participation to Hackaviz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-17-speechbot-starting-point/">
+<span class="md-ellipsis">
+    SpeechBot - the beginning
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -389,7 +400,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2024/09-25-website-migration-to-mkdocs/">
 <span class="md-ellipsis">
-    Migration de ce site web vers MkDocs
+    Website migration to MkDocs
     
   </span>
 </a>
@@ -397,7 +408,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2024/09-08-diffusers-obtain-better-results/">
 <span class="md-ellipsis">
-    Amélioration de la vitesse et de la qualité de génération d'image
+    Improving Speed and Quality of Image Generation
     
   </span>
 </a>
@@ -405,7 +416,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2024/06-16-diffusers-conditional-model/">
 <span class="md-ellipsis">
-    Générer des images à partir de labels avec un modèle conditionné
+    Generate images from labels with conditional model
     
   </span>
 </a>
@@ -413,7 +424,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2024/06-02-diffusers-unconditional-model/">
 <span class="md-ellipsis">
-    Générer des images avec un modèle non conditionné
+    Generate images with unconditional model
     
   </span>
 </a>
@@ -439,7 +450,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2023/12-03-tools-python-dataviz/">
 <span class="md-ellipsis">
-    Outils de visualisation de données pour Python
+    Datavisualization tools for Python
     
   </span>
 </a>
@@ -447,7 +458,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2023/01-16-the_grand_melee/">
 <span class="md-ellipsis">
-    Mes visualisations du tournoi The Grand Melee
+    My dataviz for The Grand Melee
     
   </span>
 </a>
@@ -473,7 +484,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2022/12-13-warlords/">
 <span class="md-ellipsis">
-    Mes visualisations du tournoi Warlords
+    My dataviz for Warlords
     
   </span>
 </a>
@@ -481,7 +492,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2022/12-08-redbull-wololo-legacy/">
 <span class="md-ellipsis">
-    Mes visualisations du tournoi Red Bull Wololo legacy
+    My Red Bull Wololo Legacy dataviz
     
   </span>
 </a>
@@ -489,7 +500,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2022/10-30-my-phd-experience/">
 <span class="md-ellipsis">
-    L'expérience de mon doctorat
+    My PhD experience
     
   </span>
 </a>
@@ -497,7 +508,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2022/09-01-my-switch-to-manjaro/">
 <span class="md-ellipsis">
-    Mon passage à Manjaro Linux
+    My switch to Manjaro Linux
     
   </span>
 </a>
@@ -531,7 +542,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2021/12-08-badaboom-fireballs/">
 <span class="md-ellipsis">
-    Badaboom - Les boules de feu
+    Badaboom - Fireballs
     
   </span>
 </a>
@@ -547,7 +558,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2021/09-12-badaboom-asteroids/">
 <span class="md-ellipsis">
-    BadaBoom - Astéroïdes
+    BadaBoom - Asteroids
     
   </span>
 </a>
@@ -573,7 +584,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/11-20-create-a-documentation-with-sphinx-on-github/">
 <span class="md-ellipsis">
-    Créer votre documentation sphinx sur GitHub
+    Create a documentation with Sphinx on GitHub
     
   </span>
 </a>
@@ -581,7 +592,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/08-02-automation-using-ssh-keys/">
 <span class="md-ellipsis">
-    Automatisation en utilisant des clés SSH
+    Automation using ssh key
     
   </span>
 </a>
@@ -589,7 +600,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/06-24-tweaks-to-speedup-AI-servers/">
 <span class="md-ellipsis">
-    Astuces pour accélérer le Deep Learning sur les serveurs
+    Tweaks to speedup Deep Learning on servers
     
   </span>
 </a>
@@ -605,7 +616,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/03-18-work-at-home/">
 <span class="md-ellipsis">
-    Configurations pour travailler depuis la maison
+    Configurations for working at home
     
   </span>
 </a>
@@ -613,7 +624,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/03-11-survey/">
 <span class="md-ellipsis">
-    État de l'art sur le few-shot pour des corpus de parole avec peu de données
+    Survey from Large Speech Corpora to Limited Data
     
   </span>
 </a>
@@ -621,7 +632,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/01-31-format-a-bootable-usb-key/">
 <span class="md-ellipsis">
-    Formater une clé USB d'amorçage
+    Format a bootable USB key
     
   </span>
 </a>
@@ -629,7 +640,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2020/01-28-improve-your-bash-navigation/">
 <span class="md-ellipsis">
-    Améliorer votre expérience bash
+    Improve your bash terminal experience
     
   </span>
 </a>
@@ -655,7 +666,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/11-06-using-zotero-to-generate-bibtex/">
 <span class="md-ellipsis">
-    Utiliser Zotero pour générer des fichiers BibTeX pour vos papiers
+    Use Zotero to generate BibTeX files for your papers
     
   </span>
 </a>
@@ -663,7 +674,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/10-12-first-year-review-as-a-phd-student/">
 <span class="md-ellipsis">
-    Revue de ma première année de thèse
+    Review of my first year as a PhD student
     
   </span>
 </a>
@@ -671,7 +682,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/10-08-check-your-writing-in-nvim/">
 <span class="md-ellipsis">
-    Vérifier vos fautes dans Neovim
+    Check your writing in Neovim
     
   </span>
 </a>
@@ -679,7 +690,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/09-23-terminal-multiplexers/">
 <span class="md-ellipsis">
-    Multiplexeur de terminaux
+    Terminal multiplexers
     
   </span>
 </a>
@@ -687,7 +698,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/09-09-save-git-credentials/">
 <span class="md-ellipsis">
-    Sauver les identifiants git
+    Save Git Credentials
     
   </span>
 </a>
@@ -695,7 +706,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../2019/09-08-hello-world/">
 <span class="md-ellipsis">
-    Bonjour le monde
+    Hello world
     
   </span>
 </a>
@@ -714,59 +725,24 @@
 <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
-      Table des matières
+      Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#architecture-de-speechbot">
+<a class="md-nav__link" href="#motivation">
 <span class="md-ellipsis">
-      Architecture de SpeechBot
+      🎯 Motivation
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bibliotheques-utilisees">
-<span class="md-ellipsis">
-      Bibliothèques utilisées
-    </span>
-</a>
-<nav aria-label="Bibliothèques utilisées" class="md-nav">
+<nav aria-label="🎯 Motivation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#streamlit">
+<a class="md-nav__link" href="#what-are-categorical-columns-and-why-use-them">
 <span class="md-ellipsis">
-      Streamlit
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fastapi">
-<span class="md-ellipsis">
-      FastAPI
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker-compose">
-<span class="md-ellipsis">
-      Docker Compose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hugging-face-transformers">
-<span class="md-ellipsis">
-      Hugging Face Transformers
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#llamacpp">
-<span class="md-ellipsis">
-      LlamaCpp
+      What Are Categorical Columns? And why use them?
     </span>
 </a>
 </li>
@@ -774,16 +750,62 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modeles-utilises">
+<a class="md-nav__link" href="#dataset-realworld2016">
 <span class="md-ellipsis">
-      Modèles utilisés
+      📦 Dataset: REALWORLD2016
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ce-qui-vient-ensuite">
+<a class="md-nav__link" href="#benchmark-tasks">
 <span class="md-ellipsis">
-      Ce qui vient ensuite
+      🧪 Benchmark Tasks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-and-reproducibility">
+<span class="md-ellipsis">
+      📁 Code and Reproducibility
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results-summary">
+<span class="md-ellipsis">
+      📈 Results Summary
+    </span>
+</a>
+<nav aria-label="📈 Results Summary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-time-lower-is-better">
+<span class="md-ellipsis">
+      Load Time (Lower is Better)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#describe-value_counts">
+<span class="md-ellipsis">
+      Describe + value_counts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-usage">
+<span class="md-ellipsis">
+      Memory Usage
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      📋 Conclusion
     </span>
 </a>
 </li>
@@ -795,136 +817,166 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<span class="md-tag">Agent</span>
-<span class="md-tag">Apprentissage automatique</span>
-<span class="md-tag">Développement</span>
-<span class="md-tag">LLM</span>
-<span class="md-tag">Parole</span>
+<span class="md-tag">Data</span>
+<span class="md-tag">Development</span>
 <span class="md-tag">Python</span>
 </nav>
-<h1>SpeechBot - le commencement</h1>
-<p>Ce post est le point de départ de ma nouvelle série de tutoriels sur la création d'un agent de parole à parole efficient.
-Nous examinerons les choix faits et le type d'architecture choisi.
-Dans ce post, nous nous concentrerons sur la version initiale disponnible sur <a href="https://github.com/vroger11/SpeechBot">GitHub</a>.
-L'objectif est d'avoir une solution performante qui peut fonctionner sur une configuration de bureau moyenne (j'ai utilisé un AMD Ryzen 7 5700X, 32 Go de RAM et une NVIDIA RTX 4060).
-Vous pouvez voir l'application en action sur <a href="https://youtu.be/5Cik2asxGfM">YouTube</a> ou vous pouvez l'essayer sur votre machine.
-Tous les modèles utilisés sont rassemblés sur Hugging Face Hub, et la solution est construite en utilisant plusieurs modèles au lieu d'un seul.</p>
-<h2 id="architecture-de-speechbot"><strong>Architecture de SpeechBot</strong><a class="headerlink" href="#architecture-de-speechbot" title="Permanent link">#</a></h2>
-<p>SpeechBot est conçu comme un système modulaire où chaque composant gère une fonction spécifique dans le pipeline d'interaction vocale. Au lieu d'utiliser un modèle de parole à parole (où les modèles SOTA utilisent des milliards de paramètres et sont difficiles à améliorer), j'ai préféré utiliser cette solution car elle est simple à mettre en œuvre et simple à mettre à niveau.</p>
-<p>De plus, créer un programme unique qui utilise et importe tous les modèles est difficile et peut être impossible car chaque modèle a ses exigences de dépendance qui peuvent être incompatibles.
-Ainsi, j'ai opté pour créer un service par modèle, et un dernier pour le frontend, en utilisant FastAPI pour chaque service utilisant un modèle (STT, LLM, TTS).</p>
-<p>Ainsi, l'architecture globale contient les composants suivants :</p>
-<pre class="mermaid"><code>graph TD
-   User["🎙 Utilisateur"] --&gt;|Parle| Frontend;
-   Frontend["🖥 Frontend (Streamlit)"] --&gt;|Envoie l'audio| STT["🗣 Speech-to-Text (STT)"];
-   STT --&gt;|Texte transcrit| Frontend;
-   Frontend --&gt;|Texte transcrit| LLM["🧠 Large Language Model (LLM)"];
-   LLM --&gt;|Réponse textuelle générée| Frontend;
-   Frontend --&gt;|Réponse textuelle générée| TTS["🔊 Text-to-Speech (TTS)"];
-   TTS --&gt;|Audio généré| Frontend;
-   Frontend --&gt;|Montre les résultats intermédiaires| User;
-   Frontend --&gt;|Joue la réponse| User;
-
-   subgraph Services
-      STT
-      LLM
-      TTS
-   end
-
-   subgraph System
-      Frontend
-      Services
-   end
-</code></pre>
-<p>Les détails de chaque composant sont les suivants :</p>
+<h1>Benchmark: Pandas, Polars, DuckDB on Categorical Parquet</h1>
+<p>Storing structured sensor data in Parquet format can significantly reduce both disk and memory usage, especially when using categorical encodings instead of raw strings.
+I wanted to evaluate how different Python libraries compare in terms of <strong>load speed</strong>, <strong>analysis performance</strong>, and <strong>memory usage</strong> when working with <strong>categorical columns</strong>.
+From experience, Polars usually performs best on numerical and plain string data, but things get more nuanced when working with proper categorical types.</p>
+<p>In this post, I benchmark three popular tools:</p>
+<ul>
+<li><a href="https://pandas.pydata.org">Pandas</a></li>
+<li><a href="https://pola.rs">Polars</a></li>
+<li><a href="https://duckdb.org">DuckDB</a></li>
+</ul>
+<h2 id="motivation">🎯 Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
+<p>Parquet is a widely adopted columnar storage format that works best with tabular data, such as what you'd find in Pandas/Polars DataFrames or relational databases.
+It’s ideal for structured data, especially when categorical encodings are used.</p>
+<p>However, performance can vary significantly across tools depending on:</p>
+<ul>
+<li>How categorical columns are handled</li>
+<li>Whether the engine uses lazy or eager execution</li>
+<li>The overhead of internal data conversions during load and computation</li>
+</ul>
+<p>To explore these differences, I built a benchmark using real-world sensor logs from wearable devices, where categorical metadata (e.g., activity, sensor type, orientation) complements numerical data.</p>
+<p>The script to generate this dataset is available in the <em>Code and Reproducibility</em> section.</p>
+<h3 id="what-are-categorical-columns-and-why-use-them">What Are Categorical Columns? And why use them?<a class="headerlink" href="#what-are-categorical-columns-and-why-use-them" title="Permanent link">#</a></h3>
+<p>Categorical columns are features that take on a finite number of distinct values.
+They are often stored as strings in raw datasets (e.g., <code>"walking"</code>, <code>"running"</code>), but with categorical columns they are encoded as integers internally for efficiency.</p>
+<p>In Parquet, categorical columns are encoded using dictionary encoding: the values are stored as integers, with a reference to a lookup table of the original strings.
+This allows both compact storage and readable output.
+Thus, when queried, the decoded string values are returned instead of the raw integers, preserving correctness (compared to numerical values).</p>
+<p>Frameworks differ in how they represent and operate on categorical columns but using parquet you have a format compatible with multiple libraries (such as Pandas, Polars and DuckDB).</p>
+<h2 id="dataset-realworld2016">📦 Dataset: REALWORLD2016<a class="headerlink" href="#dataset-realworld2016" title="Permanent link">#</a></h2>
+<p>This benchmark uses data from the <a href="https://www.uni-mannheim.de/dws/research/projects/activity-recognition/dataset/dataset-realworld/">REALWORLD2016 dataset</a>, which includes accelerometer, gyroscope, and magnetometer readings from 15 subjects performing various physical activities.</p>
+<p>Each record contains:</p>
+<ul>
+<li><code>x</code>, <code>y</code>, <code>z</code> acceleration values</li>
+<li>A <code>time</code> index</li>
+<li><code>user</code> integer ID</li>
+<li>Categorical metadata:</li>
+<li><code>activity</code> (e.g., walking, jumping)</li>
+<li><code>orientation</code> (e.g., chest, thigh)</li>
+<li><code>sensor</code> (acc, gyr, mag)</li>
+</ul>
+<p>I converted the original zipped CSV logs into columnar Parquet files using Pandas and PyArrow, with categorical columns explicitly typed.
+The resulting files are compatible with Pandas, Polars, and DuckDB.</p>
+<h2 id="benchmark-tasks">🧪 Benchmark Tasks<a class="headerlink" href="#benchmark-tasks" title="Permanent link">#</a></h2>
+<p>Each framework was evaluated on four tasks:</p>
 <ol>
-<li>
-<p><strong>Frontend (utilisant Streamlit)</strong></p>
-<ul>
-<li>Capture la parole de l'utilisateur via un microphone.</li>
-<li>Assure la communication entre les services.<ul>
-<li>Envoie l'audio enregistré au service Speech-to-Text (STT) pour obtenir la transcription.</li>
-<li>Reçoit des réponses textuelles du service Large Language Model (LLM) étant donné la transcription.</li>
-<li>Obtient la parole du service Text-to-Speech (TTS).</li>
-</ul>
-</li>
-<li>Joue la parole générée.</li>
-<li>Montre à l'utilisateur le résultat de chaque étape.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Speech-to-Text (STT)</strong></p>
-<ul>
-<li>Convertit l'entrée parlée en texte.</li>
-<li>Utilise un modèle (Whisper tiny) pour effectuer la transcription.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Large Language Model (LLM)</strong></p>
-<ul>
-<li>Traite le texte transcrit et génère une réponse.</li>
-<li>Utilise un modèle pour comprendre le contexte (version distillée de Qwen 2.5) et générer des réponses ayant du sens.</li>
-</ul>
-</li>
-<li>
-<p><strong>Service Text-to-Speech (TTS)</strong></p>
-<ul>
-<li>Convertit le texte généré en parole.</li>
-<li>Utilise un modèle pour synthétiser la voix de l'agent (tiny TTS-parler).</li>
-</ul>
-</li>
+<li><strong>Loading</strong> all Parquet files</li>
+<li><strong>Descriptive statistics</strong>: computing metrics like min, max, and mean on numerical columns</li>
+<li><strong>Grouped counts</strong> over the <code>activity</code>, <code>orientation</code>, and <code>sensor</code> columns</li>
+<li><strong>Memory usage</strong>: measuring the minimum RAM required to fully load the dataset</li>
 </ol>
-<h2 id="bibliotheques-utilisees">Bibliothèques utilisées<a class="headerlink" href="#bibliotheques-utilisees" title="Permanent link">#</a></h2>
-<p>Chaque service et le frontend sont dockerisés et peuvent être lancés en utilisant Docker Compose.
-Alors que le frontend est écrit en utilisant Streamlit, chaque service est écrit comme une API REST (en utilisant FastAPI) avec des bibliothèques associées aux modèles sous le capot (llama-cpp ou transformers).
-Voici les détails de pourquoi j'ai sélectionné ces bibliothèques :</p>
-<h3 id="streamlit">Streamlit<a class="headerlink" href="#streamlit" title="Permanent link">#</a></h3>
-<p>Streamlit est une libraire open-source qui vous permet de créer de belles applications web pour les projets de machine learning et de science des données avec un minimum d'effort. Il est utilisé pour le frontend pour capturer la parole de l'utilisateur, afficher les étapes intermédiaires et jouer la parole générée.</p>
-<h3 id="fastapi">FastAPI<a class="headerlink" href="#fastapi" title="Permanent link">#</a></h3>
-<p>FastAPI est une librarie web moderne, rapide (haute performance) pour la création d'API avec Python basé sur les annotations de type standard de Python. Il est utilisé pour créer des API REST pour chaque service (STT, LLM, TTS) en raison de sa rapidité et de sa facilité d'utilisation. De plus, la génération automatique de documentation Swagger et ReDoc (j'utilise Swagger pour tester mes services indépendamment) le rend adapté au développement rapide.</p>
-<div class="admonition warning">
-<p class="admonition-title">Avertissement</p>
-<p>Cette application dans sa première version est conçue pour un seul utilisateur. La mise en œuvre des services FastAPI n'est pas écrite pour des utilisateurs concurrents.</p>
-</div>
-<h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">#</a></h3>
-<p>Docker Compose est un outil pour définir et exécuter des applications multi-conteneurs Docker. Il est utilisé pour gérer les services et leurs dépendances, assurant une communication transparente entre tous les composants. En utilisant son sous-réseau, je peux facilement accéder aux services depuis le frontend (en utilisant des adresses comme <code>http://llm_service:8000</code>). Il simplifie également le déploiement et la gestion de tous les services.</p>
+<h2 id="code-and-reproducibility">📁 Code and Reproducibility<a class="headerlink" href="#code-and-reproducibility" title="Permanent link">#</a></h2>
+<p>All scripts and benchmark notebooks are available here:</p>
+<p>👉 <a href="https://github.com/vroger11/parquet-categorical-benchmark">GitHub Repository</a></p>
+<p>To reproduce the benchmarks:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync
+uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>download_extract_realworld.py<span class="w">   </span><span class="c1"># generate the Parquet files</span>
+jupyter<span class="w"> </span>notebook<span class="w"> </span>load_data_benchmarks.ipynb<span class="w">   </span><span class="c1"># run the benchmarks</span>
+</code></pre></div>
+<p>I recommend opening the notebook to review the implementations, along with additional remarks and tips included in the cells.
+If you have suggestions or improvements, feel free to contribute (via issue, pull request, or a comment on this post).</p>
+<h2 id="results-summary">📈 Results Summary<a class="headerlink" href="#results-summary" title="Permanent link">#</a></h2>
+<h3 id="load-time-lower-is-better">Load Time (Lower is Better)<a class="headerlink" href="#load-time-lower-is-better" title="Permanent link">#</a></h3>
+<pre class="mermaid"><code>xychart-beta
+    title "Load Time (in seconds)"
+    x-axis ["Initial Polars Eager version", "Polars Eager", "Polars Lazy", Pandas, DuckDB]
+    bar [62.0, 9.0, 4.6, 4.5, 3.3]
+</code></pre>
+<p>The first implementation of polars loading took 1min and 2s which is the worst solution by far. This solution uses implicit concatenation which is usually the goto in Python to write performant code.  However, in this case, the explicit concatenation strategy (handled manually before passing to Polars) performed significantly better. This is an unusual Python case where deferring to the library’s internal logic (in this case, written in Rust) actually hurts performance.</p>
+<p>Lazy Polars loading was as fast as Pandas, while DuckDB was slightly faster.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Sur les serveurs cloud avec plusieurs clients, vous préférerez Terraform associé à Kubernetes au lieu de Docker Compose.</p>
+<p>Normally, you should avoid calling <code>.collect()</code> on a lazy Polars frame without chaining any transformations.
+This benchmark does intentionally call <code>.collect()</code> to isolate and compare the performance of each tool on specific tasks.
+As a result, Polars' lazy engine may be slightly underutilized in this context.</p>
 </div>
-<h3 id="hugging-face-transformers">Hugging Face Transformers<a class="headerlink" href="#hugging-face-transformers" title="Permanent link">#</a></h3>
-<p>Hugging Face Transformers est une bibliothèque qui fournit des architectures à usage général pour la compréhension et la génération de langage naturel avec des modèles pré-entraînés. Elle est utilisée pour les services STT et TTS pour traiter le texte transcrit et générer des réponses.</p>
-<h3 id="llamacpp">LlamaCpp<a class="headerlink" href="#llamacpp" title="Permanent link">#</a></h3>
-<p>LlamaCpp est une bibliothèque qui fournit des implémentations efficaces de divers modèles LLM. Je la préfère à la bibliothèque transformers car elle offre de meilleures performances brutes.</p>
-<h2 id="modeles-utilises">Modèles utilisés<a class="headerlink" href="#modeles-utilises" title="Permanent link">#</a></h2>
-<p>Tous les modèles sont disponibles sur le <a href="https://huggingface.co/">Hugging Face Hub</a>, une ressource inestimable pour accéder à une large gamme de modèles et de jeux de données.</p>
-<p>Pour le modèle STT, <a href="https://huggingface.co/openai/whisper-tiny">Whisper tiny</a> a été sélectionné pour accomplir cette tâche car il obtient de bons résultats sur GPU et n'est pas gourmand en VRAM.</p>
-<p>Pour le LLM, j'ai utilisé une <a href="https://huggingface.co/bartowski/Qwen2.5.1-Coder-7B-Instruct-GGUF">version distillée de Qwen 2.5</a> pour être efficace sur CPU (car les modèles STT et TTS ne laissent pas assez de mémoire VRAM), car la performance était suffisante pour cette première version. Pour les futures versions, j'explorerai plus de modèles comme GEMINI de Google.</p>
-<p>Pour le modèle TTS, j'ai sélectionné une version tiny de <a href="https://huggingface.co/parler-tts/parler-tts-tiny-v1">tiny TTS-parler</a> pour s'assurer qu'il fonctionne efficacement sur les ressources disponibles.</p>
-<div class="admonition info">
-<p class="admonition-title">Besoin de vos retours</p>
-<p>Si vous connaissez de meilleurs modèles que je pourrais utiliser, n'hésitez pas à me contacter pour que nous puissions en discuter. J'ai vu par la suite l'approche <a href="https://github.com/huggingface/speech-to-speech">speech-to-speech</a> de Hugging Face qui a fait des choix similaires. Je prendrai leur approche en compte dans les futurs posts.</p>
-</div>
-<h2 id="ce-qui-vient-ensuite">Ce qui vient ensuite<a class="headerlink" href="#ce-qui-vient-ensuite" title="Permanent link">#</a></h2>
-<p>Le prochain post de cette série portera sur la façon d'améliorer les performances, alors restez à l'écoute (vous pouvez suivre mon flux RSS ou me suivre sur <a href="https://www.linkedin.com/in/vroger11/">LinkedIn</a>).
-J'espère que vous avez apprécié, tout retour est le bienvenu.</p>
-<p>À bientôt,</p>
-<p>Vincent</p>
+<h3 id="describe-value_counts">Describe + value_counts<a class="headerlink" href="#describe-value_counts" title="Permanent link">#</a></h3>
+<p>Let’s now benchmark some <strong>analytical operations</strong>, starting with <code>describe()</code> on numerical columns using each library:</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Describe computation (in seconds)"
+    x-axis ["Polars", "Pandas", DuckDB]
+    bar [1.6, 4.5, 9.8]
+</code></pre>
+<p>Since the dataframes are already loaded into memory, there's no opportunity for Polars to apply lazy optimizations.
+Despite that, Polars is clearly the fastest for this task.</p>
+<p>Next, let’s look at grouped value counts:</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Value count computation (in seconds)"
+    x-axis ["Pandas", "Polars Lazy", "Polars Eager", DuckDB]
+    bar [1.0, 1.2, 1.5, 16.1]
+</code></pre>
+<p>Surprisingly, the Pandas implementation of value_counts() outperforms the lazy Polars version (1.0s vs 1.2s).
+DuckDB, in contrast, is significantly slower here.</p>
+<p>If you know of a more efficient way to perform grouped value counts in DuckDB, feel free to contribute!</p>
+<h3 id="memory-usage">Memory Usage<a class="headerlink" href="#memory-usage" title="Permanent link">#</a></h3>
+<p>Here we measure how many RAM is needed to hold the data into RAM. Don't forget libraries can use more RAM to create the representation of all dataset (which is clearly a problem for DuckDB).</p>
+<p>Here we measure how much RAM is required to hold the dataset once fully loaded in memory.
+Note that during the loading process, some libraries allocate additional temporary memory to build their internal representation (this memory is released afterward).
+This construction overhead is particularly significant in the case of DuckDB.</p>
+<pre class="mermaid"><code>xychart-beta
+    title "RAM required to hold the data (in GB)"
+    x-axis ["Pandas", "Polars", "DuckDB", "DuckDB exported dataframe"]
+    bar [2.17, 2.71, 6.33, 11.83]
+</code></pre>
+<p>Polars used approximately 25% more memory than Pandas in this test.
+This overhead is expected due to its use of Arrow and internal caching mechanisms.</p>
+<p>DuckDB, however, consumed nearly three times more memory than Pandas.
+This is because categorical columns are internally represented as full VARCHAR strings rather than compact integer codes.</p>
+<p>Exporting the dataset from DuckDB to a dataframe further increases memory usage.
+This adds 11.83 GB on top of DuckDB's base 6.33 GB, for a total of roughly 18.16 GB required.</p>
+<h2 id="conclusion">📋 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>Each tool has its strengths:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pandas</td>
+<td>Simple API, fast loading</td>
+<td>Don't have lazy evaluation</td>
+</tr>
+<tr>
+<td>Polars</td>
+<td>Fastest analysis (with lazy mode)</td>
+<td>Performance suffers if misused</td>
+</tr>
+<tr>
+<td>DuckDB</td>
+<td>Competitive loading and SQL-like flexibility</td>
+<td>High memory usage on categorical columns</td>
+</tr>
+</tbody>
+</table>
+<p>Polars is impressive when used correctly, but I recommend it only if you're prepared to leverage its lazy execution model.
+As for DuckDB, I suggest avoiding it for workloads with categorical columns for now, since they are stored as <code>VARCHAR</code>, which defeats the purpose of efficient categorical encoding.</p>
+<hr/>
+<p><em>Thanks for reading. Feel free to open issues or contribute improvements in the repository or leave a comment on this post.</em></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
-<span class="md-icon" title="Dernière mise à jour">
+<span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 mars 2025</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2025</span>
 </span>
 <span class="md-source-file__fact">
-<span class="md-icon" title="Créé">
+<span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 mars 2025</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2025</span>
 </span>
 </aside>
-<h2 id="__comments">Commentaires</h2>
+<h2 id="__comments">Comments</h2>
 <!-- Insert generated snippet here -->
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOCb2JI84CivWa" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="vroger11/vroger11.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxNjM0MTYzNTU=" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
@@ -969,7 +1021,7 @@ J'espère que vous avez apprécié, tout retour est le bienvenu.</p>
 </div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Retour en haut de la page
+  Back to top
 </button>
 </main>
 <footer class="md-footer">
@@ -1007,8 +1059,8 @@ J'espère que vous avez apprécié, tout retour est le bienvenu.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
-<script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 window.mermaidConfig = {default: {
     startOnLoad: false
