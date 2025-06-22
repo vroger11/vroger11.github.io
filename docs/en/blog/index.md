@@ -1,5 +1,6 @@
 ---
 title: Welcome to my blog
+class: keep-sidebar
 hide:
     - toc
     - footer
@@ -12,23 +13,22 @@ All articles are accessible from the sidebar on the left, sorted by date with th
 You can also search for an article by its tag or use the categories below:
 
 === ":material-brain: Machine Learning"
-    I created tutorials on how to create a speech-to-speech agent (named SpeechBot):
+    I run some benchmarks:
 
-    1. [SpeechBot - how to quickly create a first version?](2025/03-17-speechbot-starting-point.md)
+    - [Pandas, Polars, DuckDB on Categorical Parquet](2025/06-22-parquet-benchmark-pandas-polars-duckdb.md)
 
-    Also, I've created tutorials on generating images using the Diffusers library:
+    I create tutorials:
 
-    1. [Generating images with an unconditional model](2024/06-02-diffusers-unconditional-model.md).
-    2. [Generating images from labels with a conditional model](2024/06-16-diffusers-conditional-model.md).
-    3. [Improving the speed and quality of image generation](2024/09-08-diffusers-obtain-better-results.md).
+    - [SpeechBot - how to quickly create a speech-to-speech agent](2025/03-17-speechbot-starting-point.md)
+
+    - Generating images with [an unconditional model](2024/06-02-diffusers-unconditional-model.md); from [labels with a conditional model](2024/06-16-diffusers-conditional-model.md); and [improving the speed and quality of image generation](2024/09-08-diffusers-obtain-better-results.md).
 
     Additionally, I wrote a post on how to [speed up training on AI servers](2020/06-24-tweaks-to-speedup-AI-servers.md).
 
     During my PhD, I conducted a survey on few-shot techniques for audio processing—[check it out here](2020/03-11-survey.md).
 
 === ":material-chart-line: Visualizations"
-    In my spare time, I enjoy creating data visualizations. Most recently, I took part in the 2025 edition of Hackaviz.
-    Have a look [here](2025/04-07-hackaviz.md).
+    In my spare time, I enjoy creating data visualizations. Most recently, I took part in the [2025 edition of Hackaviz](2025/04-07-hackaviz.md).
 
     Also, I covered some *Age of Empires 2* tournaments, which have garnered over 100k views. Some of my articles include:
 

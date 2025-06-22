@@ -13,15 +13,15 @@ Tous les articles sont accessibles depuis la barre latérale à gauche, classés
 Vous pouvez également rechercher un article par son tag ou utiliser les catégories ci-dessous :
 
 === ":material-brain: Apprentissage Automatique"
-    J'ai créé des tutoriels sur la création d'un agent parole vers parole (nommé SpeechBot) :
+    Je réalise quelques benchmarks :
 
-    1. [SpeechBot - comment créer rapidement une première version ?](2025/03-17-speechbot-starting-point.md)
+    - [Pandas, Polars, DuckDB sur des colonnes catégorielles en Parquet](2025/06-22-parquet-benchmark-pandas-polars-duckdb.md)
 
-    De plus, j'ai créé des tutoriels sur la génération d'images en utilisant la bibliothèque Diffusers :
+    Je crée des tutoriels :
 
-    2. [Générer des images avec un modèle non conditionné](2024/06-02-diffusers-unconditional-model.md).
-    3. [Générer des images à partir d'étiquettes avec un modèle conditionnel](2024/06-16-diffusers-conditional-model.md).
-    4. [Améliorer la vitesse et la qualité de la génération d'images](2024/09-08-diffusers-obtain-better-results.md).
+    - [SpeechBot – comment créer rapidement un agent de synthèse vocale](2025/03-17-speechbot-starting-point.md)
+
+    - Génération d’images avec [un modèle non conditionnel](2024/06-02-diffusers-unconditional-model.md), à partir d’[étiquettes avec un modèle conditionnel](2024/06-16-diffusers-conditional-model.md), et [amélioration de la vitesse et de la qualité de génération](2024/09-08-diffusers-obtain-better-results.md)
 
     En outre, j'ai rédigé un article sur [comment accélérer l'entraînement sur des serveurs AI](2020/06-24-tweaks-to-speedup-AI-servers.md).
 
@@ -35,8 +35,7 @@ Vous pouvez également rechercher un article par son tag ou utiliser les catégo
     - [Travailler à distance ou depuis chez soi](2020/03-18-work-at-home.md), expliquant comment configurer vos postes de travail pour un accès à distance.
 
 === ":material-chart-line: Visualisations"
-    Pendant mon temps libre, j’aime créer des visualisations de données. Plus récemment, j’ai participé à l’édition 2025 de Hackaviz.
-    Jetez un œil [ici](2025/04-07-hackaviz.md).
+    Pendant mon temps libre, j’aime créer des visualisations de données. Plus récemment, j’ai participé à l’[édition 2025 de Hackaviz](2025/04-07-hackaviz.md).
 
     De plus, j'ai couvert des tournois d'*Age of Empires 2*, qui ont accumulé plus de 100 000 vues. Voici quelques-uns de mes articles :
 
