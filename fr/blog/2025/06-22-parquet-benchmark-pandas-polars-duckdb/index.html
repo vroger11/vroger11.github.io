@@ -860,8 +860,8 @@ Cela permet un stockage compact tout en conservant la lisibilité lors des requ�
 <li><code>orientation</code> (ex : torse, cuisse)</li>
 <li><code>sensor</code> (acc, gyr, mag)</li>
 </ul>
-<p>Les fichiers CSV compressés d’origine ont été convertis en fichiers Parquet avec Pandas et PyArrow, en forçant les colonnes catégorielles.
-Les fichiers générés sont compatibles avec Pandas, Polars et DuckDB.</p>
+<p>J’ai converti les fichiers CSV compressés d’origine en fichiers Parquet columnaires à l’aide de Pandas et PyArrow. Les colonnes catégorielles ont été typées explicitement au format standard d’Arrow, plus interopérable que les types enum spécifiques à Polars ou DuckDB.
+Ainsi, les fichiers générés sont compatibles avec Pandas, Polars et DuckDB.</p>
 <h2 id="taches-de-benchmark">🧪 Tâches de benchmark<a class="headerlink" href="#taches-de-benchmark" title="Permanent link">#</a></h2>
 <p>Chaque outil a été évalué sur quatre tâches :</p>
 <ol>
@@ -884,17 +884,19 @@ Vos suggestions et contributions sont les bienvenues (issues, pull requests ou c
 <h3 id="temps-de-chargement">Temps de chargement<a class="headerlink" href="#temps-de-chargement" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>xychart-beta
     title "Temps de chargement (en secondes)"
-    x-axis ["Polars Eager initial", "Polars Eager", "Polars Lazy", Pandas, DuckDB]
-    bar [62.0, 9.0, 4.6, 4.5, 3.3]
+    x-axis ["Polars Eager initial", "Polars Eager", "Polars Lazy", Pandas, DuckDB, "df depuis DuckDB"]
+    bar [62.0, 9.0, 4.6, 4.5, 3.3, 16.1]
 </code></pre>
 <p>La première implémentation en eager de Polars, utilisant la concaténation implicite, est de loin la pire (62 s).
 La concaténation explicite avant de passer les données à Polars s’est révélée bien plus performante.
 C’est un cas rare où déléguer à la logique interne d’une bibliothèque nuit à la performance.</p>
-<p>Polars en lazy est aussi rapide que Pandas, tandis que DuckDB est légèrement plus rapide encore.</p>
+<p>Polars en lazy est aussi rapide que Pandas, tandis que DuckDB est légèrement plus rapide encore.
+Récupérer le DataFrame Pandas depuis DuckDB était sensiblement lent et devrait être évité, car c’est plus lent que de charger les données directement avec Pandas.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>En général, il faut éviter d'appeler <code>.collect()</code> sur un DataFrame lazy Polars sans chaîne d’opérations.
-Ici, <code>.collect()</code> est volontairement appelé pour isoler et comparer les performances entre outils.</p>
+Ici, <code>.collect()</code> est volontairement appelé pour isoler et comparer les performances entre outils.
+Même remarque pour DuckDB où il faut passer <code>hive_partitioning = true</code> dans votre <code>read_parquet</code> afin d’éviter de précharger des données non nécessaires.</p>
 </div>
 <h3 id="describe-value_counts">Describe + value_counts<a class="headerlink" href="#describe-value_counts" title="Permanent link">#</a></h3>
 <p>On compare maintenant des opérations analytiques, à commencer par <code>describe()</code> :</p>
@@ -909,11 +911,15 @@ Il reste tout de même le plus rapide.</p>
 <pre class="mermaid"><code>xychart-beta
     title "Comptes groupés (en secondes)"
     x-axis ["Pandas", "Polars Lazy", "Polars Eager", "DuckDB"]
-    bar [1.0, 1.2, 1.5, 16.1]
+    bar [1.0, 1.2, 1.5, 0.3]
 </code></pre>
 <p>Surprise : Pandas surpasse ici Polars Lazy (1.0 s contre 1.2 s).
-DuckDB est bien plus lent.</p>
-<p>Si vous connaissez une méthode plus efficace pour faire cela avec DuckDB, n’hésitez pas à contribuer !</p>
+DuckDB est bien plus rapide.</p>
+<div class="admonition warning">
+<p class="admonition-title">Correction</p>
+<p>Dans une version précédente de ce post, j'avais indiqué une valeur incorrecte pour DuckDB.
+Merci à <a href="https://www.linkedin.com/in/ericmauviere/">Éric Mauvière</a> d'avoir signalé cette incohérence.</p>
+</div>
 <h3 id="utilisation-memoire">Utilisation mémoire<a class="headerlink" href="#utilisation-memoire" title="Permanent link">#</a></h3>
 <p>On mesure ici la RAM nécessaire pour contenir les données en mémoire.
 Attention, certaines bibliothèques utilisent temporairement plus de mémoire pendant le chargement.</p>
@@ -954,7 +960,7 @@ Attention, certaines bibliothèques utilisent temporairement plus de mémoire pe
 </tbody>
 </table>
 <p>Polars est très efficace si bien utilisé, mais nécessite de connaître le lazy execution model.
-DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles, tant qu’elles sont représentées en VARCHAR.</p>
+DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles Arrow, tant qu’elles sont représentées en VARCHAR.</p>
 <hr/>
 <p><em>Merci pour la lecture. Vous pouvez ouvrir une issue, proposer une amélioration dans le dépôt, ou laisser un commentaire sur ce billet.</em></p>
 <aside class="md-source-file">
@@ -962,7 +968,7 @@ DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles,
 <span class="md-icon" title="Dernière mise à jour">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 juin 2025</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 juin 2025</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Créé">
