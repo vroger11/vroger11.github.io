@@ -61,8 +61,8 @@ Chaque enregistrement contient :
   - `orientation` (ex : torse, cuisse)
   - `sensor` (acc, gyr, mag)
 
-Les fichiers CSV compressés d’origine ont été convertis en fichiers Parquet avec Pandas et PyArrow, en forçant les colonnes catégorielles.
-Les fichiers générés sont compatibles avec Pandas, Polars et DuckDB.
+J’ai converti les fichiers CSV compressés d’origine en fichiers Parquet columnaires à l’aide de Pandas et PyArrow. Les colonnes catégorielles ont été typées explicitement au format standard d’Arrow, plus interopérable que les types enum spécifiques à Polars ou DuckDB.
+Ainsi, les fichiers générés sont compatibles avec Pandas, Polars et DuckDB.
 
 ## 🧪 Tâches de benchmark
 
@@ -97,8 +97,8 @@ Vos suggestions et contributions sont les bienvenues (issues, pull requests ou c
 ```mermaid
 xychart-beta
     title "Temps de chargement (en secondes)"
-    x-axis ["Polars Eager initial", "Polars Eager", "Polars Lazy", Pandas, DuckDB]
-    bar [62.0, 9.0, 4.6, 4.5, 3.3]
+    x-axis ["Polars Eager initial", "Polars Eager", "Polars Lazy", Pandas, DuckDB, "df depuis DuckDB"]
+    bar [62.0, 9.0, 4.6, 4.5, 3.3, 16.1]
 ```
 
 La première implémentation en eager de Polars, utilisant la concaténation implicite, est de loin la pire (62 s).
@@ -106,10 +106,12 @@ La concaténation explicite avant de passer les données à Polars s’est rév�
 C’est un cas rare où déléguer à la logique interne d’une bibliothèque nuit à la performance.
 
 Polars en lazy est aussi rapide que Pandas, tandis que DuckDB est légèrement plus rapide encore.
+Récupérer le DataFrame Pandas depuis DuckDB était sensiblement lent et devrait être évité, car c’est plus lent que de charger les données directement avec Pandas.
 
 !!! note "Note"
     En général, il faut éviter d'appeler `.collect()` sur un DataFrame lazy Polars sans chaîne d’opérations.
     Ici, `.collect()` est volontairement appelé pour isoler et comparer les performances entre outils.
+    Même remarque pour DuckDB où il faut passer `hive_partitioning = true` dans votre `read_parquet` afin d’éviter de précharger des données non nécessaires.
 
 ### Describe + value_counts
 
@@ -131,13 +133,15 @@ Puis les comptes groupés (value_counts) :
 xychart-beta
     title "Comptes groupés (en secondes)"
     x-axis ["Pandas", "Polars Lazy", "Polars Eager", "DuckDB"]
-    bar [1.0, 1.2, 1.5, 16.1]
+    bar [1.0, 1.2, 1.5, 0.3]
 ```
 
 Surprise : Pandas surpasse ici Polars Lazy (1.0 s contre 1.2 s).
-DuckDB est bien plus lent.
+DuckDB est bien plus rapide.
 
-Si vous connaissez une méthode plus efficace pour faire cela avec DuckDB, n’hésitez pas à contribuer !
+!!! warning "Correction"
+    Dans une version précédente de ce post, j'avais indiqué une valeur incorrecte pour DuckDB.
+    Merci à [Éric Mauvière](https://www.linkedin.com/in/ericmauviere/) d'avoir signalé cette incohérence.
 
 ### Utilisation mémoire
 
@@ -168,7 +172,7 @@ Chaque outil a ses points forts :
 | DuckDB | Chargement compétitif, SQL natif | Grosse consommation mémoire     |
 
 Polars est très efficace si bien utilisé, mais nécessite de connaître le lazy execution model.
-DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles, tant qu’elles sont représentées en VARCHAR.
+DuckDB reste un bon outil SQL, mais à éviter pour les colonnes catégorielles Arrow, tant qu’elles sont représentées en VARCHAR.
 
 ---
 
