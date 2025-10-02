@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://website.vincent-roger.fr/contact/">
+        <link rel="canonical" href="https://website.vincent-roger.fr/fr/blog/2025/10-02-efficient-dockerfile-with-uv/">
       
       
-        <link rel="prev" href="../blog/2019/09-08-hello-world/">
+        <link rel="prev" href="../../">
       
       
+        <link rel="next" href="../06-22-parquet-benchmark-pandas-polars-duckdb/">
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
       
-      <link rel="icon" href="../assets/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Flux RSS du contenu mis à jour" href="../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Contact me - Vincent ROGER, (PhD)</title>
+        <title>Constructions Docker efficaces avec uv - Vincent ROGER, (PhD)</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +72,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -79,7 +81,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -98,8 +100,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#contact-me" class="md-skip">
-          Skip to content
+        <a href="#constructions-docker-efficaces-avec-uv" class="md-skip">
+          Aller au contenu
         </a>
       
     </div>
@@ -111,10 +113,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Vincent ROGER, (PhD)" class="md-header__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-header__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -131,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contact me
+              Constructions Docker efficaces avec uv
             
           </span>
         </div>
@@ -181,21 +183,21 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../../../blog/2025/10-02-efficient-dockerfile-with-uv/" hreflang="en" class="md-select__link">
               <img style="height: 11px; border: 0px;" alt="en" class="twemoji" src="/assets/images/flags/en.png" title="english" /> English
 
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../fr/contact/" hreflang="fr" class="md-select__link">
+            <a href="./" hreflang="fr" class="md-select__link">
               <img style="height: 11px; border: 0px;" alt="fr" class="twemoji" src="/assets/images/flags/fr.png" title="english" /> Français
 
             </a>
@@ -215,16 +217,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Recherche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -237,7 +239,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Initialisation de la recherche
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -248,7 +250,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/vroger11/vroger11.github.io" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -269,7 +271,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -278,12 +280,29 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link">
         
   
     
   
-  About me
+  À propos de moi
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contact/" class="md-tabs__link">
+        
+  
+    
+  
+  Me contacter
 
       </a>
     </li>
@@ -296,30 +315,13 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-    
-  
-  Contact me
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
     
-      <li class="md-tabs__item">
-        <a href="../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
-  Blog
+  Blogue
 
         </a>
       </li>
@@ -351,16 +353,16 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Vincent ROGER, (PhD)" class="md-nav__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
+    <a href="../../../" title="Vincent ROGER, (PhD)" class="md-nav__button md-logo" aria-label="Vincent ROGER, (PhD)" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     Vincent ROGER, (PhD)
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/vroger11/vroger11.github.io" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/vroger11/vroger11.github.io" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -380,11 +382,32 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    About me
+    À propos de moi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Me contacter
     
   </span>
   
@@ -402,56 +425,28 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
+        
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Contact me
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Blog
+    Blogue
     
   </span>
   
@@ -459,10 +454,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Blog
+            Blogue
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -473,11 +468,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Welcome to my blog
+    Bienvenue dans mon blogue
     
   </span>
   
@@ -492,8 +487,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -501,13 +498,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -522,7 +517,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             2025
@@ -533,14 +528,113 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../blog/2025/10-02-efficient-dockerfile-with-uv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Constructions Docker efficaces avec uv
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Efficient Docker Builds with uv
+    Constructions Docker efficaces avec uv
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Pourquoi uv ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiliser-une-image-uv-officielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser une image uv officielle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnaliser-ton-image-pour-utiliser-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser ton image pour utiliser uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-22-parquet-benchmark-pandas-polars-duckdb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benchmark : Pandas, Polars, DuckDB avec des colonnes catégorielles Parquet
     
   </span>
   
@@ -558,11 +652,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2025/06-22-parquet-benchmark-pandas-polars-duckdb/" class="md-nav__link">
+      <a href="../04-07-hackaviz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Benchmark: Pandas, Polars, DuckDB on Categorical Parquet
+    Ma participation à l'Hackaviz
     
   </span>
   
@@ -580,33 +674,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2025/04-07-hackaviz/" class="md-nav__link">
+      <a href="../03-17-speechbot-starting-point/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My participation to Hackaviz
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../blog/2025/03-17-speechbot-starting-point/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SpeechBot - the beginning
+    SpeechBot - le commencement
     
   </span>
   
@@ -673,11 +745,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2024/09-25-website-migration-to-mkdocs/" class="md-nav__link">
+      <a href="../../2024/09-25-website-migration-to-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Website migration to MkDocs
+    Migration de ce site web vers MkDocs
     
   </span>
   
@@ -695,11 +767,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2024/09-08-diffusers-obtain-better-results/" class="md-nav__link">
+      <a href="../../2024/09-08-diffusers-obtain-better-results/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Improving Speed and Quality of Image Generation
+    Amélioration de la vitesse et de la qualité de génération d'image
     
   </span>
   
@@ -717,11 +789,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2024/06-16-diffusers-conditional-model/" class="md-nav__link">
+      <a href="../../2024/06-16-diffusers-conditional-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Generate images from labels with conditional model
+    Générer des images à partir de labels avec un modèle conditionné
     
   </span>
   
@@ -739,11 +811,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2024/06-02-diffusers-unconditional-model/" class="md-nav__link">
+      <a href="../../2024/06-02-diffusers-unconditional-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Generate images with unconditional model
+    Générer des images avec un modèle non conditionné
     
   </span>
   
@@ -810,11 +882,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2023/12-03-tools-python-dataviz/" class="md-nav__link">
+      <a href="../../2023/12-03-tools-python-dataviz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Datavisualization tools for Python
+    Outils de visualisation de données pour Python
     
   </span>
   
@@ -832,11 +904,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2023/01-16-the_grand_melee/" class="md-nav__link">
+      <a href="../../2023/01-16-the_grand_melee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My dataviz for The Grand Melee
+    Mes visualisations du tournoi The Grand Melee
     
   </span>
   
@@ -903,11 +975,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2022/12-13-warlords/" class="md-nav__link">
+      <a href="../../2022/12-13-warlords/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My dataviz for Warlords
+    Mes visualisations du tournoi Warlords
     
   </span>
   
@@ -925,11 +997,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2022/12-08-redbull-wololo-legacy/" class="md-nav__link">
+      <a href="../../2022/12-08-redbull-wololo-legacy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My Red Bull Wololo Legacy dataviz
+    Mes visualisations du tournoi Red Bull Wololo legacy
     
   </span>
   
@@ -947,11 +1019,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2022/10-30-my-phd-experience/" class="md-nav__link">
+      <a href="../../2022/10-30-my-phd-experience/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My PhD experience
+    L'expérience de mon doctorat
     
   </span>
   
@@ -969,11 +1041,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2022/09-01-my-switch-to-manjaro/" class="md-nav__link">
+      <a href="../../2022/09-01-my-switch-to-manjaro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    My switch to Manjaro Linux
+    Mon passage à Manjaro Linux
     
   </span>
   
@@ -991,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2022/04-03-hackaviz/" class="md-nav__link">
+      <a href="../../2022/04-03-hackaviz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,11 +1134,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2021/12-08-badaboom-fireballs/" class="md-nav__link">
+      <a href="../../2021/12-08-badaboom-fireballs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Badaboom - Fireballs
+    Badaboom - Les boules de feu
     
   </span>
   
@@ -1084,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2021/09-19-hackaviz/" class="md-nav__link">
+      <a href="../../2021/09-19-hackaviz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1106,11 +1178,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2021/09-12-badaboom-asteroids/" class="md-nav__link">
+      <a href="../../2021/09-12-badaboom-asteroids/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    BadaBoom - Asteroids
+    BadaBoom - Astéroïdes
     
   </span>
   
@@ -1177,11 +1249,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/11-20-create-a-documentation-with-sphinx-on-github/" class="md-nav__link">
+      <a href="../../2020/11-20-create-a-documentation-with-sphinx-on-github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Create a documentation with Sphinx on GitHub
+    Créer votre documentation sphinx sur GitHub
     
   </span>
   
@@ -1199,11 +1271,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/08-02-automation-using-ssh-keys/" class="md-nav__link">
+      <a href="../../2020/08-02-automation-using-ssh-keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Automation using ssh key
+    Automatisation en utilisant des clés SSH
     
   </span>
   
@@ -1221,11 +1293,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/06-24-tweaks-to-speedup-AI-servers/" class="md-nav__link">
+      <a href="../../2020/06-24-tweaks-to-speedup-AI-servers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Tweaks to speedup Deep Learning on servers
+    Astuces pour accélérer le Deep Learning sur les serveurs
     
   </span>
   
@@ -1243,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/03-27-audio-loader/" class="md-nav__link">
+      <a href="../../2020/03-27-audio-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,11 +1337,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/03-18-work-at-home/" class="md-nav__link">
+      <a href="../../2020/03-18-work-at-home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Configurations for working at home
+    Configurations pour travailler depuis la maison
     
   </span>
   
@@ -1287,11 +1359,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/03-11-survey/" class="md-nav__link">
+      <a href="../../2020/03-11-survey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Survey from Large Speech Corpora to Limited Data
+    État de l'art sur le few-shot pour des corpus de parole avec peu de données
     
   </span>
   
@@ -1309,11 +1381,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/01-31-format-a-bootable-usb-key/" class="md-nav__link">
+      <a href="../../2020/01-31-format-a-bootable-usb-key/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Format a bootable USB key
+    Formater une clé USB d'amorçage
     
   </span>
   
@@ -1331,11 +1403,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2020/01-28-improve-your-bash-navigation/" class="md-nav__link">
+      <a href="../../2020/01-28-improve-your-bash-navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Improve your bash terminal experience
+    Améliorer votre expérience bash
     
   </span>
   
@@ -1402,11 +1474,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/11-06-using-zotero-to-generate-bibtex/" class="md-nav__link">
+      <a href="../../2019/11-06-using-zotero-to-generate-bibtex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Use Zotero to generate BibTeX files for your papers
+    Utiliser Zotero pour générer des fichiers BibTeX pour vos papiers
     
   </span>
   
@@ -1424,11 +1496,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/10-12-first-year-review-as-a-phd-student/" class="md-nav__link">
+      <a href="../../2019/10-12-first-year-review-as-a-phd-student/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Review of my first year as a PhD student
+    Revue de ma première année de thèse
     
   </span>
   
@@ -1446,11 +1518,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/10-08-check-your-writing-in-nvim/" class="md-nav__link">
+      <a href="../../2019/10-08-check-your-writing-in-nvim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Check your writing in Neovim
+    Vérifier vos fautes dans Neovim
     
   </span>
   
@@ -1468,11 +1540,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/09-23-terminal-multiplexers/" class="md-nav__link">
+      <a href="../../2019/09-23-terminal-multiplexers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Terminal multiplexers
+    Multiplexeur de terminaux
     
   </span>
   
@@ -1490,11 +1562,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/09-09-save-git-credentials/" class="md-nav__link">
+      <a href="../../2019/09-09-save-git-credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Save Git Credentials
+    Sauver les identifiants git
     
   </span>
   
@@ -1512,11 +1584,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/2019/09-08-hello-world/" class="md-nav__link">
+      <a href="../../2019/09-08-hello-world/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Hello world
+    Bonjour le monde
     
   </span>
   
@@ -1552,17 +1624,61 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Pourquoi uv ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiliser-une-image-uv-officielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser une image uv officielle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personnaliser-ton-image-pour-utiliser-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser ton image pour utiliser uv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1578,20 +1694,142 @@
   
 
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">Automatisation</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Développement</span>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="contact-me">Contact me<a class="headerlink" href="#contact-me" title="Permanent link">#</a></h1>
-<p>There are several ways to contact me:</p>
-<div class="grid cards" style="max-width: 600px">
+<h1 id="constructions-docker-efficaces-avec-uv">Constructions Docker efficaces avec <code>uv</code><a class="headerlink" href="#constructions-docker-efficaces-avec-uv" title="Permanent link">#</a></h1>
+<p>La résolution de dépendances et l'empaquetage Python sont souvent des points douloureux dans les workflows Dockerisés. Les outils traditionnels comme <code>pip</code> et <code>pip-tools</code> fonctionnent, mais sont lents et sujets à casser le cache.
+Voici <a href="https://docs.astral.sh/uv/"><code>uv</code></a>, un gestionnaire de paquets Python ultra-rapide écrit en Rust par <a href="https://astral.sh">Astral</a>, compatible avec <code>pip</code>, <code>pip-tools</code>, et les projets suivant PEP 517/518.</p>
+<p>Dans les pipelines MLOps modernes, Docker joue un rôle central pour garantir des environnements cohérents entre les expériences locales, les workflows d'intégration continue (CI) et les déploiements en production.
+Que ce soit pour empaqueter un service d’inférence ou une image d’entraînement pour des charges à base de GPU, la containerisation garantit la reproductibilité et simplifie la gestion des dépendances.
+Associé au CI/CD, cela permet de construire, tester et déployer automatiquement aussi bien les artefacts d’entraînement que de déploiement.
+Cependant, la résolution des dépendances Python ralentit souvent la construction des images.</p>
+<p>Ce post propose une solution rapide et reproductible avec uv, qui permet de construire des images Python pour l’entraînement ou l’inférence plus vite et plus fiablement.
+Ce n’est pas un tutoriel sur uv ni sur Docker. Si vous en avez besoin, commence avec le <a href="https://docs.astral.sh/uv/getting-started/">guide officiel uv</a> et consulte les <a href="https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift">cours IBM sur Coursera</a> pour Docker.</p>
+<h2 id="pourquoi-uv">⚡ Pourquoi <code>uv</code> ?<a class="headerlink" href="#pourquoi-uv" title="Permanent link">#</a></h2>
+<p><code>uv</code> est conçu pour être <strong>rapide, moderne et compatible en remplacement direct</strong> avec les workflows Python existants.
+Il est écrit en Rust pour des performances optimales (comparé à <code>poetry</code> qui est écrit en Python).
+Il installe les dépendances à partir de <code>pyproject.toml</code> et <code>uv.lock</code>, supprimant le besoin de <code>pip</code>, <code>pip-tools</code> et <code>virtualenv</code>.</p>
+<p>Disponible en binaire statique ou via script d’installation, il produit des builds déterministes.
+Comparé à <code>poetry</code>, <code>uv</code> est ultra rapide (plus de 5x plus vite sur mes projets), ce qui m’a poussé à migrer tous mes projets vers <code>uv</code>.</p>
+<h2 id="utiliser-une-image-uv-officielle">Utiliser une image uv officielle<a class="headerlink" href="#utiliser-une-image-uv-officielle" title="Permanent link">#</a></h2>
+<p>Astral fournit des images de <code>uv</code> officielles pour <code>python:slim</code>, <code>debian:bookworm-slim</code> et d’autres.
+Consultez la documentation officielle pour la liste complète des images Docker :
+🔗 <a href="https://docs.astral.sh/uv/guides/integration/docker/#using-the-official-docker-image">https://docs.astral.sh/uv/guides/integration/docker/#using-the-official-docker-image</a></p>
+<p>Une fois que vous avez trouvé celle qui correspond à vos besoins, vous pouvez l’utiliser ainsi :</p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">astralsh/uv:latest</span>
+
+<span class="c"># Copier le minimum nécessaire pour résoudre les dépendances</span>
+<span class="k">COPY</span><span class="w"> </span>pyproject.toml<span class="w"> </span>uv.lock<span class="w"> </span>.python-version<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>uv<span class="w"> </span>sync<span class="w"> </span>--no-dev<span class="w"> </span>--frozen
+
+<span class="c"># Copier le reste du projet</span>
+<span class="k">ADD</span><span class="w"> </span>main.py<span class="w"> </span>/workspace
+
+<span class="c"># Point d’entrée par défaut</span>
+<span class="k">CMD</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>main.py
+</code></pre></div>
+<p>On copie <code>pyproject.toml</code>, <code>uv.lock</code> et <code>.python-version</code> avant le reste du projet pour que Docker puisse mettre en cache la couche d’installation des dépendances.
+De cette manière, les dépendances ne sont réinstallées que si l’un de ces fichiers change, ce qui rend les reconstructions beaucoup plus rapides et évite une invalidation inutile du cache lorsque vous modifiez votre code source.</p>
+<h2 id="personnaliser-ton-image-pour-utiliser-uv">Personnaliser ton image pour utiliser uv<a class="headerlink" href="#personnaliser-ton-image-pour-utiliser-uv" title="Permanent link">#</a></h2>
+<p>Si vous avez besoin de quelque chose de plus avancé et qu’aucune image Docker officielle d’Astral ne correspond à vos besoins, vous pouvez créer la vôtre.
+Voici un setup propre et efficace pour le développement local et les workloads d’inférence, par exemple sur une machine avec GPU :</p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">nvidia/cuda:12.3.0-runtime-ubuntu22.04</span>
+
+<span class="k">ENV</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+<span class="k">ENV</span><span class="w"> </span><span class="nv">UV_COMPILE_BYTECODE</span><span class="o">=</span><span class="m">1</span>
+<span class="k">SHELL</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/bin/bash&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--login&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
+
+<span class="c"># Installer uv</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>curl<span class="w"> </span>ca-certificates<span class="w"> </span>build-essential
+<span class="k">ADD</span><span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span>/uv-installer.sh
+<span class="k">RUN</span><span class="w"> </span>sh<span class="w"> </span>/uv-installer.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>/uv-installer.sh
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/root/.local/bin/:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="c"># Définir le dossier de travail</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">HOME</span><span class="o">=</span>/workspace
+
+<span class="c"># Copier les fichiers du projet pour les dépendences</span>
+<span class="k">COPY</span><span class="w"> </span>pyproject.toml<span class="w"> </span>uv.lock<span class="w"> </span>.python-version<span class="w"> </span>/workspace/
+
+<span class="c"># Installer les dépendances avec uv</span>
+<span class="k">RUN</span><span class="w"> </span>uv<span class="w"> </span>sync<span class="w"> </span>--no-dev<span class="w"> </span>--frozen
+
+<span class="c"># Copier le reste du projet</span>
+<span class="k">ADD</span><span class="w"> </span>main.py<span class="w"> </span>/workspace
+
+<span class="c"># Commande par défaut</span>
+<span class="k">CMD</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>main.py
+</code></pre></div>
+<p>Dans cet exemple :</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg></span> <a href="mailto:roger.vincent.11@gmail.com">Email me</a> for professional inquiries.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg></span> <a href="https://www.linkedin.com/in/vroger11/">LinkedIn</a> for professional contact and blog posts.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.5 15.41c.08.09.08.28 0 .39-.73.7-2.09.76-2.5.76-.39 0-1.75-.06-2.46-.76-.1-.11-.1-.3 0-.39.11-.1.28-.1.38 0 .46.46 1.41.59 2.08.59.69 0 1.66-.13 2.1-.59.11-.1.28-.1.4 0m-3.75-2.37c0-.57-.47-1.04-1.04-1.04s-1.04.47-1.04 1.04.47 1.05 1.04 1.04c.57 0 1.04-.47 1.04-1.04M14.29 12c-.57 0-1.04.5-1.04 1.05s.47 1.04 1.04 1.04 1.04-.48 1.04-1.04c0-.55-.47-1.05-1.04-1.05M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2s10 4.5 10 10m-3.33 0c0-.81-.67-1.46-1.45-1.46-.4 0-.76.16-1.02.41-1-.72-2.37-1.18-3.9-1.24l.67-3.13 2.17.47c.02.55.48.99 1.04.99.57 0 1.04-.47 1.04-1.04s-.47-1.04-1.04-1.04c-.41 0-.77.24-.93.59l-2.43-.52c-.07-.03-.14 0-.19.04-.06.04-.09.1-.1.17l-.74 3.48c-1.55.05-2.95.51-3.97 1.24-.26-.25-.62-.4-1.01-.4-.81 0-1.46.65-1.46 1.44 0 .61.36 1.11.86 1.34-.02.16-.03.28-.03.44 0 2.22 2.61 4.07 5.82 4.07 3.23 0 5.85-1.82 5.85-4.07 0-.14-.01-.28-.04-.44.5-.23.86-.74.86-1.34"/></svg></span> <a href="https://www.reddit.com/user/vroger11/">Reddit</a> for informal discussions or posts.</li>
+<li><code>uv</code> compile en bytecode lors du sync pour accélérer le démarrage (au prix d’une image un peu plus grosse).</li>
+<li><code>uv sync --no-dev --frozen</code> assure des builds reproductibles de niveau production.</li>
+<li>Les dépendances ne sont réinstallées que si <code>pyproject.toml</code>, <code>uv.lock</code> ou <code>.python-version</code> changent.</li>
+<li>Aucun Python système n’est installé. Seul le Python requis par uv dans son venv est utilisé.</li>
+<li>Un dossier <code>workspace</code> contient tout le code et l’environnement virtuel de uv (séparation claire).</li>
 </ul>
-</div>
+<p>La commande <code>uv run</code> se comporte comme <code>poetry run</code> ou <code>pipenv run</code> sans surcharge.</p>
+<p>Si vous devez installer <code>uv</code> dans un autre dossier (par exemple pour des droits d’accès liés à une plateforme web comme OVH), vous pouvez faire ainsi :</p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">nvidia/cuda:12.3.0-runtime-ubuntu22.04</span>
+
+<span class="k">ENV</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+<span class="k">ENV</span><span class="w"> </span><span class="nv">UV_COMPILE_BYTECODE</span><span class="o">=</span><span class="m">1</span>
+<span class="k">SHELL</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/bin/bash&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--login&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
+
+<span class="c"># Définir le dossier de travail</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
+<span class="k">ENV</span><span class="w"> </span><span class="nv">HOME</span><span class="o">=</span>/workspace
+
+<span class="c"># Installer uv</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>curl<span class="w"> </span>ca-certificates<span class="w"> </span>build-essential
+<span class="k">ADD</span><span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span>/uv-installer.sh
+<span class="k">RUN</span><span class="w"> </span>sh<span class="w"> </span>/uv-installer.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>/uv-installer.sh
+<span class="k">ENV</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="c"># Copier et installer les dépendances</span>
+<span class="k">COPY</span><span class="w"> </span>pyproject.toml<span class="w"> </span>uv.lock<span class="w"> </span>.python-version<span class="w"> </span>/workspace/
+<span class="k">RUN</span><span class="w"> </span>uv<span class="w"> </span>sync<span class="w"> </span>--no-dev<span class="w"> </span>--frozen
+
+<span class="c"># Copier les fichiers applicatifs</span>
+<span class="k">ADD</span><span class="w"> </span>main.py<span class="w"> </span>/workspace/
+
+<span class="c"># Entrypoint par défaut</span>
+<span class="k">CMD</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>main.py
+</code></pre></div>
+<p>Là, vous changez le dossier HOME avant d’installer uv (qui est utilisé par l’installateur uv) et vous modifiez le PATH pour qu’il pointe vers le nouvel emplacement d’installation, garantissant ainsi que le binaire uv soit disponible dans tout le conteneur.</p>
+<h2 id="conclusion">🧩 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>Utiliser <code>uv</code> dans tes builds Docker apporte :</p>
+<ul>
+<li>Des builds d’images plus rapides que <code>pip</code>, <code>poetry</code> ou <code>conda</code>.</li>
+<li>Une résolution de dépendances déterministe et figée.</li>
+</ul>
+<p>Que vous travaillez en local ou que vous déployez dans le cloud, <code>uv</code> simplifie et accélère la gestion des environnements Python.</p>
+<p>Bonne pratique : ajoute <code>.venv</code> dans ton <code>.dockerignore</code>. Ça t’évitera de déboguer un mauvais environnement par erreur.
+Cela peut arriver en utilisant par mégarde <code>COPY . /workspace</code>, à éviter aussi.</p>
+<hr />
+<p>Merci d’avoir lu, j’espère que ce post t’a été utile et inspirant.</p>
+<p>Une partie de ce post est inspirée du <a href="https://docs.astral.sh/uv/guides/integration/docker/">guide officiel d’intégration Docker</a> et de mon expérience.</p>
+<p>Si vous avez des remarques ou suggestions, n’hésite pas à partager tes idées ou conseils.</p>
 
 
 
@@ -1600,16 +1838,99 @@
 
 
   
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 octobre 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Créé">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 octobre 2025</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
   
 
 
 
-  
+  <h2 id="__comments">Commentaires</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="vroger11/vroger11.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxNjM0MTYzNTU="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOCb2JI84CivWa"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
 
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
 
-  
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
 
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
 
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>
@@ -1622,7 +1943,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Retour en haut de la page
 </button>
         
       </main>
@@ -1691,10 +2012,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
