@@ -30,6 +30,7 @@ Vous pouvez également rechercher un article par son tag ou utiliser les catégo
 === ":material-robot: Automatisation"
     J'ai écrit plusieurs articles sur l'automatisation de diverses tâches pendant le développement de solutions. Voici quelques uns :
 
+    - [Des builds Docker efficaces avec uv](2025/10-02-efficient-dockerfile-with-uv.md), pour accélérer et simplifier la gestion des dépendances Python dans Docker.
     - [Sauvegarder vos identifiants Git](2019/09-09-save-git-credentials.md) pour éviter de retaper votre mot de passe à chaque fois.
     - [Automatisation avec des clés SSH](2020/08-02-automation-using-ssh-keys.md), où nous explorons des tâches utiles à automatiser avec des clés SSH.
     - [Travailler à distance ou depuis chez soi](2020/03-18-work-at-home.md), expliquant comment configurer vos postes de travail pour un accès à distance.

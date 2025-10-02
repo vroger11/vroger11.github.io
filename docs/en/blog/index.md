@@ -41,6 +41,7 @@ You can also search for an article by its tag or use the categories below:
 === ":material-robot: Work automation"
     I've written several articles about automating various tasks during development. Here are a few highlights:
 
+    - [Efficient Docker Builds with uv](2025/10-02-efficient-dockerfile-with-uv.md), to speed up and streamline Python dependency management in Docker.
     - [Save your Git credentials](2019/09-09-save-git-credentials.md) to avoid repeatedly entering your password.
     - [Automation with SSH keys](2020/08-02-automation-using-ssh-keys.md), where we explore useful tasks you can automate using SSH keys.
     - [Working remotely or from home](2020/03-18-work-at-home.md), detailing how to configure your workstations for remote access.
