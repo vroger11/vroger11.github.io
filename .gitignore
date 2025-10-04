@@ -16,9 +16,6 @@ site/
 # macOS files
 .DS_Store
 
-# MkDocs config files
-*.lock
-
 # Other IDE settings
 .idea/
 *.iml
