@@ -10,10 +10,10 @@ To install all tools locally, you can do:
 uv sync
 ```
 
-And pre-commits to ensure quality.
+And prek to ensure quality.
 
 ```zsh
-uv run pre-commit install
+uv run prek install
 ```
 
 To try locally your modifications:
