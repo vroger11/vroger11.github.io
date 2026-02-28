@@ -7,7 +7,7 @@ hide:
 
 # À propos de moi
 
-![Moi](../assets/images/vroger11_photo.jpg){: align=left style="width: 100px; height: auto;"}
+![Moi](../assets/images/vroger11_photo.webp){: align=left style="width: 100px; height: 100px;"}
 
 **Scientifique des données et de l'apprentissage automatique.**
 
@@ -15,7 +15,7 @@ Docteur en informatique en utilisant l'apprentissage automatique (en particulier
 
 ## Résumé
 
-Docteur en science des données depuis 2022 (pour plus d'informations, c'est par [ici](blog/2022/10-30-my-phd-experience.md)).
+Docteur en science des données depuis 2022 (pour plus d'informations, j'ai fait [un article](blog/2022/10-30-my-phd-experience.md) sur mon blogue à ce sujet).
 Mes travaux se focalisent sur le traitement de signaux 1D et 2D, avec une plus grande expérience sur le traitement audio.
 Je travaille sur des corpus à quantité limitée, mais également avec de larges bases de données.
 Je me concentre sur les algorithmes d'apprentissage automatique pour modéliser les connaissances et les intégrer dans des microservices (à base de dockers).
@@ -25,4 +25,4 @@ Il m'arrive par ailleurs de réaliser l'analyse de données pour produire des vi
 
 Enfin, je tiens aussi un blogue sur des visualisations que je réalise, sur la recherche que j'effectue, des tutoriels en apprentissage profond et sur des astuces. [C'est par ici](blog/index.md).
 
-Vous pouvez retrouver mon résumé au complet [ici](../assets/cv/cv_fr.pdf) ou aller sur mon [LinkedIn](https://www.linkedin.com/in/vroger11/).
+Pour plus d'informations, vous pouvez consulter [mon résumé au complet](../assets/cv/cv_fr.pdf) ou aller sur mon [LinkedIn](https://www.linkedin.com/in/vroger11/).
