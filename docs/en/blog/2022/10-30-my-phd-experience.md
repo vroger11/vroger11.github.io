@@ -32,7 +32,7 @@ We therefore performed projections of the data from our corpus. As some score sl
 
 **Keywords:** Speech pathology, severity index, speech disorder, ENT cancer, deep learning, learning with a few examples, self-supervised, entropic measurement, few-shot, limited data, limited amount of data, automatic speech processing.
 
-For my manuscript, I used Latex (as all of my articles). To collaborate with others (especially my supervisors) on it, I used overleaf to have nice comments (more information [here](https://www.overleaf.com/learn/how-to/How_to_make_comments_in_an_Overleaf_LaTeX_project)), a history of modifications and to synchronize my work in progress on GitHub (for safety as I did not want to rewrite this manuscript from scratch).
+For my manuscript, I used Latex (as all of my articles). To collaborate with others (especially my supervisors) on it, I used overleaf to have nice comments (more information [here](https://docs.overleaf.com/collaborating/commenting)), a history of modifications and to synchronize my work in progress on GitHub (for safety as I did not want to rewrite this manuscript from scratch).
 Once my manuscript goes online, I will add a link to it here for those interested.
 
 ## Thesis presentation

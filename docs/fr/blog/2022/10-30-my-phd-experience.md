@@ -45,7 +45,7 @@ La qualité de nos résultats nous a permis d’envisager une utilisation en mil
 
 **Mots clés:** Parole pathologique, indice de sévérité, trouble de la parole, cancer ORL, apprentissage profond, apprentissage avec quelques exemples, auto supervisé, mesure entropique, few-shot, peu de données, quantité de données limités, traitement automatique de la parole.
 
-Pour mon manuscrit, j'ai utilisé Latex (comme tous mes articles). Pour collaborer avec d'autres personnes (notamment mes encadrants) sur celui-ci, j'ai utilisé overleaf pour avoir des commentaires collaboratif (plus d'informations [ici](https://www.overleaf.com/learn/how-to/How_to_make_comments_in_an_Overleaf_LaTeX_project)), un historique des modifications et pour synchroniser mon travail en cours sur GitHub (par sécurité car je ne voulais pas réécrire ce manuscrit depuis le début).
+Pour mon manuscrit, j'ai utilisé Latex (comme tous mes articles). Pour collaborer avec d'autres personnes (notamment mes encadrants) sur celui-ci, j'ai utilisé overleaf pour avoir des commentaires collaboratif (plus d'informations [ici](https://docs.overleaf.com/collaborating/commenting)), un historique des modifications et pour synchroniser mon travail en cours sur GitHub (par sécurité car je ne voulais pas réécrire ce manuscrit depuis le début).
 Une fois mon manuscrit mis en ligne, j'ajouterai un lien vers ce dernier ici pour les personnes intéressées.
 
 ## La présentation de ma thèse
