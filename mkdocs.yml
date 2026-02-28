@@ -109,7 +109,7 @@ plugins:
         - locale: fr
           name: >
             <img style="height: 11px; border: 0px;" alt="fr" class="twemoji"
-            src="/assets/images/flags/fr.png" title="english" /> Français
+            src="/assets/images/flags/fr.png" title="français" /> Français
           build: true
   - git-revision-date-localized:
       enable_creation_date: true
