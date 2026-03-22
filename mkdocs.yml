@@ -51,12 +51,14 @@ copyright: "Copyright &copy; 2019-2026 Vincent Roger."
 
 markdown_extensions:
   # to make the mermaid diagrams follow the theme
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.details
   - pymdownx.snippets:
-      base_path: ['docs']
+      base_path: ["docs"]
       check_paths: True
   - pymdownx.superfences:
-        # make exceptions to highlighting of code:
+      # make exceptions to highlighting of code:
       custom_fences:
         - name: mermaid
           class: mermaid
@@ -64,7 +66,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
-      permalink: '#'
+      permalink: "#"
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -149,3 +151,6 @@ extra:
 
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
