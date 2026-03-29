@@ -15,6 +15,7 @@ Vous pouvez également rechercher un article par son tag ou utiliser les catégo
 === ":material-brain: Apprentissage Automatique"
     Je réalise quelques benchmarks :
 
+    - [NumPy, JAX, PyTorch sur les opérations numériques](2026/03-02-benchmark-numpy-jax-pytorch.md)
     - [Pandas, Polars, DuckDB sur des colonnes catégorielles en Parquet](2025/06-22-parquet-benchmark-pandas-polars-duckdb.md)
 
     Je crée des tutoriels :

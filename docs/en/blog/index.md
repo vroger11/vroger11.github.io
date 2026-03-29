@@ -15,6 +15,7 @@ You can also search for an article by its tag or use the categories below:
 === ":material-brain: Machine Learning"
     I run some benchmarks:
 
+    - [NumPy, JAX, PyTorch on numerical operations](2026/03-02-benchmark-numpy-jax-pytorch.md)
     - [Pandas, Polars, DuckDB on Categorical Parquet](2025/06-22-parquet-benchmark-pandas-polars-duckdb.md)
 
     I create tutorials:
