@@ -1,2 +1,3 @@
 nav:
+    - 06-20-ollama-on-low-memory-GPU.md
     - 03-29-python-numerical-libs.md
