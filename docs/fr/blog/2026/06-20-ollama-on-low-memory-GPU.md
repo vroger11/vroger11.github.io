@@ -24,7 +24,7 @@ Par exemple, même en utilisant des modèles conçus pour de grands contextes av
 
 Comme vous pouvez le voir, je ne peux pas utiliser gemma4 12b avec l'installation par défaut d'Ollama. Ce problème persiste également pour d'autres modèles qui tiennent sur mon GPU ; dans certains cas, il est même difficile de diagnostiquer ce qui se passe, comme le montre l'exemple d'OpenCode.
 
-J'ai trouvé une solution simple à ce problème.
+J'ai trouvé une solution simple à ce problème sous Linux.
 Le problème est que la détermination automatique de la taille du contexte par Ollama sur les machines locales est souvent trop prudente.
 Selon la [documentation d'Ollama](https://docs.ollama.com/context-length), si vous avez moins de 24 Go de VRAM, votre contexte maximal pour chaque modèle est par défaut limité à seulement 4k jetons (tokens).
 C'est bien trop peu pour les modes agentiques, même si les modèles de la famille Gemma 4 (par exemple, e2b, e4b ou 12b) sont capables de gérer des contextes plus importants sur des GPU à faible mémoire.
@@ -68,6 +68,8 @@ J'ai testé cette configuration avec **gemma4 12b** sur ma RTX 4060 (8 Go de VRA
 | VS Code | ![vscode fixed](../../../assets/images/ai_agents/ollama/vscode_ollama_fixed.png) |
 
 Bien que les vitesses d'inférence puissent être plus lentes pour les modèles plus volumineux comme gemma4 12b, je peux désormais l'utiliser avec des applications agentiques !
+
+Pour résoudre ce problème sous Windows ou Mac, vous pouvez aller dans les paramètres de l'application Ollama et modifier directement la taille du contexte.
 
 ---
 
