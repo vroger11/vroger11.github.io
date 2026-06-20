@@ -2067,7 +2067,7 @@
 </tbody>
 </table>
 <p>Comme vous pouvez le voir, je ne peux pas utiliser gemma4 12b avec l'installation par défaut d'Ollama. Ce problème persiste également pour d'autres modèles qui tiennent sur mon GPU ; dans certains cas, il est même difficile de diagnostiquer ce qui se passe, comme le montre l'exemple d'OpenCode.</p>
-<p>J'ai trouvé une solution simple à ce problème.
+<p>J'ai trouvé une solution simple à ce problème sous Linux.
 Le problème est que la détermination automatique de la taille du contexte par Ollama sur les machines locales est souvent trop prudente.
 Selon la <a href="https://docs.ollama.com/context-length">documentation d'Ollama</a>, si vous avez moins de 24 Go de VRAM, votre contexte maximal pour chaque modèle est par défaut limité à seulement 4k jetons (tokens).
 C'est bien trop peu pour les modes agentiques, même si les modèles de la famille Gemma 4 (par exemple, e2b, e4b ou 12b) sont capables de gérer des contextes plus importants sur des GPU à faible mémoire.</p>
@@ -2114,6 +2114,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
 </tbody>
 </table>
 <p>Bien que les vitesses d'inférence puissent être plus lentes pour les modèles plus volumineux comme gemma4 12b, je peux désormais l'utiliser avec des applications agentiques !</p>
+<p>Pour résoudre ce problème sous Windows ou Mac, vous pouvez aller dans les paramètres de l'application Ollama et modifier directement la taille du contexte.</p>
 <hr>
 <p>Merci de m'avoir lu, j'espère que cela vous a été utile et inspirant.</p>
 <p>Si vous avez des remarques ou des suggestions, n'hésitez pas à partager vos idées/conseils.</p>
@@ -2139,7 +2140,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 juin 2026 19:36:56 UTC">20 juin 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 juin 2026 19:52:16 UTC">20 juin 2026</span>
   </span>
 
     
